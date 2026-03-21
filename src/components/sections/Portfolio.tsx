@@ -21,6 +21,7 @@ import {
   Link2,
   Check,
   Camera,
+  Droplet
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -171,6 +172,97 @@ const projects: Project[] = [
           "UART command interface for setpoint and mode configuration",
           "Soft start / ramp logic to prevent inrush current spikes",
         ],
+      },
+    ],
+  },
+  {
+    slug: "water-leak-iot",
+    title: "Water Leak Detection & Alert System",
+    category: "IoT Systems",
+    filterSlugs: ["iot", "embedded-firmware", "cloud"],
+    description:
+      "Event-driven IoT system that detects water leaks and delivers real-time multi-device alerts using Particle Cloud and webhook-based push notifications.",
+    longDescription:
+      "Designed and implemented a connected water leak detection system combining embedded sensing, cloud event streaming, and real-time notifications. The system continuously monitors water presence using a conductivity-based sensor and triggers an event-driven alert pipeline. A Particle-based microcontroller publishes events to the cloud, which are relayed through a webhook to Pushbullet, delivering notifications across multiple user devices. The system includes a time-based alert escalation strategy to ensure persistent awareness until the issue is resolved.",
+    tags: [
+      "Particle Photon",
+      "Embedded C++",
+      "IoT Architecture",
+      "Webhooks",
+      "Push Notifications",
+      "Event-Driven Systems",
+      "Sensor Integration",
+    ],
+    icon: Droplet,
+    highlight: "Event-driven alert pipeline",
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/cover_image/file/84537/acc34cba-ccd9-42da-9453-6c32af2e05d4.jpg" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/image/file/81245/ParticleCloudPushbullet.png" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/image/file/82451/Screenshot_2015-10-14-15-39-28.png" },
+    ],
+    hidden: false,
+    deliverables: [
+      "Embedded Firmware (Particle)",
+      "Webhook Integration",
+      "Cloud Event Pipeline",
+      "System Architecture Design",
+      "Testing & Alert Validation",
+    ],
+    sections: [
+      {
+        heading: "System Overview",
+        body: "A distributed IoT monitoring system designed to detect water leaks and notify users instantly regardless of location. The system bridges embedded hardware with cloud infrastructure, ensuring that critical environmental events are propagated in real time to user devices.",
+      },
+      {
+        heading: "Architecture Design",
+        bullets: [
+          "Water detection via conductivity-based sensor input",
+          "Particle device publishes events to cloud on detection",
+          "Cloud webhook forwards events to external notification service",
+          "Push notifications delivered simultaneously to multiple devices",
+        ],
+        images: [cm4_5gImg1, cm4_5gImg2],
+      },
+      {
+        heading: "Embedded Implementation",
+        numbered: [
+          {
+            title: "Sensor Interface",
+            body: "A digital input with internal pull-up resistor is used to detect water presence via circuit closure. The design minimizes external components while maintaining reliable detection across different environments.",
+          },
+          {
+            title: "State Detection Logic",
+            body: "The firmware continuously polls the sensor at fixed intervals using non-blocking timing. A state flag prevents redundant triggers and ensures alerts are only generated when a new leak condition is detected.",
+          },
+          {
+            title: "Local Feedback",
+            body: "An onboard LED provides immediate visual indication of leak detection, allowing quick validation during testing and deployment without requiring cloud connectivity.",
+          },
+        ],
+      },
+      {
+        heading: "Alerting Strategy",
+        body: "To improve reliability and user awareness, the system implements a progressive alert schedule instead of a single notification.",
+        bullets: [
+          "Initial alert triggered within seconds of detection",
+          "Follow-up alerts at increasing intervals",
+          "Long-term periodic reminders until issue is resolved",
+          "Prevents missed incidents while avoiding notification spam",
+        ],
+      },
+      {
+        heading: "Cloud & Integration Layer",
+        body: "The system leverages Particle Cloud as an event broker, enabling seamless integration with third-party services through webhooks.",
+        bullets: [
+          "Event publishing from firmware using Particle API",
+          "Webhook configuration for external API communication",
+          "Secure authentication via bearer tokens",
+          "Decoupled architecture enabling service flexibility",
+        ],
+      },
+      {
+        heading: "System Outcome",
+        body: "The final implementation provides a reliable, low-cost monitoring solution capable of detecting water leaks and delivering persistent real-time alerts. The architecture demonstrates effective use of event-driven design patterns in IoT systems, with clear separation between sensing, processing, and notification layers.",
       },
     ],
   },
@@ -980,8 +1072,8 @@ function MediaSlider({
               <button
                 key={i}
                 className={`rounded-full transition-all ${i === safeIndex
-                    ? "w-5 h-1.5 bg-primary"
-                    : "w-1.5 h-1.5 bg-foreground/40 hover:bg-foreground/70"
+                  ? "w-5 h-1.5 bg-primary"
+                  : "w-1.5 h-1.5 bg-foreground/40 hover:bg-foreground/70"
                   }`}
                 onClick={(e) => goTo(i, e)}
                 data-testid={`button-media-dot-${i}`}
@@ -1510,8 +1602,8 @@ export function Portfolio({
                 data-testid={`filter-${cat.slug}`}
                 onClick={() => handleCategoryChange(cat.slug)}
                 className={`px-4 py-2 rounded-lg text-sm font-mono transition-all border ${activeCategory === cat.slug
-                    ? "bg-primary/15 text-primary border-primary/40"
-                    : "bg-card/60 text-muted-foreground border-border/40 hover:border-primary/30 hover:text-foreground"
+                  ? "bg-primary/15 text-primary border-primary/40"
+                  : "bg-card/60 text-muted-foreground border-border/40 hover:border-primary/30 hover:text-foreground"
                   }`}
               >
                 {cat.name}
@@ -1524,8 +1616,8 @@ export function Portfolio({
                   data-testid="filter-recommended"
                   onClick={() => handleCategoryChange("recommended")}
                   className={`px-4 py-2 rounded-lg text-sm font-mono transition-all border flex items-center gap-1.5 ${activeCategory === "recommended"
-                      ? "bg-amber-500/15 text-amber-400 border-amber-500/40"
-                      : "bg-card/60 text-muted-foreground border-border/40 hover:border-amber-500/30 hover:text-foreground"
+                    ? "bg-amber-500/15 text-amber-400 border-amber-500/40"
+                    : "bg-card/60 text-muted-foreground border-border/40 hover:border-amber-500/30 hover:text-foreground"
                     }`}
                 >
                   <ThumbsUp className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
