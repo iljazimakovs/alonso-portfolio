@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Github } from "lucide-react";
 
 function useUptime() {
   const [uptime, setUptime] = useState("00:00:00");
@@ -63,7 +64,7 @@ export function Footer() {
           </span>
         </div>
 
-        {/* Right — nav links */}
+        {/* Right — nav links + GitHub */}
         <nav className="flex items-center gap-6 flex-wrap justify-center">
           {navLinks.map((link) => (
             <a
@@ -74,6 +75,15 @@ export function Footer() {
               {link.name}
             </a>
           ))}
+          <a
+            href="https://github.com/alonsoo-rodriguez"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="GitHub"
+          >
+            <Github className="w-4 h-4" />
+          </a>
         </nav>
 
       </div>

@@ -1,3 +1,5 @@
+import { Github } from "lucide-react";
+
 const bootLines = [
   { ts: "0.000", text: "firmware_init: HAL v3.2.1 loaded", highlight: false },
   { ts: "0.012", text: "clock_config: PLL locked @ 168MHz", highlight: false },
@@ -33,16 +35,28 @@ export function Hero() {
 
             {/* Heading */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold leading-[1.05] mb-6">
-              <span className="text-foreground block">Building Reliable</span>
-              <span className="text-primary block">Embedded Platforms</span>
+              <span className="text-foreground block">Precision-Engineered</span>
+              <span className="text-primary block">Embedded Systems</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-muted-foreground max-w-md leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-md leading-relaxed mb-8">
               From bare-metal firmware to certified hardware, I turn complex
               requirements into robust, shippable systems ready for the factory
               floor.
             </p>
+
+            {/* GitHub CTA */}
+            <a
+              href="https://github.com/alonsoo-rodriguez"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View GitHub Profile"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg border border-border/60 bg-card/50 hover:bg-card hover:border-primary/40 text-sm font-mono text-muted-foreground hover:text-foreground transition-all duration-200 backdrop-blur-sm"
+            >
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
           </div>
 
           {/* Right column — Boot console */}

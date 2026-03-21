@@ -27,6 +27,7 @@ import {
   Check,
   Camera,
   Thermometer,
+  Star,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -1867,139 +1868,134 @@ function ProjectModal({
   onNext: () => void;
 }) {
   const Icon = project.icon;
+  const globalIdx = projects.indexOf(project);
+  const devCode = `DEV_${String(globalIdx).padStart(3, "0")}`;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8"
       data-testid="modal-project-detail"
       onClick={onClose}
     >
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="fixed inset-0 bg-background/85 backdrop-blur-sm" />
 
+      {/* Desktop prev / next */}
       <button
-        className="hidden md:flex fixed left-2 lg:left-5 top-1/2 -translate-y-1/2 z-[60] w-12 h-12 items-center justify-center rounded-full bg-primary/15 border-2 border-primary/50 text-primary hover:bg-primary/30 hover:border-primary hover:scale-110 backdrop-blur-md transition-all duration-150 shadow-[0_0_15px_rgba(var(--primary-rgb,0,255,255),0.2)]"
-        onClick={(e) => {
-          e.stopPropagation();
-          onPrev();
-        }}
+        className="hidden md:flex fixed left-2 lg:left-5 top-1/2 -translate-y-1/2 z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+        onClick={(e) => { e.stopPropagation(); onPrev(); }}
         data-testid="button-prev-project"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5" />
       </button>
-
       <button
-        className="hidden md:flex fixed right-2 lg:right-5 top-1/2 -translate-y-1/2 z-[60] w-12 h-12 items-center justify-center rounded-full bg-primary/15 border-2 border-primary/50 text-primary hover:bg-primary/30 hover:border-primary hover:scale-110 backdrop-blur-md transition-all duration-150 shadow-[0_0_15px_rgba(var(--primary-rgb,0,255,255),0.2)]"
-        onClick={(e) => {
-          e.stopPropagation();
-          onNext();
-        }}
+        className="hidden md:flex fixed right-2 lg:right-5 top-1/2 -translate-y-1/2 z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+        onClick={(e) => { e.stopPropagation(); onNext(); }}
         data-testid="button-next-project"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5" />
       </button>
 
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
+        className="relative w-full max-w-3xl max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative overflow-hidden rounded-t-xl">
-          <MediaSlider
-            key={project.title}
-            media={project.media}
-            className="w-full"
-            isModal
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent pointer-events-none" />
-
-          <Button
-            size="icon"
-            variant="ghost"
-            className="absolute top-4 right-4 bg-background/50 backdrop-blur-sm text-foreground z-30"
-            onClick={onClose}
-            data-testid="button-close-modal"
-          >
-            <X className="w-5 h-5" />
-          </Button>
-
-          <div className="absolute bottom-4 left-6 right-6 z-20 pointer-events-none">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-lg bg-background/80 backdrop-blur-sm flex items-center justify-center border border-primary/30">
-                <Icon className="w-5 h-5 text-primary" />
-              </div>
-              <span className="text-xs font-mono text-primary bg-primary/10 border border-primary/30 rounded-md px-2.5 py-1 backdrop-blur-sm">
-                {project.highlight}
-              </span>
-            </div>
+        {/* Header bar — sticky inside the scrollable modal */}
+        <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 sticky top-0 bg-card z-30 rounded-t-xl">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <Icon className="w-3.5 h-3.5 text-primary shrink-0" />
+            <span className="text-[10px] font-mono text-muted-foreground/60 tracking-widest uppercase truncate">
+              {devCode} / TECHNICAL DATASHEET
+            </span>
+            <span className="hidden sm:inline text-[10px] font-mono text-primary/60 uppercase tracking-widest truncate">
+              {project.category}
+            </span>
+          </div>
+          <div className="flex items-center gap-2 shrink-0 ml-3">
+            <span className="text-[10px] font-mono text-primary bg-primary/15 border border-primary/40 rounded px-2 py-0.5">
+              {project.highlight}
+            </span>
+            <button
+              onClick={onClose}
+              className="text-muted-foreground hover:text-foreground transition-colors ml-1"
+              data-testid="button-close-modal"
+              aria-label="Close"
+            >
+              <X className="w-4 h-4" />
+            </button>
           </div>
         </div>
 
-        <div className="p-6 md:p-8 space-y-6">
-          <div>
-            <p className="text-xs font-mono text-primary/70 mb-1 tracking-wider uppercase">
-              {project.category}
+        {/* Image carousel */}
+        <div className="relative overflow-hidden">
+          <MediaSlider key={project.title} media={project.media} className="w-full" isModal />
+        </div>
+
+        {/* Content */}
+        <div className="p-6 md:p-8 space-y-7">
+
+          {/* Title */}
+          <h3 className="text-2xl md:text-3xl font-display font-bold">
+            {project.title}
+          </h3>
+
+          {/* Mobile prev/next */}
+          <div className="flex md:hidden items-center justify-between">
+            <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onPrev}>
+              <ChevronLeft className="w-3.5 h-3.5" /> Prev
+            </Button>
+            <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onNext}>
+              Next <ChevronRight className="w-3.5 h-3.5" />
+            </Button>
+          </div>
+
+          {/* Abstract */}
+          <div className="space-y-3">
+            <p className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase">
+              // ABSTRACT
             </p>
-            <h3 className="text-2xl md:text-3xl font-display font-bold">
-              {project.title}
-            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {project.longDescription}
+            </p>
           </div>
 
-          <div className="flex md:hidden items-center justify-between mt-2">
-            <Button
-              size="sm"
-              variant="outline"
-              className="border-primary/50 text-primary hover:bg-primary/15 hover:border-primary gap-1"
-              onClick={onPrev}
-            >
-              <ChevronLeft className="w-4 h-4" /> Prev Project
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="border-primary/50 text-primary hover:bg-primary/15 hover:border-primary gap-1"
-              onClick={onNext}
-            >
-              Next Project <ChevronRight className="w-4 h-4" />
-            </Button>
-          </div>
-
-          <p className="text-muted-foreground leading-relaxed">
-            {project.longDescription}
-          </p>
-
-          <div>
-            <h4 className="text-sm font-mono text-muted-foreground mb-3 uppercase tracking-wider">
-              Tech Stack
-            </h4>
-            <div className="flex flex-wrap gap-2">
+          {/* Peripheral map (tags) */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <p className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase">
+                // PERIPHERAL_MAP
+              </p>
+              <span className="text-[10px] font-mono text-muted-foreground/40">
+                {project.tags.length} nodes
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
               {project.tags.map((tag) => (
-                <Badge
+                <span
                   key={tag}
-                  variant="secondary"
-                  className="font-mono text-xs bg-muted/50 text-muted-foreground"
+                  className="inline-flex items-center gap-1 text-[10px] font-mono border border-border/60 text-muted-foreground rounded px-2 py-0.5"
                 >
+                  <span className="text-primary/40">::</span>
                   {tag}
-                </Badge>
+                </span>
               ))}
             </div>
           </div>
 
-          <div>
-            <h4 className="text-sm font-mono text-muted-foreground mb-3 uppercase tracking-wider">
-              Deliverables
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {/* Bill of deliverables */}
+          <div className="space-y-3">
+            <p className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase">
+              // BILL_OF_DELIVERABLES
+            </p>
+            <ul className="space-y-2">
               {project.deliverables.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2 text-sm text-foreground/80 bg-muted/30 rounded-lg px-3 py-2 border border-border/30"
-                >
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                <li key={item} className="flex items-center gap-2.5 text-sm text-foreground/75">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                   {item}
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
+
         </div>
       </div>
     </div>
@@ -2346,78 +2342,85 @@ export function Portfolio({
           {filteredProjects.slice(0, visibleCount).map((project, idx) => {
             const Icon = project.icon;
             const isRecommended = recommended.has(project.slug);
+            const globalIdx = projects.indexOf(project);
+            const devCode = `DEV_${String(globalIdx).padStart(3, "0")}`;
 
             return (
               <div
                 key={project.slug}
                 data-testid={`card-project-${idx}`}
-                className="group cursor-pointer rounded-xl border border-border/50 hover:border-primary/40 bg-card transition-all duration-300 relative"
+                className="group cursor-pointer rounded-xl border border-border/50 hover:border-primary/40 bg-card transition-all duration-300 relative overflow-hidden flex flex-col"
                 onClick={() => openProject(idx)}
               >
-                <div className="relative h-64 overflow-hidden rounded-t-xl">
-                  <MediaSlider
-                    media={project.media}
-                    className="w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-transparent dark:from-card dark:via-card/20 dark:to-transparent pointer-events-none" />
+                {/* Top meta row */}
+                <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/30">
+                  <span className="text-[10px] font-mono text-muted-foreground/50 tracking-widest uppercase">
+                    {devCode}
+                  </span>
+                  <span className="text-[10px] font-mono text-primary/70 uppercase tracking-widest">
+                    {project.category}
+                  </span>
+                </div>
 
-                  <div className="absolute top-3 right-3 flex items-center gap-2 z-10">
-                    <span className="text-[10px] font-mono text-primary bg-background/80 backdrop-blur-sm border border-primary/30 rounded-md px-2 py-1">
+                {/* Image carousel */}
+                <div className="relative h-52 overflow-hidden">
+                  <MediaSlider media={project.media} className="w-full h-full" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent pointer-events-none" />
+                  {/* Highlight badge — top right */}
+                  <div className="absolute top-2 right-2 z-10">
+                    <span className="text-[10px] font-mono text-primary bg-primary/15 border border-primary/40 rounded px-2 py-0.5 backdrop-blur-sm">
                       {project.highlight}
                     </span>
                   </div>
-
-                  <div className="absolute bottom-3 left-3 z-10" onClick={(e) => toggleRecommended(project.slug, e)}>
-                    <div className="w-9 h-9 rounded-lg bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border/50 group-hover:border-primary/50 transition-colors">
+                  {/* Project icon — bottom left, keeps recommend toggle */}
+                  <div
+                    className="absolute bottom-3 left-3 z-10"
+                    onClick={(e) => toggleRecommended(project.slug, e)}
+                  >
+                    <div className={`w-9 h-9 rounded-lg backdrop-blur-sm flex items-center justify-center border transition-colors ${isRecommended ? "bg-primary/20 border-primary/60" : "bg-background/80 border-border/50 group-hover:border-primary/50"}`}>
                       <Icon className="w-4 h-4 text-primary" />
                     </div>
                   </div>
                 </div>
 
-                <div className="p-5 space-y-3">
-                  <div>
-                    <p className="text-[10px] font-mono text-primary/60 uppercase tracking-wider mb-1">
-                      {project.category}
-                    </p>
-                    <h3 className="text-lg font-display font-semibold leading-snug group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                  </div>
+                {/* Content */}
+                <div className="p-4 flex flex-col gap-3 flex-1">
+                  <h3 className="text-base font-display font-bold leading-snug group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
 
-                  <p className="text-sm text-muted-foreground/80 leading-relaxed line-clamp-3">
+                  <p className="text-sm text-muted-foreground/75 leading-relaxed line-clamp-2">
                     {project.description}
                   </p>
 
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.slice(0, 4).map((tag) => (
-                      <Badge
+                      <span
                         key={tag}
-                        variant="secondary"
-                        className="text-[10px] font-mono bg-muted/50 text-muted-foreground"
+                        className="text-[10px] font-mono border border-border/60 text-muted-foreground rounded px-1.5 py-0.5"
                       >
                         {tag}
-                      </Badge>
+                      </span>
                     ))}
-
                     {project.tags.length > 4 && (
-                      <Badge
-                        variant="secondary"
-                        className="text-[10px] font-mono bg-muted/50 text-muted-foreground"
-                      >
-                        +{project.tags.length - 4}
-                      </Badge>
+                      <span className="text-[10px] font-mono border border-border/60 text-muted-foreground rounded px-1.5 py-0.5">
+                        +{project.tags.length - 4} more
+                      </span>
                     )}
                   </div>
 
-                  <div className="flex items-center pt-1">
-                    <div className="flex items-center gap-1.5 text-xs font-mono text-primary/70 group-hover:text-primary transition-colors">
-                      <span>View Details</span>
-                      <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                  {/* Bottom row */}
+                  <div className="flex items-center justify-between pt-2 mt-auto border-t border-border/30">
+                    <span className="text-[10px] font-mono text-muted-foreground/40">
+                      {project.deliverables.length} deliverables
+                    </span>
+                    <div className="flex items-center gap-1 text-xs font-mono text-primary/70 group-hover:text-primary transition-colors">
+                      Read Datasheet
+                      <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </div>
                   </div>
                 </div>
-
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 blur-3xl group-hover:bg-primary/15 transition-all duration-500 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
               </div>
             );
           })}
