@@ -2,8 +2,6 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useLocation } from "wouter";
 import {
   Cpu,
-  Wifi,
-  CircuitBoard,
   Server,
   Battery,
   Radio,
@@ -18,32 +16,14 @@ import {
   ChevronDown,
   Search,
   Antenna,
-  MonitorSmartphone,
   ImageIcon,
-  Zap,
-  Activity,
   ThumbsUp,
   Link2,
   Check,
   Camera,
-  Thermometer,
-  Star,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-const garbageSorterImg = "/images/image_1772512279505.jpg";
-const smartAcImg1 = "/images/image_1772513484469.jpg";
-const smartAcImg2 = "/images/image_1772513491486.jpg";
-const smartAcImg3 = "/images/image_1772513498323.jpg";
-const cm5IoImg1 = "/images/image_1772514654396.jpg";
-const cm5IoImg2 = "/images/image_1772514659035.jpg";
-const cm5IoImg3 = "/images/image_1772514663029.jpg";
-const cm5IoImg4 = "/images/image_1772514687391.jpg";
-const imx8Img1 = "/images/image_1772515235120.jpg";
-const imx8Img2 = "/images/image_1772515239394.jpg";
-const imx8Img3 = "/images/image_1772515243964.jpg";
-const imx8Img4 = "/images/image_1772515247648.jpg";
-const imx8Img5 = "/images/image_1772515254381.jpg";
 const cm4_5gImg1 = "/images/image_1772515540147.jpg";
 const cm4_5gImg2 = "/images/image_1772515544449.jpg";
 const cm4_5gImg3 = "/images/image_1772515547834.jpg";
@@ -63,58 +43,15 @@ const lorawanGwImg1 = "/images/image_1772516000947.jpg";
 const lorawanGwImg2 = "/images/image_1772516005151.jpg";
 const lorawanGwImg3 = "/images/image_1772516009642.jpg";
 const lorawanGwImg4 = "/images/image_1772516014589.jpg";
-const kbImg1 = "/images/image_1772516262337.jpg";
-const kbImg2 = "/images/image_1772516265969.jpg";
-const kbImg3 = "/images/image_1772516268993.jpg";
-const kbImg4 = "/images/image_1772516272177.jpg";
-const kbImg5 = "/images/image_1772516276487.jpg";
-const tuneImg1 = "/images/image_1772516558647.jpg";
-const tuneImg2 = "/images/image_1772516561953.jpg";
-const tuneImg3 = "/images/image_1772516565558.jpg";
-const tuneImg4 = "/images/image_1772516569652.jpg";
-const tuneImg5 = "/images/image_1772516573546.jpg";
-const modKbImg1 = "/images/image_1772516757241.jpg";
-const modKbImg2 = "/images/image_1772516760657.jpg";
-const modKbImg3 = "/images/image_1772516763910.jpg";
-const modKbImg4 = "/images/image_1772516767056.jpg";
-const modKbImg5 = "/images/image_1772516770470.jpg";
-const gsmImg1 = "/images/image_1772517196510.jpg";
-const gsmImg2 = "/images/image_1772517200677.jpg";
-const gsmImg3 = "/images/image_1772517204181.jpg";
-const gsmImg4 = "/images/image_1772517208053.jpg";
-const doorLockImg1 = "/images/image_1772517469413.jpg";
-const envImagingImg1 = "/images/image_1772517587413.jpg";
-const laneImg1 = "/images/image_1772517778740.jpg";
-const laneImg2 = "/images/image_1772517783099.jpg";
-const laneImg3 = "/images/image_1772517788291.jpg";
-const laneImg4 = "/images/image_1772517794283.jpg";
-const laneImg5 = "/images/image_1772517801026.jpg";
-const roboArmImg1 = "/images/image_1772517950140.jpg";
-const roboArmImg2 = "/images/image_1772517954562.jpg";
-const roboArmImg3 = "/images/image_1772517961091.jpg";
 const predMaintImg1 = "/images/image_1772518205107.jpg";
 const predMaintImg2 = "/images/image_1772518221506.jpg";
 const predMaintImg3 = "/images/image_1772518228852.jpg";
 const predMaintImg4 = "/images/image_1772518235099.jpg";
-const clarecoImg1 = "/images/image_1772543017538.jpg";
-const clarecoImg2 = "/images/image_1772543024387.jpg";
-const clarecoClinicImg1 = "/images/image_1772543264738.jpg";
-const usbcPcbVideo = "/images/project-usbc-pcb-panel.mp4";
 const psuVideo = "/images/project-power-supply.mp4";
 const psuImg1 = "/images/image_1772543835349.jpg";
 const psuImg2 = "/images/image_1772543842115.jpg";
 const psuImg3 = "/images/image_1772543847124.jpg";
 const motorVideo = "/images/project-motor-controller.mp4";
-const rpiHatVideo = "/images/project-rpi-motor-hat.mp4";
-const sbcImg1 = "/images/1.jpg";
-const sbcImg2 = "/images/2.jpg";
-const sbcImg3 = "/images/3.jpg";
-const lmrConsoleImg1 = "/images/812-2_1772603385611.jpg";
-const cs74Img1 = "/images/CS-74_1772604563738.jpg";
-const vg500Img1 = "/images/image_1772604751479.jpg";
-const mosfetImg1 = "/images/image_1772545256057.jpg";
-const mosfetImg2 = "/images/image_1772545261768.jpg";
-const mosfetImg3 = "/images/image_1772545266834.jpg";
 const netduino_cam_1 = "/images/netduino_cam1.jpg";
 const netduino_cam_2 = "/images/netduino_cam3.jpg";
 const netduino_cam_3 = "/images/netduino_cam4.jpg";
@@ -137,62 +74,7 @@ const pi_camera_doorbell_notifications_4 =
   "/images/pi_camera_doorbell_notifications_4.jpg";
 const pi_camera_doorbell_notifications_5 =
   "/images/pi_camera_doorbell_notifications_5.jpg";
-const kria_kv260_petalinux_bsp_1 = "/images/kria_kv260_petalinux_bsp_1.jpg";
-const kria_kv260_petalinux_bsp_2 = "/images/kria_kv260_petalinux_bsp_2.jpg";
-const kria_kv260_petalinux_bsp_3 = "/images/kria_kv260_petalinux_bsp_3.jpg";
-const k26_som_multi_boot_custom_carrier_1 =
-  "/images/k26_som_multi_boot_custom_carrier_1.jpg";
-const k26_som_multi_boot_custom_carrier_2 =
-  "/images/k26_som_multi_boot_custom_carrier_2.jpg";
-const zynq_mpsoc_vivado_ps_configuration_1 =
-  "/images/zynq_mpsoc_vivado_ps_configuration_1.jpg";
-const zynq_mpsoc_vivado_ps_configuration_2 =
-  "/images/zynq_mpsoc_vivado_ps_configuration_2.jpg";
-const zynq_mpsoc_vivado_ps_configuration_3 =
-  "/images/zynq_mpsoc_vivado_ps_configuration_3.jpg";
-const zynq_mpsoc_vivado_ps_configuration_4 =
-  "/images/zynq_mpsoc_vivado_ps_configuration_4.jpg";
-const versal_vitis_hardware_in_the_loop_1 =
-  "/images/versal_vitis_hardware_in_the_loop_1.jpg";
-const kria_kv260_fir_filter_acceleration_1 =
-  "/images/kria_kv260_fir_filter_acceleration_1.jpg";
-const kria_kv260_fir_filter_acceleration_2 =
-  "/images/kria_kv260_fir_filter_acceleration_2.jpg";
-const kria_kv260_fir_filter_acceleration_3 =
-  "/images/kria_kv260_fir_filter_acceleration_3.jpg";
-const kria_kv260_fir_filter_acceleration_4 =
-  "/images/kria_kv260_fir_filter_acceleration_4.jpg";
-const kria_kv260_fir_filter_acceleration_5 =
-  "/images/kria_kv260_fir_filter_acceleration_5.jpg";
-const kria_kv260_fir_filter_acceleration_6 =
-  "/images/kria_kv260_fir_filter_acceleration_6.jpg";
-const pulseRateImg1 = "/images/pulseRateImg1.jpg";
-const pulseRateImg2 = "/images/pulseRateImg2.jpg";
-const pulseRateImg3 = "/images/pulseRateImg3.jpg";
-const pulseRateImg4 = "/images/pulseRateImg4.jpg";
-const pulseRateImg5 = "/images/pulseRateImg5.jpg";
-const healthMonitorImg1 = "/images/healthMonitorImg1.jpg";
-const healthMonitorImg2 = "/images/healthMonitorImg2.jpg";
-const healthMonitorImg3 = "/images/healthMonitorImg3.jpg";
-const healthMonitorImg4 = "/images/healthMonitorImg4.jpg";
-const healthMonitorImg5 = "/images/healthMonitorImg5.jpg";
-const rfidTrackingImg1 = "/images/rfidTrackingImg1.png";
-const rfidTrackingImg2 = "/images/rfidTrackingImg2.png";
-const rfidTrackingImg3 = "/images/rfidTrackingImg3.jpg";
-const rfidTrackingImg4 = "/images/rfidTrackingImg4.png";
-const rfidTrackingImg5 = "/images/rfidTrackingImg5.png";
-const wifi_water_heater_1 = "/images/wifi_water_heater_1.jpg";
-const wifi_water_heater_2 = "/images/wifi_water_heater_2.jpg";
-const wifi_water_heater_3 = "/images/wifi_water_heater_3.jpg";
-const wifi_water_heater_4 = "/images/wifi_water_heater_4.jpg";
-const heatpumpImg1 = "/images/heatpumpImg1.jpg";
-const heatpumpImg2 = "/images/heatpumpImg2.jpg";
-const heatpumpImg3 = "/images/heatpumpImg3.jpg";
-const heatpumpImg4 = "/images/heatpumpImg4.jpg";
-const heatpumpImg5 = "/images/heatpumpImg5.jpg";
 
-const ecgImg1 = "/images/ecgImg1.jpg";
-const ecgImg2 = "/images/ecgImg2.jpg";
 
 interface MediaItem {
   type: "image" | "video";
@@ -213,6 +95,14 @@ export const filterCategories: FilterCategory[] = [
   { name: "PCB & Hardware", slug: "pcb-hardware" },
 ];
 
+interface ContentSection {
+  heading?: string;
+  body?: string;
+  bullets?: Array<string | { text: string; sub?: string[] }>;
+  images?: string[];
+  numbered?: Array<{ title: string; body: string; image?: string }>;
+}
+
 interface Project {
   slug: string;
   title: string;
@@ -226,38 +116,10 @@ interface Project {
   deliverables: string[];
   filterSlugs: string[];
   hidden?: boolean;
+  sections?: ContentSection[];
 }
 
 const projects: Project[] = [
-  {
-    slug: "usbc",
-    title: "USB-C PCB Panelization Design",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware"],
-    description:
-      "Custom USB-C PCB with panelization for six male–female connector pairs, optimized for manufacturing. V-cut segmentation, fresering techniques, and specialized soldering windows for factory assembly.",
-    longDescription:
-      "Designed a custom USB-C PCB featuring panelization for six male–female connector pairs, optimized for efficient manufacturing and assembly. Implemented a distinctive V-cut segmentation strategy and advanced fresering techniques to improve structural stability and production throughput. Developed specialized soldering windows to ensure precise connector alignment and reliable factory soldering. The project covered full schematic and layout design in KiCad 8, along with detailed 3D visualization and animation in Blender 4.3 for technical presentation.",
-    tags: [
-      "KiCad 8",
-      "USB-C",
-      "PCB Panelization",
-      "V-Cut",
-      "DFM Optimization",
-      "Blender 4.3",
-      "3D Visualization",
-    ],
-    icon: CircuitBoard,
-    highlight: "DFM optimized",
-    media: [{ type: "video", src: usbcPcbVideo }],
-    hidden: true,
-    deliverables: [
-      "KiCad PCB + Schematic",
-      "Panelization Layout",
-      "Gerber & BOM Files",
-      "3D Blender Visualization",
-    ],
-  },
   {
     slug: "smdc",
     title: "Smart 12V DC Motor Controller",
@@ -285,6 +147,31 @@ const projects: Project[] = [
       "STM8 Firmware",
       "BOM & Gerber Files",
       "Motor Control Documentation",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a reliable 12V DC motor control PCB with integrated rotation counting using an STM8S003 microcontroller. The system utilizes a HALL sensor for precise real-time speed and rotation measurement, while a MOSFET-based driver ensures efficient and smooth motor operation.",
+      },
+      {
+        heading: "Hardware Architecture",
+        bullets: [
+          { text: "MCU — STM8S003", sub: ["16MHz internal clock, handles PWM generation and HALL signal decoding", "GPIO-driven MOSFET gate control with configurable dead-time"] },
+          { text: "Motor Driver Stage", sub: ["N-channel MOSFET H-bridge for bidirectional speed and direction control", "Gate resistors and bootstrap diodes for fast, safe switching"] },
+          { text: "Rotation Sensing", sub: ["HALL effect sensor with 3-pin interface mounted adjacent to motor shaft", "Debounced edge-counting logic for accurate RPM calculation"] },
+          { text: "PCB Layout", sub: ["Power and signal planes separated to minimise switching noise", "Thermal relief pads on MOSFET pads for heat dissipation"] },
+        ],
+      },
+      {
+        heading: "Firmware Features",
+        bullets: [
+          "Closed-loop PWM speed control with configurable duty cycle (0–100%)",
+          "Interrupt-driven HALL pulse counting for real-time RPM feedback",
+          "Overcurrent shutdown triggered via shunt resistor sensing",
+          "UART command interface for setpoint and mode configuration",
+          "Soft start / ramp logic to prevent inrush current spikes",
+        ],
+      },
     ],
   },
   {
@@ -319,6 +206,42 @@ const projects: Project[] = [
       "STM8 Firmware",
       "BOM & Gerber Files",
       "Test & Validation Report",
+    ],
+    sections: [
+      {
+        heading: "The Regulated Power Supply System",
+        body: "A compact bench power supply built on a custom PCB with adjustable output voltage and real-time display. The core of the design is a closed-loop feedback system where the STM8 microcontroller continuously reads the output via ADC, computes the required correction, and drives the output regulator via DAC — all while displaying the live voltage on a three-digit seven-segment display.",
+      },
+      {
+        heading: "Hardware Design",
+        numbered: [
+          {
+            title: "Voltage Sensing Stage",
+            body: "A precision voltage divider network feeds the output back to the STM8's built-in 10-bit ADC. Separate inputs monitor the raw input rail, the reference, and the regulated output — giving the firmware a complete picture of system state at every control cycle.",
+            image: psuImg1,
+          },
+          {
+            title: "DAC-Driven Feedback Loop",
+            body: "A dedicated DAC output drives the reference pin of the linear regulator. By updating this voltage every 10 ms the firmware continuously corrects for load transients and input variation, achieving output stability within ±20 mV across the full load range.",
+            image: psuImg2,
+          },
+          {
+            title: "Display & User Interface",
+            body: "A three-digit, common-cathode seven-segment display is multiplexed directly from STM8 GPIO. Digit scanning runs from a timer interrupt at 1 kHz, making it imperceptible to the human eye. A front-panel potentiometer sets the voltage target and is also read by ADC.",
+            image: psuImg3,
+          },
+        ],
+      },
+      {
+        heading: "Firmware Implementation",
+        bullets: [
+          "Closed-loop PID voltage control loop executing at 100 Hz",
+          "ADC oversampling (16×) to boost effective resolution to 12 bits",
+          "EEPROM-backed setpoint memory — last target survives power cycles",
+          "Short-circuit detection with automatic output shutdown and blinking display alert",
+          "Configurable output range via compile-time constants (0.8 V – 15 V typical)",
+        ],
+      },
     ],
   },
   {
@@ -360,6 +283,29 @@ const projects: Project[] = [
       "Block Diagram",
       "BOM & Gerber Files",
       "Signal Integrity Report",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a highly integrated custom carrier board for Raspberry Pi CM4, targeting IoT gateways, edge compute nodes, and smart infrastructure deployments that demand 5G NR cellular and Wi-Fi 6 simultaneously. The board was designed in Altium Designer with careful attention to RF trace routing, power sequencing, and PCIe signal integrity.",
+      },
+      {
+        images: [cm4_5gImg1, cm4_5gImg2],
+      },
+      {
+        heading: "System Architecture",
+        bullets: [
+          { text: "Compute Core", sub: ["Raspberry Pi CM4 SoM via 100-pin high-density connectors", "Up to 8 GB LPDDR4 RAM and 32 GB eMMC on module"] },
+          { text: "5G Cellular — Quectel RM520N", sub: ["5G NR Sub-6 GHz with LTE-A fallback, connected via PCIe Gen 2 M.2 Key B", "Dual nano-SIM slots with hardware MUX for carrier switching"] },
+          { text: "Wi-Fi 6 — Intel AX200", sub: ["802.11ax 2×2 MU-MIMO with BT 5.2, connected via M.2 Key E PCIe", "Dual U.FL antenna connectors with matched 50 Ω microstrip traces"] },
+          { text: "USB Infrastructure — USB4056 Hub", sub: ["4-port USB 2.0 hub provides host ports plus OTG-capable Type-C interface", "Independently powered USB ports with current-limit protection per port"] },
+        ],
+      },
+      {
+        heading: "PCB Design Highlights",
+        body: "The board uses a 6-layer stackup with dedicated power, ground, and high-speed signal layers. USB differential pairs are length-matched to within 2 mil and routed away from clock sources. RF traces to the 5G and Wi-Fi modules are 50 Ω controlled impedance with no vias in the RF section.",
+        images: [cm4_5gImg3, cm4_5gImg4, cm4_5gImg5],
+      },
     ],
   },
   {
@@ -403,6 +349,38 @@ const projects: Project[] = [
       "BOM & Gerber Files",
       "Power Management Docs",
     ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a full-featured expansion board for the NVIDIA Jetson TX2 NX module, extending it into a complete robotics and AI edge platform. The board provides every interface a field-deployed system could need — from dual MIPI-CSI cameras and LVDS input, to CAN bus, USB 3.0, and a wide 60 V input power stage that accepts 6S LiPo directly.",
+        images: [jetsonImg1],
+      },
+      {
+        heading: "Interface Overview",
+        numbered: [
+          {
+            title: "Camera Inputs",
+            body: "Two 4-lane MIPI-CSI-2 connectors for direct sensor attachment, plus a dedicated LVDS input for Sony FCB-9500L series block cameras. Coax-based signal routing keeps camera noise isolated from the digital section.",
+            image: jetsonImg2,
+          },
+          {
+            title: "High-Speed Connectivity",
+            body: "HDMI 2.0 output, RJ-45 Gigabit Ethernet, USB 3.1 Gen 1 Type-C for high-throughput device attachment, and USB 2.0 Type-A for peripherals. All high-speed pairs are impedance-controlled and length-matched.",
+            image: jetsonImg3,
+          },
+          {
+            title: "Power & Battery Management",
+            body: "Wide 12–60 V input accepted through a switching pre-regulator feeding the module's 5 V rail. 6S Li-ion battery JST connector with charge-management IC, gas gauge, and RTC coin-cell backup for uninterrupted operation.",
+            image: jetsonImg4,
+          },
+          {
+            title: "Industrial & Expansion Interfaces",
+            body: "Isolated CAN 2.0B transceiver for robot drive systems, RS-232/485 UART, I²C and SPI headers, and configurable GPIO. Micro SD for on-board logging. All expansion headers use locking connectors for vibration tolerance.",
+            image: jetsonImg5,
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "ndai",
@@ -439,6 +417,22 @@ const projects: Project[] = [
       "Middleware Upload API",
       "AI Detection Pipeline",
       "System Documentation",
+    ],
+    sections: [
+      {
+        body: "Built an end-to-end smart surveillance system by combining a Netduino microcontroller with an ArduCam OV2640 camera module. When a detection event fires, the Netduino captures a JPEG frame over SPI, forwards it to a Flask middleware server, and the server runs YOLO object detection — all triggering an email or SMS alert if a person or object of interest is found.",
+        images: [netduino_cam_1, netduino_cam_2],
+      },
+      {
+        heading: "System Architecture",
+        bullets: [
+          { text: "Edge Node — Netduino + OV2640", sub: ["Arduino camera libraries ported to .NET Micro Framework via SPI/I2C", "JPEG compression on-chip reduces payload to ~25 kB per frame", "Triggered by GPIO event (PIR, button, or scheduled timer)"] },
+          { text: "Middleware Server — Python Flask on AWS EC2", sub: ["Receives frames over HTTP POST from the Netduino", "Passes frames through a YOLO v5 inference pipeline", "Stores annotated images to S3 and pushes alerts via SMTP / Twilio SMS"] },
+        ],
+      },
+      {
+        images: [netduino_cam_3, netduino_cam_4],
+      },
     ],
   },
   {
@@ -481,6 +475,30 @@ const projects: Project[] = [
       "IoT Cloud Communication Setup",
       "Hardware Integration Documentation",
     ],
+    sections: [
+      {
+        heading: "NE101 IoT Camera System",
+        body: "A battery-powered IoT camera built around the OV5640 sensor and an optional Cat.1 LTE modem (EG912U). The device captures JPEG images on schedule or on PIR trigger, encodes them as Base64, and publishes them inside a JSON payload over MQTT or MQTTS to any cloud broker — all without mains power.",
+        images: [ne101_mqtt_lte_iot_camera_1, ne101_mqtt_lte_iot_camera_2],
+      },
+      {
+        heading: "Key Features",
+        bullets: [
+          { text: "Connectivity", sub: ["Cat.1 LTE via EG912U for remote field deployments without Wi-Fi", "Fallback Wi-Fi AP mode for local configuration and testing", "MQTT and MQTTS (TLS 1.2) transport with configurable broker, topic, and QoS"] },
+          { text: "Image Capture & Reporting", sub: ["OV5640 5 MP sensor with configurable resolution and quality", "PIR-triggered and time-scheduled captures", "Base64-encoded JPEG embedded in structured JSON telemetry payload"] },
+          { text: "Power & Battery Management", sub: ["Ultra-low-power sleep between captures extends battery life significantly", "Battery voltage reported in every telemetry packet", "Configurable wake interval from 1 minute to 24 hours"] },
+          { text: "Remote Management", sub: ["OTA firmware update over LTE/Wi-Fi", "Remote reboot, parameter change, and capture command via MQTT downlink"] },
+        ],
+      },
+      {
+        images: [ne101_mqtt_lte_iot_camera_3, ne101_mqtt_lte_iot_camera_4, ne101_mqtt_lte_iot_camera_5],
+      },
+      {
+        heading: "Device Configuration Interface",
+        body: "A built-in captive-portal web interface is served over the Wi-Fi AP on first boot. Operators scan a QR code, connect, and set MQTT broker details, APN, capture schedule, and image resolution — all without a laptop or serial cable. Settings persist to flash across reboots.",
+        images: [ne101_mqtt_lte_iot_camera_6, ne101_mqtt_lte_iot_camera_7, ne101_mqtt_lte_iot_camera_8],
+      },
+    ],
   },
   {
     slug: "dbel",
@@ -519,6 +537,26 @@ const projects: Project[] = [
       "Home Assistant Automation Setup",
       "Telegram Alert Integration",
     ],
+    sections: [
+      {
+        heading: "How It Works",
+        body: "A 433 MHz RF receiver on a Raspberry Pi Zero W listens for the wireless doorbell button signal. The moment a matching code arrives, the Pi Camera module captures a timestamped image of whoever is at the door, publishes the image over MQTT, and a Home Assistant automation forwards it as a Telegram message — all in under two seconds.",
+        images: [pi_camera_doorbell_notifications_1, pi_camera_doorbell_notifications_2],
+      },
+      {
+        heading: "Software Stack",
+        bullets: [
+          "rpi-rf library decodes 433 MHz OOK signals and matches the learned doorbell code",
+          "picamera Python library triggers capture with a short warm-up delay for exposure",
+          "paho-mqtt publishes image bytes and metadata to a local Mosquitto broker",
+          "Home Assistant MQTT image entity renders the photo in the dashboard",
+          "Telegram Bot API delivers the image and a door alert message to a private chat",
+        ],
+      },
+      {
+        images: [pi_camera_doorbell_notifications_3, pi_camera_doorbell_notifications_4, pi_camera_doorbell_notifications_5],
+      },
+    ],
   },
   {
     slug: "nrf5",
@@ -555,6 +593,31 @@ const projects: Project[] = [
       "Block Diagram",
       "BOM & Gerber Files",
       "Sensor Integration Guide",
+    ],
+    sections: [
+      {
+        heading: "Multi-Radio IoT Platform",
+        body: "Designed a compact multi-radio IoT board that combines BLE 5.4 (nRF5340), LoRa (SX1302), and GNSS (Quectel L96) on a single PCB — enabling asset tracking applications that need long-range uplinks, precise location, and short-range configuration in one device.",
+        images: [nrf5340Img1, nrf5340Img2],
+      },
+      {
+        heading: "Radio Architecture",
+        bullets: [
+          { text: "Nordic nRF5340 — Dual-Core SoC", sub: ["Application core (128 MHz Cortex-M33) runs sensor fusion and application logic", "Network core manages BLE 5.4 stack independently for real-time reliability"] },
+          { text: "Semtech SX1302 — LoRa Module", sub: ["868 / 915 MHz sub-GHz for multi-kilometre outdoor range", "LoRaWAN Class A/C support with OTAA activation", "Connected via high-speed SPI with dedicated DIO interrupt lines"] },
+          { text: "Quectel L96 — GNSS Module", sub: ["Multi-constellation GPS + GLONASS + BeiDou", "UART interface with PPS output for timing synchronisation", "Low-power tracking mode: < 1 mA in acquisition"] },
+        ],
+      },
+      {
+        heading: "On-Board Sensor Suite",
+        bullets: [
+          "DHT20 — Temperature and humidity via I²C",
+          "LSM6DSOX — 6-axis IMU (accelerometer + gyroscope) for motion and impact detection",
+          "OPT3001 — Ambient light sensor for tamper / enclosure-open detection",
+          "256 Mbit W25Q256 NOR Flash via SPI for local data buffering when offline",
+        ],
+        images: [nrf5340Img3, nrf5340Img4, nrf5340Img5],
+      },
     ],
   },
   {
@@ -593,6 +656,28 @@ const projects: Project[] = [
       "Network Architecture Docs",
       "Production Test Guide",
     ],
+    sections: [
+      {
+        heading: "Gateway Overview",
+        body: "An industrial-grade single-channel LoRaWAN gateway built on ESP32 dual-core, designed to bridge LoRa field sensors to cloud platforms in environments where off-the-shelf gateways can't be deployed. The board accepts 96–264 VAC mains or DC input and can be expanded with LTE, additional I/O, and battery backup modules.",
+        images: [lorawanGwImg1, lorawanGwImg2],
+      },
+      {
+        heading: "Connectivity Stack",
+        bullets: [
+          "LoRa SX1276/78 at 433 or 915 MHz for wide-area sensor uplinks",
+          "Ethernet (W5500) for reliable wired cloud connectivity",
+          "RS-485 (optically isolated, 1 Mbps) for Modbus RTU devices on the local bus",
+          "Wi-Fi 802.11 b/g/n and BLE 4.2 for local configuration and AP fallback",
+          "4G-LTE via optional expansion module (SIM slot onboard)",
+        ],
+      },
+      {
+        heading: "Storage & Timekeeping",
+        body: "W25Q64 NOR flash provides 8 MB of local packet buffering for store-and-forward when the cloud link is interrupted. DS3231M precision RTC with coin-cell backup ensures accurate timestamping of sensor packets regardless of network availability.",
+        images: [lorawanGwImg3, lorawanGwImg4],
+      },
+    ],
   },
   {
     slug: "apmd",
@@ -628,972 +713,33 @@ const projects: Project[] = [
       "ARM Linux Edge Firmware",
       "Retraining Pipeline Scripts",
     ],
-  },
-  {
-    slug: "ecg1",
-    title: "Embedded ECG Monitoring and HRV Analysis System",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices"],
-    description:
-      "Single-lead ECG monitoring system using the MAX30003 AFE and Arduino Uno to capture cardiac signals and measure heart-rate variability through real-time R-R interval detection.",
-    longDescription:
-      "Developed a single-lead ECG monitoring system using the MAX30003 analog front-end with an Arduino Uno to acquire accurate cardiac electrical signals. The system uses two electrodes connected to the chest to capture ECG data, which is transmitted to the microcontroller via SPI. The MAX30003 integrates hardware-based R-R interval detection using the Pan-Tompkins algorithm, allowing precise heart-rate variability (HRV) analysis with minimal processing overhead. The Arduino firmware streams ECG waveform data and R-R interval measurements over USB-UART, while a Processing-based GUI visualizes the signal in real time and displays instantaneous heart-rate values.",
-    tags: [
-      "MAX30003",
-      "Arduino Uno",
-      "Embedded C",
-      "SPI",
-      "ECG Monitoring",
-      "Heart Rate Variability",
-      "Biomedical Signal Processing",
-      "Processing GUI",
-    ],
-    icon: Activity,
-    highlight: "Real-time ECG monitoring",
-    media: [
-      { type: "image", src: ecgImg1 },
-      { type: "image", src: ecgImg2 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Embedded Firmware",
-      "ECG Signal Acquisition System",
-      "SPI Sensor Interface",
-      "Real-time Visualization GUI",
-      "Prototype Validation",
-    ],
-  },
-  {
-    slug: "pulse-rate-monitor-arduino",
-    title: "Real-Time Pulse Tracking System with Arduino",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices"],
-    description:
-      "Arduino-based pulse monitoring system that reads real-time heart rate from a PPG pulse sensor and displays BPM values on a 16x2 LCD for simple, low-cost health tracking.",
-    longDescription:
-      "Developed a real-time pulse rate monitoring system using an Arduino Uno, a Pulse Sensor, and a 16x2 LCD display. The sensor uses photoplethysmography (PPG) to detect blood flow changes and generate an analog heartbeat waveform. The Arduino processes the signal, applies noise filtering, calculates beats per minute, and displays live BPM readings on the LCD. The project provides a simple and affordable solution for basic health monitoring, education, and biomedical prototyping.",
-    tags: [
-      "Arduino Uno",
-      "Pulse Sensor",
-      "PPG",
-      "Heart Rate Monitoring",
-      "Embedded C",
-      "16x2 LCD",
-      "Analog Signal Processing",
-    ],
-    icon: Activity,
-    highlight: "Live BPM display",
-    media: [
-      { type: "image", src: pulseRateImg1 },
-      { type: "image", src: pulseRateImg2 },
-      { type: "image", src: pulseRateImg3 },
-      { type: "image", src: pulseRateImg4 },
-      { type: "image", src: pulseRateImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Arduino Firmware",
-      "Sensor Interface Circuit",
-      "LCD Display Integration",
-      "Signal Filtering Logic",
-      "Prototype Demonstration",
-    ],
-  },
-  {
-    slug: "ai-vital-signs-monitor",
-    title: "AI-Enabled Remote Vital Signs Monitoring Platform",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices", "pcb-hardware"],
-    description:
-      "Wearable multi-sensor health monitoring device using BLE and cloud connectivity to track ECG, SpO2, temperature, respiration, and activity with AI-assisted analysis.",
-    longDescription:
-      "Developed a wearable IoT-based vital signs monitoring system designed for remote patient monitoring during large-scale healthcare scenarios. The device integrates multiple biomedical sensors including ECG (ADS1292R), SpO2 and heart rate (MAX30102), temperature (TMP117), accelerometer for activity and fall detection (IIS2DLPC), and MEMS microphones for respiratory sound monitoring. Powered by the nRF52840 BLE SoC, the system streams patient data to a mobile gateway via Bluetooth 5 and securely uploads it to a cloud platform for real-time visualization and AI-assisted health analysis. The modular hardware architecture separates ECG, oximeter, and core processing boards connected through flex cables, enabling flexible wearable configurations and easier enclosure design.",
-    tags: [
-      "nRF52840",
-      "BLE 5",
-      "ECG Monitoring",
-      "SpO2",
-      "Embedded C++",
-      "Biomedical Sensors",
-      "AWS Cloud",
-      "IoT Healthcare",
-      "PCB Design",
-    ],
-    icon: Activity,
-    highlight: "AI remote health monitoring",
-    media: [
-      { type: "image", src: healthMonitorImg1 },
-      { type: "image", src: healthMonitorImg2 },
-      { type: "image", src: healthMonitorImg3 },
-      { type: "image", src: healthMonitorImg4 },
-      { type: "image", src: healthMonitorImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Embedded Firmware",
-      "Multi-Sensor Hardware Design",
-      "BLE Communication Stack",
-      "Cloud Data Streaming Integration",
-      "System Architecture Documentation",
-    ],
-  },
-  {
-    slug: "gsm1",
-    title: "GSM-Based Smart Energy Meter",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices", "pcb-hardware"],
-    description:
-      "GSM-enabled single-phase energy meter using PIC18F4520 for remote energy monitoring. Measures voltage, current, and power factor with two-way SMS communication for real-time meter readings.",
-    longDescription:
-      "Developed a GSM-enabled single-phase energy meter using PIC18F4520 for remote energy monitoring. The system measures voltage, current, and power factor to calculate accurate energy consumption. A GSM module enables two-way communication, allowing the utility provider to request and receive real-time meter readings via SMS. The design includes a regulated power supply section and tamper detection circuitry for enhanced reliability and security. A complete functional prototype was built and validated.",
-    tags: [
-      "PIC18F4520",
-      "GSM Module",
-      "Embedded C",
-      "UART",
-      "Energy Metering",
-      "Tamper Detection",
-      "PCB Design",
-    ],
-    icon: Zap,
-    highlight: "Remote SMS metering",
-    media: [
-      { type: "image", src: gsmImg1 },
-      { type: "image", src: gsmImg2 },
-      { type: "image", src: gsmImg3 },
-      { type: "image", src: gsmImg4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Embedded C Firmware",
-      "Schematic + PCB Layout",
-      "Simulation Files",
-      "Prototype Validation Report",
-    ],
-  },
-  {
-    slug: "csbc",
-    title: "Custom Embedded Linux SBC",
-    category: "Embedded Linux / Hardware",
-    filterSlugs: ["embedded-linux-bsp", "pcb-hardware", "hardware-debugging"],
-    description:
-      "Custom single-board computer built around an i.MX6 SoC with Yocto Linux BSP. Designed for edge computing applications with industrial-grade reliability and extended temperature range.",
-    longDescription:
-      "Engineered a custom single-board computer for edge computing applications requiring industrial reliability. The board is built around an NXP i.MX6 SoC with 1GB DDR3 RAM, eMMC storage, Gigabit Ethernet, USB, and a 40-pin GPIO header for expansion. The custom Yocto Linux BSP includes a hardened kernel, secure boot via HABv4, and application containerization via Docker. Designed for -40 to +85C operation with conformal coating support. The 6-layer PCB was optimized for EMI compliance and passed FCC/CE certification. Used as the compute platform for multiple industrial IoT deployments.",
-    tags: ["i.MX6", "Yocto", "DDR3", "Secure Boot", "PCB Design", "Linux"],
-    icon: Cpu,
-    highlight: "Industrial -40 to 85C",
-    media: [
-      { type: "image", src: sbcImg1 },
-      { type: "image", src: sbcImg2 },
-      { type: "image", src: sbcImg3 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Yocto BSP Image",
-      "6-Layer PCB Files",
-      "Hardware Test Report",
-      "FCC/CE Certification Docs",
-    ],
-  },
-  {
-    slug: "isac",
-    title: "IoT-Based Smart AC Controller",
-    category: "Smart Home / IoT",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
-    description:
-      "ESP32-based IR AC controller enabling remote control and monitoring via smartphone and web dashboard. Supports 100+ AC brands with remote cloning, BLE provisioning, and secure OTA updates.",
-    longDescription:
-      "Designed and developed an ESP32-based IR AC controller enabling remote control and monitoring via smartphone and web dashboard. The system interfaces with IR transmitters and receivers, supporting over 100 AC brands with a remote cloning feature for unsupported models. It monitors temperature and humidity and sends data to AWS IoT Core. Features include BLE-based provisioning for easy setup and secure firmware OTA updates for continuous improvement.",
-    tags: [
-      "ESP32",
-      "C",
-      "Arduino",
-      "IR Communication",
-      "AWS IoT Core",
-      "Wi-Fi",
-      "BLE",
-      "I2C",
-      "PCB Design",
-      "IoT",
-    ],
-    icon: Wifi,
-    highlight: "100+ AC brands",
-    media: [
-      { type: "image", src: smartAcImg1 },
-      { type: "image", src: smartAcImg2 },
-      { type: "image", src: smartAcImg3 },
-    ],
-    hidden: false,
-    deliverables: [
-      "ESP32 Firmware",
-      "Web Dashboard",
-      "PCB Design Files",
-      "AWS IoT Integration Guide",
-    ],
-  },
-  {
-    slug: "alfs",
-    title: "AI/ML Lane Following in Simulink",
-    category: "Autonomous Systems",
-    filterSlugs: ["embedded-firmware", "embedded-linux-bsp"],
-    description:
-      "Production-grade AI/ML lane-following system in MATLAB/Simulink for a 1:10 scale autonomous vehicle. Fine-tuned YOLOv8n for real-time lane segmentation with ML-enhanced MPC controller. Achieved 22 FPS on Jetson Nano with 92% accuracy.",
-    longDescription:
-      "Developed a production-grade AI/ML lane-following system in MATLAB/Simulink for a 1:10 scale autonomous vehicle. Integrated a fine-tuned YOLOv8n model (trained on BDD100K and KITTI) for real-time lane segmentation and curvature estimation. Implemented an ML-enhanced MPC controller for smooth steering and reduced oscillations. Built a 2-DOF bicycle model in Simscape for realistic closed-loop simulation. Achieved 22 FPS on Jetson Nano with 92% lane-keeping accuracy under varied conditions.",
-    tags: [
-      "MATLAB",
-      "Simulink",
-      "YOLOv8n",
-      "ONNX",
-      "MPC",
-      "Jetson Nano",
-      "Deep Learning",
-      "Python",
-    ],
-    icon: Cpu,
-    highlight: "92% lane accuracy",
-    media: [
-      { type: "image", src: laneImg1 },
-      { type: "image", src: laneImg2 },
-      { type: "image", src: laneImg3 },
-      { type: "image", src: laneImg4 },
-      { type: "image", src: laneImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Simulink Model",
-      "YOLOv8n ONNX Model",
-      "MPC Controller Config",
-      "Simulation Results & Report",
-    ],
-  },
-  {
-    slug: "kfir",
-    title: "High-Throughput FIR DSP Accelerator on KV260",
-    category: "Firmware / Hardware Bring-Up & Debugging",
-    filterSlugs: ["embedded-firmware", "hardware-debugging"],
-    description:
-      "Designed and accelerated a fully pipelined FIR filter on the AMD Kria KV260 using Vitis HLS and PYNQ, comparing floating-point and fixed-point implementations for high-throughput FPGA DSP processing.",
-    longDescription:
-      "Developed a high-performance FIR filter accelerator on the AMD Kria KV260 using Vitis HLS, Vivado, and PYNQ. The design implemented a fully pipelined and parallel filter architecture with both floating-point and fixed-point data types, optimizing latency and throughput for DSP workloads. Python was used to generate coefficients and validation data, while the FPGA design was integrated with PYNQ for runtime control and benchmarking, achieving major speedups over Python and SciPy software filtering.",
-    tags: [
-      "AMD Kria KV260",
-      "Vitis HLS",
-      "Vivado",
-      "PYNQ",
-      "FIR Filter",
-      "FPGA DSP",
-      "Fixed-Point Design",
-      "Floating-Point Design",
-      "Python",
-      "Hardware Acceleration",
-    ],
-    icon: Activity,
-    highlight: "Pipelined DSP Acceleration",
-    media: [
-      { type: "image", src: kria_kv260_fir_filter_acceleration_1 },
-      { type: "image", src: kria_kv260_fir_filter_acceleration_2 },
-      { type: "image", src: kria_kv260_fir_filter_acceleration_3 },
-      { type: "image", src: kria_kv260_fir_filter_acceleration_4 },
-      { type: "image", src: kria_kv260_fir_filter_acceleration_5 },
-      { type: "image", src: kria_kv260_fir_filter_acceleration_6 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Vitis HLS FIR Filter Design",
-      "Vivado Hardware Platform",
-      "PYNQ Integration Notebook",
-      "Python Coefficient Generation Scripts",
-      "Performance Benchmark Report",
-    ],
-  },
-  {
-    slug: "ccop",
-    title: "Clareco AI Medical Co-Pilot",
-    category: "AI / Mobile App",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
-    description:
-      "AI-powered Flutter mobile app that records doctor–patient conversations and converts them into structured email summaries. Supports 80+ languages with AI speech recognition and multilingual NLP processing.",
-    longDescription:
-      "Developed an AI-powered mobile application that records doctor–patient conversations and converts them into clear, structured email summaries. Built with Flutter, the app captures audio and delivers accurate transcriptions within minutes, supporting over 80 languages. Integrated AI-based speech recognition and multilingual processing to generate understandable medical summaries in Dutch or the patient's preferred language, improving comprehension, accessibility, and retention of critical healthcare information.",
-    tags: [
-      "Flutter",
-      "Dart",
-      "Speech-to-Text AI",
-      "NLP",
-      "Multilingual Translation",
-      "Cloud APIs",
-      "Mobile App",
-    ],
-    icon: MonitorSmartphone,
-    highlight: "80+ languages",
-    media: [
-      { type: "image", src: clarecoImg1 },
-      { type: "image", src: clarecoImg2 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Flutter App Source",
-      "Cloud API Integration",
-      "Speech Processing Pipeline",
-      "Multilingual NLP Module",
-    ],
-  },
-  {
-    slug: "imx8",
-    title: "iMX8 SoM Custom Base Board",
-    category: "Embedded Linux / Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "hardware-debugging"],
-    description:
-      "Custom base PCB for Computelab UCM-iMX8M-Mini SoM with CSI camera, I2S audio codec, Class-D amplifier, Ha-Low Wi-Fi, waterproof USB-C, and 1S Li-Po BMS - optimized for low power and mass production.",
-    longDescription:
-      "Designed a custom base PCB for the Computelab UCM-iMX8M-Mini SoM, optimized for low power and compact embedded applications. The board integrates a 2-lane CSI camera interface, I2S audio codec (WM8904), Class-D amplifier with 1W speaker, Ha-Low Wi-Fi module, waterproof USB Type-C, UART debug port, and a 20-pin GPIO header. It includes a 1S Li-Po BMS power design for portable use, focusing on hardware architecture, EMI considerations, and mass production readiness.",
-    tags: [
-      "NXP iMX8M Mini",
-      "Altium",
-      "High-Speed PCB",
-      "I2S",
-      "USB Type-C",
-      "Li-Po BMS",
-      "Ha-Low Wi-Fi",
-      "Mass Production",
-    ],
-    icon: CircuitBoard,
-    highlight: "Compact low-power SoM",
-    media: [
-      { type: "image", src: imx8Img1 },
-      { type: "image", src: imx8Img2 },
-      { type: "image", src: imx8Img3 },
-      { type: "image", src: imx8Img4 },
-      { type: "image", src: imx8Img5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Altium PCB + Schematic",
-      "BOM & Gerber Files",
-      "Power Design Docs",
-      "EMI Compliance Report",
-    ],
-  },
-  {
-    slug: "kv26",
-    title: "Embedded Vision Linux Platform for Kria KV260",
-    category: "Linux & BSP",
-    filterSlugs: ["embedded-linux-bsp", "iot-connected-devices"],
-    description:
-      "Configured and customized the PetaLinux 2021.1 BSP for the AMD Kria KV260 Vision AI kit, enabling Linux boot, camera support, and development workflows for embedded vision applications.",
-    longDescription:
-      "Implemented a PetaLinux 2021.1 Board Support Package setup for the AMD Kria KV260 Vision AI Starter Kit to enable Linux-based development and camera workflows. The project demonstrates BSP customization, SD image generation, boot firmware updates, and root filesystem configuration. Additional setup included SSH/SCP access, GStreamer camera pipeline testing with a USB webcam, and installing system utilities through dnf. The environment provides a foundation for embedded vision, AI acceleration, and FPGA-based Linux development.",
-    tags: [
-      "AMD Kria KV260",
-      "PetaLinux",
-      "Embedded Linux",
-      "GStreamer",
-      "Yocto",
-      "Linux BSP",
-      "Vision AI",
-      "USB Camera",
-      "FPGA SoC",
-    ],
-    icon: MonitorSmartphone,
-    highlight: "Embedded Vision BSP",
-    media: [
-      { type: "image", src: kria_kv260_petalinux_bsp_1 },
-      { type: "image", src: kria_kv260_petalinux_bsp_2 },
-      { type: "image", src: kria_kv260_petalinux_bsp_3 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Customized PetaLinux BSP",
-      "Bootable SD Card Image",
-      "Embedded Linux Configuration",
-      "GStreamer Camera Test Pipeline",
-      "System Setup Documentation",
-    ],
-  },
-  {
-    slug: "k26b",
-    title: "Multi-Storage Boot Architecture for Embedded Linux Systems",
-    category: "Linux & BSP / Hardware Bring-Up & Debugging",
-    filterSlugs: ["embedded-linux-bsp", "hardware-debugging"],
-    description:
-      "Configured multi-boot support for AMD Kria K26 SoM on a custom carrier, enabling boot from eMMC, SD card, and USB storage using PetaLinux and U-Boot configuration.",
-    longDescription:
-      "Implemented a flexible boot workflow for AMD Kria K26 SoM on a custom carrier board, enabling system startup from eMMC, SD card, and USB storage. The project demonstrates modifying PetaLinux boot arguments, generating BOOT.BIN, updating QSPI boot firmware, and configuring U-Boot parameters for different storage devices. It also includes expanding the eMMC root filesystem and verifying active boot partitions through Linux commands, providing a practical workflow for embedded Linux bring-up on custom FPGA carrier designs.",
-    tags: [
-      "AMD Kria K26",
-      "Embedded Linux",
-      "PetaLinux",
-      "U-Boot",
-      "eMMC",
-      "SD Card Boot",
-      "USB Boot",
-      "FPGA SoC",
-      "Linux BSP",
-    ],
-    icon: Cpu,
-    highlight: "Multi-Device Boot",
-    media: [
-      { type: "image", src: k26_som_multi_boot_custom_carrier_1 },
-      { type: "image", src: k26_som_multi_boot_custom_carrier_2 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Multi-Boot PetaLinux Configuration",
-      "BOOT.BIN Generation and QSPI Update",
-      "U-Boot Bootargs Setup",
-      "eMMC Filesystem Expansion Guide",
-      "Custom Carrier Boot Documentation",
-    ],
-  },
-  {
-    slug: "rhat",
-    title: "Raspberry Pi Motor Control HAT",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-firmware"],
-    description:
-      "Custom Raspberry Pi HAT for motor control and sensor integration. KiCad 9 design with motor drivers, regulated power supply, and GPIO/I2C/SPI interfaces in a stackable form factor.",
-    longDescription:
-      "Designed and developed a custom Raspberry Pi expansion board (HAT) for motor control and sensor integration in robotics and automation systems. Created in KiCad 9, the PCB integrates motor driver circuits, regulated power supply, and multiple GPIO, I2C, and SPI interfaces for analog and digital sensors. The compact stackable form factor ensures seamless integration with Raspberry Pi. Delivered complete design files, Gerbers, BOM, and 3D visualizations with Blender animations for technical presentation.",
-    tags: [
-      "KiCad 9",
-      "Raspberry Pi",
-      "GPIO",
-      "I2C",
-      "SPI",
-      "DC Motor Drivers",
-      "Power Regulation",
-      "Blender 3D",
-    ],
-    icon: CircuitBoard,
-    highlight: "Stackable HAT design",
-    media: [{ type: "video", src: rpiHatVideo }],
-    hidden: false,
-    deliverables: [
-      "KiCad PCB + Schematic",
-      "Gerber & BOM Files",
-      "3D Blender Visualization",
-      "Integration Guide",
-    ],
-  },
-  {
-    slug: "nmkb",
-    title: "Nomad RGB Mechanical Keyboard",
-    category: "Consumer Electronics",
-    filterSlugs: ["pcb-hardware", "embedded-firmware"],
-    description:
-      'Premium RGB mechanical keyboard with ANSI/ISO layouts, multi-device Bluetooth, hot-swappable switches, 1.9" display, rotary encoders, and integrated battery charging - designed for mass production in Autodesk Eagle.',
-    longDescription:
-      "Engineered a premium RGB mechanical keyboard supporting ANSI and ISO layouts with multi-device Bluetooth connectivity. Features include hot-swappable switches, a 1.9-inch display, rotary encoders, advanced power management, and integrated battery charging. Schematics and PCB were designed in Autodesk Eagle following high-speed and mass-production standards, ensuring signal integrity, reliability, and cost-effective manufacturing for large-scale deployment.",
-    tags: [
-      "Autodesk Eagle",
-      "Bluetooth",
-      "Wi-Fi",
-      "RGB LED Drivers",
-      "Power Management",
-      "Li-ion Charging",
-      "Keyboard Matrix",
-      "Mass Production",
-    ],
-    icon: CircuitBoard,
-    highlight: "ANSI + ISO layouts",
-    media: [
-      { type: "image", src: kbImg1 },
-      { type: "image", src: kbImg2 },
-      { type: "image", src: kbImg3 },
-      { type: "image", src: kbImg4 },
-      { type: "image", src: kbImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Eagle PCB + Schematic",
-      "BOM & Gerber Files",
-      "Firmware Source",
-      "Production Assembly Guide",
-    ],
-  },
-  {
-    slug: "aira",
-    title: "AI Robotic Arm in Simulink",
-    category: "Autonomous Systems",
-    filterSlugs: ["embedded-firmware", "embedded-linux-bsp"],
-    description:
-      "AI-driven 6-DOF robotic arm simulation in MATLAB/Simulink for autonomous pick-and-place tasks. CNN-based object detection, ML policy for joint commands, and custom Embedded C S-Function for deterministic low-latency control.",
-    longDescription:
-      "Developed an AI-driven robotic arm simulation in MATLAB/Simulink for autonomous pick-and-place tasks. Integrated a CNN-based vision block for object detection, an ML policy for mapping object pose to joint commands, and a custom Embedded C S-Function for deterministic low-latency control. Modeled a 6-DOF manipulator in Simscape Multibody with realistic dynamics, torque limits, and collision detection. Delivered a full simulation-to-deployment package validated for real-time adaptive grasping.",
-    tags: [
-      "MATLAB",
-      "Simulink",
-      "Simscape Multibody",
-      "Embedded C",
-      "S-Function",
-      "ONNX",
-      "6-DOF Kinematics",
-      "Python",
-    ],
-    icon: Server,
-    highlight: "Adaptive grasping",
-    media: [
-      { type: "image", src: roboArmImg1 },
-      { type: "image", src: roboArmImg2 },
-      { type: "image", src: roboArmImg3 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Simulink Model + S-Function",
-      "CNN ONNX Model",
-      "Simscape Multibody Config",
-      "Deployment Package",
-    ],
-  },
-  {
-    slug: "mosf",
-    title: "MOSFET Amplifier Design & Analysis",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware"],
-    description:
-      "MOSFET-based amplifier with biasing network, coupling capacitors, and load configuration. AC frequency response, transient, and gain simulations validate stability and bandwidth.",
-    longDescription:
-      "Designed and analyzed a MOSFET-based amplifier according to specified device parameters and performance targets. Developed the complete schematic including biasing network, coupling capacitors, and load configuration. Performed AC frequency response, transient, and gain simulations to validate stability, bandwidth, and signal amplification characteristics. Evaluated cutoff frequency, voltage gain, and operating point to ensure optimal linear performance. The project demonstrates strong expertise in analog circuit design, simulation, and performance optimization.",
-    tags: [
-      "Analog Design",
-      "MOSFET",
-      "AC Analysis",
-      "Transient Analysis",
-      "LTspice",
-      "Signal Integrity",
-      "Frequency Response",
-    ],
-    icon: Activity,
-    highlight: "Simulation-validated",
-    media: [
-      { type: "image", src: mosfetImg1 },
-      { type: "image", src: mosfetImg2 },
-      { type: "image", src: mosfetImg3 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Circuit Schematic",
-      "Simulation Results",
-      "Frequency Response Analysis",
-      "Design Report",
-    ],
-  },
-  {
-    slug: "mckb",
-    title: "Modular Creator RGB Keyboard",
-    category: "Consumer Electronics",
-    filterSlugs: ["pcb-hardware", "embedded-firmware"],
-    description:
-      "Modular smart RGB keyboard with configurable independent modules, each functioning as a standalone keyboard. VIA firmware support for dynamic key remapping, inter-module communication, and mass-production-ready design.",
-    longDescription:
-      "Designed a modular smart RGB keyboard composed of configurable independent modules, each functioning as a standalone keyboard. The system supports dynamic layout customization through VIA firmware, enabling users to remap keys and adjust functionality based on workflow needs. Engineered with advanced PCB architecture, reliable inter-module communication, and optimized power management, the design ensures seamless expandability, premium RGB integration, and mass-production readiness for a highly customizable user experience.",
-    tags: [
-      "Autodesk Eagle",
-      "VIA Firmware",
-      "RGB LED Drivers",
-      "Bluetooth",
-      "Wi-Fi",
-      "Power Management",
-      "Mass Production",
-    ],
-    icon: CircuitBoard,
-    highlight: "Modular expandable",
-    media: [
-      { type: "image", src: modKbImg1 },
-      { type: "image", src: modKbImg2 },
-      { type: "image", src: modKbImg3 },
-      { type: "image", src: modKbImg4 },
-      { type: "image", src: modKbImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Eagle PCB + Schematic",
-      "VIA Firmware Config",
-      "BOM & Gerber Files",
-      "Module Interface Spec",
-    ],
-  },
-  {
-    slug: "ieis",
-    title: "IoT Environmental Imaging System",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware", "pcb-hardware"],
-    description:
-      "Self-contained IoT device using ESP32-CAM and BME680 for remote environmental monitoring and imaging. Scheduled image capture, sensor data logging to SD card, and secure cloud transmission via MQTT over TLS.",
-    longDescription:
-      "Developed a self-contained IoT device for remote environmental monitoring and imaging. The system uses ESP32-CAM to capture images at scheduled intervals and a BME680 sensor to measure temperature, humidity, pressure, and air quality. Data and images are stored locally on an SD card and securely transmitted to a cloud server using MQTT over TLS. Designed with reliable power management and secure connectivity, the device enables centralized monitoring of environmental conditions and visual inspection of remote sites.",
-    tags: [
-      "ESP32-CAM",
-      "BME680",
-      "MQTT over TLS",
-      "Wi-Fi",
-      "SD Card",
-      "Embedded C",
-      "PCB Design",
-      "IoT Cloud",
-    ],
-    icon: Wifi,
-    highlight: "Remote site imaging",
-    media: [{ type: "image", src: envImagingImg1 }],
-    hidden: false,
-    deliverables: [
-      "ESP32 Firmware",
-      "PCB Layout + Schematic",
-      "Enclosure CAD Files",
-      "Cloud Integration Docs",
-    ],
-  },
-  {
-    slug: "zpsc",
-    title:
-      "Foundational Vivado Platform for Zynq UltraScale+ Processing System",
-    category: "Hardware Bring-Up & Debugging / Firmware",
-    filterSlugs: ["hardware-debugging", "embedded-firmware"],
-    description:
-      "Created a base Vivado project to configure the Processing System of a Zynq UltraScale+ MPSoC on the MYD-CZU3EG board, enabling camera-ready Linux and software development workflows.",
-    longDescription:
-      "Built a base Vivado design for the MYIR MYD-CZU3EG Zynq UltraScale+ MPSoC board focusing on Processing System configuration. The project demonstrates configuring MIO banks, DDR4 memory, Ethernet, USB, UART, PCIe, DisplayPort, and storage interfaces in the PS block design. The setup generates a reusable PS configuration and exports the hardware platform as an XSA file, forming a foundation for embedded Linux, camera, and software development using Vitis or PetaLinux.",
-    tags: [
-      "Zynq UltraScale+ MPSoC",
-      "AMD Vivado",
-      "FPGA SoC",
-      "Embedded Linux",
-      "Processing System",
-      "DDR4 Configuration",
-      "Hardware Platform",
-      "XSA Export",
-      "Linux Development",
-    ],
-    icon: CircuitBoard,
-    highlight: "Vivado PS Platform",
-    media: [
-      { type: "image", src: zynq_mpsoc_vivado_ps_configuration_1 },
-      { type: "image", src: zynq_mpsoc_vivado_ps_configuration_2 },
-      { type: "image", src: zynq_mpsoc_vivado_ps_configuration_3 },
-      { type: "image", src: zynq_mpsoc_vivado_ps_configuration_4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Vivado Block Design Project",
-      "PS Configuration TCL Preset",
-      "Generated Bitstream",
-      "Exported XSA Hardware Platform",
-      "Base FPGA Development Setup",
-    ],
-  },
-  {
-    slug: "tune",
-    title: "Tuneshine Album Art Display",
-    category: "Consumer Electronics",
-    filterSlugs: ["iot-connected-devices", "pcb-hardware", "embedded-firmware"],
-    description:
-      "Wi-Fi enabled live album art display that syncs with music streaming services. BLE provisioning, real-time artwork rendering on LED matrix, and CE-compliant PCB designed for production in Autodesk Eagle.",
-    longDescription:
-      "Designed and developed Tuneshine™, a Wi-Fi enabled live album art display that syncs with users' music streaming services. The device connects via Bluetooth for initial provisioning, allowing users to configure Wi-Fi and link streaming accounts through a mobile app. Once set up, it automatically displays real-time album artwork from music played on any device. The PCB was engineered for reliable wireless connectivity, optimized power management, and CE compliance, ensuring stable performance and production readiness.",
-    tags: [
-      "Autodesk Eagle",
-      "Wi-Fi",
-      "BLE",
-      "LED Matrix",
-      "Power Management",
-      "CE Compliance",
-      "Embedded Systems",
-    ],
-    icon: MonitorSmartphone,
-    highlight: "Live music sync",
-    media: [
-      { type: "image", src: tuneImg1 },
-      { type: "image", src: tuneImg2 },
-      { type: "image", src: tuneImg3 },
-      { type: "image", src: tuneImg4 },
-      { type: "image", src: tuneImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Eagle PCB + Schematic",
-      "BOM & Gerber Files",
-      "Firmware Source",
-      "CE Compliance Docs",
-    ],
-  },
-  {
-    slug: "uhf-rfid-item-tracking",
-    title: "Long-Range RFID Asset Location System",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices", "pcb-hardware"],
-    description:
-      "Long-range UHF RFID tracking system using Raspberry Pi and cloud-connected readers to monitor tagged tools and assets across rooms, providing last-known location data through a web dashboard.",
-    longDescription:
-      "Developed a low-cost UHF RFID asset tracking system for makerspaces and shared work areas using Raspberry Pi-based monitor nodes, a Cottonwood long-range RFID reader, and passive EPC Gen2 tags. Each monitor captures timestamped tag reads over UART and sends the data to a cloud-hosted Azure Web API for centralized tracking. A web dashboard allows users to register readers and tags, then view the latest known location and read time for each item. The system combines embedded scanning, cloud integration, and inventory visibility for scalable item tracking.",
-    tags: [
-      "Raspberry Pi 2",
-      "UHF RFID",
-      "EPC Gen2",
-      "UART",
-      "Microsoft Azure",
-      "Windows 10 IoT Core",
-      "ASP.NET MVC",
-      "Web API",
-      "Asset Tracking",
-    ],
-    icon: Antenna,
-    highlight: "Long-range asset tracking",
-    media: [
-      { type: "image", src: rfidTrackingImg1 },
-      { type: "image", src: rfidTrackingImg2 },
-      { type: "image", src: rfidTrackingImg3 },
-      { type: "image", src: rfidTrackingImg4 },
-      { type: "image", src: rfidTrackingImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "RFID Scanner Background App",
-      "Cloud Web API Integration",
-      "Asset Management Web Dashboard",
-      "SQL Database Schema",
-      "Monitor Node Setup Documentation",
-    ],
-  },
-  {
-    slug: "vhil",
-    title: "Ethernet-Driven FPGA Hardware Validation for Versal Subsystems",
-    category: "Linux & BSP / Hardware Bring-Up & Debugging",
-    filterSlugs: ["embedded-linux-bsp", "hardware-debugging"],
-    description:
-      "Implemented a Vitis Hardware-in-the-Loop flow for Versal VSS designs, enabling Ethernet-based validation of AI Engine, HLS, and RTL subsystems on real hardware before full system integration.",
-    longDescription:
-      "Built a Hardware-in-the-Loop verification flow for AMD Versal Vitis Sub Systems using Vitis 2025.2. The project covers generating an HIL server SD image, booting the VCK190 target, and validating AI Engine, HLS, and RTL subsystems on hardware over Ethernet. Python host scripts generated test vectors, streamed data to the target, buffered returned channel data, and visualized spectra, enabling pre-integration verification of subsystem behavior on real hardware.",
-    tags: [
-      "AMD Vitis",
-      "Versal",
-      "Vitis Sub System",
-      "Hardware-in-the-Loop",
-      "Python",
-      "AI Engine",
-      "HLS",
-      "RTL Verification",
-      "VCK190",
-      "Ethernet",
-    ],
-    icon: Activity,
-    highlight: "Real Hardware Verification",
-    media: [{ type: "image", src: versal_vitis_hardware_in_the_loop_1 }],
-    hidden: false,
-    deliverables: [
-      "Vitis HIL Build Flow",
-      "Bootable SD Card Image",
-      "Python Host Verification Scripts",
-      "HIL Interface Configuration",
-      "Hardware Validation Documentation",
-    ],
-  },
-  {
-    slug: "ccli",
-    title: "Clareco Clinic Healthcare Platform",
-    category: "AI / Mobile App",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
-    description:
-      "Digital healthcare platform enabling appointment scheduling, AI digital assistant conversations, and proactive patient–doctor communication. Built with Flutter for seamless mobile experience.",
-    longDescription:
-      "Developed Clareco Clinic, a digital healthcare platform designed to streamline doctor–patient interaction and appointment management. The mobile app enables patients to schedule and receive appointment notifications, communicate with a digital assistant, and discuss medical concerns directly from their smartphone. Doctors gain early access to patient inputs, medical insights, and assistant conversations, enabling proactive and personalized care. The platform enhances engagement, accessibility, and operational efficiency in modern healthcare environments.",
-    tags: [
-      "Flutter",
-      "Dart",
-      "REST APIs",
-      "Push Notifications",
-      "Secure Messaging",
-      "AI Digital Assistant",
-      "Cloud Backend",
-    ],
-    icon: MonitorSmartphone,
-    highlight: "Digital health assistant",
-    media: [{ type: "image", src: clarecoClinicImg1 }],
-    hidden: false,
-    deliverables: [
-      "Flutter App Source",
-      "REST API Backend",
-      "Push Notification System",
-      "AI Assistant Integration",
-    ],
-  },
-  {
-    slug: "cm5i",
-    title: "CM5 IO Board with USB 2.0 OTG",
-    category: "Embedded Linux / Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-linux-bsp"],
-    description:
-      "Custom Raspberry Pi CM5 IO board with dual USB 2.0 ports, USB hub IC, path switch, and Type-C interface. Compatible with CM4/CM5 via DNP resistors, with DPDT slide switch for BOOT and OTG_ID control.",
-    longDescription:
-      "Designed a custom Raspberry Pi CM5 IO board with dual USB 2.0 ports, integrating a USB hub IC and USB path switch for host functionality. The design ensures compatibility with both CM4 and CM5 by adding DNP resistors for optional 5.1K CC configuration. Implemented a USB Type-C interface using CM5 CC pins and a 5A-rated ideal diode for external power support. Replaced automatic OTG switching with a DPDT slide switch to manage BOOT and OTG_ID control, optimizing usability and reliability.",
-    tags: [
-      "Raspberry Pi CM4/CM5",
-      "Altium",
-      "USB 2.0 Hub IC",
-      "USB Type-C",
-      "High-Speed PCB",
-      "Mass Production",
-    ],
-    icon: CircuitBoard,
-    highlight: "CM4/CM5 compatible",
-    media: [
-      { type: "image", src: cm5IoImg1 },
-      { type: "image", src: cm5IoImg2 },
-      { type: "image", src: cm5IoImg3 },
-      { type: "image", src: cm5IoImg4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Altium PCB + Schematic",
-      "BOM & Gerber Files",
-      "USB Architecture Docs",
-      "Production Test Guide",
-    ],
-  },
-  {
-    slug: "heatpump1",
-    title: "Heat Pump Automation Controller",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "pcb-hardware", "hardware-debugging"],
-    description:
-      "Embedded firmware-driven heat pump controller with real-time sensor monitoring, relay-based actuation, and advanced protection logic for HVAC automation and system reliability.",
-    longDescription:
-      "Developed a heat pump automation controller with a strong focus on embedded firmware design and real-time system control. Built around an Arduino Pro Mini and a custom PCB, the system manages compressors, pumps, fans, crankcase heaters, and pressure sensors while continuously monitoring up to 12 DS18B20 temperature sensors and current signals.\n\nThe embedded firmware implements state-machine-based control logic, handling system startup, shutdown, and dynamic operation based on sensor feedback. Advanced protection mechanisms are integrated, including overheat protection, pressure fault detection, power failure recovery, and compressor safety control. The firmware also supports Electronic Expansion Valve (EEV) operation, self-test routines, and real-time diagnostics via serial communication.\n\nAdditional features include RS485/UART communication for remote display and service tools, enabling monitoring, debugging, and system tuning. The solution is designed for both new installations and legacy system retrofits, providing a reliable and flexible platform for HVAC automation and experimentation.",
-    tags: [
-      "Arduino Pro Mini",
-      "Embedded Firmware",
-      "Embedded C",
-      "State Machine",
-      "DS18B20",
-      "Heat Pump Control",
-      "Electronic Expansion Valve",
-      "RS485",
-      "Relay Control",
-      "PCB Design",
-      "HVAC Automation"
-    ],
-    icon: Thermometer,
-    highlight: "Firmware-driven HVAC control",
-    media: [
-      { type: "image", src: heatpumpImg1 },
-      { type: "image", src: heatpumpImg2 },
-      { type: "image", src: heatpumpImg3 },
-      { type: "image", src: heatpumpImg4 },
-      { type: "image", src: heatpumpImg5 }
-    ],
-    hidden: false,
-    deliverables: [
-      "Firmware",
-      "State Machine Control Implementation",
-      "Sensor & Actuator Integration",
-      "Schematic + PCB Layout",
-      "Serial Diagnostics & Debug Interface",
-      "System Testing & Validation"
-    ]
-  },
-  {
-    slug: "adlk",
-    title: "Android-Based Digital Door Lock",
-    category: "IoT & Smart Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices"],
-    description:
-      "Android-controlled digital door lock using Arduino Uno and HC-06 Bluetooth for secure wireless access. Dual authentication via mobile app or 4x4 keypad with LCD status display and relay-based actuation.",
-    longDescription:
-      "Developed an Android-controlled digital door lock system using Arduino Uno and HC-06 Bluetooth module for secure wireless access. The system integrates a 4x4 keypad and 16x2 LCD for local password entry and status display, along with a 5V relay module to control the door locking mechanism. Users can authenticate via a mobile app or keypad, while the microcontroller manages password verification and access control. Designed with secure communication, user feedback display, and reliable relay-based actuation.",
-    tags: [
-      "Arduino Uno",
-      "HC-06 Bluetooth",
-      "Embedded C",
-      "Android App",
-      "UART",
-      "GPIO",
-      "Relay Module",
-    ],
-    icon: Cpu,
-    highlight: "Bluetooth door control",
-    media: [{ type: "image", src: doorLockImg1 }],
-    hidden: false,
-    deliverables: [
-      "Arduino Firmware",
-      "Android App Source",
-      "Wiring Diagram",
-      "System Documentation",
-    ],
-  },
-  {
-    slug: "wifi-smart-water-heater-controller",
-    title: "Smart IR-Controlled Wi-Fi Water Heater Upgrade",
-    category: "IoT & Smart Systems",
-    filterSlugs: [
-      "embedded-firmware",
-      "iot-connected-devices",
-      "hardware-debugging",
-    ],
-    description:
-      "Wi-Fi-enabled smart water heater retrofit with embedded firmware, IR-based control, temperature monitoring, and web interface for remote operation and automation.",
-    longDescription:
-      "Developed a smart retrofit solution to add Wi-Fi connectivity to a traditional electric water heater using the Ai-M61-32S module. The project includes Firmware for handling Wi-Fi connectivity, IR signal transmission, sensor data acquisition, and system control logic. Instead of replacing the original MCU, the system uses IR protocol capture and replay to control the heater. It integrates a DS18B20 temperature sensor for monitoring, an optocoupler for heating status detection, and a DS1302 RTC for timekeeping. The firmware implements a web server for remote control, OTA updates for maintainability, FlashDB for configuration storage, and LittleFS for data logging, providing a complete IoT-enabled smart home solution.",
-    tags: [
-      "Ai-M61-32S",
-      "Wi-Fi IoT",
-      "Embedded Firmware",
-      "IR Communication",
-      "DS18B20",
-      "OTA Update",
-      "FlashDB",
-      "LittleFS",
-      "Smart Home",
-    ],
-    icon: Wifi,
-    highlight: "IR-based smart retrofit",
-    media: [
-      { type: "image", src: wifi_water_heater_1 },
-      { type: "image", src: wifi_water_heater_2 },
-      { type: "image", src: wifi_water_heater_3 },
-      { type: "image", src: wifi_water_heater_4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Firmware",
-      "IR Protocol Capture & Replay",
-      "Web Server Control Interface",
-      "Temperature Monitoring System",
-      "OTA Update Implementation",
-    ],
-  },
-  {
-    slug: "ags2",
-    title: "AI-Based Smart Garbage Sorter",
-    category: "IoT / AI & Automation",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
-    description:
-      "ESP32-based smart waste sorting system that automates garbage classification using cloud AI. Captures images via ESP32-CAM, processes them through AWS Rekognition, and directs waste to the correct bin using motors and a linear actuator.",
-    longDescription:
-      "Developed an ESP32-based smart waste sorting system that automates garbage classification to improve recycling efficiency. The system captures images using an ESP32-CAM and uploads them to AWS S3, where a Lambda function processes them via Rekognition for category detection. Based on the result, motors and a linear actuator direct waste to the correct bin, while LEDs indicate the identified type. The design integrates embedded control, cloud-based AI processing, and a stable 3D mechanical structure for reliable operation.",
-    tags: [
-      "ESP32",
-      "ESP32-CAM",
-      "AWS S3",
-      "AWS Lambda",
-      "AWS Rekognition",
-      "C++",
-      "Arduino",
-      "Wi-Fi",
-      "I2C",
-      "GPIO",
-      "Altium",
-      "IoT",
-    ],
-    icon: Cpu,
-    highlight: "Cloud AI sorting",
-    media: [{ type: "image", src: garbageSorterImg }],
-    hidden: false,
-    deliverables: [
-      "ESP32 Firmware",
-      "AWS Lambda Functions",
-      "3D Mechanical Design",
-      "System Integration Guide",
+    sections: [
+      {
+        heading: "System Overview",
+        body: "An AI-driven predictive maintenance platform that fuses a physics-based Simulink digital twin with an edge-deployed LSTM-Autoencoder to detect motor bearing faults up to 14 days before failure — without requiring expensive test rigs or cloud round-trips.",
+        images: [predMaintImg1, predMaintImg2],
+      },
+      {
+        heading: "AI Model Architecture",
+        bullets: [
+          { text: "Hybrid LSTM-Autoencoder", sub: ["Trained on NASA CMAPSS dataset and real vibration recordings from industrial motors", "Encoder compresses 50-sample vibration windows into a 16-dim health embedding", "Reconstruction error acts as an anomaly score — rising score = degrading bearing"] },
+          { text: "Model Export & Deployment", sub: ["Converted to ONNX, then compiled to optimised C via ONNX Runtime for ARM Linux", "Inference latency < 20 ms on Cortex-A53 at 1.2 GHz with no GPU required", "Single binary, no Python runtime dependency on the gateway"] },
+        ],
+      },
+      {
+        heading: "Digital Twin — Simulink / Simscape",
+        body: "A Simscape Electrical model simulates the motor-bearing-load system with configurable stiffness, damping, and imbalance parameters. When the AI detects an anomaly it runs the twin to estimate remaining useful life and simulate the effect of proposed repair strategies — all offline, all deterministic.",
+        images: [predMaintImg3, predMaintImg4],
+      },
+      {
+        heading: "System Performance",
+        bullets: [
+          "95% early fault detection precision on held-out CMAPSS test data",
+          "14-day advance warning on bearing failures in field validation",
+          "< 20 ms end-to-end inference latency on ARM Linux gateway hardware",
+          "Automated nightly retraining via Bash + TCL scripts on new vibration data",
+        ],
+      },
     ],
   },
 ];
@@ -1856,6 +1002,85 @@ function MediaSlider({
   );
 }
 
+function RichSection({ section }: { section: ContentSection }) {
+  return (
+    <div className="space-y-4">
+      {section.heading && (
+        <div className="flex items-center gap-3">
+          <h4 className="text-sm font-display font-semibold text-foreground tracking-wide">
+            {section.heading}
+          </h4>
+          <div className="h-px flex-1 bg-border/40" />
+        </div>
+      )}
+      {section.body && (
+        <p className="text-sm text-muted-foreground leading-relaxed">{section.body}</p>
+      )}
+      {section.bullets && section.bullets.length > 0 && (
+        <ul className="space-y-2.5">
+          {section.bullets.map((bullet, j) => {
+            if (typeof bullet === "string") {
+              return (
+                <li key={j} className="flex items-start gap-2.5 text-sm text-foreground/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                  <span>{bullet}</span>
+                </li>
+              );
+            }
+            return (
+              <li key={j} className="space-y-1.5">
+                <div className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                  <span className="text-sm font-medium text-foreground/90">{bullet.text}</span>
+                </div>
+                {bullet.sub && (
+                  <ul className="ml-6 space-y-1">
+                    {bullet.sub.map((s, k) => (
+                      <li key={k} className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span className="text-primary/50 font-mono shrink-0">–</span>
+                        <span>{s}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      {section.numbered && section.numbered.length > 0 && (
+        <div className="space-y-6">
+          {section.numbered.map((item, j) => (
+            <div key={j} className="space-y-2">
+              <p className="text-sm font-semibold text-foreground/90">
+                <span className="text-primary font-mono mr-2">{j + 1}.</span>
+                {item.title}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed pl-5">{item.body}</p>
+              {item.image && (
+                <div className="pl-5">
+                  <div className="rounded-lg overflow-hidden border border-border/40 mt-2">
+                    <img src={item.image} alt={item.title} className="w-full h-auto object-cover" />
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+      {section.images && section.images.length > 0 && (
+        <div className={`grid gap-3 ${section.images.length === 1 ? "grid-cols-1" : section.images.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+          {section.images.map((src, j) => (
+            <div key={j} className="rounded-lg overflow-hidden border border-border/40">
+              <img src={src} alt="" className="w-full h-auto object-cover" />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ProjectModal({
   project,
   onClose,
@@ -1868,8 +1093,6 @@ function ProjectModal({
   onNext: () => void;
 }) {
   const Icon = project.icon;
-  const globalIdx = projects.indexOf(project);
-  const devCode = `DEV_${String(globalIdx).padStart(3, "0")}`;
 
   return (
     <div
@@ -1899,24 +1122,32 @@ function ProjectModal({
         className="relative w-full max-w-3xl max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header bar — sticky inside the scrollable modal */}
+        {/* Header bar */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 bg-card rounded-t-xl">
-          <div className="flex items-center gap-2.5 min-w-0">
+          <div className="flex items-center gap-2 min-w-0">
             <Icon className="w-3.5 h-3.5 text-primary shrink-0" />
             <span className="text-[10px] font-mono text-muted-foreground/60 tracking-widest uppercase truncate">
-              {devCode} / TECHNICAL DATASHEET
-            </span>
-            <span className="hidden sm:inline text-[10px] font-mono text-primary/60 uppercase tracking-widest truncate">
               {project.category}
             </span>
           </div>
-          <div className="flex items-center gap-2 shrink-0 ml-3">
-            <span className="text-[10px] font-mono text-primary bg-primary/15 border border-primary/40 rounded px-2 py-0.5">
-              {project.highlight}
-            </span>
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="hidden md:flex items-center gap-1.5">
+              <button
+                className="flex w-7 h-7 items-center justify-center rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
+                onClick={(e) => { e.stopPropagation(); onPrev(); }}
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+              </button>
+              <button
+                className="flex w-7 h-7 items-center justify-center rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
+                onClick={(e) => { e.stopPropagation(); onNext(); }}
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
             <button
               onClick={onClose}
-              className="text-muted-foreground hover:text-foreground transition-colors ml-1"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               data-testid="button-close-modal"
               aria-label="Close"
             >
@@ -1925,76 +1156,83 @@ function ProjectModal({
           </div>
         </div>
 
-        {/* Image carousel */}
-        <div className="relative overflow-hidden">
+        {/* Hero media carousel — full width at top */}
+        <div className="relative overflow-hidden border-b border-border/30">
           <MediaSlider key={project.title} media={project.media} className="w-full" isModal />
         </div>
 
-        {/* Content */}
-        <div className="p-6 md:p-8 space-y-7">
-
-          {/* Title */}
-          <h3 className="text-2xl md:text-3xl font-display font-bold">
-            {project.title}
-          </h3>
-
-          {/* Mobile prev/next */}
-          <div className="flex md:hidden items-center justify-between">
-            <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onPrev}>
-              <ChevronLeft className="w-3.5 h-3.5" /> Prev
-            </Button>
-            <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onNext}>
-              Next <ChevronRight className="w-3.5 h-3.5" />
-            </Button>
+        {/* Brief overview block */}
+        <div className="px-6 md:px-8 pt-6 pb-5 space-y-4 border-b border-border/30">
+          {/* Title + highlight badge */}
+          <div className="flex flex-wrap items-start gap-3">
+            <h3 className="text-2xl md:text-3xl font-display font-bold leading-tight flex-1 min-w-0">
+              {project.title}
+            </h3>
+            <span className="inline-flex items-center text-[11px] font-mono bg-primary/20 text-primary border border-primary/40 rounded-full px-3 py-0.5 font-semibold shrink-0 mt-1">
+              {project.highlight}
+            </span>
           </div>
 
-          {/* Abstract */}
-          <div className="space-y-3">
-            <p className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase">
-              // ABSTRACT
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {project.longDescription}
-            </p>
-          </div>
+          {/* Short description */}
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {project.description}
+          </p>
 
-          {/* Peripheral map (tags) */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <p className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase">
-                // PERIPHERAL_MAP
-              </p>
-              <span className="text-[10px] font-mono text-muted-foreground/40">
-                {project.tags.length} nodes
+          {/* Tag pills */}
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center text-[10px] font-mono bg-primary/10 text-primary border border-primary/25 rounded-full px-2.5 py-0.5"
+              >
+                {tag}
               </span>
-            </div>
+            ))}
+          </div>
+
+          {/* Deliverables as compact chips */}
+          {project.deliverables && project.deliverables.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
-              {project.tags.map((tag) => (
+              {project.deliverables.map((item) => (
                 <span
-                  key={tag}
-                  className="inline-flex items-center gap-1 text-[10px] font-mono border border-border/60 text-muted-foreground rounded px-2 py-0.5"
+                  key={item}
+                  className="inline-flex items-center gap-1.5 text-[10px] font-mono border border-border/50 text-muted-foreground/80 rounded px-2 py-0.5"
                 >
-                  <span className="text-primary/40">::</span>
-                  {tag}
+                  <span className="w-1 h-1 rounded-full bg-primary/50 shrink-0" />
+                  {item}
                 </span>
               ))}
             </div>
-          </div>
+          )}
+        </div>
 
-          {/* Bill of deliverables */}
-          <div className="space-y-3">
-            <p className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase">
-              // BILL_OF_DELIVERABLES
-            </p>
-            <ul className="space-y-2">
-              {project.deliverables.map((item) => (
-                <li key={item} className="flex items-center gap-2.5 text-sm text-foreground/75">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Mobile prev/next */}
+        <div className="flex md:hidden items-center justify-between px-6 pt-4">
+          <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onPrev}>
+            <ChevronLeft className="w-3.5 h-3.5" /> Prev
+          </Button>
+          <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onNext}>
+            Next <ChevronRight className="w-3.5 h-3.5" />
+          </Button>
+        </div>
+
+        {/* Main detailed content */}
+        <div className="px-6 md:px-8 py-7 space-y-8">
+
+          {/* Rich sections — each project has its own unique structure */}
+          {project.sections && project.sections.length > 0 ? (
+            project.sections.map((section, i) => (
+              <RichSection key={i} section={section} />
+            ))
+          ) : (
+            <div className="space-y-4">
+              <h4 className="text-sm font-display font-semibold text-foreground tracking-wide flex items-center gap-3">
+                Project Overview
+                <span className="h-px flex-1 bg-border/40 block" />
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">{project.longDescription}</p>
+            </div>
+          )}
 
         </div>
       </div>
