@@ -3,8 +3,8 @@ const categories = [
     name: "Firmware & RTOS",
     reg: "REG_FW",
     tags: [
-      "C/C++", "FreeRTOS", "Zephyr RTOS",
-      "HAL/BSP Drivers", "Bootloader Design",
+      "C / C++", "FreeRTOS", "Zephyr RTOS",
+      "HAL / BSP Drivers", "Bootloader Design",
       "OTA Frameworks", "Memory Optimization",
     ],
   },
@@ -22,8 +22,8 @@ const categories = [
     name: "Wireless Protocols",
     reg: "REG_RF",
     tags: [
-      "Bluetooth LE", "Wi-Fi 6", "LoRaWAN", "MQTT/CoAP",
-      "TLS/DTLS", "Protocol Buffers", "Cellular (LTE/5G)",
+      "Bluetooth LE", "Wi-Fi 6", "LoRaWAN", "MQTT / CoAP",
+      "TLS / DTLS", "Protocol Buffers", "Cellular LTE / 5G",
     ],
   },
   {
@@ -31,7 +31,7 @@ const categories = [
     reg: "REG_HW",
     tags: [
       "Altium Designer", "KiCad", "High-Speed Layout",
-      "Power Integrity", "EMC Design", "DFM/DFA",
+      "Power Integrity", "EMC Design", "DFM / DFA",
       "Component Engineering",
     ],
   },
@@ -39,9 +39,9 @@ const categories = [
     name: "Validation & Test",
     reg: "REG_TST",
     tags: [
-      "JTAG/SWD Debug", "Oscilloscope Analysis",
-      "Protocol Analyzers", "Automated Test",
-      "CI/CD Pipelines", "Environmental Testing",
+      "JTAG / SWD Debug", "Oscilloscope Analysis",
+      "Protocol Analyzers", "Automated Test Frameworks",
+      "CI / CD Pipelines", "Environmental Testing",
     ],
   },
 ];
@@ -51,40 +51,39 @@ export function Skills() {
     <section id="skills" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Section label */}
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-xs font-mono text-muted-foreground/50 tracking-widest">0x0004</span>
-          <span className="text-xs font-mono text-primary font-semibold tracking-widest uppercase">Expertise</span>
+        {/* Inline section header */}
+        <div className="flex items-center gap-5 mb-16">
+          <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0004</span>
+          <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Expertise</span>
+          <div className="h-px flex-1 bg-border/35" />
+          <h2 className="text-base font-display font-bold text-foreground whitespace-nowrap">
+            Technology Stack
+          </h2>
         </div>
 
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-12">
-          Technology Stack
-        </h2>
-
-        {/* 3-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Register-file style table — category left, tags right */}
+        <div className="divide-y divide-border/30">
           {categories.map((cat) => (
             <div
               key={cat.name}
-              className="rounded-lg border border-border/60 bg-card/50 p-5 flex flex-col gap-4"
+              className="flex flex-col sm:flex-row gap-5 sm:gap-10 py-7 group"
             >
-              {/* Card header */}
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono text-primary font-semibold tracking-widest uppercase">
+              {/* Category label */}
+              <div className="sm:w-44 shrink-0 pt-0.5">
+                <p className="text-[11px] font-mono text-primary font-semibold tracking-widest uppercase">
                   {cat.name}
-                </span>
-                <span className="text-[10px] font-mono text-muted-foreground/40 tracking-wider">
+                </p>
+                <p className="text-[9px] font-mono text-muted-foreground/35 mt-1 tracking-wider">
                   {cat.reg}
-                </span>
+                </p>
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 flex-1">
                 {cat.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center font-mono text-[11px] text-muted-foreground/80 border border-border/60 bg-background/40 rounded px-2.5 py-1"
+                    className="inline-flex items-center font-mono text-[11px] text-muted-foreground/75 border border-border/50 bg-background/50 rounded px-2.5 py-1 hover:border-primary/30 hover:text-foreground/80 transition-colors duration-150"
                   >
                     {tag}
                   </span>

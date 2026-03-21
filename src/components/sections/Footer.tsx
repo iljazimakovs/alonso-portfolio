@@ -19,6 +19,36 @@ function useUptime() {
   return uptime;
 }
 
+function ChipBadge() {
+  return (
+    <svg width="38" height="22" viewBox="0 0 38 22" fill="none" className="shrink-0 text-primary opacity-70">
+      {/* Left pins */}
+      <line x1="0" y1="6"  x2="7" y2="6"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="0" y1="11" x2="7" y2="11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="0" y1="16" x2="7" y2="16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      {/* Right pins */}
+      <line x1="31" y1="6"  x2="38" y2="6"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="31" y1="11" x2="38" y2="11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="31" y1="16" x2="38" y2="16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      {/* Chip body */}
+      <rect x="7" y="1" width="24" height="20" rx="2" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="1" opacity="0.7"/>
+      {/* Index notch */}
+      <path d="M14 1 A4 4 0 0 1 24 1" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.6"/>
+      {/* AR label */}
+      <text
+        x="19" y="13"
+        style={{ fontFamily: "'Courier New', Courier, monospace", fontWeight: 800, fontSize: "7px" }}
+        fill="currentColor"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        letterSpacing="0.5"
+      >
+        AR
+      </text>
+    </svg>
+  );
+}
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const uptime = useUptime();
@@ -54,11 +84,9 @@ export function Footer() {
       {/* Main footer row */}
       <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
 
-        {/* Left — AR badge + copyright */}
+        {/* Left — chip badge + copyright */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-primary/15 border border-primary/40 flex items-center justify-center shrink-0">
-            <span className="font-display font-bold text-xs text-primary tracking-tight">AR</span>
-          </div>
+          <ChipBadge />
           <span className="text-sm text-muted-foreground font-mono">
             © {currentYear} Alonso Rodriguez
           </span>
@@ -79,7 +107,7 @@ export function Footer() {
             href="https://github.com/alonsoo-rodriguez"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="GitHub"
           >
             <Github className="w-4 h-4" />

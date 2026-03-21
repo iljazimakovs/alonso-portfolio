@@ -1900,7 +1900,7 @@ function ProjectModal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header bar — sticky inside the scrollable modal */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 sticky top-0 bg-card z-30 rounded-t-xl">
+        <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 bg-card rounded-t-xl">
           <div className="flex items-center gap-2.5 min-w-0">
             <Icon className="w-3.5 h-3.5 text-primary shrink-0" />
             <span className="text-[10px] font-mono text-muted-foreground/60 tracking-widest uppercase truncate">
@@ -2253,19 +2253,17 @@ export function Portfolio({
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-12">
-          <div className="flex items-end justify-between gap-4 flex-wrap mb-8">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Featured <span className="text-primary">Projects</span>
-              </h2>
-            </div>
-            <div className="text-right">
-              <p className="text-sm font-mono text-muted-foreground">
-                {filteredProjects.length} project
-                {filteredProjects.length !== 1 ? "s" : ""}
-              </p>
-            </div>
+          <div className="flex items-center gap-5 mb-10">
+            <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0003</span>
+            <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Projects</span>
+            <div className="h-px flex-1 bg-border/35" />
+            <p className="text-[11px] font-mono text-muted-foreground/50">
+              {filteredProjects.length} project{filteredProjects.length !== 1 ? "s" : ""}
+            </p>
           </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-10">
+            Selected <span className="text-primary">Work</span>
+          </h2>
 
           <div className="flex flex-wrap gap-2" data-testid="category-filters">
             {filterCategories.map((cat) => (

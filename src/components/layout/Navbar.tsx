@@ -2,6 +2,36 @@ import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
+function ChipLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg width="50" height="30" viewBox="0 0 50 30" fill="none" className={`shrink-0 text-primary ${className}`}>
+      {/* Left pins — 3 leads */}
+      <line x1="0" y1="8"  x2="9" y2="8"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="0" y1="15" x2="9" y2="15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="0" y1="22" x2="9" y2="22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      {/* Right pins — 3 leads */}
+      <line x1="41" y1="8"  x2="50" y2="8"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="41" y1="15" x2="50" y2="15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      <line x1="41" y1="22" x2="50" y2="22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
+      {/* Chip body */}
+      <rect x="9" y="2" width="32" height="26" rx="2" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="1" opacity="0.7"/>
+      {/* Index notch at top */}
+      <path d="M20 2 A5 5 0 0 1 30 2" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.65"/>
+      {/* AR label */}
+      <text
+        x="25" y="17"
+        style={{ fontFamily: "'Courier New', Courier, monospace", fontWeight: 800, fontSize: "10px" }}
+        fill="currentColor"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        letterSpacing="1"
+      >
+        AR
+      </text>
+    </svg>
+  );
+}
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,11 +61,9 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo: AR badge + name */}
+        {/* Logo: chip icon + name */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-md bg-primary/15 border border-primary/40 flex items-center justify-center shrink-0 group-hover:bg-primary/25 transition-colors">
-            <span className="font-display font-bold text-sm text-primary tracking-tight">AR</span>
-          </div>
+          <ChipLogo className="group-hover:opacity-100 opacity-75 transition-opacity" />
           <span className="font-display font-semibold text-base text-foreground group-hover:text-primary transition-colors tracking-tight">
             Alonso Rodriguez
           </span>

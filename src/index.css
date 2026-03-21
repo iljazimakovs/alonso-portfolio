@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,36 +6,38 @@
 
 @layer base {
   :root {
-    /* Light Mode */
-    --background: 214 32% 96%;
-    --foreground: 218 30% 10%;
+    /* Light mode — clean technical document, like a datasheet */
+    --background: 0 0% 97%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 218 30% 10%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 30% 10%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 174 80% 32%;
+    /* Phosphor green — datasheet/PCB silkscreen */
+    --primary: 145 58% 30%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 217 40% 88%;
-    --secondary-foreground: 218 30% 10%;
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 214 25% 90%;
-    --muted-foreground: 218 15% 44%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 42%;
 
-    --accent: 214 25% 90%;
-    --accent-foreground: 174 80% 32%;
+    --accent: 0 0% 93%;
+    --accent-foreground: 145 58% 30%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 25% 82%;
-    --input: 217 25% 82%;
-    --ring: 174 80% 32%;
+    --border: 0 0% 84%;
+    --input: 0 0% 84%;
+    --ring: 145 58% 30%;
 
-    --radius: 0.5rem;
+    /* Tighter radius — engineering tools prefer rectangular elements */
+    --radius: 0.3rem;
 
     --font-sans: 'Inter', sans-serif;
     --font-display: 'Outfit', sans-serif;
@@ -44,46 +46,47 @@
     --elevate-1: rgba(0, 0, 0, 0.03);
     --elevate-2: rgba(0, 0, 0, 0.06);
 
-    --grid-line-color: rgba(0, 0, 0, 0.05);
+    --grid-line-color: rgba(0, 0, 0, 0.055);
     --grid-line-color-lg: rgba(0, 0, 0, 0.03);
   }
 
   .dark {
-    /* Dark Mode — Deep Navy Tech Aesthetic */
-    --background: 220 55% 4%;
-    --foreground: 210 18% 94%;
+    /* True near-black — oscilloscope / instrument display, no navy cast */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 90%;
 
-    --card: 220 48% 7%;
-    --card-foreground: 210 18% 94%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 220 55% 4%;
-    --popover-foreground: 210 18% 94%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 90%;
 
-    /* Primary Accent: Vivid Cyan — matches the reference design */
-    --primary: 185 100% 42%;
-    --primary-foreground: 220 55% 4%;
+    /* Phosphor green — the universal embedded/terminal color */
+    --primary: 145 60% 40%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 220 40% 13%;
-    --secondary-foreground: 210 18% 94%;
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 38% 10%;
-    --muted-foreground: 217 16% 55%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 220 38% 10%;
-    --accent-foreground: 185 100% 42%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 145 60% 40%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 30% 13%;
-    --input: 220 30% 13%;
-    --ring: 185 100% 42%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 145 60% 40%;
 
     --elevate-1: rgba(255, 255, 255, 0.02);
-    --elevate-2: rgba(255, 255, 255, 0.06);
+    --elevate-2: rgba(255, 255, 255, 0.05);
 
-    --grid-line-color: rgba(0, 210, 230, 0.06);
-    --grid-line-color-lg: rgba(0, 210, 230, 0.03);
+    /* Subtle green-tinted graticule grid — like an oscilloscope screen */
+    --grid-line-color: rgba(60, 200, 100, 0.055);
+    --grid-line-color-lg: rgba(60, 200, 100, 0.03);
   }
 }
 
@@ -92,7 +95,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary;
+    @apply bg-background text-foreground antialiased selection:bg-primary/25 selection:text-primary;
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
@@ -106,6 +109,7 @@
 }
 
 @layer utilities {
+  /* Standard 40px square grid — like graph paper or PCB grid */
   .bg-grid-pattern {
     background-image:
       linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
@@ -113,6 +117,7 @@
     background-size: 40px 40px;
   }
 
+  /* 64px grid — hero / large sections */
   .bg-grid-pattern-lg {
     background-image:
       linear-gradient(to right, var(--grid-line-color-lg) 1px, transparent 1px),
@@ -120,16 +125,39 @@
     background-size: 64px 64px;
   }
 
-  .text-glow {
-    text-shadow: 0 0 20px hsla(var(--primary) / 0.5);
+  /* Oscilloscope-style dot graticule — use for accent sections */
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, var(--grid-line-color) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 
-  .box-glow {
-    box-shadow: 0 0 30px -10px hsla(var(--primary) / 0.3);
+  /* PCB corner bracket accent — used on cards/panels */
+  .corner-bracket {
+    position: relative;
+  }
+  .corner-bracket::before,
+  .corner-bracket::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: hsl(var(--primary) / 0.35);
+    border-style: solid;
+    pointer-events: none;
+  }
+  .corner-bracket::before {
+    top: 6px;
+    left: 6px;
+    border-width: 1px 0 0 1px;
+  }
+  .corner-bracket::after {
+    bottom: 6px;
+    right: 6px;
+    border-width: 0 1px 1px 0;
   }
 
   .reveal {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    @apply opacity-0 translate-y-6 transition-all duration-500 ease-out;
   }
 
   .reveal.active {
@@ -137,16 +165,17 @@
   }
 }
 
+/* Precision scrollbar — thin, like an instrument panel */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 5px;
+  background: hsl(var(--border));
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--border));
+  background: hsl(var(--muted-foreground) / 0.5);
 }

@@ -13,12 +13,12 @@ export default function Home({ projectSlug, categorySlug, recommendedIds }: { pr
 
       <Navbar />
 
-      <main className="relative z-10 flex-1">
+      <main className="relative flex-1">
         <Hero />
         <About />
+        <Portfolio initialSlug={projectSlug} initialCategory={categorySlug} initialRecommendedIds={recommendedIds} />
         <Services />
         <Skills />
-        <Portfolio initialSlug={projectSlug} initialCategory={categorySlug} initialRecommendedIds={recommendedIds} />
         <Industries />
       </main>
 
