@@ -206,10 +206,10 @@ interface FilterCategory {
 
 export const filterCategories: FilterCategory[] = [
   { name: "All Projects", slug: "all" },
-  { name: "Embedded Firmware Development", slug: "embedded-firmware" },
-  { name: "Embedded Linux & BSP", slug: "embedded-linux-bsp" },
-  { name: "IoT & Connected Devices", slug: "iot-connected-devices" },
-  { name: "PCB & Hardware Engineering", slug: "pcb-hardware" },
+  { name: "Firmware", slug: "embedded-firmware" },
+  { name: "Linux & BSP", slug: "embedded-linux-bsp" },
+  { name: "IoT & Connectivity", slug: "iot-connected-devices" },
+  { name: "PCB & Hardware", slug: "pcb-hardware" },
 ];
 
 interface Project {
@@ -406,7 +406,7 @@ const projects: Project[] = [
   {
     slug: "ndai",
     title: "Edge Vision Camera with Cloud Object Detection",
-    category: "IoT & Connected Devices / Embedded Firmware",
+    category: "IoT & Connectivity / Embedded Firmware",
     filterSlugs: ["embedded-firmware", "iot-connected-devices"],
     description:
       "Embedded smart camera built with Netduino and ArduCam OV2640 that captures images and sends them to a cloud server for AI-based object detection and automated alert notifications.",
@@ -443,7 +443,7 @@ const projects: Project[] = [
   {
     slug: "ne10",
     title: "NE101 MQTT LTE IoT Camera",
-    category: "IoT & Connected Devices / Embedded Firmware",
+    category: "IoT & Connectivity / Embedded Firmware",
     filterSlugs: ["embedded-firmware", "iot-connected-devices"],
     description:
       "Battery-powered IoT camera using OV5640 and Cat.1 LTE module to capture images and transmit them via MQTT/MQTTS with JSON payloads for remote monitoring, automation systems, and cloud-based image analytics.",
@@ -484,7 +484,7 @@ const projects: Project[] = [
   {
     slug: "dbel",
     title: "RF Doorbell Camera Alert System",
-    category: "IoT & Connected Devices / Embedded Firmware",
+    category: "IoT & Connectivity / Embedded Firmware",
     filterSlugs: ["embedded-firmware", "iot-connected-devices"],
     description:
       "Built a low-cost smart doorbell using Raspberry Pi Zero W, Pi Camera, and 433MHz RF receiver to capture visitor images and send MQTT-based notifications through Home Assistant and Telegram.",
@@ -596,7 +596,7 @@ const projects: Project[] = [
   {
     slug: "apmd",
     title: "AI Predictive Maintenance Digital Twin",
-    category: "Embedded Linux & BSP",
+    category: "Linux & BSP",
     filterSlugs: ["embedded-linux-bsp", "embedded-firmware"],
     description:
       "AI-driven predictive maintenance system combining edge AI inference with a Simulink-based digital twin. Hybrid LSTM-Autoencoder achieving 95% early fault detection, optimized C for ARM Linux with <20ms latency and 14-day advance failure warnings.",
@@ -870,7 +870,7 @@ const projects: Project[] = [
   {
     slug: "kfir",
     title: "High-Throughput FIR DSP Accelerator on KV260",
-    category: "Embedded Firmware Development / Hardware Bring-Up & Debugging",
+    category: "Firmware / Hardware Bring-Up & Debugging",
     filterSlugs: ["embedded-firmware", "hardware-debugging"],
     description:
       "Designed and accelerated a fully pipelined FIR filter on the AMD Kria KV260 using Vitis HLS and PYNQ, comparing floating-point and fixed-point implementations for high-throughput FPGA DSP processing.",
@@ -978,7 +978,7 @@ const projects: Project[] = [
   {
     slug: "kv26",
     title: "Embedded Vision Linux Platform for Kria KV260",
-    category: "Embedded Linux & BSP",
+    category: "Linux & BSP",
     filterSlugs: ["embedded-linux-bsp", "iot-connected-devices"],
     description:
       "Configured and customized the PetaLinux 2021.1 BSP for the AMD Kria KV260 Vision AI kit, enabling Linux boot, camera support, and development workflows for embedded vision applications.",
@@ -1014,7 +1014,7 @@ const projects: Project[] = [
   {
     slug: "k26b",
     title: "Multi-Storage Boot Architecture for Embedded Linux Systems",
-    category: "Embedded Linux & BSP / Hardware Bring-Up & Debugging",
+    category: "Linux & BSP / Hardware Bring-Up & Debugging",
     filterSlugs: ["embedded-linux-bsp", "hardware-debugging"],
     description:
       "Configured multi-boot support for AMD Kria K26 SoM on a custom carrier, enabling boot from eMMC, SD card, and USB storage using PetaLinux and U-Boot configuration.",
@@ -1248,7 +1248,7 @@ const projects: Project[] = [
     slug: "zpsc",
     title:
       "Foundational Vivado Platform for Zynq UltraScale+ Processing System",
-    category: "Hardware Bring-Up & Debugging / Embedded Firmware Development",
+    category: "Hardware Bring-Up & Debugging / Firmware",
     filterSlugs: ["hardware-debugging", "embedded-firmware"],
     description:
       "Created a base Vivado project to configure the Processing System of a Zynq UltraScale+ MPSoC on the MYD-CZU3EG board, enabling camera-ready Linux and software development workflows.",
@@ -1358,7 +1358,7 @@ const projects: Project[] = [
   {
     slug: "vhil",
     title: "Ethernet-Driven FPGA Hardware Validation for Versal Subsystems",
-    category: "Embedded Linux & BSP / Hardware Bring-Up & Debugging",
+    category: "Linux & BSP / Hardware Bring-Up & Debugging",
     filterSlugs: ["embedded-linux-bsp", "hardware-debugging"],
     description:
       "Implemented a Vitis Hardware-in-the-Loop flow for Versal VSS designs, enabling Ethernet-based validation of AI Engine, HLS, and RTL subsystems on real hardware before full system integration.",
@@ -1483,7 +1483,7 @@ const projects: Project[] = [
     ],
     hidden: false,
     deliverables: [
-      "Embedded Firmware Development",
+      "Firmware",
       "State Machine Control Implementation",
       "Sensor & Actuator Integration",
       "Schematic + PCB Layout",
@@ -1532,7 +1532,7 @@ const projects: Project[] = [
     description:
       "Wi-Fi-enabled smart water heater retrofit with embedded firmware, IR-based control, temperature monitoring, and web interface for remote operation and automation.",
     longDescription:
-      "Developed a smart retrofit solution to add Wi-Fi connectivity to a traditional electric water heater using the Ai-M61-32S module. The project includes embedded firmware development for handling Wi-Fi connectivity, IR signal transmission, sensor data acquisition, and system control logic. Instead of replacing the original MCU, the system uses IR protocol capture and replay to control the heater. It integrates a DS18B20 temperature sensor for monitoring, an optocoupler for heating status detection, and a DS1302 RTC for timekeeping. The firmware implements a web server for remote control, OTA updates for maintainability, FlashDB for configuration storage, and LittleFS for data logging, providing a complete IoT-enabled smart home solution.",
+      "Developed a smart retrofit solution to add Wi-Fi connectivity to a traditional electric water heater using the Ai-M61-32S module. The project includes Firmware for handling Wi-Fi connectivity, IR signal transmission, sensor data acquisition, and system control logic. Instead of replacing the original MCU, the system uses IR protocol capture and replay to control the heater. It integrates a DS18B20 temperature sensor for monitoring, an optocoupler for heating status detection, and a DS1302 RTC for timekeeping. The firmware implements a web server for remote control, OTA updates for maintainability, FlashDB for configuration storage, and LittleFS for data logging, providing a complete IoT-enabled smart home solution.",
     tags: [
       "Ai-M61-32S",
       "Wi-Fi IoT",
@@ -1554,7 +1554,7 @@ const projects: Project[] = [
     ],
     hidden: false,
     deliverables: [
-      "Embedded Firmware Development",
+      "Firmware",
       "IR Protocol Capture & Replay",
       "Web Server Control Interface",
       "Temperature Monitoring System",
