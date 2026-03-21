@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { useTheme } from "@/components/ThemeProvider";
+import { Menu, X } from "lucide-react";
 
 function ChipLogo({ className = "" }: { className?: string }) {
   return (
@@ -35,7 +34,6 @@ function ChipLogo({ className = "" }: { className?: string }) {
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,14 +77,6 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <button
-            onClick={toggleTheme}
-            className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md"
-            aria-label="Toggle theme"
-            data-testid="button-toggle-theme"
-          >
-            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
         </nav>
 
         <button
@@ -109,14 +99,6 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <button
-            onClick={() => { toggleTheme(); setIsMobileMenuOpen(false); }}
-            className="flex items-center gap-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
-            data-testid="button-toggle-theme-mobile"
-          >
-            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            {theme === "dark" ? "Light Mode" : "Dark Mode"}
-          </button>
         </div>
       )}
     </header>

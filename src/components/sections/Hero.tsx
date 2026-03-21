@@ -34,10 +34,10 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View GitHub Profile"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded border border-border hover:border-primary/60 bg-card/40 hover:bg-primary/8 text-[11px] font-mono text-muted-foreground hover:text-primary transition-all duration-200"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded border border-primary/40 bg-primary/10 text-[11px] font-mono text-primary hover:bg-primary/20 hover:border-primary/70 transition-all duration-200"
           >
             <Github className="w-4 h-4" />
-            <span>github/alonsoo-rodriguez</span>
+            <span>GitHub</span>
           </a>
         </div>
 
