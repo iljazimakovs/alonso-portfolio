@@ -176,106 +176,6 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "rpi2-security-camera",
-    title: "Raspberry Pi Security Camera System",
-    category: "IoT & Connectivity",
-    filterSlugs: ["iot-connected-devices"],
-    description:
-      "Motion-triggered security camera built on Raspberry Pi 2 with PIR sensing, video capture, Azure Blob upload, and remote smartphone notifications.",
-    longDescription:
-      "Developed a connected security monitoring system using Raspberry Pi 2, a USB webcam, and a PIR motion sensor to detect intrusions and record events automatically. The system captures video when motion is detected, stops recording once activity ends, and uploads the resulting footage to Microsoft Azure Blob Storage for remote access and retention. A notification pipeline then alerts the user on a smartphone when a new recording has been uploaded, creating a compact cloud-connected surveillance solution that combines edge sensing, media capture, and remote event reporting.",
-    tags: [
-      "Raspberry Pi 2",
-      "PIR Sensor",
-      "Webcam",
-      "Windows 10 IoT Core",
-      "Microsoft Azure",
-      "C#",
-      "Motion Detection",
-    ],
-    icon: Camera,
-    highlight: "Motion-triggered cloud surveillance",
-    media: [
-      {
-        type: "image",
-        src: "https://hackster.imgix.net/uploads/cover_image/file/64182/IMG_1790.JPG?auto=compress%2Cformat&w=900&h=675&fit=min",
-      },
-      {
-        type: "image",
-        src: "https://hackster.imgix.net/uploads/image/file/77176/2015-09-19%2009.18.04.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-      },
-      {
-        type: "image",
-        src: "https://hackster.imgix.net/uploads/image_file/file/78279/PIR_RPi2.png",
-      },
-    ],
-    hidden: false,
-    deliverables: [
-      "Raspberry Pi Camera Application",
-      "PIR Motion Detection Integration",
-      "Azure Blob Upload Workflow",
-      "Remote Notification Pipeline",
-      "Wiring & System Validation",
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Built a compact security camera system that records video when motion is detected and automatically pushes the captured footage to the cloud. The project combines local sensing, event-based recording, cloud storage, and smartphone notification to create a simple remote monitoring solution for small spaces.",
-      },
-      {
-        heading: "System Workflow",
-        body: "The architecture is centered around event-driven capture: motion detection starts recording, inactivity stops recording, and the completed file is uploaded for remote access.",
-        bullets: [
-          "PIR sensor monitors the environment for movement",
-          "Raspberry Pi 2 triggers webcam recording on motion detection",
-          "Recording stops when motion is no longer present",
-          "Video file is uploaded to Azure Blob Storage",
-          "User receives a remote notification after successful upload",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/77176/2015-09-19%2009.18.04.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-      {
-        heading: "Hardware Integration",
-        numbered: [
-          {
-            title: "Raspberry Pi Processing Node",
-            body: "The Raspberry Pi 2 serves as the local control node, coordinating sensor input, webcam access, recording control, and cloud upload operations within a single embedded platform.",
-          },
-          {
-            title: "PIR Motion Sensor Interface",
-            body: "A PIR sensor provides the motion trigger signal, allowing the system to capture only relevant activity instead of recording continuously. This reduces storage usage and makes event review more practical.",
-          },
-          {
-            title: "USB Webcam Capture",
-            body: "A standard webcam is used for video acquisition, giving the platform flexible image capture without requiring specialized imaging hardware.",
-          },
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/image_file/file/78279/PIR_RPi2.png",
-        ],
-      },
-      {
-        heading: "Software & Cloud Layer",
-        bullets: [
-          "Application implemented in C# on Windows 10 IoT Core",
-          "Video capture controlled directly from the Raspberry Pi runtime",
-          "Azure Blob Storage used for remote media retention",
-          "Notification flow alerts the user after upload completion",
-        ],
-      },
-      {
-        heading: "Engineering Value",
-        body: "This project demonstrates practical edge-to-cloud system design by combining physical sensing with automated media handling and cloud services. Rather than functioning as only a local recorder, the system extends into a connected surveillance workflow that improves accessibility and real-time awareness.",
-      },
-      {
-        heading: "Outcome",
-        body: "The final implementation delivers a lightweight smart surveillance platform capable of capturing intrusion events, archiving footage remotely, and notifying the user without manual intervention. It highlights the integration of embedded hardware, application logic, and cloud infrastructure in a single IoT security use case.",
-      },
-    ],
-  },
-  {
     slug: "water-leak-iot",
     title: "Water Leak Detection & Alert System",
     category: "IoT & Connectivity",
@@ -1362,9 +1262,28 @@ function ProjectModal({
           </div>
         </div>
 
-        {/* Hero media carousel — full width at top */}
+        {/* Hero media — first item only, no slide */}
         <div className="relative overflow-hidden border-b border-border/30">
-          <MediaSlider key={project.title} media={project.media} className="w-full" isModal />
+          {project.media[0]?.type === "video" ? (
+            <video
+              className="w-full object-contain"
+              loop
+              muted
+              playsInline
+              autoPlay
+              poster={project.media[0].poster}
+              data-testid="video-modal-hero"
+            >
+              <source src={project.media[0].src} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              src={project.media[0]?.src}
+              alt={project.title}
+              className="w-full object-contain"
+              data-testid="img-modal-hero"
+            />
+          )}
         </div>
 
         {/* Brief overview block */}
@@ -1537,6 +1456,17 @@ export function Portfolio({
       }, 100);
     }
   }, [initialCategory]);
+
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedIndex]);
 
   const toggleRecommended = (slug: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -1780,85 +1710,101 @@ export function Portfolio({
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredProjects.slice(0, visibleCount).map((project, idx) => {
             const Icon = project.icon;
-            const isRecommended = recommended.has(project.slug);
             const globalIdx = projects.indexOf(project);
-            const devCode = `DEV_${String(globalIdx).padStart(3, "0")}`;
+            const isRecommended = recommended.has(project.slug);
+            const firstMedia = project.media[0];
 
             return (
               <div
                 key={project.slug}
                 data-testid={`card-project-${idx}`}
-                className="group cursor-pointer rounded-xl border border-border/50 hover:border-primary/40 bg-card transition-all duration-300 relative overflow-hidden flex flex-col"
+                className="group cursor-pointer bg-card border border-border/40 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-8px_hsl(var(--primary)/0.25)]"
                 onClick={() => openProject(idx)}
               >
-                {/* Top meta row */}
-                <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/30">
-                  <span className="text-[10px] font-mono text-muted-foreground/50 tracking-widest uppercase">
-                    {devCode}
-                  </span>
-                  <span className="text-[10px] font-mono text-primary/70 uppercase tracking-widest">
-                    {project.category}
-                  </span>
-                </div>
+                {/* Image hero */}
+                <div className="relative h-64 overflow-hidden bg-background/60 shrink-0">
+                  {firstMedia?.type === "video" ? (
+                    <video
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      muted
+                      playsInline
+                      loop
+                      autoPlay
+                      poster={firstMedia.poster}
+                    >
+                      <source src={firstMedia.src} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img
+                      src={firstMedia?.src}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
 
-                {/* Image carousel */}
-                <div className="relative h-52 overflow-hidden">
-                  <MediaSlider media={project.media} className="w-full h-full" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent pointer-events-none" />
-                  {/* Highlight badge — top right */}
-                  <div className="absolute top-2 right-2 z-10">
-                    <span className="text-[10px] font-mono text-primary bg-primary/15 border border-primary/40 rounded px-2 py-0.5 backdrop-blur-sm">
-                      {project.highlight}
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+
+                  {/* Category — top left */}
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-foreground/70 bg-background/70 backdrop-blur-sm border border-border/50 rounded-full px-2.5 py-1">
+                      <Icon className="w-3 h-3 text-primary" />
+                      {project.category}
                     </span>
                   </div>
-                  {/* Project icon — bottom left, keeps recommend toggle */}
+
+                  {/* Highlight — bottom of image, triggers recommend on click */}
                   <div
                     className="absolute bottom-3 left-3 z-10"
                     onClick={(e) => toggleRecommended(project.slug, e)}
+                    data-testid={`badge-highlight-${idx}`}
                   >
-                    <div className={`w-9 h-9 rounded-lg backdrop-blur-sm flex items-center justify-center border transition-colors ${isRecommended ? "bg-primary/20 border-primary/60" : "bg-background/80 border-border/50 group-hover:border-primary/50"}`}>
-                      <Icon className="w-4 h-4 text-primary" />
-                    </div>
+                    <span className="text-[10px] font-mono text-primary font-semibold tracking-wide">
+                      ◆ {project.highlight}
+                    </span>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-4 flex flex-col gap-3 flex-1">
-                  <h3 className="text-base font-display font-bold leading-snug group-hover:text-primary transition-colors">
+                {/* Body */}
+                <div className="flex flex-col flex-1 px-5 pt-4 pb-5 gap-3">
+                  {/* Title */}
+                  <h3 className="text-[15px] font-display font-bold leading-snug group-hover:text-primary transition-colors line-clamp-2">
                     {project.title}
                   </h3>
 
-                  <p className="text-sm text-muted-foreground/75 leading-relaxed line-clamp-2">
+                  {/* Description */}
+                  <p className="text-xs text-muted-foreground/70 leading-relaxed line-clamp-2 flex-1">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.slice(0, 4).map((tag) => (
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-1">
+                    {project.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] font-mono border border-border/60 text-muted-foreground rounded px-1.5 py-0.5"
+                        className="text-[10px] font-mono text-primary/80 bg-primary/8 border border-primary/20 rounded px-2 py-0.5"
                       >
                         {tag}
                       </span>
                     ))}
-                    {project.tags.length > 4 && (
-                      <span className="text-[10px] font-mono border border-border/60 text-muted-foreground rounded px-1.5 py-0.5">
-                        +{project.tags.length - 4} more
+                    {project.tags.length > 3 && (
+                      <span className="text-[10px] font-mono text-muted-foreground/50 border border-border/40 rounded px-2 py-0.5">
+                        +{project.tags.length - 3}
                       </span>
                     )}
                   </div>
 
-                  {/* Bottom row */}
-                  <div className="flex items-center justify-between pt-2 mt-auto border-t border-border/30">
-                    <span className="text-[10px] font-mono text-muted-foreground/40">
+                  {/* Footer row */}
+                  <div className="flex items-center justify-between pt-3 border-t border-border/25 mt-auto">
+                    <div className="flex items-center gap-1.5 text-[10px] font-mono text-muted-foreground/40">
+                      <span className="w-1 h-1 rounded-full bg-primary/40 inline-block" />
                       {project.deliverables.length} deliverables
-                    </span>
-                    <div className="flex items-center gap-1 text-xs font-mono text-primary/70 group-hover:text-primary transition-colors">
-                      Read Datasheet
+                    </div>
+                    <div className="flex items-center gap-1 text-[11px] font-mono text-primary/60 group-hover:text-primary transition-colors font-semibold">
+                      View Case Study
                       <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </div>
                   </div>
