@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: 214 32% 96%;
+    --foreground: 218 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 30% 10%;
+
+    --primary: 174 80% 32%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 217 40% 88%;
+    --secondary-foreground: 218 30% 10%;
+
+    --muted: 214 25% 90%;
+    --muted-foreground: 218 15% 44%;
+
+    --accent: 214 25% 90%;
+    --accent-foreground: 174 80% 32%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 25% 82%;
+    --input: 217 25% 82%;
+    --ring: 174 80% 32%;
+
+    --radius: 0.5rem;
+
+    --font-sans: 'Inter', sans-serif;
+    --font-display: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --elevate-1: rgba(0, 0, 0, 0.03);
+    --elevate-2: rgba(0, 0, 0, 0.06);
+
+    --grid-line-color: rgba(0, 0, 0, 0.05);
+    --grid-line-color-lg: rgba(0, 0, 0, 0.03);
+  }
+
+  .dark {
+    /* Dark Mode — Deep Navy Tech Aesthetic (matching screenshot) */
+    --background: 219 52% 5%;
+    --foreground: 210 20% 96%;
+
+    --card: 219 45% 8%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 219 52% 5%;
+    --popover-foreground: 210 20% 96%;
+
+    /* Primary Accent: Teal/Cyan — matches the screenshot accent color */
+    --primary: 174 90% 41%;
+    --primary-foreground: 219 52% 5%;
+
+    --secondary: 219 40% 14%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 219 38% 11%;
+    --muted-foreground: 217 18% 58%;
+
+    --accent: 219 38% 11%;
+    --accent-foreground: 174 90% 41%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 219 30% 14%;
+    --input: 219 30% 14%;
+    --ring: 174 90% 41%;
+
+    --elevate-1: rgba(255, 255, 255, 0.02);
+    --elevate-2: rgba(255, 255, 255, 0.06);
+
+    --grid-line-color: rgba(80, 140, 220, 0.09);
+    --grid-line-color-lg: rgba(80, 140, 220, 0.05);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-grid-pattern-lg {
+    background-image:
+      linear-gradient(to right, var(--grid-line-color-lg) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line-color-lg) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsla(var(--primary) / 0.5);
+  }
+
+  .box-glow {
+    box-shadow: 0 0 30px -10px hsla(var(--primary) / 0.3);
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--border));
+}

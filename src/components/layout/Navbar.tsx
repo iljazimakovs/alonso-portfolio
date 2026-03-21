@@ -1,0 +1,96 @@
+import { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", href: "#" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#portfolio" },
+    { name: "Expertise", href: "#skills" },
+    { name: "Industries", href: "#industries" },
+  ];
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/85 backdrop-blur-md border-b border-border/50 py-3" : "bg-transparent py-4"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        {/* Logo: AR badge + name */}
+        <a href="#" className="flex items-center gap-3 group">
+          <div className="w-9 h-9 rounded-md bg-primary/15 border border-primary/40 flex items-center justify-center shrink-0 group-hover:bg-primary/25 transition-colors">
+            <span className="font-display font-bold text-sm text-primary tracking-tight">AR</span>
+          </div>
+          <span className="font-display font-semibold text-base text-foreground group-hover:text-primary transition-colors tracking-tight">
+            Alonso Rodriguez
+          </span>
+        </a>
+
+        <nav className="hidden md:flex items-center gap-7">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+          <button
+            onClick={toggleTheme}
+            className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md"
+            aria-label="Toggle theme"
+            data-testid="button-toggle-theme"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+        </nav>
+
+        <button
+          className="md:hidden text-foreground hover:text-primary transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/50 p-6 flex flex-col gap-4 shadow-xl">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <button
+            onClick={() => { toggleTheme(); setIsMobileMenuOpen(false); }}
+            className="flex items-center gap-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
+            data-testid="button-toggle-theme-mobile"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {theme === "dark" ? "Light Mode" : "Dark Mode"}
+          </button>
+        </div>
+      )}
+    </header>
+  );
+}

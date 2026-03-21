@@ -1,0 +1,18 @@
+[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K⠋[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K
+up to date, audited 478 packages in 2s
+[1G[0K⠸[1G[0K
+[1G[0K⠸[1G[0K76 packages are looking for funding
+[1G[0K⠸[1G[0K  run `npm fund` for details
+[1G[0K⠸[1G[0K
+[31m[1m4[22m[39m vulnerabilities (1 [1mlow[22m, 1 [33m[1mmoderate[22m[39m, 2 [31m[1mhigh[22m[39m)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+[1G[0K⠸[1G[0K[1mnpm[22m [96mnotice[39m
+[1mnpm[22m [96mnotice[39m New [31mmajor[39m version of npm available! [31m10.8.2[39m -> [34m11.12.0[39m
+[1mnpm[22m [96mnotice[39m Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.12.0[39m
+[1mnpm[22m [96mnotice[39m To update run: [4mnpm install -g npm@11.12.0[24m
+[1mnpm[22m [96mnotice[39m
+[1G[0K⠸[1G[0K1:50:19 AM [express] serving on port 5000
