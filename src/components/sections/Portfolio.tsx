@@ -176,6 +176,106 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "rpi2-security-camera",
+    title: "Raspberry Pi Security Camera System",
+    category: "IoT & Connectivity",
+    filterSlugs: ["iot-connected-devices"],
+    description:
+      "Motion-triggered security camera built on Raspberry Pi 2 with PIR sensing, video capture, Azure Blob upload, and remote smartphone notifications.",
+    longDescription:
+      "Developed a connected security monitoring system using Raspberry Pi 2, a USB webcam, and a PIR motion sensor to detect intrusions and record events automatically. The system captures video when motion is detected, stops recording once activity ends, and uploads the resulting footage to Microsoft Azure Blob Storage for remote access and retention. A notification pipeline then alerts the user on a smartphone when a new recording has been uploaded, creating a compact cloud-connected surveillance solution that combines edge sensing, media capture, and remote event reporting.",
+    tags: [
+      "Raspberry Pi 2",
+      "PIR Sensor",
+      "Webcam",
+      "Windows 10 IoT Core",
+      "Microsoft Azure",
+      "C#",
+      "Motion Detection",
+    ],
+    icon: Camera,
+    highlight: "Motion-triggered cloud surveillance",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/cover_image/file/64182/IMG_1790.JPG?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/image/file/77176/2015-09-19%2009.18.04.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+      },
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/image_file/file/78279/PIR_RPi2.png",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Raspberry Pi Camera Application",
+      "PIR Motion Detection Integration",
+      "Azure Blob Upload Workflow",
+      "Remote Notification Pipeline",
+      "Wiring & System Validation",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Built a compact security camera system that records video when motion is detected and automatically pushes the captured footage to the cloud. The project combines local sensing, event-based recording, cloud storage, and smartphone notification to create a simple remote monitoring solution for small spaces.",
+      },
+      {
+        heading: "System Workflow",
+        body: "The architecture is centered around event-driven capture: motion detection starts recording, inactivity stops recording, and the completed file is uploaded for remote access.",
+        bullets: [
+          "PIR sensor monitors the environment for movement",
+          "Raspberry Pi 2 triggers webcam recording on motion detection",
+          "Recording stops when motion is no longer present",
+          "Video file is uploaded to Azure Blob Storage",
+          "User receives a remote notification after successful upload",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/77176/2015-09-19%2009.18.04.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Hardware Integration",
+        numbered: [
+          {
+            title: "Raspberry Pi Processing Node",
+            body: "The Raspberry Pi 2 serves as the local control node, coordinating sensor input, webcam access, recording control, and cloud upload operations within a single embedded platform.",
+          },
+          {
+            title: "PIR Motion Sensor Interface",
+            body: "A PIR sensor provides the motion trigger signal, allowing the system to capture only relevant activity instead of recording continuously. This reduces storage usage and makes event review more practical.",
+          },
+          {
+            title: "USB Webcam Capture",
+            body: "A standard webcam is used for video acquisition, giving the platform flexible image capture without requiring specialized imaging hardware.",
+          },
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image_file/file/78279/PIR_RPi2.png",
+        ],
+      },
+      {
+        heading: "Software & Cloud Layer",
+        bullets: [
+          "Application implemented in C# on Windows 10 IoT Core",
+          "Video capture controlled directly from the Raspberry Pi runtime",
+          "Azure Blob Storage used for remote media retention",
+          "Notification flow alerts the user after upload completion",
+        ],
+      },
+      {
+        heading: "Engineering Value",
+        body: "This project demonstrates practical edge-to-cloud system design by combining physical sensing with automated media handling and cloud services. Rather than functioning as only a local recorder, the system extends into a connected surveillance workflow that improves accessibility and real-time awareness.",
+      },
+      {
+        heading: "Outcome",
+        body: "The final implementation delivers a lightweight smart surveillance platform capable of capturing intrusion events, archiving footage remotely, and notifying the user without manual intervention. It highlights the integration of embedded hardware, application logic, and cloud infrastructure in a single IoT security use case.",
+      },
+    ],
+  },
+  {
     slug: "water-leak-iot",
     title: "Water Leak Detection & Alert System",
     category: "IoT & Connectivity",
