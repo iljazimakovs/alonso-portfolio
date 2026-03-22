@@ -1,8 +1,9 @@
+import profilePhoto from "/images/photo.png";
+
 const datasheetRows = [
   { label: "Experience",       value: "10+ years" },
   { label: "Projects Shipped", value: "50+ units" },
   { label: "MCU Platforms",    value: "STM32 · nRF · ESP · i.MX" },
-  { label: "Certifications",   value: "FCC · CE · UL" },
   { label: "Protocols",        value: "BLE · Wi-Fi · LoRa · CAN" },
   { label: "Temp Range",       value: "−40 to +85 °C" },
 ];
@@ -19,8 +20,8 @@ export function About() {
           <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">About</span>
         </div>
         <blockquote className="text-2xl md:text-[2rem] lg:text-[2.4rem] font-display font-semibold text-foreground leading-[1.25] max-w-4xl">
-          "I build things that work in the field —
-          <span className="text-muted-foreground/70"> not just on the bench."</span>
+          "Most of the interesting problems in embedded work happen
+          <span className="text-muted-foreground/70"> after the prototype passes."</span>
         </blockquote>
       </div>
 
@@ -61,29 +62,52 @@ export function About() {
 
           {/* Right — wide bio column */}
           <div className="flex-1 lg:pl-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8 leading-tight">
-              Alonso Rodriguez
-            </h2>
+
+            {/* Profile header — photo + name */}
+            <div className="flex items-center gap-8 mb-10">
+              <div className="relative shrink-0">
+                <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-primary/40 ring-4 ring-primary/10 shadow-xl shadow-black/40">
+                  <img
+                    src={profilePhoto}
+                    alt="Alonso Rodriguez"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span className="absolute bottom-2 right-2 w-3.5 h-3.5 rounded-full bg-primary border-2 border-background shadow" title="Available" />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
+                  Alonso Rodriguez
+                </h2>
+                <p className="text-[11px] font-mono text-primary tracking-widest uppercase mt-2">
+                  Senior Embedded Systems Engineer
+                </p>
+              </div>
+            </div>
 
             <div className="space-y-5 text-[15px] text-muted-foreground leading-[1.75]">
               <p>
-                For over a decade I've been the engineer clients call when a design needs to work —
-                not just prototype well, but survive production runs, compliance labs, and real-world
-                operating conditions. My background spans the full embedded stack: schematic capture and
-                multi-layer PCB layout, bare-metal C on resource-constrained MCUs, RTOS integration,
-                Linux BSP, and everything in between.
+                I've been working in embedded systems for about ten years, mostly on projects that
+                reach production. Day-to-day that means writing firmware in C and C++ for Cortex-M
+                targets — STM32, nRF52, ESP32 — bringing up embedded Linux on custom hardware using
+                Yocto or Buildroot, and doing schematic capture and multi-layer PCB layout in KiCad
+                myself rather than handing it off. Most clients come to me because they need one
+                engineer who can work across both sides of the board.
               </p>
               <p>
-                I've shipped BLE wearables, industrial IoT gateways, motor-control boards for robotics,
-                and LoRa sensor networks — each with its own set of power, thermal, and certification
-                constraints. For every project I take on, I own the deliverable from first bring-up all
-                the way to factory handoff documentation.
+                I've worked on BLE health monitors, industrial IoT gateways, LoRa sensor networks,
+                and a few motor-control boards — mostly for startups and small engineering teams without
+                an embedded specialist on staff. Projects usually involve first-article builds, which
+                means dealing with bring-up issues, board rework, and the back-and-forth that comes
+                before anything stabilises. I'm used to that part.
               </p>
               <p>
-                What separates my work is the discipline I bring after the design phase ends. Every
-                driver I write has a test harness. Every board layout includes a programming jig plan.
-                Every handoff package is complete enough for a contract manufacturer to run production
-                without me in the room.
+                On the firmware side I write layered code with a hardware abstraction layer so the
+                application logic stays portable and testable. For PCB work I do my own DFM checks
+                before sending files to fab and keep the CM in the loop early. If a project needs
+                FCC or CE testing, I can write the test plan, coordinate with the lab, and handle
+                remediation. Handoff packages include schematics, BOM, firmware build instructions,
+                and programming jig specs — enough for a CM to run production independently.
               </p>
             </div>
           </div>

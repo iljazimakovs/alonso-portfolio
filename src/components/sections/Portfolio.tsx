@@ -1208,25 +1208,26 @@ function ProjectModal({
     >
       <div className="fixed inset-0 bg-background/85 backdrop-blur-sm" />
 
-      {/* Desktop prev / next */}
-      <button
-        className="hidden md:flex fixed left-2 lg:left-5 top-1/2 -translate-y-1/2 z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
-        onClick={(e) => { e.stopPropagation(); onPrev(); }}
-        data-testid="button-prev-project"
-      >
-        <ChevronLeft className="w-5 h-5" />
-      </button>
-      <button
-        className="hidden md:flex fixed right-2 lg:right-5 top-1/2 -translate-y-1/2 z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
-        onClick={(e) => { e.stopPropagation(); onNext(); }}
-        data-testid="button-next-project"
-      >
-        <ChevronRight className="w-5 h-5" />
-      </button>
+      {/* Modal wrapper — prev/next sit just outside the card */}
+      <div className="relative w-full max-w-3xl" onClick={(e) => e.stopPropagation()}>
+
+        <button
+          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[52px] z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+          onClick={(e) => { e.stopPropagation(); onPrev(); }}
+          data-testid="button-prev-project"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-[52px] z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+          onClick={(e) => { e.stopPropagation(); onNext(); }}
+          data-testid="button-next-project"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
 
       <div
-        className="relative w-full max-w-3xl max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
+        className="relative max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
       >
         {/* Header bar */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 bg-card rounded-t-xl">
@@ -1237,20 +1238,6 @@ function ProjectModal({
             </span>
           </div>
           <div className="flex items-center gap-2 shrink-0">
-            <div className="hidden md:flex items-center gap-1.5">
-              <button
-                className="flex w-7 h-7 items-center justify-center rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
-                onClick={(e) => { e.stopPropagation(); onPrev(); }}
-              >
-                <ChevronLeft className="w-3.5 h-3.5" />
-              </button>
-              <button
-                className="flex w-7 h-7 items-center justify-center rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
-                onClick={(e) => { e.stopPropagation(); onNext(); }}
-              >
-                <ChevronRight className="w-3.5 h-3.5" />
-              </button>
-            </div>
             <button
               onClick={onClose}
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -1331,16 +1318,6 @@ function ProjectModal({
           )}
         </div>
 
-        {/* Mobile prev/next */}
-        <div className="flex md:hidden items-center justify-between px-6 pt-4">
-          <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onPrev}>
-            <ChevronLeft className="w-3.5 h-3.5" /> Prev
-          </Button>
-          <Button size="sm" variant="outline" className="border-border/60 text-muted-foreground gap-1 font-mono text-xs" onClick={onNext}>
-            Next <ChevronRight className="w-3.5 h-3.5" />
-          </Button>
-        </div>
-
         {/* Main detailed content */}
         <div className="px-6 md:px-8 py-7 space-y-8">
 
@@ -1360,6 +1337,7 @@ function ProjectModal({
           )}
 
         </div>
+      </div>
       </div>
     </div>
   );
