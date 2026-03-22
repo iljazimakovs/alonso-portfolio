@@ -28,7 +28,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section id="industries" className="py-12 lg:py-24 relative bg-card/15">
+    <section id="industries" className="py-24 relative bg-card/15">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

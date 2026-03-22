@@ -56,10 +56,9 @@ export function Footer() {
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
-    { name: "What I Offer", href: "#services" },
+    { name: "Services", href: "#services" },
     { name: "Projects", href: "#portfolio" },
-    { name: "Technical Skills", href: "#skills" },
-    { name: "Industries", href: "#industries" },
+    { name: "Expertise", href: "#skills" },
   ];
 
   return (

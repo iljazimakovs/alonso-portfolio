@@ -16,8 +16,8 @@ export default function Home({ projectSlug, categorySlug, recommendedIds }: { pr
       <main className="relative flex-1">
         <Hero />
         <About />
-        <Services />
         <Portfolio initialSlug={projectSlug} initialCategory={categorySlug} initialRecommendedIds={recommendedIds} />
+        <Services />
         <Skills />
         <Industries />
       </main>

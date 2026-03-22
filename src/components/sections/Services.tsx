@@ -39,7 +39,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-12 lg:py-24 relative bg-card/15">
+    <section id="services" className="py-24 relative bg-card/15">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
@@ -50,7 +50,7 @@ export function Services() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0002</span>
                 <div className="h-px w-8 bg-border/40" />
-                <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">What I Offer</span>
+                <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Services</span>
               </div>
               <h2 className="font-display font-bold text-foreground leading-snug mb-4">
                 <span className="block text-lg font-medium text-muted-foreground">What I</span>
