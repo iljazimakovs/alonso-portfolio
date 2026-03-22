@@ -88,7 +88,7 @@ interface FilterCategory {
   slug: string;
 }
 
-export const filterCategories: FilterCategory[] = [
+const filterCategories: FilterCategory[] = [
   { name: "All Projects", slug: "all" },
   { name: "Firmware", slug: "embedded-firmware" },
   { name: "Linux & BSP", slug: "embedded-linux-bsp" },
@@ -1202,7 +1202,7 @@ function ProjectModal({
 
   return (
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-0 z-[200] flex items-start justify-center pt-16 md:pt-20 pb-4 px-4 md:px-8"
       data-testid="modal-project-detail"
       onClick={onClose}
     >
@@ -1227,7 +1227,7 @@ function ProjectModal({
         </button>
 
       <div
-        className="relative max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
+        className="relative max-h-[calc(100vh-5.5rem)] md:max-h-[calc(100vh-6.5rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
       >
         {/* Header bar */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 bg-card rounded-t-xl">
@@ -1614,7 +1614,7 @@ export function Portfolio({
       "All Projects";
 
   return (
-    <section id="portfolio" className="py-24 relative">
+    <section id="portfolio" className="py-12 lg:py-24 relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

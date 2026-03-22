@@ -10,7 +10,7 @@ const datasheetRows = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-12 lg:py-24 relative">
 
       {/* Full-width statement bar */}
       <div className="max-w-7xl mx-auto px-6 mb-20">

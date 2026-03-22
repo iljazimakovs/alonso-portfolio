@@ -48,13 +48,13 @@ const categories = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-12 lg:py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Inline section header */}
         <div className="flex items-center gap-5 mb-16">
           <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0004</span>
-          <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Expertise</span>
+          <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Technical Skills</span>
           <div className="h-px flex-1 bg-border/35" />
           <h2 className="text-base font-display font-bold text-foreground whitespace-nowrap">
             Technology Stack

@@ -14,15 +14,15 @@ const bootLines = [
 ];
 
 const stats = [
-  { value: "10+", label: "Years Embedded" },
-  { value: "50+", label: "Boards Shipped" },
-  { value: "5", label: "MCU Families" },
-  { value: "HW→SW", label: "Full-Stack" },
+  { value: "10+", label: "Years Experience" },
+  { value: "20+", label: "Systems to Market" },
+  { value: "8+", label: "MCU Families" },
+  { value: "FW+HW", label: "Full Stack" },
 ];
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col pt-20 overflow-x-hidden bg-background">
+    <section className="relative flex flex-col pt-20 pb-16 overflow-x-hidden bg-background">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -59,10 +59,10 @@ export function Hero() {
         </div>
 
         {/* Main content — two-column on desktop, stacked on mobile */}
-        <div className="flex-1 flex flex-col lg:flex-row gap-10 lg:gap-14 py-10 lg:py-12">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 py-12">
 
           {/* Left column — headline · description · stats */}
-          <div className="flex flex-col justify-between gap-8 flex-1 min-w-0">
+          <div className="flex flex-col gap-10 flex-1 min-w-0">
 
             {/* Headline */}
             <h1 className="font-display font-extrabold leading-[1.05] tracking-tight">
@@ -87,16 +87,16 @@ export function Hero() {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-4 gap-2 lg:gap-3 pt-6 border-t border-border/25">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 lg:gap-3 pt-6 border-t border-border/25">
               {stats.map((s) => (
                 <div
                   key={s.value}
-                  className="flex flex-col items-center justify-center py-3 rounded-lg border border-border/35 bg-card/40 backdrop-blur-sm text-center gap-0.5"
+                  className="flex flex-col items-center justify-center py-3.5 px-2 rounded-lg border border-border/35 bg-card/40 backdrop-blur-sm text-center gap-1"
                 >
-                  <span className="font-mono font-bold text-primary text-sm lg:text-base leading-none">
+                  <span className="font-mono font-bold text-primary text-base lg:text-lg leading-none">
                     {s.value}
                   </span>
-                  <span className="font-mono text-[9px] lg:text-[10px] text-muted-foreground/60 uppercase tracking-wide leading-tight">
+                  <span className="font-mono text-[10px] lg:text-[11px] text-muted-foreground/60 uppercase tracking-wide leading-tight">
                     {s.label}
                   </span>
                 </div>
@@ -105,8 +105,8 @@ export function Hero() {
 
           </div>
 
-          {/* Right column — boot console, visible on all screens */}
-          <div className="lg:w-[380px] shrink-0 flex flex-col justify-center">
+          {/* Right column — boot console, hidden on mobile */}
+          <div className="hidden lg:flex lg:w-[380px] shrink-0 flex-col justify-center">
             <div className="rounded-lg border border-border/40 bg-card/60 backdrop-blur-sm overflow-hidden shadow-xl shadow-black/20">
               <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/35 bg-muted/15">
                 <div className="flex items-center gap-1.5">
