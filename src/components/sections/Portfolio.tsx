@@ -1175,7 +1175,7 @@ function RichSection({ section }: { section: ContentSection }) {
         </div>
       )}
       {section.images && section.images.length > 0 && (
-        <div className={`grid gap-3 ${section.images.length === 1 ? "grid-cols-1" : section.images.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+        <div className={`grid gap-3 grid-cols-1 ${section.images.length >= 3 ? "sm:grid-cols-3" : section.images.length === 2 ? "sm:grid-cols-2" : ""}`}>
           {section.images.map((src, j) => (
             <div key={j} className="rounded-lg overflow-hidden border border-border/40">
               <img src={src} alt="" className="w-full h-auto object-cover" />
@@ -1212,14 +1212,14 @@ function ProjectModal({
       <div className="relative w-full max-w-3xl" onClick={(e) => e.stopPropagation()}>
 
         <button
-          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[52px] z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[72px] z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
           onClick={(e) => { e.stopPropagation(); onPrev(); }}
           data-testid="button-prev-project"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
-          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-[52px] z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-[72px] z-[210] w-10 h-10 items-center justify-center rounded-full bg-card border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
           onClick={(e) => { e.stopPropagation(); onNext(); }}
           data-testid="button-next-project"
         >
@@ -1239,8 +1239,22 @@ function ProjectModal({
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <button
+              className="md:hidden flex items-center justify-center w-7 h-7 rounded-full border border-border/50 bg-muted/40 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+              onClick={(e) => { e.stopPropagation(); onPrev(); }}
+              aria-label="Previous project"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              className="md:hidden flex items-center justify-center w-7 h-7 rounded-full border border-border/50 bg-muted/40 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+              onClick={(e) => { e.stopPropagation(); onNext(); }}
+              aria-label="Next project"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            <button
               onClick={onClose}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors ml-1"
               data-testid="button-close-modal"
               aria-label="Close"
             >
@@ -1253,7 +1267,7 @@ function ProjectModal({
         <div className="relative overflow-hidden border-b border-border/30">
           {project.media[0]?.type === "video" ? (
             <video
-              className="w-full object-contain"
+              className="w-full object-contain max-h-52 sm:max-h-none"
               loop
               muted
               playsInline
@@ -1267,7 +1281,7 @@ function ProjectModal({
             <img
               src={project.media[0]?.src}
               alt={project.title}
-              className="w-full object-contain"
+              className="w-full object-contain max-h-52 sm:max-h-none"
               data-testid="img-modal-hero"
             />
           )}

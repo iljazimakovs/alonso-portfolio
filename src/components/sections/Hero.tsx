@@ -13,6 +13,13 @@ const bootLines = [
   { ts: "0.155", text: "system: ready – awaiting commands", highlight: true },
 ];
 
+const stats = [
+  { value: "10+", label: "Years Embedded" },
+  { value: "50+", label: "Boards Shipped" },
+  { value: "5", label: "MCU Families" },
+  { value: "HW→SW", label: "Full-Stack" },
+];
+
 export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col pt-20 overflow-x-hidden bg-background">
@@ -51,60 +58,78 @@ export function Hero() {
           </a>
         </div>
 
-        {/* Main content — fills remaining height with space-between */}
-        <div className="flex-1 flex flex-col justify-between py-10 lg:py-12">
+        {/* Main content — two-column on desktop, stacked on mobile */}
+        <div className="flex-1 flex flex-col lg:flex-row gap-10 lg:gap-14 py-10 lg:py-12">
 
-          {/* Main headline */}
-          <h1 className="font-display font-extrabold leading-[0.88] tracking-tight">
-            <span className="block text-foreground" style={{ fontSize: "clamp(3rem, 8.5vw, 7.5rem)" }}>
-              Firmware.
-            </span>
-            <span className="block text-foreground pl-[8vw] lg:pl-40" style={{ fontSize: "clamp(3rem, 8.5vw, 7.5rem)" }}>
-              Hardware.
-            </span>
-            <span className="block text-primary" style={{ fontSize: "clamp(3rem, 8.5vw, 7.5rem)" }}>
-              Delivered.
-            </span>
-          </h1>
+          {/* Left column — headline · description · stats */}
+          <div className="flex flex-col justify-between gap-8 flex-1 min-w-0">
 
-          {/* Bottom content row — description + boot console */}
-          <div className="flex flex-col lg:flex-row items-start lg:items-end gap-10 lg:gap-16 pt-8 border-t border-border/25">
+            {/* Headline */}
+            <h1 className="font-display font-extrabold leading-[1.05] tracking-tight">
+              <span className="block text-foreground" style={{ fontSize: "clamp(2.6rem, 7vw, 7rem)" }}>
+                Firmware.
+              </span>
+              <span className="block text-foreground pl-[8vw] lg:pl-32" style={{ fontSize: "clamp(2.6rem, 7vw, 7rem)" }}>
+                Hardware.
+              </span>
+              <span className="block text-primary" style={{ fontSize: "clamp(2.6rem, 7vw, 7rem)" }}>
+                Delivered.
+              </span>
+            </h1>
 
             {/* Description */}
-            <div className="flex-1 min-w-0">
-              <p className="text-[15px] text-muted-foreground leading-relaxed max-w-lg">
+            <div>
+              <p className="text-[15px] text-muted-foreground leading-[2] max-w-lg">
                 Firmware, Embedded Linux, IoT, and PCB design. Ten years of hands-on embedded work —
                 from first bring-up through compliance testing and CM handoff. I cover the full
                 hardware-software stack on the same project.
               </p>
             </div>
 
-            {/* Boot console */}
-            <div className="hidden lg:block w-[390px] shrink-0">
-              <div className="rounded-lg border border-border/40 bg-card/60 backdrop-blur-sm overflow-hidden shadow-xl shadow-black/20">
-                <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/35 bg-muted/15">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-widest">
-                      uart0 · boot console
-                    </span>
-                  </div>
-                  <span className="text-[10px] font-mono text-muted-foreground/35">115200 baud</span>
+            {/* Stats row */}
+            <div className="grid grid-cols-4 gap-2 lg:gap-3 pt-6 border-t border-border/25">
+              {stats.map((s) => (
+                <div
+                  key={s.value}
+                  className="flex flex-col items-center justify-center py-3 rounded-lg border border-border/35 bg-card/40 backdrop-blur-sm text-center gap-0.5"
+                >
+                  <span className="font-mono font-bold text-primary text-sm lg:text-base leading-none">
+                    {s.value}
+                  </span>
+                  <span className="font-mono text-[9px] lg:text-[10px] text-muted-foreground/60 uppercase tracking-wide leading-tight">
+                    {s.label}
+                  </span>
                 </div>
-                <div className="p-4 font-mono text-[10.5px] leading-relaxed space-y-0.5">
-                  {bootLines.map((line) => (
-                    <div key={line.ts} className="flex items-start gap-3">
-                      <span className="text-muted-foreground/40 shrink-0 w-11 text-right">[{line.ts}]</span>
-                      <span className={line.highlight ? "text-primary" : "text-muted-foreground/75"}>
-                        {line.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
 
           </div>
+
+          {/* Right column — boot console, visible on all screens */}
+          <div className="lg:w-[380px] shrink-0 flex flex-col justify-center">
+            <div className="rounded-lg border border-border/40 bg-card/60 backdrop-blur-sm overflow-hidden shadow-xl shadow-black/20">
+              <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/35 bg-muted/15">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <span className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-widest">
+                    uart0 · boot console
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono text-muted-foreground/35">115200 baud</span>
+              </div>
+              <div className="p-4 font-mono text-[10.5px] leading-relaxed space-y-0.5">
+                {bootLines.map((line) => (
+                  <div key={line.ts} className="flex items-start gap-3">
+                    <span className="text-muted-foreground/40 shrink-0 w-11 text-right">[{line.ts}]</span>
+                    <span className={line.highlight ? "text-primary" : "text-muted-foreground/75"}>
+                      {line.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>

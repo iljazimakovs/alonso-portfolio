@@ -1,11 +1,11 @@
 import profilePhoto from "/images/photo.png";
 
 const datasheetRows = [
-  { label: "Experience",       value: "10+ years" },
-  { label: "Projects Shipped", value: "50+ units" },
-  { label: "MCU Platforms",    value: "STM32 · nRF · ESP · i.MX" },
-  { label: "Protocols",        value: "BLE · Wi-Fi · LoRa · CAN" },
-  { label: "Temp Range",       value: "−40 to +85 °C" },
+  { label: "RTOS",             value: "FreeRTOS · Zephyr · ThreadX" },
+  { label: "Toolchain",        value: "GCC · IAR · LLVM · Keil" },
+  { label: "Debug I/F",        value: "JTAG · SWD · ETM Trace" },
+  { label: "PCB Stack-up",     value: "2 → 8-layer HDI" },
+  { label: "Certifications",   value: "CE · FCC · IEC 62443" },
 ];
 
 export function About() {
