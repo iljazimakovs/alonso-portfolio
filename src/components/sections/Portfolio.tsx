@@ -22,7 +22,8 @@ import {
   Check,
   Camera,
   Droplet,
-  Zap
+  Zap,
+  Wifi
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -361,6 +362,107 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "Achieved extremely high inference throughput exceeding 200,000 FPS by combining quantization, parallelism, and pipelined architecture. The project demonstrates strong capability in FPGA-based AI acceleration, HLS design optimization, and hardware/software co-design.",
+      },
+    ],
+  },
+  {
+    slug: "7d2a9f",
+    title: "RFID IoT Attendance System (ESP8266)",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+    description:
+      "WiFi-enabled RFID attendance system using ESP8266 with real-time logging to Google Sheets via cloud API.",
+    longDescription:
+      "Developed a low-cost IoT-based RFID attendance and access control system using ESP8266 and MFRC522. The system reads RFID card data and transmits it over HTTPS to a Google Apps Script web API, which logs attendance data into a Google Sheet in real time. Designed for deployment in classrooms, offices, and labs, the system provides immediate user feedback via LEDs and buzzer while maintaining reliable WiFi connectivity and cloud synchronization. The architecture eliminates the need for a dedicated backend server by leveraging Google Sheets as a lightweight database.",
+    tags: [
+      "ESP8266",
+      "RFID",
+      "IoT",
+      "HTTP",
+      "Google Sheets API",
+      "Embedded C",
+      "Cloud Integration",
+    ],
+    icon: Wifi,
+    highlight: "RFID Cloud Logging",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1903473/_3HddXBvRpD.blob?auto=compress&w=900&h=675&fit=min&fm=jpg",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "ESP8266 Firmware",
+      "RFID Reader Integration",
+      "Cloud Logging API (Google Script)",
+      "Real-Time Attendance System",
+      "Hardware Interface Design",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a cloud-connected attendance system that automates RFID-based identification and logs data directly to a remote spreadsheet. The system removes the need for manual registers or complex backend infrastructure by using a lightweight IoT-to-cloud pipeline.",
+      },
+      {
+        heading: "System Architecture",
+        body: "The system connects embedded hardware with a cloud-based logging service using a simple but effective architecture.",
+        bullets: [
+          "ESP8266 handles WiFi connectivity and HTTP communication",
+          "MFRC522 reads RFID card data",
+          "Google Apps Script acts as a REST-like API",
+          "Google Sheets used as real-time database",
+          "End-to-end flow: RFID → ESP8266 → HTTPS → Google Sheets",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1903476/circuit_rbJHBbM9hQ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Embedded Firmware Design",
+        body: "Firmware was designed for reliability and continuous operation in real-world environments.",
+        bullets: [
+          "Automatic WiFi reconnection handling",
+          "HTTPS request generation for secure data transmission",
+          "RFID block authentication and data extraction",
+          "Serial debugging for network and HTTP status monitoring",
+        ],
+      },
+      {
+        heading: "Cloud Integration",
+        body: "Instead of building a custom backend, the system uses Google Apps Script to provide a scalable and serverless logging solution.",
+        bullets: [
+          "ESP8266 sends data via HTTP GET requests",
+          "Google Script parses incoming data",
+          "Data appended directly to spreadsheet rows",
+          "Accessible, exportable, and easy to monitor",
+        ],
+      },
+      {
+        heading: "User Feedback System",
+        body: "Real-time feedback improves usability and system clarity.",
+        bullets: [
+          "Green LED indicates successful read and upload",
+          "Red LED signals errors or failed authentication",
+          "Buzzer provides audible confirmation",
+          "Double-beep pattern confirms valid scan",
+        ],
+      },
+      {
+        heading: "System Output",
+        body: "Each RFID scan generates a structured log entry in the cloud database.",
+        bullets: [
+          "User identification (RFID / name)",
+          "Timestamp (date and time)",
+          "Sequential logging for tracking",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1903483/ss_pzUqDLn6dc.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The system demonstrates a practical IoT architecture combining embedded hardware with cloud services to deliver a scalable and cost-effective attendance solution. It highlights experience in embedded networking, API integration, and real-time data systems without relying on heavy backend infrastructure.",
       },
     ],
   },
