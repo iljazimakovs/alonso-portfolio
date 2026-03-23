@@ -748,9 +748,6 @@ const projects: Project[] = [
           "Extended reminders after 15 minutes and 1 hour",
           "Recurring 4-hour notifications until the leak is cleared",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/82451/Screenshot_2015-10-14-15-39-28.png",
-        ],
       },
       {
         heading: "Outcome",
@@ -822,10 +819,6 @@ const projects: Project[] = [
             body: "Combining two half-bridges forms a full H-bridge, enabling bidirectional motor control with variable speed and direction.",
           },
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1151247/uni_d8d8Mqos1G.GIF?auto=compress%2Cformat&gifq=35&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1151250/bi_P2rn1nseRF.GIF?auto=compress%2Cformat&gifq=35&w=1280&h=960&fit=max",
-        ],
       },
       {
         heading: "BLDC Control",
@@ -835,9 +828,6 @@ const projects: Project[] = [
           "Automatic commutation based on voltage feedback",
           "No hall sensors required in BEMF mode",
           "Supports variable speed ramp-up and control",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1151252/bldc_4fHVcKKnab.GIF?auto=compress%2Cformat&gifq=35&w=1280&h=960&fit=max",
         ],
       },
       {
