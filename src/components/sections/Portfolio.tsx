@@ -123,25 +123,25 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "usb-c-pd-sink",
-    title: "USB-C Power Delivery Sink (CYPD3177)",
+    slug: "usb-c-pd-sink-cypd3177",
+    title: "USB-C PD Sink with CYPD3177",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
     description:
-      "USB-C Power Delivery sink board supporting up to 20V 5A using CYPD3177 controller with configurable voltage/current and optional I2C telemetry.",
+      "Compact USB-C Power Delivery sink board designed to replace barrel connectors, supporting negotiated output profiles up to 20V 5A with optional I2C telemetry.",
     longDescription:
-      "Designed a compact USB-C Power Delivery (PD) sink module based on the Cypress CYPD3177 controller, capable of negotiating and delivering up to 100W (20V, 5A) from compliant PD sources. The board replaces traditional barrel connectors with USB-C, offering selectable voltage and current profiles via hardware configuration. A high-efficiency power path using a low Rds_on p-channel MOSFET ensures minimal losses, while an optional I2C interface enables telemetry access and system monitoring. The design emphasizes safe power negotiation, compact integration, and flexibility for inline or embedded applications.",
+      "Designed a compact USB-C Power Delivery sink module based on the Cypress CYPD3177 controller to replace legacy barrel-jack power inputs with a modern USB-C PD interface. The board negotiates power directly from compliant USB-C adapters and supports selectable voltage levels of 5V, 9V, 12V, and 20V with current settings from 1A up to 5A. The design emphasizes software-free operation through hardware configuration, while still exposing an optional I2C interface for telemetry, status inspection, and advanced control. Built on a compact 2 oz copper PCB with a detachable telemetry section, the module is suitable for inline cable integration, embedded installations, and high-current power delivery applications.",
     tags: [
       "USB-C PD",
       "CYPD3177",
       "Power Electronics",
       "PCB Design",
-      "I2C",
-      "Embedded Systems",
+      "I2C Telemetry",
       "High Current Design",
+      "Embedded Hardware",
     ],
     icon: Zap,
-    highlight: "100W USB-C PD power negotiation",
+    highlight: "USB-C barrel-connector replacement up to 100W",
     media: [
       {
         type: "image",
@@ -158,67 +158,90 @@ const projects: Project[] = [
     ],
     hidden: false,
     deliverables: [
-      "USB-C PD Sink PCB Design",
-      "CYPD3177 Configuration",
-      "Power Path Hardware Design",
+      "USB-C PD Sink PCB",
+      "Power Negotiation Hardware",
+      "Configurable Voltage/Current Selection",
       "I2C Telemetry Interface",
-      "Assembly & Integration Files",
+      "Assembly & Integration Design",
     ],
     sections: [
       {
         heading: "Project Overview",
-        body: "Developed a compact USB-C Power Delivery sink module capable of replacing traditional barrel power connectors. The system negotiates voltage and current profiles directly from USB-C PD sources, enabling flexible and efficient power delivery for embedded and electronic systems.",
+        body: "Developed a USB-C Power Delivery sink module that replaces traditional barrel connectors with a negotiation-based USB-C input. The system enables embedded devices to draw power directly from modern USB-C PD adapters without requiring firmware for standard operation.",
       },
       {
-        heading: "System Capabilities",
+        heading: "Core Concept",
+        body: "The design follows the Barrel Connector Replacement (BCR) concept, transforming USB-C PD into a drop-in power source for electronics that traditionally rely on fixed DC adapters.",
         bullets: [
-          "USB-C PD sink supporting 5V, 9V, 12V, and 20V profiles",
-          "Current selection from 1A up to 5A (100W max)",
-          "Hardware-based configuration without firmware requirement",
-          "Inline integration into cables or embedded systems",
+          "Acts as a USB-C PD sink device",
+          "Negotiates voltage and current from PD power sources",
+          "Provides output via screw terminal or solder pads",
+          "Eliminates need for dedicated external adapters",
+        ],
+      },
+      {
+        heading: "Power Delivery Features",
+        bullets: [
+          "Selectable voltages: 5V, 9V, 12V, 20V",
+          "Selectable current levels: 1A to 5A",
+          "Maximum output up to 100W",
+          "Hardware-based configuration (no firmware required)",
+          "Safe operation with pre-configured power profiles",
         ],
       },
       {
         heading: "Hardware Design",
         numbered: [
           {
-            title: "USB-C PD Controller",
-            body: "The Cypress CYPD3177 handles USB Power Delivery negotiation, enabling automatic contract establishment with compatible power supplies without requiring external firmware.",
+            title: "PD Controller Integration",
+            body: "The CYPD3177 manages USB Power Delivery negotiation and contract establishment, enabling automatic interaction with compliant USB-C power supplies without external control logic.",
           },
           {
-            title: "Power Switching Stage",
-            body: "A low Rds_on p-channel MOSFET ensures efficient power delivery with minimal thermal losses, supporting high current operation up to 5A.",
+            title: "Efficient Power Path",
+            body: "A low Rds_on p-channel MOSFET ensures efficient high-current delivery while minimizing thermal losses, supporting up to 5A continuous current.",
           },
           {
-            title: "Configurable Output Profiles",
-            body: "Voltage and current levels are selected using resistor configurations or hardware switches, allowing flexible deployment across different applications without software changes.",
+            title: "High-Current PCB Layout",
+            body: "Implemented on a compact PCB (~53 mm x 15 mm) with 2 oz copper to handle high current density while maintaining a slim inline form factor.",
           },
         ],
       },
       {
-        heading: "Telemetry & Control",
-        body: "An optional I2C interface provides access to internal registers of the PD controller, enabling monitoring and advanced control when connected to a host such as an Arduino.",
+        heading: "Configuration & Operation",
         bullets: [
-          "I2C interface for reading status and negotiation data",
-          "Compatible with Arduino or bus interface tools",
-          "Useful for debugging and system integration",
+          "Voltage and current configured via resistors or switches",
+          "No programming required for standalone operation",
+          "LED indicator provides fault and status feedback",
+          "Output must be configured prior to connection for safe operation",
         ],
       },
       {
-        heading: "Mechanical & Integration Design",
+        heading: "Telemetry & Expansion",
+        body: "Although designed for firmware-free operation, the system exposes an optional I2C interface for advanced monitoring and integration.",
         bullets: [
-          "Compact PCB form factor (approx. 53 mm x 15 mm)",
-          "2oz copper for high current handling",
-          "Designed for heat-shrink enclosure for inline cable use",
-          "Detachable telemetry section for space-constrained applications",
+          "Access to internal controller registers via I2C",
+          "Compatible with Arduino or external hosts",
+          "Useful for debugging and validation",
+          "Enables deeper insight into PD negotiation behavior",
+        ],
+      },
+      {
+        heading: "Mechanical Integration",
+        body: "The module is designed for real-world deployment, enabling compact and robust integration into existing systems and cable assemblies.",
+        bullets: [
+          "Inline cable integration capability",
+          "Supports heat-shrink enclosure for permanent installation",
+          "Detachable telemetry section for compact deployments",
+          "Suitable for embedded and space-constrained designs",
         ],
         images: [
+          "https://hackster.imgix.net/uploads/attachments/1208399/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1208401/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
         heading: "Engineering Outcome",
-        body: "The final design provides a robust and flexible USB-C power solution, eliminating the need for dedicated power adapters. It demonstrates strong understanding of power electronics, high-current PCB design, and modern USB-C PD standards, while maintaining a compact and integration-friendly form factor.",
+        body: "A compact and practical USB-C PD power module that modernizes power input design by replacing legacy connectors with a flexible, high-power USB-C solution. The project demonstrates strong capability in power electronics, USB-C PD integration, and high-current PCB design with a product-oriented mindset.",
       },
     ],
   },
