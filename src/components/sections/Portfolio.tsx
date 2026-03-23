@@ -21,7 +21,8 @@ import {
   Link2,
   Check,
   Camera,
-  Droplet
+  Droplet,
+  Zap
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -121,6 +122,106 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    slug: "usb-c-pd-sink",
+    title: "USB-C Power Delivery Sink (CYPD3177)",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware"],
+    description:
+      "USB-C Power Delivery sink board supporting up to 20V 5A using CYPD3177 controller with configurable voltage/current and optional I2C telemetry.",
+    longDescription:
+      "Designed a compact USB-C Power Delivery (PD) sink module based on the Cypress CYPD3177 controller, capable of negotiating and delivering up to 100W (20V, 5A) from compliant PD sources. The board replaces traditional barrel connectors with USB-C, offering selectable voltage and current profiles via hardware configuration. A high-efficiency power path using a low Rds_on p-channel MOSFET ensures minimal losses, while an optional I2C interface enables telemetry access and system monitoring. The design emphasizes safe power negotiation, compact integration, and flexibility for inline or embedded applications.",
+    tags: [
+      "USB-C PD",
+      "CYPD3177",
+      "Power Electronics",
+      "PCB Design",
+      "I2C",
+      "Embedded Systems",
+      "High Current Design",
+    ],
+    icon: Zap,
+    highlight: "100W USB-C PD power negotiation",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1208398/_BLGl2VleYg.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1208399/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+      },
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1208401/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "USB-C PD Sink PCB Design",
+      "CYPD3177 Configuration",
+      "Power Path Hardware Design",
+      "I2C Telemetry Interface",
+      "Assembly & Integration Files",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a compact USB-C Power Delivery sink module capable of replacing traditional barrel power connectors. The system negotiates voltage and current profiles directly from USB-C PD sources, enabling flexible and efficient power delivery for embedded and electronic systems.",
+      },
+      {
+        heading: "System Capabilities",
+        bullets: [
+          "USB-C PD sink supporting 5V, 9V, 12V, and 20V profiles",
+          "Current selection from 1A up to 5A (100W max)",
+          "Hardware-based configuration without firmware requirement",
+          "Inline integration into cables or embedded systems",
+        ],
+      },
+      {
+        heading: "Hardware Design",
+        numbered: [
+          {
+            title: "USB-C PD Controller",
+            body: "The Cypress CYPD3177 handles USB Power Delivery negotiation, enabling automatic contract establishment with compatible power supplies without requiring external firmware.",
+          },
+          {
+            title: "Power Switching Stage",
+            body: "A low Rds_on p-channel MOSFET ensures efficient power delivery with minimal thermal losses, supporting high current operation up to 5A.",
+          },
+          {
+            title: "Configurable Output Profiles",
+            body: "Voltage and current levels are selected using resistor configurations or hardware switches, allowing flexible deployment across different applications without software changes.",
+          },
+        ],
+      },
+      {
+        heading: "Telemetry & Control",
+        body: "An optional I2C interface provides access to internal registers of the PD controller, enabling monitoring and advanced control when connected to a host such as an Arduino.",
+        bullets: [
+          "I2C interface for reading status and negotiation data",
+          "Compatible with Arduino or bus interface tools",
+          "Useful for debugging and system integration",
+        ],
+      },
+      {
+        heading: "Mechanical & Integration Design",
+        bullets: [
+          "Compact PCB form factor (approx. 53 mm x 15 mm)",
+          "2oz copper for high current handling",
+          "Designed for heat-shrink enclosure for inline cable use",
+          "Detachable telemetry section for space-constrained applications",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1208401/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The final design provides a robust and flexible USB-C power solution, eliminating the need for dedicated power adapters. It demonstrates strong understanding of power electronics, high-current PCB design, and modern USB-C PD standards, while maintaining a compact and integration-friendly form factor.",
+      },
+    ],
+  },
   {
     slug: "smdc",
     title: "Smart 12V DC Motor Controller",
@@ -1226,132 +1327,132 @@ function ProjectModal({
           <ChevronRight className="w-5 h-5" />
         </button>
 
-      <div
-        className="relative max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
-      >
-        {/* Header bar */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 bg-card rounded-t-xl">
-          <div className="flex items-center gap-2 min-w-0">
-            <Icon className="w-3.5 h-3.5 text-primary shrink-0" />
-            <span className="text-[10px] font-mono text-muted-foreground/60 tracking-widest uppercase truncate">
-              {project.category}
-            </span>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              className="md:hidden flex items-center justify-center w-7 h-7 rounded-full border border-border/50 bg-muted/40 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
-              onClick={(e) => { e.stopPropagation(); onPrev(); }}
-              aria-label="Previous project"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              className="md:hidden flex items-center justify-center w-7 h-7 rounded-full border border-border/50 bg-muted/40 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
-              onClick={(e) => { e.stopPropagation(); onNext(); }}
-              aria-label="Next project"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={onClose}
-              className="text-muted-foreground hover:text-foreground transition-colors ml-1"
-              data-testid="button-close-modal"
-              aria-label="Close"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Hero media — first item only, no slide */}
-        <div className="relative overflow-hidden border-b border-border/30">
-          {project.media[0]?.type === "video" ? (
-            <video
-              className="w-full object-contain max-h-52 sm:max-h-none"
-              loop
-              muted
-              playsInline
-              autoPlay
-              poster={project.media[0].poster}
-              data-testid="video-modal-hero"
-            >
-              <source src={project.media[0].src} type="video/mp4" />
-            </video>
-          ) : (
-            <img
-              src={project.media[0]?.src}
-              alt={project.title}
-              className="w-full object-contain max-h-52 sm:max-h-none"
-              data-testid="img-modal-hero"
-            />
-          )}
-        </div>
-
-        {/* Brief overview block */}
-        <div className="px-6 md:px-8 pt-6 pb-5 space-y-4 border-b border-border/30">
-          {/* Title + highlight badge */}
-          <div className="flex flex-wrap items-start gap-3">
-            <h3 className="text-2xl md:text-3xl font-display font-bold leading-tight flex-1 min-w-0">
-              {project.title}
-            </h3>
-            <span className="inline-flex items-center text-[11px] font-mono bg-primary/20 text-primary border border-primary/40 rounded-full px-3 py-0.5 font-semibold shrink-0 mt-1">
-              {project.highlight}
-            </span>
-          </div>
-
-          {/* Short description */}
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            {project.description}
-          </p>
-
-          {/* Tag pills */}
-          <div className="flex flex-wrap gap-1.5">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex items-center text-[10px] font-mono bg-primary/10 text-primary border border-primary/25 rounded-full px-2.5 py-0.5"
-              >
-                {tag}
+        <div
+          className="relative max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl bg-card border border-border/50 shadow-2xl"
+        >
+          {/* Header bar */}
+          <div className="flex items-center justify-between px-5 py-3 border-b border-border/40 bg-card rounded-t-xl">
+            <div className="flex items-center gap-2 min-w-0">
+              <Icon className="w-3.5 h-3.5 text-primary shrink-0" />
+              <span className="text-[10px] font-mono text-muted-foreground/60 tracking-widest uppercase truncate">
+                {project.category}
               </span>
-            ))}
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                className="md:hidden flex items-center justify-center w-7 h-7 rounded-full border border-border/50 bg-muted/40 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+                onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                aria-label="Previous project"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                className="md:hidden flex items-center justify-center w-7 h-7 rounded-full border border-border/50 bg-muted/40 text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+                onClick={(e) => { e.stopPropagation(); onNext(); }}
+                aria-label="Next project"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={onClose}
+                className="text-muted-foreground hover:text-foreground transition-colors ml-1"
+                data-testid="button-close-modal"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
-          {/* Deliverables as compact chips */}
-          {project.deliverables && project.deliverables.length > 0 && (
+          {/* Hero media — first item only, no slide */}
+          <div className="relative overflow-hidden border-b border-border/30">
+            {project.media[0]?.type === "video" ? (
+              <video
+                className="w-full object-contain max-h-52 sm:max-h-none"
+                loop
+                muted
+                playsInline
+                autoPlay
+                poster={project.media[0].poster}
+                data-testid="video-modal-hero"
+              >
+                <source src={project.media[0].src} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={project.media[0]?.src}
+                alt={project.title}
+                className="w-full object-contain max-h-52 sm:max-h-none"
+                data-testid="img-modal-hero"
+              />
+            )}
+          </div>
+
+          {/* Brief overview block */}
+          <div className="px-6 md:px-8 pt-6 pb-5 space-y-4 border-b border-border/30">
+            {/* Title + highlight badge */}
+            <div className="flex flex-wrap items-start gap-3">
+              <h3 className="text-2xl md:text-3xl font-display font-bold leading-tight flex-1 min-w-0">
+                {project.title}
+              </h3>
+              <span className="inline-flex items-center text-[11px] font-mono bg-primary/20 text-primary border border-primary/40 rounded-full px-3 py-0.5 font-semibold shrink-0 mt-1">
+                {project.highlight}
+              </span>
+            </div>
+
+            {/* Short description */}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {project.description}
+            </p>
+
+            {/* Tag pills */}
             <div className="flex flex-wrap gap-1.5">
-              {project.deliverables.map((item) => (
+              {project.tags.map((tag) => (
                 <span
-                  key={item}
-                  className="inline-flex items-center gap-1.5 text-[10px] font-mono border border-border/50 text-muted-foreground/80 rounded px-2 py-0.5"
+                  key={tag}
+                  className="inline-flex items-center text-[10px] font-mono bg-primary/10 text-primary border border-primary/25 rounded-full px-2.5 py-0.5"
                 >
-                  <span className="w-1 h-1 rounded-full bg-primary/50 shrink-0" />
-                  {item}
+                  {tag}
                 </span>
               ))}
             </div>
-          )}
+
+            {/* Deliverables as compact chips */}
+            {project.deliverables && project.deliverables.length > 0 && (
+              <div className="flex flex-wrap gap-1.5">
+                {project.deliverables.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center gap-1.5 text-[10px] font-mono border border-border/50 text-muted-foreground/80 rounded px-2 py-0.5"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-primary/50 shrink-0" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Main detailed content */}
+          <div className="px-6 md:px-8 py-7 space-y-8">
+
+            {/* Rich sections — each project has its own unique structure */}
+            {project.sections && project.sections.length > 0 ? (
+              project.sections.map((section, i) => (
+                <RichSection key={i} section={section} />
+              ))
+            ) : (
+              <div className="space-y-4">
+                <h4 className="text-sm font-display font-semibold text-foreground tracking-wide flex items-center gap-3">
+                  Project Overview
+                  <span className="h-px flex-1 bg-border/40 block" />
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{project.longDescription}</p>
+              </div>
+            )}
+
+          </div>
         </div>
-
-        {/* Main detailed content */}
-        <div className="px-6 md:px-8 py-7 space-y-8">
-
-          {/* Rich sections — each project has its own unique structure */}
-          {project.sections && project.sections.length > 0 ? (
-            project.sections.map((section, i) => (
-              <RichSection key={i} section={section} />
-            ))
-          ) : (
-            <div className="space-y-4">
-              <h4 className="text-sm font-display font-semibold text-foreground tracking-wide flex items-center gap-3">
-                Project Overview
-                <span className="h-px flex-1 bg-border/40 block" />
-              </h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{project.longDescription}</p>
-            </div>
-          )}
-
-        </div>
-      </div>
       </div>
     </div>
   );
