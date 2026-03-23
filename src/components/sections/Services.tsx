@@ -44,7 +44,7 @@ export function Services() {
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
-          {/* Left — sticky heading block */}
+          {/* Left - sticky heading block */}
           <div className="lg:w-60 shrink-0">
             <div className="lg:sticky lg:top-28">
               <div className="flex items-center gap-3 mb-6">
@@ -58,12 +58,12 @@ export function Services() {
                 <span className="block text-lg font-medium text-muted-foreground">For You</span>
               </h2>
               <p className="text-[13px] text-muted-foreground leading-relaxed">
-                End-to-end embedded engineering — from concept validation to certified, volume-ready product.
+                End-to-end embedded engineering - from concept validation to certified, volume-ready product.
               </p>
             </div>
           </div>
 
-          {/* Right — vertical numbered service list */}
+          {/* Right - vertical numbered service list */}
           <div className="flex-1 divide-y divide-border/35">
             {services.map((service) => (
               <div

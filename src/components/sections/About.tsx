@@ -29,7 +29,7 @@ export function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0">
 
-          {/* Left — narrow spec sheet column */}
+          {/* Left - narrow spec sheet column */}
           <div className="lg:w-64 shrink-0 lg:pr-12 lg:border-r lg:border-border/30">
             <p className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase mb-5">
               Technical Parameters
@@ -60,10 +60,10 @@ export function About() {
             </div>
           </div>
 
-          {/* Right — wide bio column */}
+          {/* Right - wide bio column */}
           <div className="flex-1 lg:pl-16">
 
-            {/* Profile header — photo + name */}
+            {/* Profile header - photo + name */}
             <div className="flex items-center gap-8 mb-10">
               <div className="relative shrink-0">
                 <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-primary/40 ring-4 ring-primary/10 shadow-xl shadow-black/40">
@@ -89,14 +89,14 @@ export function About() {
               <p>
                 I've been working in embedded systems for about ten years, mostly on projects that
                 reach production. Day-to-day that means writing firmware in C and C++ for Cortex-M
-                targets — STM32, nRF52, ESP32 — bringing up embedded Linux on custom hardware using
+                targets - STM32, nRF52, ESP32 - bringing up embedded Linux on custom hardware using
                 Yocto or Buildroot, and doing schematic capture and multi-layer PCB layout in KiCad
                 myself rather than handing it off. Most clients come to me because they need one
                 engineer who can work across both sides of the board.
               </p>
               <p>
                 I've worked on BLE health monitors, industrial IoT gateways, LoRa sensor networks,
-                and a few motor-control boards — mostly for startups and small engineering teams without
+                and a few motor-control boards - mostly for startups and small engineering teams without
                 an embedded specialist on staff. Projects usually involve first-article builds, which
                 means dealing with bring-up issues, board rework, and the back-and-forth that comes
                 before anything stabilises. I'm used to that part.
@@ -107,7 +107,7 @@ export function About() {
                 before sending files to fab and keep the CM in the loop early. If a project needs
                 FCC or CE testing, I can write the test plan, coordinate with the lab, and handle
                 remediation. Handoff packages include schematics, BOM, firmware build instructions,
-                and programming jig specs — enough for a CM to run production independently.
+                and programming jig specs - enough for a CM to run production independently.
               </p>
             </div>
           </div>

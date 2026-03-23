@@ -4,7 +4,7 @@ const reasons = [
   {
     icon: Shield,
     title: "Production-Ready Delivery",
-    description: "Every project is engineered for manufacturing — not just a working prototype on the bench.",
+    description: "Every project is engineered for manufacturing - not just a working prototype on the bench.",
   },
   {
     icon: Clock,

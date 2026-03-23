@@ -58,10 +58,10 @@ export function Hero() {
           </a>
         </div>
 
-        {/* Main content — two-column on desktop, stacked on mobile */}
+        {/* Main content - two-column on desktop, stacked on mobile */}
         <div className="flex-1 flex flex-col lg:flex-row gap-10 lg:gap-14 py-10 lg:py-12">
 
-          {/* Left column — headline · description · stats */}
+          {/* Left column - headline · description · stats */}
           <div className="flex flex-col justify-between gap-8 flex-1 min-w-0">
 
             {/* Headline */}
@@ -80,7 +80,7 @@ export function Hero() {
             {/* Description */}
             <div>
               <p className="text-[15px] text-muted-foreground leading-[2] max-w-lg">
-                Firmware, Embedded Linux, IoT, and PCB design. Ten years of hands-on embedded work —
+                Firmware, Embedded Linux, IoT, and PCB design. Ten years of hands-on embedded work -
                 from first bring-up through compliance testing and CM handoff. I cover the full
                 hardware-software stack on the same project.
               </p>
@@ -105,7 +105,7 @@ export function Hero() {
 
           </div>
 
-          {/* Right column — boot console, visible on all screens */}
+          {/* Right column - boot console, visible on all screens */}
           <div className="lg:w-[380px] shrink-0 flex flex-col justify-center">
             <div className="rounded-lg border border-border/40 bg-card/60 backdrop-blur-sm overflow-hidden shadow-xl shadow-black/20">
               <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/35 bg-muted/15">

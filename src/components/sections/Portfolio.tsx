@@ -1466,7 +1466,7 @@ function ProjectModal({
     >
       <div className="fixed inset-0 bg-background/85 backdrop-blur-sm" />
 
-      {/* Modal wrapper — prev/next sit just outside the card */}
+      {/* Modal wrapper - prev/next sit just outside the card */}
       <div className="relative w-full max-w-3xl" onClick={(e) => e.stopPropagation()}>
 
         <button
@@ -1521,7 +1521,7 @@ function ProjectModal({
             </div>
           </div>
 
-          {/* Hero media — first item only, no slide */}
+          {/* Hero media - first item only, no slide */}
           <div className="relative overflow-hidden border-b border-border/30">
             {project.media[0]?.type === "video" ? (
               <video
@@ -1593,7 +1593,7 @@ function ProjectModal({
           {/* Main detailed content */}
           <div className="px-6 md:px-8 py-7 space-y-8">
 
-            {/* Rich sections — each project has its own unique structure */}
+            {/* Rich sections - each project has its own unique structure */}
             {project.sections && project.sections.length > 0 ? (
               project.sections.map((section, i) => (
                 <RichSection key={i} section={section} />
@@ -1998,7 +1998,7 @@ export function Portfolio({
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
 
-                  {/* Category — top left */}
+                  {/* Category - top left */}
                   <div className="absolute top-3 left-3 z-10">
                     <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-foreground/70 bg-background/70 backdrop-blur-sm border border-border/50 rounded-full px-2.5 py-1">
                       <Icon className="w-3 h-3 text-primary" />
@@ -2006,7 +2006,7 @@ export function Portfolio({
                     </span>
                   </div>
 
-                  {/* Highlight — bottom of image, triggers recommend on click */}
+                  {/* Highlight - bottom of image, triggers recommend on click */}
                   <div
                     className="absolute bottom-3 left-3 z-10"
                     onClick={(e) => toggleRecommended(project.slug, e)}
