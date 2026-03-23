@@ -126,7 +126,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "usb-c-pd-sink-cypd3177",
+    slug: "e4a1b2",
     title: "USB-C PD Sink with CYPD3177",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
@@ -144,7 +144,7 @@ const projects: Project[] = [
       "Embedded Hardware",
     ],
     icon: Zap,
-    highlight: "USB-C barrel-connector replacement up to 100W",
+    highlight: "USB-C PD",
     media: [
       {
         type: "image",
@@ -242,7 +242,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "f3a91c",
+    slug: "f9c2d7",
     title: "FPGA Deep Learning Inference (HLS, Kria KV260)",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-ai", "embedded-firmware"],
@@ -260,7 +260,7 @@ const projects: Project[] = [
       "Parallel Computing",
     ],
     icon: Cpu,
-    highlight: "FPGA AI Acceleration",
+    highlight: "FPGA AI",
     media: [
       {
         type: "image",
@@ -337,7 +337,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "7d2a9f",
+    slug: "7a3e91",
     title: "RFID IoT Attendance System (ESP8266)",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
@@ -355,7 +355,7 @@ const projects: Project[] = [
       "Cloud Integration",
     ],
     icon: Wifi,
-    highlight: "RFID Cloud Logging",
+    highlight: "RFID IoT",
     media: [
       {
         type: "image",
@@ -435,7 +435,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "espiff-esp32-rp2040-controller",
+    slug: "b8d4f1",
     title: "EsPiFF: ESP32 + RP2040 Controller",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware", "iot-connected-devices"],
@@ -453,7 +453,7 @@ const projects: Project[] = [
       "FreeRTOS",
     ],
     icon: Cpu,
-    highlight: "Reliable Raspberry Pi alternative for 24/7 systems",
+    highlight: "Dual MCU",
     media: [
       {
         type: "image",
@@ -553,7 +553,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "a9f3c7",
+    slug: "c2f6a8",
     title: "Edge AI Model Porting (Jetson → TDA4VM)",
     category: "Embedded Linux & BSP",
     filterSlugs: ["embedded-linux-bsp", "iot-connected-devices"],
@@ -654,7 +654,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "water-leak-iot",
+    slug: "9d1b73",
     title: "Water Leak Detection & Alert System",
     category: "IoT & Connectivity",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
@@ -672,7 +672,7 @@ const projects: Project[] = [
       "Cloud Events",
     ],
     icon: Droplet,
-    highlight: "Real-time water leak alerts",
+    highlight: "IoT Alerts",
     media: [
       {
         type: "image",
@@ -756,7 +756,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "9e4b2c",
+    slug: "4f8c2e",
     title: "Motor Control Shield (DC & BLDC, IFX007T)",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
@@ -774,7 +774,7 @@ const projects: Project[] = [
       "BEMF",
     ],
     icon: Gauge,
-    highlight: "BLDC Motor Control",
+    highlight: "Motor Control",
     media: [
       {
         type: "image",
@@ -866,7 +866,7 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "c1d8e4",
+    slug: "1a7e5c",
     title: "WiFi-Controlled Arduino Car",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
@@ -884,7 +884,7 @@ const projects: Project[] = [
       "WiFi",
     ],
     icon: Wifi,
-    highlight: "Web-Controlled Robotics",
+    highlight: "Web Robotics",
     media: [
       {
         type: "image",
