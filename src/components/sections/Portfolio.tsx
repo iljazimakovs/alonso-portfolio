@@ -357,6 +357,105 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "edge-ai-model-porting-tda4vm",
+    title: "Edge AI Model Porting (Jetson → TDA4VM)",
+    category: "Embedded Linux & BSP",
+    filterSlugs: ["embedded-linux-bsp", "iot-connected-devices"],
+    description:
+      "Ported an edge AI inference pipeline from Jetson Nano to TI TDA4VM, leveraging hardware accelerators for significant performance gains.",
+    longDescription:
+      "Ported an existing edge machine learning pipeline from the NVIDIA Jetson Nano to the Texas Instruments SK-TDA4VM platform, focusing on optimizing inference performance using dedicated hardware accelerators. The original implementation used a TensorFlow Lite SSD MobileNet model running on CPU, while the target system required model compilation using TI’s TIDL toolchain to utilize onboard deep learning accelerators. The workflow involved adapting model formats, setting up a cross-platform compilation environment, generating optimized artifacts, and deploying them onto the embedded target. The final system achieved a substantial reduction in inference time, demonstrating the impact of hardware-aware optimization in edge AI deployments.",
+    tags: [
+      "Edge AI",
+      "TensorFlow Lite",
+      "TDA4VM",
+      "Jetson Nano",
+      "Embedded Linux",
+      "Model Optimization",
+      "TIDL",
+    ],
+    icon: Cpu,
+    highlight: "Edge AI Porting",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1541944/dsc_7551_WZqr6P6Slb.JPG?auto=compress,format&w=1280&h=960&fit=max",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Model Porting Workflow",
+      "TIDL Compilation Setup",
+      "Optimized Inference Pipeline",
+      "Performance Benchmarking",
+      "Deployment on TDA4VM",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Migrated an edge AI inference pipeline from a general-purpose embedded GPU platform (Jetson Nano) to a heterogeneous edge AI system (TI TDA4VM). The goal was to improve inference efficiency by leveraging dedicated accelerator hardware rather than relying on CPU execution.",
+      },
+      {
+        heading: "Baseline System (Jetson Nano)",
+        body: "The original implementation executed a TensorFlow Lite SSD MobileNet V1 model on the Jetson Nano using CPU-based inference.",
+        bullets: [
+          "Input: 320×320 images from COCO dataset",
+          "Model: SSD MobileNet V1 (TensorFlow Lite)",
+          "Execution: CPU-based inference",
+          "Average latency: ~223 ms per inference",
+          "Power envelope: ~5W",
+        ],
+      },
+      {
+        heading: "Target Platform (TDA4VM)",
+        body: "The TDA4VM platform introduces dedicated deep learning and vision accelerators, requiring model transformation and compilation before execution.",
+        bullets: [
+          "Heterogeneous architecture with CPU, DSP, and AI accelerators",
+          "Requires compiled model artifacts for hardware execution",
+          "Supports TensorFlow Lite via TIDL optimization pipeline",
+          "Enhanced I/O capabilities including PCIe and multi-camera support",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1541946/dsc_8678006_kEPDnhO7T0.jpg?auto=compress,format&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Model Optimization Workflow",
+        numbered: [
+          {
+            title: "Environment Setup",
+            body: "Configured TI’s edgeai-tidl-tools environment on Ubuntu (via WSL2) to enable model compilation and artifact generation.",
+          },
+          {
+            title: "Model Compilation",
+            body: "Converted TensorFlow Lite model into TIDL-compatible format using TI’s toolchain, generating required artifacts and configuration files.",
+          },
+          {
+            title: "Deployment",
+            body: "Transferred compiled artifacts to the TDA4VM board via SFTP and integrated them into the runtime environment.",
+          },
+        ],
+      },
+      {
+        heading: "Performance Results",
+        body: "The migration demonstrated the impact of hardware acceleration in edge AI systems.",
+        bullets: [
+          "Jetson Nano (CPU): ~223 ms per inference",
+          "TDA4VM (accelerated): ~9 ms per inference",
+          "Performance improvement: ~24× speedup",
+          "Significant efficiency gain using dedicated AI hardware",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1547665/image_jtAmQ78BXZ.png?auto=compress,format&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Engineering Insight",
+        body: "This project highlights the importance of hardware-aware model deployment in edge AI systems. While general-purpose platforms allow quick prototyping, leveraging specialized accelerators requires additional tooling and workflow adaptation but delivers substantial performance improvements.",
+      },
+    ],
+  },
+  {
     slug: "smdc",
     title: "Smart 12V DC Motor Controller",
     category: "PCB & Hardware",
