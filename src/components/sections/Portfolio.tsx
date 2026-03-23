@@ -690,7 +690,6 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "Designed a custom ESP32 development board in Arduino Uno form factor, focusing on improving usability and reliability for everyday embedded development. The project evolved through real-world usage, leading to a refined second revision addressing practical design limitations.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1605094/image_rHmuYm1hfZ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1605095/image_POeRWSnGb3.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
