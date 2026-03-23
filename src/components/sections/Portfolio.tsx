@@ -160,9 +160,6 @@ const projects: Project[] = [
       {
         heading: "Project Overview",
         body: "Developed a USB-C Power Delivery sink module that replaces conventional barrel power connectors with a negotiation-based USB-C input. The design enables embedded systems and standalone electronics to draw power safely from standard USB-C PD adapters without requiring firmware for normal operation.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1208398/_BLGl2VleYg.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
-        ],
       },
       {
         heading: "Core Design Concept",
@@ -171,19 +168,17 @@ const projects: Project[] = [
           "Operates as a USB-C PD sink device",
           "Negotiates power from compliant USB-C PD sources",
           "Exposes output through screw terminal or direct solder connection",
-          "Designed to replace legacy power adapters with a compact inline module",
+          "Replaces legacy power adapters with a compact inline module",
         ],
       },
       {
         heading: "Power Delivery Features",
-        body: "The module supports multiple negotiated output profiles, making it adaptable for a wide range of embedded and hardware power applications.",
         bullets: [
           "Selectable output voltages: 5V, 9V, 12V, and 20V",
           "Selectable current levels: 1A, 2A, 3A, and 5A",
           "Maximum power capability up to 100W",
-          "Fine-tuning support for higher current operation",
-          "Voltage and current must be configured before connection",
-          "Not adjustable during active operation",
+          "Hardware-based configuration (no firmware required)",
+          "Pre-configuration required before power-up",
         ],
       },
       {
@@ -191,47 +186,46 @@ const projects: Project[] = [
         numbered: [
           {
             title: "USB-C PD Controller Stage",
-            body: "The CYPD3177 manages USB Power Delivery negotiation with the source adapter, allowing the board to request defined voltage and current profiles without requiring external firmware for standard operation.",
+            body: "The CYPD3177 manages USB Power Delivery negotiation with the source adapter, enabling automatic contract establishment without external firmware.",
           },
           {
             title: "Efficient Power Switching",
-            body: "A low Rds_on DMP3013SFV p-channel MOSFET is used in the power path to support efficient high-current switching with reduced conduction loss and compact layout area.",
+            body: "A low Rds_on DMP3013SFV p-channel MOSFET supports efficient high-current delivery while minimizing thermal losses.",
           },
           {
             title: "Compact High-Current PCB",
-            body: "The board is implemented on a compact 53 mm × 15.4 mm PCB with 2 oz copper, supporting high-current operation while preserving an inline form factor suited to embedded integration.",
+            body: "Implemented on a compact 53 mm × 15.4 mm PCB with 2 oz copper, enabling high current handling in an inline-friendly form factor.",
           },
         ],
       },
       {
         heading: "Configuration & Operation",
-        body: "A key strength of the design is that it remains simple to deploy in standalone applications.",
         bullets: [
-          "No programming required for normal operation",
-          "Voltage and current selected via switches or resistor values",
-          "LED failure indicator for fault visibility",
-          "Designed for safe use with USB-C PD instead of unsafe high-voltage misuse on USB-A",
-          "Lead-free assembly for production-friendly implementation",
+          "No programming required for standalone use",
+          "Voltage and current configured via resistors or switches",
+          "LED failure indicator for diagnostics",
+          "Designed to prevent unsafe high-voltage misuse",
+          "Lead-free assembly for production readiness",
         ],
       },
       {
         heading: "Telemetry Interface",
-        body: "Although the board is designed for software-free operation, it also exposes an optional I2C interface for advanced access to controller telemetry and status.",
+        body: "An optional I2C interface allows access to controller registers for monitoring and advanced integration.",
         bullets: [
-          "Access to status and control registers through I2C",
+          "I2C access to status and control registers",
           "Compatible with 3.3V hosts such as Arduino Due",
-          "Useful for debugging, validation, and deeper system monitoring",
-          "Supports external scripts or tools for controller inspection",
+          "Useful for debugging and validation workflows",
+          "Supports external scripts for inspection and testing",
         ],
       },
       {
         heading: "Mechanical Integration",
-        body: "The module was clearly designed as a deployable product rather than only a bench prototype, with features that support compact installation into cables and embedded systems.",
+        body: "Designed for real-world deployment, the module supports compact inline integration into cables and embedded systems.",
         bullets: [
-          "Can be integrated inline into existing cable assemblies",
-          "Supports permanent installation using heat-shrink tubing",
-          "Telemetry section can be snapped off for more compact deployment",
-          "Overall height can be adapted depending on installed components",
+          "Inline cable integration capability",
+          "Supports heat-shrink enclosure for permanent installation",
+          "Detachable telemetry section for compact use",
+          "Adaptable height depending on component population",
         ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/1208399/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
@@ -240,7 +234,125 @@ const projects: Project[] = [
       },
       {
         heading: "Engineering Outcome",
-        body: "The final design delivers a compact, high-power USB-C PD sink solution that modernizes power input design for embedded hardware. It demonstrates strong capability in USB-C PD integration, high-current PCB design, hardware-oriented product thinking, and practical deployment-focused mechanical integration.",
+        body: "The final design delivers a compact, high-power USB-C PD sink solution that modernizes power input design. It demonstrates strong capability in USB-C PD integration, high-current PCB design, and product-oriented hardware development.",
+      },
+    ],
+  },
+  {
+    slug: "espiff-esp32-rp2040-controller",
+    title: "EsPiFF: ESP32 + RP2040 Controller",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "iot-connected-devices"],
+    description:
+      "Industrial-grade controller combining ESP32 and RP2040 in Raspberry Pi form factor, designed for reliable 24/7 operation with HAT compatibility and embedded-focused architecture.",
+    longDescription:
+      "Designed a high-reliability embedded controller platform combining an ESP32 and RP2040 in a Raspberry Pi 4 form factor. The system targets 24/7 automation and industrial environments where Linux-based SBCs introduce reliability risks due to SD card dependency and lack of hardware supervision. The ESP32 provides connectivity, memory, and processing capabilities, while the RP2040 acts as a co-processor enabling Raspberry Pi header compatibility and advanced peripheral interfacing. The design integrates external watchdog, supercapacitor-backed RTC, Ethernet, WiFi, and expandable flash, making it suitable for sealed enclosures, industrial deployments, and long-term unattended operation.",
+    tags: [
+      "ESP32",
+      "RP2040",
+      "Embedded Hardware",
+      "PCB Design",
+      "Industrial IoT",
+      "Ethernet",
+      "FreeRTOS",
+    ],
+    icon: Cpu,
+    highlight: "Reliable Raspberry Pi alternative for 24/7 systems",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1520167/_7fhyhPxdZv.blob?auto=compress,format&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Custom Dual-MCU PCB",
+      "ESP32 + RP2040 System Architecture",
+      "Raspberry Pi Form Factor Integration",
+      "High-Reliability Hardware Design",
+      "Multi-Interface Embedded Platform",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a dual-microcontroller embedded system in Raspberry Pi form factor to address reliability limitations of Linux SBCs in continuous operation environments. The design enables reuse of Pi HATs and enclosures while replacing the software-heavy stack with a deterministic embedded architecture.",
+      },
+      {
+        heading: "System Architecture",
+        body: "The platform combines a connectivity-focused MCU with a flexible co-processor to deliver both performance and interface compatibility.",
+        bullets: [
+          "ESP32 provides WiFi, Ethernet, flash, and PSRAM for application processing",
+          "16 MB flash and 8 MB PSRAM support complex embedded workloads",
+          "RP2040 acts as co-processor for GPIO and interface expansion",
+          "40-pin header enables compatibility with Raspberry Pi HAT ecosystem",
+          "Designed to operate without Linux for improved determinism and reliability",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1520180/espiff_v3_1_annotated_correct_V30zvmZa8C.png",
+        ],
+      },
+      {
+        heading: "Reliability Engineering",
+        body: "A key objective was eliminating common failure points found in Raspberry Pi-based deployments, especially in unattended or industrial environments.",
+        bullets: [
+          "Eliminates SD-card dependency for storage",
+          "External watchdog for system supervision",
+          "Supercapacitor-backed real-time clock for resilience",
+          "Designed for operation in sealed and low-airflow enclosures",
+          "Suitable for long-duration and remote deployments",
+        ],
+      },
+      {
+        heading: "Hardware Capabilities",
+        numbered: [
+          {
+            title: "Connected Processing Core",
+            body: "The ESP32 integrates wireless connectivity, Ethernet, and large memory resources, enabling networked control, automation, and data processing in a compact embedded platform.",
+          },
+          {
+            title: "RP2040 Co-Processor Layer",
+            body: "The RP2040 extends system flexibility by handling GPIO, emulating Raspberry Pi header behavior, and enabling USB host/device functionality for peripherals such as storage and input devices.",
+          },
+          {
+            title: "Memory & Expandability",
+            body: "The design includes onboard flash plus external ISSI flash options up to 512 Mbit, enabling scalable storage for embedded applications.",
+          },
+        ],
+      },
+      {
+        heading: "Power & Deployment",
+        bullets: [
+          "USB-C input supporting up to 5V / 3A",
+          "Direct 24V power input option",
+          "Compatible with PoE HAT for network-powered deployment",
+          "Supports power-hungry HAT modules",
+        ],
+      },
+      {
+        heading: "Mechanical & Integration",
+        body: "The system was intentionally designed to integrate seamlessly into the existing Raspberry Pi ecosystem while improving deployment robustness.",
+        bullets: [
+          "Compatible with Raspberry Pi 4 enclosures (metal, DIN rail, plastic)",
+          "External antenna via uFL connector for use in shielded enclosures",
+          "Suitable for industrial and waterproof installations",
+          "Maintains Pi ecosystem compatibility while improving reliability",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1520175/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg?auto=compress,format&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Software Ecosystem",
+        bullets: [
+          "Arduino IDE support for both ESP32 and RP2040",
+          "Compatible with Espressif IDF and Pico SDK",
+          "Supports MicroPython and JavaScript environments",
+          "RTOS support including FreeRTOS and Apache NuttX",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The final platform delivers a robust embedded alternative to Raspberry Pi for applications where reliability, enclosure compatibility, and deterministic operation are critical. It demonstrates strong system-level design across hardware architecture, power integration, mechanical compatibility, and long-term deployment considerations.",
       },
     ],
   },
