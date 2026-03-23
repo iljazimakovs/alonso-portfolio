@@ -5,7 +5,7 @@ const datasheetRows = [
   { label: "Toolchain",        value: "GCC · IAR · LLVM · Keil" },
   { label: "Debug I/F",        value: "JTAG · SWD · ETM Trace" },
   { label: "PCB Stack-up",     value: "2 → 8-layer HDI" },
-  { label: "Certifications",   value: "CE · FCC · IEC 62443" },
+  { label: "Protocols",   value: "UART · SPI · I²C · USB · CAN" },
 ];
 
 export function About() {
