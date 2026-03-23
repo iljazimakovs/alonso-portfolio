@@ -1866,7 +1866,7 @@ export function Portfolio({
 
   const activeCategoryName =
     activeCategory === "recommended"
-      ? "Suggested"
+      ? "Recommended"
       : filterCategories.find((c) => c.slug === activeCategory)?.name ||
       "All Projects";
 
@@ -2083,7 +2083,7 @@ export function Portfolio({
               {searchQuery.trim()
                 ? `No projects match "${searchQuery}". Try a different search term.`
                 : activeCategory === "recommended"
-                  ? "No suggested projects yet. Click the thumbs-up icon on any project card to add it."
+                  ? "No recommended projects yet. Click the thumbs-up icon on any project card to add it."
                   : "No projects found in this category."}
             </p>
           </div>
