@@ -654,11 +654,11 @@ const projects: Project[] = [
   },
   {
     slug: "6b2f9a",
-    title: "Custom ESP32 Development Board (Rev 2.0)",
+    title: "Custom ESP32 Development Board",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
     description:
-      "Custom ESP32 development board (Rev 2.0) with improved power input, programming interface, and usability for embedded projects.",
+      "Custom ESP32 development board with improved power input, programming interface, and usability for embedded projects.",
     longDescription:
       "Designed and refined a custom ESP32-based development board in Arduino Uno form factor, focusing on usability, power handling, and real-world deployment. Revision 2.0 introduces key improvements over the initial design, including a DC barrel power connector, a dedicated programming header with auto reset/flash circuitry, and enhanced decoupling for improved voltage stability. The board is optimized for both rapid prototyping and permanent installations, addressing practical limitations identified during extensive use of the first revision.",
     tags: [
@@ -738,13 +738,6 @@ const projects: Project[] = [
         images: [
           "https://hackster.imgix.net/uploads/attachments/1605099/image_tdlmsDBCBY.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1605101/image_Vb2G43zPK5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-      {
-        heading: "Schematic",
-        body: "Complete schematic of the Rev 2.0 design including power regulation and programming interface.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1605102/schematic_esp32-s-uno_-_rev2_2023-06-25_8jzofM18T7.png",
         ],
       },
       {
