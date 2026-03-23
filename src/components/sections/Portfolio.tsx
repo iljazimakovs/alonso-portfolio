@@ -127,7 +127,7 @@ interface Project {
 const projects: Project[] = [
   {
     slug: "e4a1b2",
-    title: "USB-C PD Sink with CYPD3177",
+    title: "Configurable High-Power Input System",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
     description:
@@ -243,7 +243,7 @@ const projects: Project[] = [
   },
   {
     slug: "f9c2d7",
-    title: "FPGA Deep Learning Inference (HLS, Kria KV260)",
+    title: "Hardware-Accelerated Neural Compute Engine",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-ai", "embedded-firmware"],
     description:
@@ -337,7 +337,7 @@ const projects: Project[] = [
   },
   {
     slug: "7a3e91",
-    title: "RFID IoT Attendance System (ESP8266)",
+    title: "Cloud-Connected Access Logging System",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
     description:
@@ -435,7 +435,7 @@ const projects: Project[] = [
   },
   {
     slug: "b8d4f1",
-    title: "EsPiFF: ESP32 + RP2040 Controller",
+    title: "Industrial Dual-Processor Embedded Platform",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware", "iot-connected-devices"],
     description:
@@ -553,7 +553,7 @@ const projects: Project[] = [
   },
   {
     slug: "c2f6a8",
-    title: "Edge AI Model Porting (Jetson → TDA4VM)",
+    title: "Cross-Platform AI Acceleration Pipeline",
     category: "Embedded Linux & BSP",
     filterSlugs: ["embedded-linux-bsp", "iot-connected-devices"],
     description:
@@ -654,7 +654,7 @@ const projects: Project[] = [
   },
   {
     slug: "6b2f9a",
-    title: "Custom ESP32 Development Board",
+    title: "Embedded Prototyping Hardware Platform",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
     description:
@@ -748,7 +748,7 @@ const projects: Project[] = [
   },
   {
     slug: "8c4d2f",
-    title: "ESP32 Drone Control System (Tello API)",
+    title: "Wireless Multi-Input Flight Controller",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
     description:
@@ -864,7 +864,7 @@ const projects: Project[] = [
   },
   {
     slug: "9d1b73",
-    title: "Water Leak Detection & Alert System",
+    title: "Event-Driven Environmental Monitoring System",
     category: "IoT & Connectivity",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
     description:
@@ -966,7 +966,7 @@ const projects: Project[] = [
   },
   {
     slug: "4f8c2e",
-    title: "Motor Control Shield (DC & BLDC, IFX007T)",
+    title: "Multi-Topology Motor Drive Platform",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware"],
     description:
@@ -1076,7 +1076,7 @@ const projects: Project[] = [
   },
   {
     slug: "1a7e5c",
-    title: "WiFi-Controlled Arduino Car",
+    title: "Browser-Based Mobile Robotics Platform",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware"],
     description:
@@ -1185,7 +1185,7 @@ const projects: Project[] = [
   },
   {
     slug: "a7f3c9",
-    title: "Edge AI AFib Detection using PPG (ESP32)",
+    title: "On-Device Cardiac Anomaly Detection System",
     category: "AI & Edge Computing",
     filterSlugs: ["ai-edge-computing", "embedded-firmware"],
     description:
