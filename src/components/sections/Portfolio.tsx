@@ -653,6 +653,240 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "6b2f9a",
+    title: "Custom ESP32 Development Board (Rev 2.0)",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware"],
+    description:
+      "Custom ESP32 development board (Rev 2.0) with improved power input, programming interface, and usability for embedded projects.",
+    longDescription:
+      "Designed and refined a custom ESP32-based development board in Arduino Uno form factor, focusing on usability, power handling, and real-world deployment. Revision 2.0 introduces key improvements over the initial design, including a DC barrel power connector, a dedicated programming header with auto reset/flash circuitry, and enhanced decoupling for improved voltage stability. The board is optimized for both rapid prototyping and permanent installations, addressing practical limitations identified during extensive use of the first revision.",
+    tags: [
+      "ESP32",
+      "PCB Design",
+      "Embedded Systems",
+      "Hardware Design",
+      "Power Electronics",
+      "IoT",
+    ],
+    icon: Cpu,
+    highlight: "Custom PCB Design",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1605093/_mi0rAzkkTd.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Custom PCB Layout & Routing",
+      "Rev 2.0 Hardware Design",
+      "Programming Interface Circuit",
+      "Power Input Design",
+      "Assembly & Validation",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a custom ESP32 development board in Arduino Uno form factor, focusing on improving usability and reliability for everyday embedded development. The project evolved through real-world usage, leading to a refined second revision addressing practical design limitations.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1605094/image_rHmuYm1hfZ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1605095/image_POeRWSnGb3.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1605096/image_52Fo62RCkm.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Design Evolution",
+        body: "The initial revision focused on minimalism, but real-world usage revealed missing features that limited usability in practical applications.",
+        bullets: [
+          "Rev 1.0 omitted USB interface and dedicated power connector",
+          "OTA programming used to reduce hardware complexity",
+          "External wiring required for power during development",
+          "User experience highlighted need for integrated interfaces",
+        ],
+      },
+      {
+        heading: "Hardware Improvements",
+        body: "Revision 2.0 introduces several key enhancements to improve usability and robustness.",
+        bullets: [
+          "DC barrel connector for stable external power input",
+          "6-pin programming header for external USB-to-serial interface",
+          "Auto reset/flash circuit using transistor-based design",
+          "Additional decoupling capacitors for voltage stability",
+          "Improved PCB routing and thermal considerations",
+        ],
+      },
+      {
+        heading: "Power Design",
+        body: "The board uses a linear regulator for 3.3V supply, with considerations for future improvements.",
+        bullets: [
+          "3.3V LDO regulator for ESP32 supply",
+          "Supports 7.2V–12V input via barrel jack",
+          "Handles moderate load but limited to ~800mA",
+          "Future plan: switch to buck converter for higher efficiency",
+        ],
+      },
+      {
+        heading: "Manufacturing",
+        body: "The PCB was fabricated and assembled with attention to prototyping efficiency and cost.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1605097/image-5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Assembly Process",
+        body: "The board was assembled using standard PCB prototyping techniques.",
+        bullets: [
+          "Stencil-based solder paste application",
+          "Component placement within minutes",
+          "Hotplate reflow at ~223°C",
+          "Manual inspection for solder defects",
+          "Through-hole component finishing",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1605098/image_beWG7utilj.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1605099/image_tdlmsDBCBY.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1605100/image_dKvLjESX0Z.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1605101/image_Vb2G43zPK5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Schematic",
+        body: "Complete schematic of the Rev 2.0 design including power regulation and programming interface.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1605102/schematic_esp32-s-uno_-_rev2_2023-06-25_8jzofM18T7.png",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates iterative hardware design driven by real-world usage. It highlights experience in PCB layout, power system design, embedded hardware integration, and practical usability improvements across hardware revisions.",
+      },
+    ],
+  },
+  {
+    slug: "8c4d2f",
+    title: "ESP32 Drone Control System (Tello API)",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+    description:
+      "Embedded drone control system using ESP32 with WiFi, gesture input, and gamepad support for real-time flight control.",
+    longDescription:
+      "Developed a standalone embedded drone controller using ESP32 to interface with the DJI Tello drone via its WiFi-based API. The system supports multiple input modalities including physical buttons, gesture-based control using an MPU6050, and Bluetooth gamepad integration. A captive portal-based WiFi configuration system allows seamless drone pairing without manual setup. The controller provides real-time feedback through LEDs, OLED display, and onboard controls, enabling intuitive and flexible flight operation. The architecture separates communication, input handling, and control logic to support extensibility and future features such as voice control.",
+    tags: [
+      "ESP32",
+      "Drone Control",
+      "IoT",
+      "WiFi",
+      "Embedded Systems",
+      "MPU6050",
+      "Robotics",
+    ],
+    icon: Wifi,
+    highlight: "Drone Control System",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1617714/_fX8bRTRZXj.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "ESP32 Firmware",
+      "Tello API Integration",
+      "Gesture Control System",
+      "Gamepad Interface (Bluetooth)",
+      "WiFi Captive Portal Setup",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a standalone embedded controller for the DJI Tello drone using ESP32, enabling wireless control through multiple input methods including buttons, gestures, and gamepads. The system focuses on usability, flexibility, and modular architecture.",
+      },
+      {
+        heading: "Hardware System",
+        body: "The controller integrates sensing, feedback, and control hardware into a compact embedded platform.",
+        bullets: [
+          "ESP32 microcontroller for processing and WiFi communication",
+          "MPU6050 for gesture-based control",
+          "OLED display for status and feedback",
+          "LED indicators for connection and battery status",
+          "Push buttons for flight actions (takeoff, land, emergency stop)",
+          "LiPo battery-powered portable system",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1618010/sampleassembledcontroller_FJ8MsyUhnH.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Drone & Input Devices",
+        body: "The system supports multiple drone models and user input devices for flexible operation.",
+        bullets: [
+          "Compatible with Tello, Tello EDU, and Tello Talent drones",
+          "Supports PS3, PS4, Switch, and 8BitDo gamepads",
+          "Fallback control via onboard buttons and gestures",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1618009/whitetello_wI2Z3XGB66.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1618012/ps4red_oBsDN2kTgP.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1618013/8bitdo_fmhc8FQ3CS.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "System Architecture",
+        body: "The controller communicates with the drone over WiFi using the Tello SDK, while handling input processing locally.",
+        bullets: [
+          "ESP32 connects directly to Tello WiFi network",
+          "Commands sent using Tello UDP-based API",
+          "Separation between input handling and command generation",
+          "Real-time control loop for responsive flight behavior",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1617718/samplecontrollerlayout_oAccSVZ36v.png",
+        ],
+      },
+      {
+        heading: "Gesture Control",
+        body: "Gesture-based flight control is implemented using onboard motion sensing.",
+        bullets: [
+          "MPU6050 detects tilt direction",
+          "Mapped to directional flight commands",
+          "Enables intuitive hands-on control",
+          "Reduces dependency on external controllers",
+        ],
+      },
+      {
+        heading: "WiFi Configuration",
+        body: "A captive portal simplifies pairing between the controller and drone.",
+        bullets: [
+          "ESP32 hosts WiFi configuration portal",
+          "User selects Tello SSID from list",
+          "Automatic connection and binding",
+          "No manual configuration required",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1618018/managetello_TgY8FHQLlR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1618019/ssidlist_D4IlAiMVvb.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1618020/tellossid_Ea3MgnymvI.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1618021/telloconnected_YGCGk3Zu5U.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Software System",
+        body: "Firmware is built using Arduino framework with multiple integrated libraries.",
+        bullets: [
+          "ESP32 support via Arduino Board Manager",
+          "MPU6050 and OLED libraries for sensor/UI integration",
+          "Bluepad32 library for Bluetooth gamepad support",
+          "Modular firmware for progressive feature development",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates a complete embedded robotics control system integrating wireless communication, human interfaces, and real-time control. It highlights experience in ESP32 networking, multi-input control design, and system-level architecture for interactive embedded applications.",
+      },
+    ],
+  },
+  {
     slug: "9d1b73",
     title: "Water Leak Detection & Alert System",
     category: "IoT & Connectivity",
