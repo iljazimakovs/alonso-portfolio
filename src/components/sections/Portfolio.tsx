@@ -1073,12 +1073,6 @@ const projects: Project[] = [
           "30-second sliding window segmentation",
           "Downsampling from 125 Hz to 50 Hz",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1879196/ppg-hr-hrv_iATrvLZDoi.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1879162/impulse_design_7KCzVFAcS0.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1879165/dsp_results_9xnrDxMtof.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1879166/feature_explorer_BM1z7J7hlt.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
       {
         heading: "Model Development",
@@ -1088,11 +1082,6 @@ const projects: Project[] = [
           "93.2% training accuracy (float32 model)",
           "95.15% accuracy on test dataset",
           "Optimized for embedded inference using Edge Impulse",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1879223/classifier_yGQJ3MawUw.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1882034/confusion_matrix_dmO4VNAVER.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1879187/model_testing_eSotbxk1Ix.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
