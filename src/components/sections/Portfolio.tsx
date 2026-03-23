@@ -456,9 +456,6 @@ const projects: Project[] = [
           "Timestamp (date and time)",
           "Sequential logging for tracking",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1903483/ss_pzUqDLn6dc.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
       {
         heading: "Engineering Outcome",
