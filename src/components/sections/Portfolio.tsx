@@ -23,7 +23,8 @@ import {
   Camera,
   Droplet,
   Zap,
-  Wifi
+  Wifi,
+  Gauge
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -296,13 +297,6 @@ const projects: Project[] = [
           "Reduced computational cost and memory bandwidth",
           "Minimal accuracy loss for small network",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1471567/screenshot_from_2022-07-21_11-36-36_D2qfKnduW0.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1468488/screenshot_from_2022-07-14_11-05-32_1onc2MCb2d.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1469952/screenshot_from_2022-07-18_07-15-43_fJZLjTJdHC.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1469953/screenshot_from_2022-07-18_07-16-05_po6Ry0wjpW.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470017/screenshot_from_2022-07-18_09-23-29_jELrqstq9M.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
       {
         heading: "HLS Architecture Design",
@@ -313,37 +307,13 @@ const projects: Project[] = [
           "Vectorized matrix multiplication",
           "Parallel processing across multiple dimensions",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1470046/screenshot_from_2022-07-18_11-02-04_W4g8whfAjl.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470055/screenshot_from_2022-07-18_11-34-16_9woHIRfMwM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470020/screenshot_from_2022-07-18_09-36-42_YgHbkMefvL.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470016/screenshot_from_2022-07-18_09-21-25_r6vQZozEjB.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470705/screenshot_from_2022-07-19_15-31-44_maInc37ZYE.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
       {
         heading: "FPGA Integration",
         body: "The generated HLS IP is integrated into the FPGA system using Vivado and deployed via PYNQ for runtime interaction.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1470117/screenshot_from_2022-07-18_14-57-15_Gh4yr3CCFQ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1470725/screenshot_from_2022-07-19_17-03-50_gbWYavQZ3L.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1470119/screenshot_from_2022-07-18_14-58-11_PpmwBfmdIh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-      {
-        heading: "Runtime & Testing",
-        body: "Inference execution and validation are performed using PYNQ with Python-based control.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1471598/screenshot_from_2022-07-21_13-25-38_sJKC2hGBFq.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470913/screenshot_from_2022-07-20_10-00-38_SgJkm0eE0w.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470914/screenshot_from_2022-07-20_10-00-49_F8q7KCrvPR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470919/screenshot_from_2022-07-20_10-01-01_3OX57YJRjM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1471066/screenshot_from_2022-07-20_10-01-32_VlnJUzH0Ls.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470965/screenshot_from_2022-07-20_10-38-40_MuyGdaD1ew.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470922/screenshot_from_2022-07-20_10-02-36_aMZN9vhEMg.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470923/screenshot_from_2022-07-20_10-03-09_iWcLjExWw5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470924/screenshot_from_2022-07-20_10-03-27_ZnmZf3V6SB.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1471601/screenshot_from_2022-07-21_13-27-01_Fl8OQT4aHa.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -784,6 +754,232 @@ const projects: Project[] = [
       {
         heading: "Outcome",
         body: "The final system delivers a low-cost but effective flood alerting solution that combines embedded firmware with cloud connectivity. It demonstrates practical IoT system design through sensor integration, real-time event publishing, webhook automation, and persistent remote notification handling.",
+      },
+    ],
+  },
+  {
+    slug: "9e4b2c",
+    title: "Motor Control Shield (DC & BLDC, IFX007T)",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware"],
+    description:
+      "Multi-mode motor control system using IFX007T drivers supporting DC, H-bridge, and sensorless BLDC operation on Arduino.",
+    longDescription:
+      "Implemented and evaluated a multi-mode motor control system using the Infineon IFX007T motor driver shield. The platform supports multiple configurations including half-bridge DC control, full H-bridge bidirectional control, and three-phase BLDC operation. The system demonstrates both sensorless BLDC control using Back EMF (BEMF) and hall-sensor-based control for higher precision. Designed for flexibility, the architecture enables controlling multiple motors simultaneously while maintaining efficient power handling and modular driver abstraction.",
+    tags: [
+      "Motor Control",
+      "BLDC",
+      "H-Bridge",
+      "Power Electronics",
+      "Arduino",
+      "Embedded Systems",
+      "BEMF",
+    ],
+    icon: Gauge,
+    highlight: "BLDC Motor Control",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1150159/_WSJLKa8SPT.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Motor Control Firmware",
+      "Multi-Mode Driver Configuration",
+      "BLDC Control Implementation",
+      "Hardware Integration Setup",
+      "Motor Control Testing",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a flexible motor control system capable of driving DC and brushless motors using a modular half-bridge driver architecture. The system demonstrates how different motor control strategies can be implemented using the same hardware platform.",
+      },
+      {
+        heading: "Driver Architecture",
+        body: "The system is based on three IFX007T half-bridge drivers, which can be combined in different configurations to support multiple motor types.",
+        bullets: [
+          "Each IFX007T acts as an independent half-bridge",
+          "Three half-bridges enable multi-motor or BLDC configurations",
+          "Drivers can be combined to form full H-bridge structures",
+          "Supports both unidirectional and bidirectional control",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1200850/possible_applications_2_UFUIo32qw7.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "DC Motor Control Modes",
+        numbered: [
+          {
+            title: "Half-Bridge Mode",
+            body: "Each half-bridge drives a DC motor in a single direction with independent speed control. Suitable for multi-channel unidirectional control systems.",
+          },
+          {
+            title: "H-Bridge Mode",
+            body: "Combining two half-bridges forms a full H-bridge, enabling bidirectional motor control with variable speed and direction.",
+          },
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1151247/uni_d8d8Mqos1G.GIF?auto=compress%2Cformat&gifq=35&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1151250/bi_P2rn1nseRF.GIF?auto=compress%2Cformat&gifq=35&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "BLDC Control",
+        body: "The system supports three-phase BLDC motor control using the three available half-bridges.",
+        bullets: [
+          "Sensorless BLDC control using Back EMF (BEMF)",
+          "Automatic commutation based on voltage feedback",
+          "No hall sensors required in BEMF mode",
+          "Supports variable speed ramp-up and control",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1151252/bldc_4fHVcKKnab.GIF?auto=compress%2Cformat&gifq=35&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Hall Sensor Mode",
+        body: "For higher precision applications, the system also supports hall-sensor-based BLDC motors.",
+        bullets: [
+          "Provides accurate rotor position feedback",
+          "Improves stability and control at low speeds",
+          "Supports field weakening mode for higher speed operation",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1151255/terminals_kvuCFIpenj.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Software Integration",
+        body: "The system uses an Arduino-based control layer with a dedicated driver library to simplify motor control implementation.",
+        bullets: [
+          "Library-based abstraction for motor control",
+          "Example sketches for each configuration",
+          "Utility tools for BLDC pole pair detection",
+          "Compatible with multiple microcontroller platforms",
+        ],
+      },
+      {
+        heading: "Simulation & Validation",
+        body: "An online simulation tool was used to validate torque and behavior across different motor configurations before deployment.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1163238/simulation_I03deKM54g.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates practical understanding of motor control systems, including power stage design, multi-mode driver configuration, and BLDC control techniques. It highlights experience in combining hardware abstraction with real-world motor control applications.",
+      },
+    ],
+  },
+  {
+    slug: "c1d8e4",
+    title: "WiFi-Controlled Arduino Car",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+    description:
+      "Web-controlled robotic car using ESP8266 access point, embedded web server, and serial communication with motor controller.",
+    longDescription:
+      "Developed a WiFi-controlled robotic car system combining an ATmega328-based motor controller with an ESP8266 acting as a wireless access point and embedded web server. The system hosts a browser-based control interface that allows real-time directional and speed control from any connected device. Communication between the ESP8266 and the motor controller is implemented via serial protocol, enabling separation of networking and control logic. The design integrates motor driver hardware, onboard web UI, and embedded firmware into a cohesive real-time control system.",
+    tags: [
+      "ESP8266",
+      "Arduino",
+      "IoT",
+      "Web Server",
+      "Motor Control",
+      "Embedded Systems",
+      "WiFi",
+    ],
+    icon: Wifi,
+    highlight: "Web-Controlled Robotics",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1485391/_QKeZ6HTyI8.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Embedded Web Server (ESP8266)",
+      "HTML Control Interface",
+      "Motor Control Firmware",
+      "Serial Communication Protocol",
+      "WiFi-Based Control System",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a WiFi-enabled robotic control system where a browser-based interface communicates with an embedded device acting as both access point and web server. The architecture separates networking logic from motor control, enabling modular system design.",
+      },
+      {
+        heading: "System Architecture",
+        body: "The system combines networking, control, and actuation layers into a unified workflow.",
+        bullets: [
+          "ESP8266 operates as WiFi access point and HTTP server",
+          "Client devices connect directly via browser",
+          "Commands sent as HTTP requests (GET/POST)",
+          "Serial communication between ESP8266 and ATmega328",
+          "Motor control handled independently by Arduino firmware",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1485409/blockflowdiagram_bzUtPAh7mM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Hardware System",
+        body: "The platform integrates motor driving hardware, embedded controllers, and power management for mobile operation.",
+        bullets: [
+          "ATmega328 handles real-time motor control",
+          "L298 H-bridge driver controls dual DC motors",
+          "ESP8266 provides wireless communication",
+          "Battery-powered system using Li-ion cells",
+          "Optional encoder modules for feedback integration",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1485410/img_3641_4IliUhwScq.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1485411/img_3643_8OTJsTlsBu.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1485412/schematicdiagram_Gy4WnIxRhh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Embedded Networking",
+        body: "The ESP8266 is configured as a standalone access point with integrated DNS and HTTP server capabilities.",
+        bullets: [
+          "SoftAP mode creates dedicated wireless network",
+          "mDNS enables local URL access (esp8266.local)",
+          "HTTP server processes control commands",
+          "SPIFFS used to store and serve HTML interface",
+        ],
+      },
+      {
+        heading: "Web Interface",
+        body: "A browser-based UI enables real-time control without requiring a dedicated mobile application.",
+        bullets: [
+          "Directional buttons (FWD, LEFT, RIGHT, BACK)",
+          "Real-time speed control via slider",
+          "GET requests used for motion commands",
+          "POST requests used for speed control",
+          "Visual feedback via button state changes",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1485425/htmlpage_qyEt6qTHNG.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Control Protocol",
+        body: "A lightweight serial protocol is used to decouple networking and control logic.",
+        bullets: [
+          "Single-character commands for motion control",
+          "Speed transmitted as formatted string values",
+          "ATmega328 interprets commands and drives motors",
+          "PWM used for speed control via L298 driver",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates a complete embedded system integrating networking, control, and actuation. It highlights experience in embedded web servers, real-time control systems, communication protocols, and hardware/software co-design for interactive IoT applications.",
       },
     ],
   },
