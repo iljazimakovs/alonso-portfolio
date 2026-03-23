@@ -727,13 +727,6 @@ const projects: Project[] = [
         ],
       },
       {
-        heading: "Manufacturing",
-        body: "The PCB was fabricated and assembled with attention to prototyping efficiency and cost.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1605097/image-5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-      {
         heading: "Assembly Process",
         body: "The board was assembled using standard PCB prototyping techniques.",
         bullets: [
@@ -744,9 +737,7 @@ const projects: Project[] = [
           "Through-hole component finishing",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1605098/image_beWG7utilj.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1605099/image_tdlmsDBCBY.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1605100/image_dKvLjESX0Z.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1605101/image_Vb2G43zPK5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
@@ -828,7 +819,6 @@ const projects: Project[] = [
         images: [
           "https://hackster.imgix.net/uploads/attachments/1618009/whitetello_wI2Z3XGB66.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1618012/ps4red_oBsDN2kTgP.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1618013/8bitdo_fmhc8FQ3CS.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -862,12 +852,6 @@ const projects: Project[] = [
           "User selects Tello SSID from list",
           "Automatic connection and binding",
           "No manual configuration required",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1618018/managetello_TgY8FHQLlR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1618019/ssidlist_D4IlAiMVvb.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1618020/tellossid_Ea3MgnymvI.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1618021/telloconnected_YGCGk3Zu5U.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
