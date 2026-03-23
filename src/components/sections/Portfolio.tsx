@@ -261,7 +261,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1520167/_7fhyhPxdZv.blob?auto=compress,format&w=900&h=675&fit=min",
+        src: "https://hackster.imgix.net/uploads/attachments/1520175/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg?auto=compress,format&w=1280&h=960&fit=max",
       },
     ],
     hidden: false,
@@ -276,6 +276,9 @@ const projects: Project[] = [
       {
         heading: "Project Overview",
         body: "Developed a dual-microcontroller embedded system in Raspberry Pi form factor to address reliability limitations of Linux SBCs in continuous operation environments. The design enables reuse of Pi HATs and enclosures while replacing the software-heavy stack with a deterministic embedded architecture.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1520167/_7fhyhPxdZv.blob?auto=compress,format&w=900&h=675&fit=min",
+        ],
       },
       {
         heading: "System Architecture",
@@ -336,9 +339,6 @@ const projects: Project[] = [
           "External antenna via uFL connector for use in shielded enclosures",
           "Suitable for industrial and waterproof installations",
           "Maintains Pi ecosystem compatibility while improving reliability",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1520175/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg?auto=compress,format&w=1280&h=960&fit=max",
         ],
       },
       {
