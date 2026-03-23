@@ -983,6 +983,115 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "c1d8e4",
+    title: "WiFi-Controlled Arduino Car",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+    description:
+      "Web-controlled robotic car using ESP8266 access point, embedded web server, and serial communication with motor controller.",
+    longDescription:
+      "Developed a WiFi-controlled robotic car system combining an ATmega328-based motor controller with an ESP8266 acting as a wireless access point and embedded web server. The system hosts a browser-based control interface that allows real-time directional and speed control from any connected device. Communication between the ESP8266 and the motor controller is implemented via serial protocol, enabling separation of networking and control logic. The design integrates motor driver hardware, onboard web UI, and embedded firmware into a cohesive real-time control system.",
+    tags: [
+      "ESP8266",
+      "Arduino",
+      "IoT",
+      "Web Server",
+      "Motor Control",
+      "Embedded Systems",
+      "WiFi",
+    ],
+    icon: Wifi,
+    highlight: "Web-Controlled Robotics",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1485391/_QKeZ6HTyI8.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "Embedded Web Server (ESP8266)",
+      "HTML Control Interface",
+      "Motor Control Firmware",
+      "Serial Communication Protocol",
+      "WiFi-Based Control System",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a WiFi-enabled robotic control system where a browser-based interface communicates with an embedded device acting as both access point and web server. The architecture separates networking logic from motor control, enabling modular system design.",
+      },
+      {
+        heading: "System Architecture",
+        body: "The system combines networking, control, and actuation layers into a unified workflow.",
+        bullets: [
+          "ESP8266 operates as WiFi access point and HTTP server",
+          "Client devices connect directly via browser",
+          "Commands sent as HTTP requests (GET/POST)",
+          "Serial communication between ESP8266 and ATmega328",
+          "Motor control handled independently by Arduino firmware",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1485409/blockflowdiagram_bzUtPAh7mM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Hardware System",
+        body: "The platform integrates motor driving hardware, embedded controllers, and power management for mobile operation.",
+        bullets: [
+          "ATmega328 handles real-time motor control",
+          "L298 H-bridge driver controls dual DC motors",
+          "ESP8266 provides wireless communication",
+          "Battery-powered system using Li-ion cells",
+          "Optional encoder modules for feedback integration",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1485410/img_3641_4IliUhwScq.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1485411/img_3643_8OTJsTlsBu.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1485412/schematicdiagram_Gy4WnIxRhh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Embedded Networking",
+        body: "The ESP8266 is configured as a standalone access point with integrated DNS and HTTP server capabilities.",
+        bullets: [
+          "SoftAP mode creates dedicated wireless network",
+          "mDNS enables local URL access (esp8266.local)",
+          "HTTP server processes control commands",
+          "SPIFFS used to store and serve HTML interface",
+        ],
+      },
+      {
+        heading: "Web Interface",
+        body: "A browser-based UI enables real-time control without requiring a dedicated mobile application.",
+        bullets: [
+          "Directional buttons (FWD, LEFT, RIGHT, BACK)",
+          "Real-time speed control via slider",
+          "GET requests used for motion commands",
+          "POST requests used for speed control",
+          "Visual feedback via button state changes",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1485425/htmlpage_qyEt6qTHNG.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Control Protocol",
+        body: "A lightweight serial protocol is used to decouple networking and control logic.",
+        bullets: [
+          "Single-character commands for motion control",
+          "Speed transmitted as formatted string values",
+          "ATmega328 interprets commands and drives motors",
+          "PWM used for speed control via L298 driver",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates a complete embedded system integrating networking, control, and actuation. It highlights experience in embedded web servers, real-time control systems, communication protocols, and hardware/software co-design for interactive IoT applications.",
+      },
+    ],
+  },
 ];
 
 export { projects };
