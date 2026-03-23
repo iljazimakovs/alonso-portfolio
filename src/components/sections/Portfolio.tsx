@@ -239,6 +239,132 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "f3a91c",
+    title: "FPGA Deep Learning Inference (HLS, Kria KV260)",
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-ai", "embedded-firmware"],
+    description:
+      "Implemented high-throughput neural network inference on FPGA using Vitis HLS, achieving over 200k FPS through parallelized architecture and quantized computation.",
+    longDescription:
+      "Designed and implemented a fully connected neural network inference engine on FPGA using Vitis High-Level Synthesis (HLS) on the Kria KV260 platform. The project focuses on accelerating small neural networks where traditional frameworks introduce overhead. By leveraging quantized integer arithmetic, pipelined matrix multiplication, and parallelized compute structures, the design achieves extremely high inference throughput. The workflow includes model quantization, HLS-based hardware generation, Vivado integration, and runtime execution using PYNQ. A comparison with RTL-based implementation highlights tradeoffs in hardware utilization and design efficiency.",
+    tags: [
+      "FPGA",
+      "Vitis HLS",
+      "Kria KV260",
+      "PYNQ",
+      "Deep Learning",
+      "Quantization",
+      "Parallel Computing",
+    ],
+    icon: Cpu,
+    highlight: "FPGA AI Acceleration",
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1470478/_41pDWgCaDU.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+    hidden: false,
+    deliverables: [
+      "HLS Neural Network Implementation",
+      "Quantized Model Pipeline",
+      "FPGA Bitstream + Integration",
+      "PYNQ Runtime Interface",
+      "Performance Benchmarking",
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Implemented a fully connected neural network inference engine on FPGA to evaluate performance gains from hardware acceleration compared to traditional embedded platforms. The design targets small neural networks where framework overhead limits performance.",
+      },
+      {
+        heading: "Neural Network Fundamentals",
+        body: "The network is implemented as a sequence of dense layers performing vector-matrix multiplications followed by activation functions and quantization.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1468476/network-1_nX3kYRKuCr.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1468478/nn-1_EjOow0B27g.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1469957/screenshot_from_2022-07-18_07-32-04_6u0ZV6PQRD.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Quantization Strategy",
+        body: "To optimize FPGA execution, the model is converted from floating-point to integer arithmetic using quantization techniques compatible with hardware implementation.",
+        bullets: [
+          "32-bit floating point converted to 8-bit / 16-bit integer",
+          "Scaling factors implemented as bit-shift operations",
+          "Reduced computational cost and memory bandwidth",
+          "Minimal accuracy loss for small network",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1471567/screenshot_from_2022-07-21_11-36-36_D2qfKnduW0.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1468488/screenshot_from_2022-07-14_11-05-32_1onc2MCb2d.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1469952/screenshot_from_2022-07-18_07-15-43_fJZLjTJdHC.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1469953/screenshot_from_2022-07-18_07-16-05_po6Ry0wjpW.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470017/screenshot_from_2022-07-18_09-23-29_jELrqstq9M.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "HLS Architecture Design",
+        body: "The neural network is implemented using HLS, enabling rapid hardware design while still achieving high performance through loop restructuring and parallelism.",
+        bullets: [
+          "Loop reordering to remove data dependencies",
+          "Full pipelining of compute stages",
+          "Vectorized matrix multiplication",
+          "Parallel processing across multiple dimensions",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1470046/screenshot_from_2022-07-18_11-02-04_W4g8whfAjl.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470055/screenshot_from_2022-07-18_11-34-16_9woHIRfMwM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470020/screenshot_from_2022-07-18_09-36-42_YgHbkMefvL.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470016/screenshot_from_2022-07-18_09-21-25_r6vQZozEjB.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470705/screenshot_from_2022-07-19_15-31-44_maInc37ZYE.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "FPGA Integration",
+        body: "The generated HLS IP is integrated into the FPGA system using Vivado and deployed via PYNQ for runtime interaction.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1470117/screenshot_from_2022-07-18_14-57-15_Gh4yr3CCFQ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470725/screenshot_from_2022-07-19_17-03-50_gbWYavQZ3L.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470119/screenshot_from_2022-07-18_14-58-11_PpmwBfmdIh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Runtime & Testing",
+        body: "Inference execution and validation are performed using PYNQ with Python-based control.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1471598/screenshot_from_2022-07-21_13-25-38_sJKC2hGBFq.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470913/screenshot_from_2022-07-20_10-00-38_SgJkm0eE0w.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470914/screenshot_from_2022-07-20_10-00-49_F8q7KCrvPR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470919/screenshot_from_2022-07-20_10-01-01_3OX57YJRjM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1471066/screenshot_from_2022-07-20_10-01-32_VlnJUzH0Ls.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470965/screenshot_from_2022-07-20_10-38-40_MuyGdaD1ew.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470922/screenshot_from_2022-07-20_10-02-36_aMZN9vhEMg.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470923/screenshot_from_2022-07-20_10-03-09_iWcLjExWw5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1470924/screenshot_from_2022-07-20_10-03-27_ZnmZf3V6SB.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1471601/screenshot_from_2022-07-21_13-27-01_Fl8OQT4aHa.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Hardware Utilization Analysis",
+        body: "Comparison between HLS and handcrafted RTL implementation highlights tradeoffs in resource efficiency and design abstraction.",
+        bullets: [
+          "HLS provides faster development but higher resource usage",
+          "RTL allows DSP reuse across layers",
+          "Tradeoff between design time and hardware efficiency",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1474151/screenshot_from_2022-07-27_08-08-53_fnXhHMarlo.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1474150/screenshot_from_2022-07-27_08-08-33_4eyr88uqtR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "Achieved extremely high inference throughput exceeding 200,000 FPS by combining quantization, parallelism, and pipelined architecture. The project demonstrates strong capability in FPGA-based AI acceleration, HLS design optimization, and hardware/software co-design.",
+      },
+    ],
+  },
+  {
     slug: "espiff-esp32-rp2040-controller",
     title: "EsPiFF: ESP32 + RP2040 Controller",
     category: "PCB & Hardware",
@@ -458,60 +584,6 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "smdc",
-    title: "Smart 12V DC Motor Controller",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-firmware"],
-    description:
-      "12V DC motor control PCB with integrated rotation counting using STM8S003. HALL sensor for real-time speed measurement and MOSFET-based driver for efficient motor operation.",
-    longDescription:
-      "Designed a reliable 12V DC motor control PCB with integrated rotation counting using an STM8S003 microcontroller. The system utilizes a HALL sensor for precise real-time speed and rotation measurement, while a MOSFET-based driver ensures efficient and smooth motor operation. The PCB layout was optimized for noise immunity, thermal management, and long-term durability. The solution supports customizable control logic, making it suitable for automation, robotics, and industrial motor control applications.",
-    tags: [
-      "STM8S003",
-      "Embedded C",
-      "HALL Sensor",
-      "MOSFET Driver",
-      "PWM",
-      "Power Electronics",
-      "PCB Design",
-    ],
-    icon: Battery,
-    highlight: "HALL sensor feedback",
-    media: [{ type: "video", src: motorVideo }],
-    hidden: false,
-    deliverables: [
-      "PCB Layout + Schematic",
-      "STM8 Firmware",
-      "BOM & Gerber Files",
-      "Motor Control Documentation",
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Designed a reliable 12V DC motor control PCB with integrated rotation counting using an STM8S003 microcontroller. The system utilizes a HALL sensor for precise real-time speed and rotation measurement, while a MOSFET-based driver ensures efficient and smooth motor operation.",
-      },
-      {
-        heading: "Hardware Architecture",
-        bullets: [
-          { text: "MCU — STM8S003", sub: ["16MHz internal clock, handles PWM generation and HALL signal decoding", "GPIO-driven MOSFET gate control with configurable dead-time"] },
-          { text: "Motor Driver Stage", sub: ["N-channel MOSFET H-bridge for bidirectional speed and direction control", "Gate resistors and bootstrap diodes for fast, safe switching"] },
-          { text: "Rotation Sensing", sub: ["HALL effect sensor with 3-pin interface mounted adjacent to motor shaft", "Debounced edge-counting logic for accurate RPM calculation"] },
-          { text: "PCB Layout", sub: ["Power and signal planes separated to minimise switching noise", "Thermal relief pads on MOSFET pads for heat dissipation"] },
-        ],
-      },
-      {
-        heading: "Firmware Features",
-        bullets: [
-          "Closed-loop PWM speed control with configurable duty cycle (0–100%)",
-          "Interrupt-driven HALL pulse counting for real-time RPM feedback",
-          "Overcurrent shutdown triggered via shunt resistor sensing",
-          "UART command interface for setpoint and mode configuration",
-          "Soft start / ramp logic to prevent inrush current spikes",
-        ],
-      },
-    ],
-  },
-  {
     slug: "water-leak-iot",
     title: "Water Leak Detection & Alert System",
     category: "IoT & Connectivity",
@@ -613,574 +685,6 @@ const projects: Project[] = [
       {
         heading: "Outcome",
         body: "The final system delivers a low-cost but effective flood alerting solution that combines embedded firmware with cloud connectivity. It demonstrates practical IoT system design through sensor integration, real-time event publishing, webhook automation, and persistent remote notification handling.",
-      },
-    ],
-  },
-  {
-    slug: "mpsu",
-    title: "Miniature Regulated Power Supply",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-firmware"],
-    description:
-      "Compact regulated power supply PCB with adjustable output voltage and real-time monitoring. ADC/DAC feedback loop controlled by STM8 microcontroller with seven-segment display output.",
-    longDescription:
-      "Designed a compact regulated power supply PCB with adjustable output voltage and real-time monitoring. Integrated an ADC to measure input, output, and reference voltages for precise feedback control. Output regulation is achieved through a DAC-driven feedback loop, dynamically maintaining stability under varying loads. Controlled by an STM8 microcontroller, the system executes efficient voltage regulation algorithms. A three-digit seven-segment display provides clear operational feedback, demonstrating robust hardware architecture and precision PCB layout design.",
-    tags: [
-      "STM8",
-      "ADC",
-      "DAC",
-      "Embedded C",
-      "Power Electronics",
-      "Signal Integrity",
-      "PCB Design",
-    ],
-    icon: Battery,
-    highlight: "DAC feedback control",
-    media: [
-      { type: "video", src: psuVideo, poster: psuImg1 },
-      { type: "image", src: psuImg1 },
-      { type: "image", src: psuImg2 },
-      { type: "image", src: psuImg3 },
-    ],
-    hidden: false,
-    deliverables: [
-      "PCB Layout + Schematic",
-      "STM8 Firmware",
-      "BOM & Gerber Files",
-      "Test & Validation Report",
-    ],
-    sections: [
-      {
-        heading: "The Regulated Power Supply System",
-        body: "A compact bench power supply built on a custom PCB with adjustable output voltage and real-time display. The core of the design is a closed-loop feedback system where the STM8 microcontroller continuously reads the output via ADC, computes the required correction, and drives the output regulator via DAC — all while displaying the live voltage on a three-digit seven-segment display.",
-      },
-      {
-        heading: "Hardware Design",
-        numbered: [
-          {
-            title: "Voltage Sensing Stage",
-            body: "A precision voltage divider network feeds the output back to the STM8's built-in 10-bit ADC. Separate inputs monitor the raw input rail, the reference, and the regulated output — giving the firmware a complete picture of system state at every control cycle.",
-            image: psuImg1,
-          },
-          {
-            title: "DAC-Driven Feedback Loop",
-            body: "A dedicated DAC output drives the reference pin of the linear regulator. By updating this voltage every 10 ms the firmware continuously corrects for load transients and input variation, achieving output stability within ±20 mV across the full load range.",
-            image: psuImg2,
-          },
-          {
-            title: "Display & User Interface",
-            body: "A three-digit, common-cathode seven-segment display is multiplexed directly from STM8 GPIO. Digit scanning runs from a timer interrupt at 1 kHz, making it imperceptible to the human eye. A front-panel potentiometer sets the voltage target and is also read by ADC.",
-            image: psuImg3,
-          },
-        ],
-      },
-      {
-        heading: "Firmware Implementation",
-        bullets: [
-          "Closed-loop PID voltage control loop executing at 100 Hz",
-          "ADC oversampling (16×) to boost effective resolution to 12 bits",
-          "EEPROM-backed setpoint memory — last target survives power cycles",
-          "Short-circuit detection with automatic output shutdown and blinking display alert",
-          "Configurable output range via compile-time constants (0.8 V – 15 V typical)",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "c45g",
-    title: "CM4 5G & WiFi 6 Embedded Board",
-    category: "Embedded Linux / Hardware",
-    filterSlugs: [
-      "pcb-hardware",
-      "embedded-linux-bsp",
-      "iot-connected-devices",
-      "hardware-debugging",
-    ],
-    description:
-      "Highly integrated CM4-based board with 5G RM520N module, Wi-Fi 6 AX200, Micro SD, USB hub, and PoE support - designed for IoT, smart infrastructure, and edge computing with high-bandwidth connectivity.",
-    longDescription:
-      "Developed a highly integrated custom circuit board based on Raspberry Pi CM4 for advanced embedded and edge applications. The design integrates a 5G RM520N module and Wi-Fi 6 AX200 card for high-speed connectivity, Micro SD storage expansion, and multiple USB interfaces controlled by a USB4056 hub. Optimized PCB layout ensures signal integrity and efficient power management. The board supports IoT, smart infrastructure, and edge computing deployments requiring reliable, high-bandwidth communication.",
-    tags: [
-      "Raspberry Pi CM4",
-      "RM520N 5G",
-      "Intel AX200 Wi-Fi 6",
-      "USB4056 Hub",
-      "High-Speed PCB",
-      "Altium",
-      "USB",
-      "Micro SD",
-    ],
-    icon: Server,
-    highlight: "5G + Wi-Fi 6",
-    media: [
-      { type: "image", src: cm4_5gImg1 },
-      { type: "image", src: cm4_5gImg2 },
-      { type: "image", src: cm4_5gImg3 },
-      { type: "image", src: cm4_5gImg4 },
-      { type: "image", src: cm4_5gImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Altium PCB + Schematic",
-      "Block Diagram",
-      "BOM & Gerber Files",
-      "Signal Integrity Report",
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed a highly integrated custom carrier board for Raspberry Pi CM4, targeting IoT gateways, edge compute nodes, and smart infrastructure deployments that demand 5G NR cellular and Wi-Fi 6 simultaneously. The board was designed in Altium Designer with careful attention to RF trace routing, power sequencing, and PCIe signal integrity.",
-      },
-      {
-        images: [cm4_5gImg1, cm4_5gImg2],
-      },
-      {
-        heading: "System Architecture",
-        bullets: [
-          { text: "Compute Core", sub: ["Raspberry Pi CM4 SoM via 100-pin high-density connectors", "Up to 8 GB LPDDR4 RAM and 32 GB eMMC on module"] },
-          { text: "5G Cellular — Quectel RM520N", sub: ["5G NR Sub-6 GHz with LTE-A fallback, connected via PCIe Gen 2 M.2 Key B", "Dual nano-SIM slots with hardware MUX for carrier switching"] },
-          { text: "Wi-Fi 6 — Intel AX200", sub: ["802.11ax 2×2 MU-MIMO with BT 5.2, connected via M.2 Key E PCIe", "Dual U.FL antenna connectors with matched 50 Ω microstrip traces"] },
-          { text: "USB Infrastructure — USB4056 Hub", sub: ["4-port USB 2.0 hub provides host ports plus OTG-capable Type-C interface", "Independently powered USB ports with current-limit protection per port"] },
-        ],
-      },
-      {
-        heading: "PCB Design Highlights",
-        body: "The board uses a 6-layer stackup with dedicated power, ground, and high-speed signal layers. USB differential pairs are length-matched to within 2 mil and routed away from clock sources. RF traces to the 5G and Wi-Fi modules are 50 Ω controlled impedance with no vias in the RF section.",
-        images: [cm4_5gImg3, cm4_5gImg4, cm4_5gImg5],
-      },
-    ],
-  },
-  {
-    slug: "jtx2",
-    title: "Jetson TX2 NX Expansion Board",
-    category: "AI & Edge Computing",
-    filterSlugs: [
-      "pcb-hardware",
-      "embedded-linux-bsp",
-      "embedded-firmware",
-      "hardware-debugging",
-    ],
-    description:
-      "High-performance expansion board for NVIDIA Jetson TX2 NX with dual MIPI-CSI cameras, LVDS input, HDMI, Gigabit Ethernet, USB 3.0, CAN bus, and 60V/6S Li-ion power support for robotics and AI edge applications.",
-    longDescription:
-      "Designed a high-performance expansion board for the NVIDIA Jetson TX2 NX, extending its capabilities for robotics and AI edge applications. The board integrates dual MIPI-CSI camera connectors, LVDS camera input (Sony FCB 9500-L), HDMI, RJ45 Ethernet, USB 3.0 Type-C, USB 2.0, and Micro SD storage. It supports up to 60V power input with a 6S Li-ion battery interface and RTC backup. Additional interfaces include GPIO, UART, I2C, and CAN, with optimized layout for signal integrity and robust power management.",
-    tags: [
-      "Jetson TX2 NX",
-      "MIPI-CSI",
-      "LVDS",
-      "HDMI",
-      "Gigabit Ethernet",
-      "USB 3.0",
-      "CAN Bus",
-      "Li-ion 6S BMS",
-      "Altium",
-    ],
-    icon: Cpu,
-    highlight: "60V AI edge platform",
-    media: [
-      { type: "image", src: jetsonImg1 },
-      { type: "image", src: jetsonImg2 },
-      { type: "image", src: jetsonImg3 },
-      { type: "image", src: jetsonImg4 },
-      { type: "image", src: jetsonImg5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Altium PCB + Schematic",
-      "Block Diagram",
-      "BOM & Gerber Files",
-      "Power Management Docs",
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Designed a full-featured expansion board for the NVIDIA Jetson TX2 NX module, extending it into a complete robotics and AI edge platform. The board provides every interface a field-deployed system could need — from dual MIPI-CSI cameras and LVDS input, to CAN bus, USB 3.0, and a wide 60 V input power stage that accepts 6S LiPo directly.",
-        images: [jetsonImg1],
-      },
-      {
-        heading: "Interface Overview",
-        numbered: [
-          {
-            title: "Camera Inputs",
-            body: "Two 4-lane MIPI-CSI-2 connectors for direct sensor attachment, plus a dedicated LVDS input for Sony FCB-9500L series block cameras. Coax-based signal routing keeps camera noise isolated from the digital section.",
-            image: jetsonImg2,
-          },
-          {
-            title: "High-Speed Connectivity",
-            body: "HDMI 2.0 output, RJ-45 Gigabit Ethernet, USB 3.1 Gen 1 Type-C for high-throughput device attachment, and USB 2.0 Type-A for peripherals. All high-speed pairs are impedance-controlled and length-matched.",
-            image: jetsonImg3,
-          },
-          {
-            title: "Power & Battery Management",
-            body: "Wide 12–60 V input accepted through a switching pre-regulator feeding the module's 5 V rail. 6S Li-ion battery JST connector with charge-management IC, gas gauge, and RTC coin-cell backup for uninterrupted operation.",
-            image: jetsonImg4,
-          },
-          {
-            title: "Industrial & Expansion Interfaces",
-            body: "Isolated CAN 2.0B transceiver for robot drive systems, RS-232/485 UART, I²C and SPI headers, and configurable GPIO. Micro SD for on-board logging. All expansion headers use locking connectors for vibration tolerance.",
-            image: jetsonImg5,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "ndai",
-    title: "Edge Vision Camera with Cloud Object Detection",
-    category: "IoT & Connectivity / Embedded Firmware",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices"],
-    description:
-      "Embedded smart camera built with Netduino and ArduCam OV2640 that captures images and sends them to a cloud server for AI-based object detection and automated alert notifications.",
-    longDescription:
-      "Developed a smart camera system integrating a Netduino microcontroller with an ArduCam OV2640 module to capture images and transmit them to a middleware server for AI-based object detection. Firmware ports Arduino camera libraries to the .NET Micro Framework using SPI and I2C communication. Captured frames are uploaded to a cloud processing service running YOLO detection models. The system enables event-based monitoring and can trigger notifications such as email or SMS alerts when specific objects are detected.",
-    tags: [
-      "Netduino",
-      "ArduCam OV2640",
-      "C#",
-      ".NET Micro Framework",
-      "SPI",
-      "I2C",
-      "Python Flask",
-      "YOLO",
-      "AWS EC2",
-    ],
-    icon: Camera,
-    highlight: "AI Vision Alerts",
-    media: [
-      { type: "image", src: netduino_cam_1 },
-      { type: "image", src: netduino_cam_2 },
-      { type: "image", src: netduino_cam_3 },
-      { type: "image", src: netduino_cam_4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Embedded Firmware",
-      "Camera Interface Integration",
-      "Middleware Upload API",
-      "AI Detection Pipeline",
-      "System Documentation",
-    ],
-    sections: [
-      {
-        body: "Built an end-to-end smart surveillance system by combining a Netduino microcontroller with an ArduCam OV2640 camera module. When a detection event fires, the Netduino captures a JPEG frame over SPI, forwards it to a Flask middleware server, and the server runs YOLO object detection — all triggering an email or SMS alert if a person or object of interest is found.",
-        images: [netduino_cam_1, netduino_cam_2],
-      },
-      {
-        heading: "System Architecture",
-        bullets: [
-          { text: "Edge Node — Netduino + OV2640", sub: ["Arduino camera libraries ported to .NET Micro Framework via SPI/I2C", "JPEG compression on-chip reduces payload to ~25 kB per frame", "Triggered by GPIO event (PIR, button, or scheduled timer)"] },
-          { text: "Middleware Server — Python Flask on AWS EC2", sub: ["Receives frames over HTTP POST from the Netduino", "Passes frames through a YOLO v5 inference pipeline", "Stores annotated images to S3 and pushes alerts via SMTP / Twilio SMS"] },
-        ],
-      },
-      {
-        images: [netduino_cam_3, netduino_cam_4],
-      },
-    ],
-  },
-  {
-    slug: "ne10",
-    title: "NE101 MQTT LTE IoT Camera",
-    category: "IoT & Connectivity / Embedded Firmware",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices"],
-    description:
-      "Battery-powered IoT camera using OV5640 and Cat.1 LTE module to capture images and transmit them via MQTT/MQTTS with JSON payloads for remote monitoring, automation systems, and cloud-based image analytics.",
-    longDescription:
-      "Developed a low-power IoT sensing camera using the OV5640 image sensor with optional Cat.1 LTE connectivity via the EG912U module. The device supports Wi-Fi AP configuration, MQTT/MQTTS image reporting, scheduled and event-based captures, and remote firmware management. Captured images are encoded in Base64 and transmitted as JSON payloads to cloud platforms. The system supports PIR triggers, scheduled captures, and battery monitoring, making it suitable for remote monitoring and edge IoT deployments.",
-    tags: [
-      "OV5640 Camera",
-      "EG912U LTE",
-      "MQTT",
-      "MQTTS",
-      "Embedded Systems",
-      "IoT Camera",
-      "Wi-Fi AP",
-      "JSON Telemetry",
-      "Battery Powered",
-    ],
-    icon: Camera,
-    highlight: "MQTT Image Streaming",
-    media: [
-      { type: "image", src: ne101_mqtt_lte_iot_camera_1 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_2 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_3 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_4 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_5 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_6 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_7 },
-      { type: "image", src: ne101_mqtt_lte_iot_camera_8 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Embedded Camera Firmware",
-      "MQTT/MQTTS Data Integration",
-      "Device Configuration Web Interface",
-      "IoT Cloud Communication Setup",
-      "Hardware Integration Documentation",
-    ],
-    sections: [
-      {
-        heading: "NE101 IoT Camera System",
-        body: "A battery-powered IoT camera built around the OV5640 sensor and an optional Cat.1 LTE modem (EG912U). The device captures JPEG images on schedule or on PIR trigger, encodes them as Base64, and publishes them inside a JSON payload over MQTT or MQTTS to any cloud broker — all without mains power.",
-        images: [ne101_mqtt_lte_iot_camera_1, ne101_mqtt_lte_iot_camera_2],
-      },
-      {
-        heading: "Key Features",
-        bullets: [
-          { text: "Connectivity", sub: ["Cat.1 LTE via EG912U for remote field deployments without Wi-Fi", "Fallback Wi-Fi AP mode for local configuration and testing", "MQTT and MQTTS (TLS 1.2) transport with configurable broker, topic, and QoS"] },
-          { text: "Image Capture & Reporting", sub: ["OV5640 5 MP sensor with configurable resolution and quality", "PIR-triggered and time-scheduled captures", "Base64-encoded JPEG embedded in structured JSON telemetry payload"] },
-          { text: "Power & Battery Management", sub: ["Ultra-low-power sleep between captures extends battery life significantly", "Battery voltage reported in every telemetry packet", "Configurable wake interval from 1 minute to 24 hours"] },
-          { text: "Remote Management", sub: ["OTA firmware update over LTE/Wi-Fi", "Remote reboot, parameter change, and capture command via MQTT downlink"] },
-        ],
-      },
-      {
-        images: [ne101_mqtt_lte_iot_camera_3, ne101_mqtt_lte_iot_camera_4, ne101_mqtt_lte_iot_camera_5],
-      },
-      {
-        heading: "Device Configuration Interface",
-        body: "A built-in captive-portal web interface is served over the Wi-Fi AP on first boot. Operators scan a QR code, connect, and set MQTT broker details, APN, capture schedule, and image resolution — all without a laptop or serial cable. Settings persist to flash across reboots.",
-        images: [ne101_mqtt_lte_iot_camera_6, ne101_mqtt_lte_iot_camera_7, ne101_mqtt_lte_iot_camera_8],
-      },
-    ],
-  },
-  {
-    slug: "dbel",
-    title: "RF Doorbell Camera Alert System",
-    category: "IoT & Connectivity / Embedded Firmware",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices"],
-    description:
-      "Built a low-cost smart doorbell using Raspberry Pi Zero W, Pi Camera, and 433MHz RF receiver to capture visitor images and send MQTT-based notifications through Home Assistant and Telegram.",
-    longDescription:
-      "Developed a DIY smart doorbell system using Raspberry Pi Zero W, a Pi Camera, and a 433MHz RF receiver to intercept wireless doorbell signals. When the button is pressed, the system captures an image, publishes it over MQTT, and forwards notifications through Home Assistant and Telegram. The solution combines RF event detection, camera control, MQTT messaging, and home automation integration to deliver an affordable connected doorbell with remote image alerts.",
-    tags: [
-      "Raspberry Pi Zero W",
-      "Pi Camera",
-      "433MHz RF Receiver",
-      "MQTT",
-      "Home Assistant",
-      "Telegram",
-      "Python",
-      "GPIO",
-      "Rpi-rf",
-    ],
-    icon: Camera,
-    highlight: "RF Doorbell Camera Alerts",
-    media: [
-      { type: "image", src: pi_camera_doorbell_notifications_1 },
-      { type: "image", src: pi_camera_doorbell_notifications_2 },
-      { type: "image", src: pi_camera_doorbell_notifications_3 },
-      { type: "image", src: pi_camera_doorbell_notifications_4 },
-      { type: "image", src: pi_camera_doorbell_notifications_5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Python Doorbell Detection Script",
-      "Pi Camera Capture Integration",
-      "MQTT Notification Pipeline",
-      "Home Assistant Automation Setup",
-      "Telegram Alert Integration",
-    ],
-    sections: [
-      {
-        heading: "How It Works",
-        body: "A 433 MHz RF receiver on a Raspberry Pi Zero W listens for the wireless doorbell button signal. The moment a matching code arrives, the Pi Camera module captures a timestamped image of whoever is at the door, publishes the image over MQTT, and a Home Assistant automation forwards it as a Telegram message — all in under two seconds.",
-        images: [pi_camera_doorbell_notifications_1, pi_camera_doorbell_notifications_2],
-      },
-      {
-        heading: "Software Stack",
-        bullets: [
-          "rpi-rf library decodes 433 MHz OOK signals and matches the learned doorbell code",
-          "picamera Python library triggers capture with a short warm-up delay for exposure",
-          "paho-mqtt publishes image bytes and metadata to a local Mosquitto broker",
-          "Home Assistant MQTT image entity renders the photo in the dashboard",
-          "Telegram Bot API delivers the image and a door alert message to a private chat",
-        ],
-      },
-      {
-        images: [pi_camera_doorbell_notifications_3, pi_camera_doorbell_notifications_4, pi_camera_doorbell_notifications_5],
-      },
-    ],
-  },
-  {
-    slug: "nrf5",
-    title: "nRF5340 LoRa GNSS IoT Board",
-    category: "IoT / Wireless Sensing",
-    filterSlugs: ["iot-connected-devices", "pcb-hardware", "embedded-firmware"],
-    description:
-      "Multi-communication IoT board with Nordic nRF5340 SoC, Semtech SX1302 LoRa, Quectel L96 GNSS, 256Mbit SPI flash, and multiple sensors - designed for asset tracking and environmental monitoring.",
-    longDescription:
-      "Designed a multi-communication IoT board based on Nordic nRF5340 dual-core SoC with BLE support. The system integrates a Semtech SX1302 LoRa module for long-range connectivity and a Quectel L96 GNSS module for precise positioning. It features 256Mbit external NOR flash via SPI and multiple sensors including DHT20, LSM6DSOX 6-axis IMU, and OPT3001 light sensor. The board supports JTAG, I2C, UART, and GPIO interfaces, enabling scalable applications in asset tracking and environmental monitoring.",
-    tags: [
-      "nRF5340",
-      "SX1302 LoRa",
-      "Quectel L96 GNSS",
-      "BLE",
-      "SPI Flash",
-      "DHT20",
-      "LSM6DSOX",
-      "OPT3001",
-      "High-Speed PCB",
-    ],
-    icon: Antenna,
-    highlight: "BLE + LoRa + GNSS",
-    media: [
-      { type: "image", src: nrf5340Img1 },
-      { type: "image", src: nrf5340Img2 },
-      { type: "image", src: nrf5340Img3 },
-      { type: "image", src: nrf5340Img4 },
-      { type: "image", src: nrf5340Img5 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Altium PCB + Schematic",
-      "Block Diagram",
-      "BOM & Gerber Files",
-      "Sensor Integration Guide",
-    ],
-    sections: [
-      {
-        heading: "Multi-Radio IoT Platform",
-        body: "Designed a compact multi-radio IoT board that combines BLE 5.4 (nRF5340), LoRa (SX1302), and GNSS (Quectel L96) on a single PCB — enabling asset tracking applications that need long-range uplinks, precise location, and short-range configuration in one device.",
-        images: [nrf5340Img1, nrf5340Img2],
-      },
-      {
-        heading: "Radio Architecture",
-        bullets: [
-          { text: "Nordic nRF5340 — Dual-Core SoC", sub: ["Application core (128 MHz Cortex-M33) runs sensor fusion and application logic", "Network core manages BLE 5.4 stack independently for real-time reliability"] },
-          { text: "Semtech SX1302 — LoRa Module", sub: ["868 / 915 MHz sub-GHz for multi-kilometre outdoor range", "LoRaWAN Class A/C support with OTAA activation", "Connected via high-speed SPI with dedicated DIO interrupt lines"] },
-          { text: "Quectel L96 — GNSS Module", sub: ["Multi-constellation GPS + GLONASS + BeiDou", "UART interface with PPS output for timing synchronisation", "Low-power tracking mode: < 1 mA in acquisition"] },
-        ],
-      },
-      {
-        heading: "On-Board Sensor Suite",
-        bullets: [
-          "DHT20 — Temperature and humidity via I²C",
-          "LSM6DSOX — 6-axis IMU (accelerometer + gyroscope) for motion and impact detection",
-          "OPT3001 — Ambient light sensor for tamper / enclosure-open detection",
-          "256 Mbit W25Q256 NOR Flash via SPI for local data buffering when offline",
-        ],
-        images: [nrf5340Img3, nrf5340Img4, nrf5340Img5],
-      },
-    ],
-  },
-  {
-    slug: "lgw1",
-    title: "ESP32 LoRaWAN Gateway V1",
-    category: "IoT / Wireless Sensing",
-    filterSlugs: ["iot-connected-devices", "pcb-hardware", "embedded-firmware"],
-    description:
-      "Single-channel LoRaWAN gateway based on ESP32 with SX1276/78 LoRa, Ethernet, isolated RS485, WiFi, BLE, NOR flash, SD card, and RTC - supporting 96–264VAC input and optional battery backup for industrial IoT.",
-    longDescription:
-      "Developed a single-channel LoRaWAN gateway based on ESP32 dual-core MCU for versatile IoT deployments. The system integrates SX1276/78 LoRa modules (433/925MHz), Ethernet, RS485 (isolated 1Mbps), WiFi, and BLE connectivity. It features onboard W25Q64 NOR flash, SD card storage, DS3231M high-accuracy RTC with backup battery, and USB debug interface. Designed with expandable I2C, LTE, and IO modules, wide 96–264VAC or DC input support, and optional battery backup, enabling reliable industrial and smart infrastructure applications.",
-    tags: [
-      "ESP32",
-      "SX1276/SX1278",
-      "LoRaWAN",
-      "W25Q64 NOR Flash",
-      "DS3231M RTC",
-      "Ethernet",
-      "RS485",
-      "WiFi",
-      "BLE",
-      "4G-LTE",
-    ],
-    icon: Antenna,
-    highlight: "Multi-protocol gateway",
-    media: [
-      { type: "image", src: lorawanGwImg1 },
-      { type: "image", src: lorawanGwImg2 },
-      { type: "image", src: lorawanGwImg3 },
-      { type: "image", src: lorawanGwImg4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "ESP32 Firmware",
-      "PCB Design Files",
-      "Network Architecture Docs",
-      "Production Test Guide",
-    ],
-    sections: [
-      {
-        heading: "Gateway Overview",
-        body: "An industrial-grade single-channel LoRaWAN gateway built on ESP32 dual-core, designed to bridge LoRa field sensors to cloud platforms in environments where off-the-shelf gateways can't be deployed. The board accepts 96–264 VAC mains or DC input and can be expanded with LTE, additional I/O, and battery backup modules.",
-        images: [lorawanGwImg1, lorawanGwImg2],
-      },
-      {
-        heading: "Connectivity Stack",
-        bullets: [
-          "LoRa SX1276/78 at 433 or 915 MHz for wide-area sensor uplinks",
-          "Ethernet (W5500) for reliable wired cloud connectivity",
-          "RS-485 (optically isolated, 1 Mbps) for Modbus RTU devices on the local bus",
-          "Wi-Fi 802.11 b/g/n and BLE 4.2 for local configuration and AP fallback",
-          "4G-LTE via optional expansion module (SIM slot onboard)",
-        ],
-      },
-      {
-        heading: "Storage & Timekeeping",
-        body: "W25Q64 NOR flash provides 8 MB of local packet buffering for store-and-forward when the cloud link is interrupted. DS3231M precision RTC with coin-cell backup ensures accurate timestamping of sensor packets regardless of network availability.",
-        images: [lorawanGwImg3, lorawanGwImg4],
-      },
-    ],
-  },
-  {
-    slug: "apmd",
-    title: "AI Predictive Maintenance Digital Twin",
-    category: "Linux & BSP",
-    filterSlugs: ["embedded-linux-bsp", "embedded-firmware"],
-    description:
-      "AI-driven predictive maintenance system combining edge AI inference with a Simulink-based digital twin. Hybrid LSTM-Autoencoder achieving 95% early fault detection, optimized C for ARM Linux with <20ms latency and 14-day advance failure warnings.",
-    longDescription:
-      "Developed an AI-driven predictive maintenance system combining edge AI inference with a Simulink-based digital twin. Implemented a hybrid LSTM-Autoencoder trained on NASA CMAPSS and vibration datasets, achieving 95% early fault detection precision. Converted the model to optimized C for ARM Linux gateways with <20ms latency. Built a Simscape Electrical motor model to simulate bearing degradation and validate repair strategies. Automated retraining and simulation workflows using Bash and TCL scripts, enabling 14-day advance failure warnings.",
-    tags: [
-      "MATLAB",
-      "Simulink",
-      "LSTM Autoencoder",
-      "ONNX",
-      "ARM Linux",
-      "Edge AI",
-      "Vibration Analysis",
-      "Python",
-    ],
-    icon: Server,
-    highlight: "95% fault detection",
-    media: [
-      { type: "image", src: predMaintImg1 },
-      { type: "image", src: predMaintImg2 },
-      { type: "image", src: predMaintImg3 },
-      { type: "image", src: predMaintImg4 },
-    ],
-    hidden: false,
-    deliverables: [
-      "Simulink Digital Twin Model",
-      "LSTM-Autoencoder ONNX",
-      "ARM Linux Edge Firmware",
-      "Retraining Pipeline Scripts",
-    ],
-    sections: [
-      {
-        heading: "System Overview",
-        body: "An AI-driven predictive maintenance platform that fuses a physics-based Simulink digital twin with an edge-deployed LSTM-Autoencoder to detect motor bearing faults up to 14 days before failure — without requiring expensive test rigs or cloud round-trips.",
-        images: [predMaintImg1, predMaintImg2],
-      },
-      {
-        heading: "AI Model Architecture",
-        bullets: [
-          { text: "Hybrid LSTM-Autoencoder", sub: ["Trained on NASA CMAPSS dataset and real vibration recordings from industrial motors", "Encoder compresses 50-sample vibration windows into a 16-dim health embedding", "Reconstruction error acts as an anomaly score — rising score = degrading bearing"] },
-          { text: "Model Export & Deployment", sub: ["Converted to ONNX, then compiled to optimised C via ONNX Runtime for ARM Linux", "Inference latency < 20 ms on Cortex-A53 at 1.2 GHz with no GPU required", "Single binary, no Python runtime dependency on the gateway"] },
-        ],
-      },
-      {
-        heading: "Digital Twin — Simulink / Simscape",
-        body: "A Simscape Electrical model simulates the motor-bearing-load system with configurable stiffness, damping, and imbalance parameters. When the AI detects an anomaly it runs the twin to estimate remaining useful life and simulate the effect of proposed repair strategies — all offline, all deterministic.",
-        images: [predMaintImg3, predMaintImg4],
-      },
-      {
-        heading: "System Performance",
-        bullets: [
-          "95% early fault detection precision on held-out CMAPSS test data",
-          "14-day advance warning on bearing failures in field validation",
-          "< 20 ms end-to-end inference latency on ARM Linux gateway hardware",
-          "Automated nightly retraining via Bash + TCL scripts on new vibration data",
-        ],
       },
     ],
   },
