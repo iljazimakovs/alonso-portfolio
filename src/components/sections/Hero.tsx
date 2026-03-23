@@ -15,9 +15,9 @@ const bootLines = [
 
 const stats = [
   { value: "10+", label: "Years Embedded" },
-  { value: "50+", label: "Boards Shipped" },
+  { value: "30+", label: "Boards Shipped" },
   { value: "5", label: "MCU Families" },
-  { value: "HW→SW", label: "Full-Stack" },
+  { value: "CE/FCC", label: "Certified Products" },
 ];
 
 export function Hero() {

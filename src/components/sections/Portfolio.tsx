@@ -148,7 +148,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1208398/_BLGl2VleYg.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "/images/_BLGl2VleYg.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -231,8 +231,8 @@ const projects: Project[] = [
           "Adaptable height depending on component population",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1208399/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1208401/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -264,7 +264,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1470478/_41pDWgCaDU.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "/images/_41pDWgCaDU.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -284,9 +284,8 @@ const projects: Project[] = [
         heading: "Neural Network Fundamentals",
         body: "The network is implemented as a sequence of dense layers performing vector-matrix multiplications followed by activation functions and quantization.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1468476/network-1_nX3kYRKuCr.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1468478/nn-1_EjOow0B27g.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1469957/screenshot_from_2022-07-18_07-32-04_6u0ZV6PQRD.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/network-1_nX3kYRKuCr.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/nn-1_EjOow0B27g.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -313,8 +312,8 @@ const projects: Project[] = [
         heading: "FPGA Integration",
         body: "The generated HLS IP is integrated into the FPGA system using Vivado and deployed via PYNQ for runtime interaction.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1470725/screenshot_from_2022-07-19_17-03-50_gbWYavQZ3L.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1470119/screenshot_from_2022-07-18_14-58-11_PpmwBfmdIh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/screenshot_from_2022-07-19_17-03-50_gbWYavQZ3L.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/screenshot_from_2022-07-18_14-58-11_PpmwBfmdIh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -326,8 +325,8 @@ const projects: Project[] = [
           "Tradeoff between design time and hardware efficiency",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1474151/screenshot_from_2022-07-27_08-08-53_fnXhHMarlo.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1474150/screenshot_from_2022-07-27_08-08-33_4eyr88uqtR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/screenshot_from_2022-07-27_08-08-53_fnXhHMarlo.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/screenshot_from_2022-07-27_08-08-33_4eyr88uqtR.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -359,7 +358,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1903473/_3HddXBvRpD.blob?auto=compress&w=900&h=675&fit=min&fm=jpg",
+        src: "/images/_3HddXBvRpD.blob?auto=compress&w=900&h=675&fit=min&fm=jpg",
       },
     ],
     hidden: false,
@@ -386,7 +385,7 @@ const projects: Project[] = [
           "End-to-end flow: RFID → ESP8266 → HTTPS → Google Sheets",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1903476/circuit_rbJHBbM9hQ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/circuit_rbJHBbM9hQ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -457,7 +456,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1520175/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg?auto=compress,format&w=1280&h=960&fit=max",
+        src: "/images/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg?auto=compress,format&w=1280&h=960&fit=max",
       },
     ],
     hidden: false,
@@ -473,7 +472,7 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "Developed a dual-microcontroller embedded system in Raspberry Pi form factor to address reliability limitations of Linux SBCs in continuous operation environments. The design enables reuse of Pi HATs and enclosures while replacing the software-heavy stack with a deterministic embedded architecture.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1520167/_7fhyhPxdZv.blob?auto=compress,format&w=900&h=675&fit=min",
+          "/images/_7fhyhPxdZv.blob?auto=compress,format&w=900&h=675&fit=min",
         ],
       },
       {
@@ -487,7 +486,7 @@ const projects: Project[] = [
           "Designed to operate without Linux for improved determinism and reliability",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1520180/espiff_v3_1_annotated_correct_V30zvmZa8C.png",
+          "/images/espiff_v3_1_annotated_correct_V30zvmZa8C.png",
         ],
       },
       {
@@ -575,7 +574,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1541958/_unlI3boDdj.blob?auto=compress,format&w=900&h=675&fit=min",
+        src: "/images/_unlI3boDdj.blob?auto=compress,format&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -602,7 +601,7 @@ const projects: Project[] = [
           "Average latency: 223 ms per inference",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1541944/dsc_7551_WZqr6P6Slb.JPG?auto=compress,format&w=1280&h=960&fit=max",
+          "/images/dsc_7551_WZqr6P6Slb.JPG?auto=compress,format&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -615,7 +614,7 @@ const projects: Project[] = [
           "Expanded I/O and PCIe support",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1541946/dsc_8678006_kEPDnhO7T0.jpg?auto=compress,format&w=1280&h=960&fit=max",
+          "/images/dsc_8678006_kEPDnhO7T0.jpg?auto=compress,format&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -644,7 +643,7 @@ const projects: Project[] = [
           "Speedup: ~24×",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1547665/image_jtAmQ78BXZ.png?auto=compress,format&w=1280&h=960&fit=max",
+          "/images/image_jtAmQ78BXZ.png?auto=compress,format&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -778,7 +777,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1150159/_WSJLKa8SPT.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "/images/_WSJLKa8SPT.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -804,7 +803,7 @@ const projects: Project[] = [
           "Supports both unidirectional and bidirectional control",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1200850/possible_applications_2_UFUIo32qw7.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/possible_applications_2_UFUIo32qw7.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -839,7 +838,7 @@ const projects: Project[] = [
           "Supports field weakening mode for higher speed operation",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1151255/terminals_kvuCFIpenj.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/terminals_kvuCFIpenj.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -856,7 +855,7 @@ const projects: Project[] = [
         heading: "Simulation & Validation",
         body: "An online simulation tool was used to validate torque and behavior across different motor configurations before deployment.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1163238/simulation_I03deKM54g.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/simulation_I03deKM54g.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -888,7 +887,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1485391/_QKeZ6HTyI8.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "/images/_QKeZ6HTyI8.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -915,7 +914,7 @@ const projects: Project[] = [
           "Motor control handled independently by Arduino firmware",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1485409/blockflowdiagram_bzUtPAh7mM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/blockflowdiagram_bzUtPAh7mM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -929,9 +928,9 @@ const projects: Project[] = [
           "Optional encoder modules for feedback integration",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1485410/img_3641_4IliUhwScq.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1485411/img_3643_8OTJsTlsBu.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1485412/schematicdiagram_Gy4WnIxRhh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/img_3641_4IliUhwScq.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/img_3643_8OTJsTlsBu.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/schematicdiagram_Gy4WnIxRhh.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -955,7 +954,7 @@ const projects: Project[] = [
           "Visual feedback via button state changes",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1485425/htmlpage_qyEt6qTHNG.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/htmlpage_qyEt6qTHNG.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -997,7 +996,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1879156/_h8itjqr0Kc.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "/images/_h8itjqr0Kc.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -1023,7 +1022,7 @@ const projects: Project[] = [
           "Signal normalization and noise handling on-device",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1881910/ppg_fBPKCV13qa.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/ppg_fBPKCV13qa.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -1036,8 +1035,8 @@ const projects: Project[] = [
           "I2C interface for sensor communication",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1879159/m5stickc_fuYvlbjdT5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1879160/heart_rate_hat_s7MZRoj74o.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/m5stickc_fuYvlbjdT5.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/heart_rate_hat_s7MZRoj74o.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -1051,7 +1050,7 @@ const projects: Project[] = [
           "Automated dataset upload via CLI",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1879161/data_acquisition_OG0KLUVkf7.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/data_acquisition_OG0KLUVkf7.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -1084,7 +1083,7 @@ const projects: Project[] = [
           "Low-latency classification pipeline",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1879178/deployment_GCJXHncqq4.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/deployment_GCJXHncqq4.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
@@ -1097,7 +1096,7 @@ const projects: Project[] = [
           "Simple button-based control",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1882205/user_interface_gmFljHQj9Z.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/user_interface_gmFljHQj9Z.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
       {
