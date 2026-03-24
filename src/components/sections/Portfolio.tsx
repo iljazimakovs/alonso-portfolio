@@ -904,7 +904,6 @@ const projects: Project[] = [
         ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/1859396/image_4NxKxJnSJY.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1859366/image_e1PCKOucOF.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
@@ -919,7 +918,6 @@ const projects: Project[] = [
           "Discrete-time control implementation in RTL",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1860254/image_Fnj4Y1rBxt.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1860789/image_GzkVBfZlVm.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
@@ -934,20 +932,12 @@ const projects: Project[] = [
           "Clock domain handling and timing control",
           "Simulation and verification in Vivado",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1859771/image_SHmDvz69QN.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1859865/image_PRpZQD41gC.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
 
       {
         heading: "System Validation",
         body:
           "Validated the control system using simulation models and real hardware testing, refining parameters to achieve stable and synchronized motion.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1860291/image_ZLOXin0bnm.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1860777/image_dxsl4lKLuH.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
 
       {
@@ -2667,7 +2657,7 @@ export function Portfolio({
                     }`}
                 >
                   <ThumbsUp className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  Suggested ({recommended.size})
+                  Recommended ({recommended.size})
                 </button>
 
                 <button
