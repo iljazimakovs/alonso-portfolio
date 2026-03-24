@@ -149,7 +149,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/test.jpg",
+        src: "https://hackster.imgix.net/uploads/attachments/1208398/_BLGl2VleYg.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
     hidden: false,
@@ -232,7 +232,7 @@ const projects: Project[] = [
           "Adaptable height depending on component population",
         ],
         images: [
-          "/images/test.jpg",
+          "https://hackster.imgix.net/uploads/attachments/1208399/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1208401/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
