@@ -232,7 +232,7 @@ const projects: Project[] = [
           "Adaptable height depending on component population",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1208399/cables_VoeFMS9dBO.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/test.jpg",
           "https://hackster.imgix.net/uploads/attachments/1208401/heatschrink5_Z2jsInvZvb.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
