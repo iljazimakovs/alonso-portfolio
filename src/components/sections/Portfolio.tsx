@@ -25,7 +25,8 @@ import {
   Zap,
   Wifi,
   Gauge,
-  Activity
+  Activity,
+  Lightbulb
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -1392,6 +1393,139 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "The project demonstrates a complete embedded robotics control system integrating wireless communication, human interfaces, and real-time control. It highlights experience in ESP32 networking, multi-input control design, and system-level architecture for interactive embedded applications.",
+      },
+    ],
+  },
+  {
+    slug: "c5e8a2",
+    title: "Multi-Channel Intelligent Lighting Control System",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware"],
+
+    description:
+      "Embedded lighting control system with multi-channel PWM control, constant current driving, and RS485 communication support.",
+
+    longDescription:
+      "Designed a multi-channel lighting control system capable of driving high-power LEDs using constant current regulation and PWM-based dimming. The system integrates a microcontroller for real-time control, RS485 communication for long-distance networking, and temperature sensing for safe operation. Each channel is independently controlled, enabling flexible lighting patterns and scalable system expansion. The design focuses on reliability, thermal protection, and efficient power delivery for high-current LED applications.",
+
+    tags: [
+      "Power Electronics",
+      "PCB Design",
+      "Embedded Systems",
+      "PWM Control",
+      "LED Driver",
+      "RS485",
+      "Hardware Design",
+    ],
+
+    icon: Lightbulb,
+    highlight: "LED Power Control",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1683835/_9AJ5MQyfmN.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Multi-Channel LED Driver Hardware",
+      "PWM Control Firmware",
+      "RS485 Communication Interface",
+      "Thermal Monitoring Integration",
+      "Custom PCB Design (KiCad)",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a multi-channel lighting control system capable of driving high-power LEDs with precise brightness control and safe operating conditions. The system supports scalable deployment and remote control through serial communication.",
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The design integrates power regulation, control logic, and communication into a single embedded platform.",
+        bullets: [
+          "Microcontroller-based PWM control system",
+          "Three independent LED driving channels",
+          "Constant current regulation for stable output",
+          "Integrated communication interface for scalability",
+        ],
+      },
+
+      {
+        heading: "Power & Driver Design",
+        body:
+          "Each LED channel is driven using constant current circuitry to ensure safe and efficient operation.",
+        bullets: [
+          "Constant current LED drivers for thermal safety",
+          "Supports high-current operation up to ~1A",
+          "Resistor-based current configuration",
+          "Protection against overcurrent and overheating",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1683840/0104054923732.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1683841/0105011820668.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Control System",
+        body:
+          "A microcontroller is used to generate PWM signals and manage communication across the system.",
+        bullets: [
+          "PWM-based brightness control",
+          "Multiple channel synchronization",
+          "UART-based communication interface",
+          "Flexible lighting pattern generation",
+        ],
+      },
+
+      {
+        heading: "Communication Interface",
+        body:
+          "RS485 communication enables long-distance control and multi-device networking.",
+        bullets: [
+          "Half-duplex RS485 communication",
+          "Supports multi-node bus architecture",
+          "Reliable long-range data transmission",
+          "Expandable system design",
+        ],
+      },
+
+      {
+        heading: "Thermal & Sensor Integration",
+        body:
+          "Temperature monitoring is included to ensure safe operation of high-power LEDs.",
+        bullets: [
+          "Digital temperature sensing",
+          "Thermal protection considerations",
+          "Improved reliability under high load",
+        ],
+      },
+
+      {
+        heading: "PCB Design & Fabrication",
+        body:
+          "The PCB was designed in KiCad with focus on power routing and manufacturability.",
+        bullets: [
+          "Custom PCB layout optimized for power delivery",
+          "3D visualization for mechanical validation",
+          "Designed for automated fabrication workflows",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1683842/1410048502637.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates expertise in power electronics, embedded control, and PCB design. It highlights the ability to design reliable, scalable lighting systems with integrated communication and thermal awareness for real-world applications.",
       },
     ],
   },
