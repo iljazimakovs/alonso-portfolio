@@ -1628,9 +1628,6 @@ const projects: Project[] = [
           "Optimized routing for power and signal integrity",
           "Manufactured using rapid prototyping services",
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1809762/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
 
       {
@@ -1641,22 +1638,6 @@ const projects: Project[] = [
           "Enclosure designed using Fusion 360",
           "STL export for 3D printing",
           "Compact and functional mechanical design",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1809764/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1809767/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1809768/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1809769/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1809770/unnamed.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-
-      {
-        heading: "Assembly & Integration",
-        body:
-          "The system was assembled using hand soldering techniques and integrated into the enclosure.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1809766/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
@@ -1672,7 +1653,6 @@ const projects: Project[] = [
         images: [
           "https://hackster.imgix.net/uploads/attachments/1809771/unnamed.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1809772/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1809776/image_XKQhGRPmi9.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
