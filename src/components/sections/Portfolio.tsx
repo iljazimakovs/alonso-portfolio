@@ -713,9 +713,7 @@ const projects: Project[] = [
         body:
           "Developed a custom carrier platform tailored for edge computing modules, designed to combine high-performance processing with a familiar and widely supported hardware ecosystem. The system enables reuse of existing accessories while extending functionality through custom hardware integration.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1816673/soms_oQgd1w4uDX.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1816674/mockup_6JvfupHzEW.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1819177/kria_pt_tW4fHEn7L4.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
@@ -813,6 +811,159 @@ const projects: Project[] = [
         heading: "Engineering Outcome",
         body:
           "This project demonstrates advanced PCB design and system integration skills, including high-speed interface design, multi-layer routing, and hardware platform development for edge computing systems. It highlights the ability to design complex carrier architectures for scalable embedded and AI applications.",
+      },
+    ],
+  },
+  {
+    slug: "b7f4d1",
+    title: "FPGA-Based Robotic Motion Control System",
+    category: "FPGA & Embedded AI",
+    filterSlugs: ["fpga", "robotics", "embedded-systems"],
+
+    description:
+      "RTL-based motor control system using FPGA for precise dual-motor synchronization with encoder feedback.",
+
+    longDescription:
+      "Designed and implemented a real-time motor control system on FPGA using Verilog, enabling precise control of dual DC motors with encoder feedback. The system integrates PWM generation, quadrature decoding, and a custom lead-follow PID control algorithm to ensure synchronized motion. Compared to traditional microcontroller-based solutions, the FPGA implementation provides deterministic timing, parallel processing, and low-latency control, making it suitable for robotics and real-time embedded applications.",
+
+    tags: [
+      "FPGA",
+      "Verilog",
+      "RTL Design",
+      "Robotics",
+      "Motor Control",
+      "PID Control",
+      "Embedded Systems",
+    ],
+
+    icon: Cpu,
+    highlight: "FPGA Motor Control",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1857569/_kVlac0BHjL.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "RTL Motor Control System",
+      "FPGA-Based PID Controller",
+      "Quadrature Encoder Decoder",
+      "PWM Signal Generation",
+      "Robotic Motion Control Architecture",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed an FPGA-based motor control system capable of driving and synchronizing two DC motors with encoder feedback. The system leverages hardware-level parallelism to achieve deterministic timing and high-performance control for robotics applications.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1859206/image_f1yG9kGWmq.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The design integrates multiple hardware modules within the FPGA to enable real-time motor control and feedback processing.",
+        bullets: [
+          "PWM generation for motor speed control",
+          "Encoder-based feedback system",
+          "Dual motor synchronization logic",
+          "RC input interface for control signals",
+          "Real-time processing using FPGA parallelism",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1859208/image_jbejuB65tr.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1859220/image_ZFQ1VlIRGN.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Motor Driver & Hardware Interface",
+        body:
+          "Integrated an H-bridge motor driver with FPGA-generated control signals to drive dual DC motors efficiently.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1858478/image_JqvbsDhzQo.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1859139/image_xEmklyzqqW.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Encoder Feedback System",
+        body:
+          "Implemented quadrature decoding logic to determine motor speed and direction using Hall-effect encoder signals.",
+        bullets: [
+          "Dual-channel encoder signal processing",
+          "Direction detection via phase difference",
+          "Velocity estimation using pulse frequency",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1859396/image_4NxKxJnSJY.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1859366/image_e1PCKOucOF.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Control Algorithm (PID)",
+        body:
+          "Designed a custom lead-follow PID control algorithm to synchronize motor speeds by dynamically adjusting PWM duty cycles based on encoder feedback.",
+        bullets: [
+          "Real-time error computation between motors",
+          "Velocity difference compensation",
+          "Integral component for stability and damping",
+          "Discrete-time control implementation in RTL",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1860254/image_Fnj4Y1rBxt.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1860789/image_GzkVBfZlVm.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "RTL Design & Implementation",
+        body:
+          "Implemented the system in Verilog using modular design principles and state machines for sequential computations.",
+        bullets: [
+          "Modular RTL architecture",
+          "State machine-based control logic",
+          "Clock domain handling and timing control",
+          "Simulation and verification in Vivado",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1859771/image_SHmDvz69QN.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1859865/image_PRpZQD41gC.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "System Validation",
+        body:
+          "Validated the control system using simulation models and real hardware testing, refining parameters to achieve stable and synchronized motion.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1860291/image_ZLOXin0bnm.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1860777/image_dxsl4lKLuH.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Robotic System Integration",
+        body:
+          "Integrated the FPGA motor controller into a mobile robot platform including power distribution, chassis design, and mechanical assembly.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1860832/image_VxMtP0w2lN.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1860863/image_6Yu4senJgF.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates advanced FPGA-based control system design, combining RTL development, real-time signal processing, and robotics integration. It highlights expertise in hardware-level control, feedback systems, and embedded robotics architecture.",
       },
     ],
   },
