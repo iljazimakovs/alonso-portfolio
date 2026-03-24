@@ -666,6 +666,157 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "a8c3f2",
+    title: "Custom Edge Compute Carrier Platform",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-linux-bsp"],
+
+    description:
+      "Custom carrier board enabling edge computing modules with Raspberry Pi form-factor compatibility and extended peripheral support.",
+
+    longDescription:
+      "Designed a custom carrier platform for an edge computing system-on-module, focusing on compatibility, flexibility, and high-speed peripheral integration. The board adopts a Raspberry Pi–compatible form factor to leverage existing ecosystems while enabling advanced compute capabilities. The design includes Ethernet, USB, JTAG/UART interfaces, SD storage, and a fully accessible GPIO architecture routed to programmable logic. Emphasis was placed on layout constraints, connector alignment, power sequencing, and integration of high-speed interfaces, resulting in a compact multi-layer PCB suitable for embedded AI and robotics applications.",
+
+    tags: [
+      "PCB Design",
+      "Carrier Board",
+      "Edge Computing",
+      "High-Speed Design",
+      "Embedded Systems",
+      "KiCad",
+      "FPGA Systems",
+    ],
+
+    icon: Cpu,
+    highlight: "Carrier Board Design",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1819404/_zJ41sg2WrV.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Custom Carrier Board Architecture",
+      "Multi-Interface Hardware Design",
+      "High-Speed PCB Layout",
+      "Peripheral Integration System",
+      "Edge Compute Platform Design",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a custom carrier platform tailored for edge computing modules, designed to combine high-performance processing with a familiar and widely supported hardware ecosystem. The system enables reuse of existing accessories while extending functionality through custom hardware integration.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1816673/soms_oQgd1w4uDX.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1816674/mockup_6JvfupHzEW.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1819177/kria_pt_tW4fHEn7L4.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The platform integrates multiple high-speed and standard interfaces into a compact form factor, enabling flexible deployment across robotics and edge AI applications.",
+        bullets: [
+          "Ethernet interface for high-speed networking",
+          "USB subsystem for peripheral connectivity",
+          "Dedicated JTAG and UART debugging interfaces",
+          "SD card interface for storage and boot",
+          "40-pin GPIO header for expansion and customization",
+        ],
+      },
+
+      {
+        heading: "Core Hardware Integration",
+        numbered: [
+          {
+            title: "Module Connector Interface",
+            body:
+              "Integrated high-density board-to-board connectors to interface with the compute module, routing all critical signals while maintaining layout integrity.",
+            image: "https://hackster.imgix.net/uploads/attachments/1818756/som_connectors_mJpzpMsKbH.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          },
+          {
+            title: "Ethernet Subsystem",
+            body:
+              "Implemented a gigabit-capable Ethernet interface using a dedicated PHY and RJ45 connector, ensuring reliable high-speed communication.",
+            image: "https://hackster.imgix.net/uploads/attachments/1818757/ethernet_cq1MeWKds3.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          },
+          {
+            title: "Debug & Programming Interface",
+            body:
+              "Integrated USB-based debugging with FTDI along with a direct JTAG interface for flexible programming and diagnostics.",
+            image: "https://hackster.imgix.net/uploads/attachments/1818759/ftdi_wnqTE2RjpX.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          },
+        ],
+      },
+
+      {
+        heading: "Peripheral Integration",
+        body:
+          "The design extends system functionality through multiple integrated peripheral interfaces.",
+        bullets: [
+          "USB PHY for external device connectivity",
+          "GPIO routed to programmable logic for flexibility",
+          "Standard expansion header compatibility",
+          "Modular peripheral architecture",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1818763/usb_phy_Au69HL294v.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1818764/periph_connectors_nER2srhq72.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "GPIO & System Flexibility",
+        body:
+          "All GPIO signals are routed to programmable logic, enabling full reconfigurability and custom interface design.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1819180/rpi_gpio_uhy8PyvFFw.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Storage Interface",
+        body:
+          "Integrated SD card circuitry for system boot and data storage using proven reference design patterns.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1818765/sd_card_gXRYhJ7V29.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "PCB Layout & Constraints",
+        body:
+          "The layout required careful handling of connector alignment, mechanical constraints, and high-density routing within a compact form factor.",
+        bullets: [
+          "Multi-layer PCB design for signal integrity",
+          "Precise connector spacing and mechanical alignment",
+          "Compact routing under space constraints",
+          "Optimized placement for dense component layout",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1818768/layout0_hnjUD4cAXc.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1818790/layout1_i8TyWDEqdK.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1819191/layout2_6nYmrYTYvF.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1819405/layout5_AB0xAZ8wK4.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1819406/layout6_8NQwHBBEek.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates advanced PCB design and system integration skills, including high-speed interface design, multi-layer routing, and hardware platform development for edge computing systems. It highlights the ability to design complex carrier architectures for scalable embedded and AI applications.",
+      },
+    ],
+  },
+  {
     slug: "c2f6a8",
     title: "Cross-Platform AI Acceleration Pipeline",
     category: "Embedded Linux & BSP",
