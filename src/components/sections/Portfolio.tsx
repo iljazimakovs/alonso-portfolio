@@ -149,7 +149,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_BLGl2VleYg.png",
+        src: "/images/_BLGl2VleYg.jpg",
       },
     ],
     hidden: false,
