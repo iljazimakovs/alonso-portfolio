@@ -968,6 +968,134 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "e2b7c9",
+    title: "High-Speed Error Correction Engine (RTL)",
+    category: "FPGA & Embedded AI",
+    filterSlugs: ["fpga", "digital-design", "verification"],
+
+    description:
+      "High-throughput error correction system implemented in RTL with continuous data processing and formal verification.",
+
+    longDescription:
+      "Designed and implemented a high-throughput error correction system using RTL, capable of producing one valid output per clock cycle. The architecture leverages time-division multiplexing of multiple decoding units to sustain continuous data flow. A serial data interface is used for high-speed communication, while a valid-ready protocol ensures synchronization between encoder and decoder. The system is formally verified using model checking techniques to guarantee correctness under all input conditions, including error injection scenarios.",
+
+    tags: [
+      "FPGA",
+      "RTL Design",
+      "Verilog",
+      "Digital Design",
+      "Formal Verification",
+      "Error Correction",
+      "High Throughput Systems",
+    ],
+
+    icon: Cpu,
+    highlight: "Error Correction RTL",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1754169/_LA3kmP6sBI.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "RTL Encoder & Decoder Design",
+      "High-Throughput Data Pipeline",
+      "Formal Verification Model",
+      "FPGA Implementation",
+      "Error Injection & Validation Framework",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a high-performance error correction system capable of processing continuous input data streams with minimal latency. The design ensures reliable communication by detecting and correcting transmission errors in real time.",
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system consists of a serial encoder, a high-throughput decoder, and a channel model for validation.",
+        bullets: [
+          "Bit-serial data transmission for high-speed operation",
+          "Valid-ready handshake protocol for synchronization",
+          "Continuous pipeline processing with output per cycle",
+          "Time-division multiplexing for throughput optimization",
+        ],
+      },
+
+      {
+        heading: "Encoder Design",
+        body:
+          "The encoder converts parallel input data into a serialized format while generating parity information for error detection.",
+        bullets: [
+          "Parallel-in serial-out architecture",
+          "Finite state machine for data and parity generation",
+          "Syndrome computation during message processing",
+          "Optimized for continuous data streaming",
+        ],
+      },
+
+      {
+        heading: "Decoder Architecture",
+        body:
+          "The decoder reconstructs original data and corrects errors using syndrome analysis and feedback logic.",
+        bullets: [
+          "Linear feedback shift register for syndrome generation",
+          "Error position detection via combinational logic",
+          "Parallel output reconstruction using buffer registers",
+          "Dual-decoder time multiplexing for maximum throughput",
+        ],
+      },
+
+      {
+        heading: "Channel Modeling",
+        body:
+          "A configurable channel model simulates real-world transmission errors for validation and testing.",
+        bullets: [
+          "Single and double bit error injection",
+          "Configurable error rate control",
+          "Used for both simulation and hardware testing",
+        ],
+      },
+
+      {
+        heading: "Formal Verification",
+        body:
+          "The system is formally verified using model checking techniques to ensure correctness across all possible input scenarios.",
+        bullets: [
+          "Assertions validating error correction behavior",
+          "Proof of single-bit error correction",
+          "Detection of multi-bit error conditions",
+          "Latency guarantees for encoder and decoder",
+          "Liveness verification to ensure no deadlock",
+        ],
+      },
+
+      {
+        heading: "FPGA Implementation",
+        body:
+          "The design is synthesized and deployed on FPGA hardware for real-time validation.",
+        bullets: [
+          "RTL implementation using Verilog",
+          "Simulation and synthesis using Vivado",
+          "Hardware validation on FPGA board",
+          "End-to-end system verification with real signals",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates advanced digital design and verification skills, including high-throughput architecture design, RTL implementation, and formal verification. It highlights the ability to build reliable, high-performance data processing systems suitable for communication and safety-critical applications.",
+      },
+    ],
+  },
+  {
     slug: "c2f6a8",
     title: "Cross-Platform AI Acceleration Pipeline",
     category: "Embedded Linux & BSP",
