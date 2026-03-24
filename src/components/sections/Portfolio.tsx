@@ -1469,7 +1469,6 @@ const projects: Project[] = [
         ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/1683840/0104054923732.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1683841/0105011820668.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
@@ -1526,6 +1525,161 @@ const projects: Project[] = [
         heading: "Engineering Outcome",
         body:
           "This project demonstrates expertise in power electronics, embedded control, and PCB design. It highlights the ability to design reliable, scalable lighting systems with integrated communication and thermal awareness for real-world applications.",
+      },
+    ],
+  },
+  {
+    slug: "9c7e4b",
+    title: "Wireless High-Power Lighting Control Module",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "pcb-hardware"],
+
+    description:
+      "Wireless RGB lighting controller with PWM power stage and mobile app integration for high-power LED strips.",
+
+    longDescription:
+      "Developed a wireless lighting control module capable of driving high-power RGB LED strips using PWM-based switching and mobile app control. The system integrates an ESP32-based controller with MOSFET power stages to handle up to 100W load. It supports real-time color control via WiFi using a mobile application interface. The design includes a custom PCB, onboard voltage regulation, and a 3D-printed enclosure, forming a complete product-ready solution for smart lighting applications.",
+
+    tags: [
+      "ESP32",
+      "IoT",
+      "PWM Control",
+      "Power Electronics",
+      "Embedded Systems",
+      "LED Control",
+      "PCB Design",
+    ],
+
+    icon: Wifi,
+    highlight: "Wireless LED Control",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1809759/_OXf2590Kja.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Wireless LED Control System",
+      "ESP32 Firmware Integration",
+      "MOSFET Power Driver Stage",
+      "Custom PCB Design",
+      "3D Printed Enclosure",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Designed a wireless lighting control module capable of driving high-power RGB LED strips with real-time control via mobile application. The system combines embedded control, power electronics, and user interface into a compact product-ready design.",
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system integrates wireless communication, PWM control, and high-current switching into a unified platform.",
+        bullets: [
+          "ESP32-based wireless control system",
+          "PWM signal generation for RGB channels",
+          "MOSFET-based high-current switching stage",
+          "Mobile app-based real-time control",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1809761/unnamed.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Power & Driver Stage",
+        body:
+          "The LED strips are driven using logic-level MOSFETs to handle high current loads efficiently.",
+        bullets: [
+          "Supports up to ~100W LED load",
+          "IRLFZ44N MOSFET-based switching",
+          "12V LED strip compatibility",
+          "Efficient PWM-based brightness control",
+        ],
+      },
+
+      {
+        heading: "Wireless Control System",
+        body:
+          "The system uses WiFi connectivity to enable remote lighting control through a mobile application.",
+        bullets: [
+          "ESP32-C3 microcontroller platform",
+          "Real-time control via mobile app",
+          "Color and brightness adjustment",
+          "User-friendly interface integration",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1809765/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "PCB Design",
+        body:
+          "The PCB was designed using a modern design workflow with emphasis on compact layout and power routing.",
+        bullets: [
+          "Custom PCB designed using Flux.ai",
+          "Optimized routing for power and signal integrity",
+          "Manufactured using rapid prototyping services",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1809762/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Mechanical Design",
+        body:
+          "A custom enclosure was designed and 3D printed to house the electronics securely.",
+        bullets: [
+          "Enclosure designed using Fusion 360",
+          "STL export for 3D printing",
+          "Compact and functional mechanical design",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1809764/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1809767/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1809768/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1809769/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1809770/unnamed.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Assembly & Integration",
+        body:
+          "The system was assembled using hand soldering techniques and integrated into the enclosure.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1809766/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Testing & Validation",
+        body:
+          "The system was tested using RGB LED strips and controlled through a mobile application to validate performance.",
+        bullets: [
+          "Real-time lighting control validation",
+          "Stable operation under load",
+          "User interaction testing via app",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1809771/unnamed.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1809772/unnamed.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1809776/image_XKQhGRPmi9.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates end-to-end embedded product development, including wireless communication, power electronics, PCB design, and mechanical integration. It highlights the ability to build complete IoT-enabled hardware systems ready for real-world deployment.",
       },
     ],
   },
