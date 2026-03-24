@@ -552,6 +552,228 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "d3f8a1",
+    title: "Autonomous Multi-Parameter Environmental Monitoring Node",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+
+    description:
+      "Battery-powered environmental monitoring node measuring temperature, humidity, pressure, and air quality with long автономous operation and USB-C charging.",
+
+    longDescription:
+      "Designed a compact, low-power environmental monitoring node using ESP32-C3 for continuous sensing in resource-constrained environments. The system integrates multiple environmental sensors to capture temperature, humidity, pressure, and air quality data while maintaining extended battery life. Built with a dual power architecture, it supports both USB-C charging and autonomous battery operation, ensuring reliability during power outages. The design emphasizes accessibility, low cost, and energy efficiency, making it suitable for home monitoring, agriculture, and remote deployments.",
+
+    tags: [
+      "ESP32-C3",
+      "Environmental Monitoring",
+      "IoT",
+      "Low Power Design",
+      "Battery Systems",
+      "Sensor Integration",
+      "Embedded Systems",
+    ],
+
+    icon: Activity,
+    highlight: "Low-Power Sensing",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1906929/_KOoa1uyXuP.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Custom ESP32-C3 Embedded Node",
+      "Multi-Sensor Integration (BME280 + SPG40)",
+      "Battery + USB-C Power System",
+      "Low-Power Firmware Design",
+      "Compact PCB Layout",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a compact environmental monitoring node designed for continuous operation in power-constrained environments. The system collects multiple environmental parameters and maintains reliable operation during unstable power conditions through an integrated battery-backed design.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1897336/top_Hf5nqdZawZ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The design combines sensing, processing, and power management into a single compact embedded platform optimized for long-term deployment.",
+        bullets: [
+          "ESP32-C3 used for processing and connectivity",
+          "Integrated environmental sensing for multiple parameters",
+          "Compact PCB optimized for space and efficiency",
+          "Designed for autonomous operation without external dependency",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1897337/top_eDCRyNSZDF.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1897338/bottom_XEytMuRQuM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Power System Design",
+        body:
+          "A dual power architecture ensures reliable operation in environments with unstable power availability.",
+        bullets: [
+          "Rechargeable lithium battery for автономous operation",
+          "USB-C interface for power input and charging",
+          "High-efficiency regulator (~95%) for extended battery life",
+          "Supports continuous operation during outages",
+        ],
+      },
+
+      {
+        heading: "Sensor Integration",
+        body:
+          "The system integrates multiple sensors to provide comprehensive environmental insights.",
+        bullets: [
+          "BME280 for temperature, humidity, and pressure monitoring",
+          "SPG40 sensor for air quality and CO2 estimation",
+          "Designed for both indoor and outdoor use cases",
+          "Supports applications in agriculture, home monitoring, and health",
+        ],
+      },
+
+      {
+        heading: "Low-Power Optimization",
+        body:
+          "Energy efficiency is a core design objective, enabling extended автономous operation.",
+        bullets: [
+          "Optimized power consumption for long battery life",
+          "Estimated runtime of 15–20 days on 500mAh battery",
+          "Efficient regulator and system-level power management",
+          "Designed for continuous unattended operation",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1897335/bottom_AAX3d5pK0x.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates practical embedded system design under real-world constraints, combining low-power electronics, sensor integration, and resilient power architecture. It highlights the ability to engineer cost-effective, автономous solutions for environmental monitoring and IoT deployment.",
+      },
+    ],
+  },
+  {
+    slug: "f1a9c3",
+    title: "Configurable High-Power Input System",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware"],
+
+    description:
+      "Compact power input system enabling dynamic voltage negotiation and efficient energy delivery for embedded applications.",
+
+    longDescription:
+      "Designed a compact power input system that enables embedded devices to safely draw energy from modern power sources through automated negotiation. The system eliminates the need for fixed power adapters by dynamically selecting appropriate voltage levels based on system requirements. Built with minimal external components, the design emphasizes efficiency, compactness, and ease of integration into embedded and portable systems.",
+
+    tags: [
+      "Power Electronics",
+      "Embedded Hardware",
+      "PCB Design",
+      "Power Management",
+      "Voltage Regulation",
+      "Hardware Design",
+    ],
+
+    icon: Zap,
+    highlight: "Smart Power Input",
+
+    media: [
+      {
+        type: "image",
+        src: "https://www.infineon.com/export/sites/default/media/product/USB-C_PD_Sink.jpg",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Power Input Hardware Design",
+      "Voltage Negotiation Interface",
+      "Compact PCB Implementation",
+      "Embedded Power Integration",
+      "Efficient Energy Delivery System",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a compact power input module that enables embedded systems to dynamically negotiate and receive appropriate voltage levels from external power sources. The design simplifies power integration while improving flexibility and efficiency compared to fixed-voltage solutions.",
+      },
+
+      {
+        heading: "Core Design Concept",
+        body:
+          "The system replaces traditional fixed power input methods with a negotiation-based approach, allowing devices to adapt to available power sources automatically.",
+        bullets: [
+          "Dynamic voltage negotiation based on system requirements",
+          "Eliminates dependency on dedicated power adapters",
+          "Compact and integration-friendly design",
+          "Minimal external component requirement",
+        ],
+      },
+
+      {
+        heading: "Power Management Features",
+        bullets: [
+          "Automatic voltage selection",
+          "Efficient power delivery across multiple voltage levels",
+          "Optimized for embedded and portable systems",
+          "Stable and reliable operation under varying load conditions",
+        ],
+      },
+
+      {
+        heading: "Hardware Architecture",
+        numbered: [
+          {
+            title: "Power Negotiation Controller",
+            body:
+              "Handles communication with the power source and establishes appropriate voltage contracts automatically, ensuring safe and efficient operation.",
+          },
+          {
+            title: "Input Interface",
+            body:
+              "Standardized connector interface enabling compatibility with modern power delivery sources while maintaining compact form factor.",
+          },
+          {
+            title: "Passive Component Network",
+            body:
+              "Uses minimal resistors and capacitors to configure operation, reducing complexity and improving reliability.",
+          },
+        ],
+      },
+
+      {
+        heading: "Applications",
+        bullets: [
+          "Embedded system power input modules",
+          "Portable electronic devices",
+          "Battery-powered systems",
+          "Development and prototyping platforms",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates practical expertise in modern power delivery integration and compact hardware design. It highlights the ability to replace legacy power architectures with flexible, efficient, and scalable solutions suitable for real-world embedded applications.",
+      },
+    ],
+  },
+  {
     slug: "c2f6a8",
     title: "Cross-Platform AI Acceleration Pipeline",
     category: "Embedded Linux & BSP",
