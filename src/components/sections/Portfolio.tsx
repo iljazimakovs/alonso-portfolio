@@ -2503,6 +2503,142 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "b2e9f6",
+    title: "Event-Driven Embedded Vision & Streaming System",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+
+    description:
+      "Real-time embedded vision system with object-triggered image capture and Ethernet-based streaming interface.",
+
+    longDescription:
+      "Designed an embedded vision system capable of detecting objects in real time and capturing images automatically upon detection. The system integrates ultrasonic sensing, camera acquisition, and Ethernet-based communication to deliver captured images through a web interface. It features low-latency event detection, efficient memory management, and a lightweight HTTP server running directly on a microcontroller. The architecture is optimized for constrained environments while maintaining reliable real-time performance.",
+
+    tags: [
+      "Embedded Systems",
+      "Computer Vision",
+      "IoT",
+      "Ethernet",
+      "Real-Time Systems",
+      "Networking",
+      "Microcontrollers",
+    ],
+
+    icon: Camera,
+    highlight: "Embedded Vision System",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1927116/_lqSojDb7TH.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Object Detection Trigger System",
+      "Embedded Camera Integration",
+      "Ethernet-Based Web Server",
+      "Real-Time Image Streaming",
+      "Memory-Optimized Firmware",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed an embedded vision system that detects nearby objects and captures images automatically. The system serves captured images through a real-time web interface, enabling remote monitoring without external servers.",
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system integrates sensing, image capture, and network communication into a single embedded platform.",
+        bullets: [
+          "Ultrasonic-based object detection",
+          "Camera module for image acquisition",
+          "Embedded HTTP server for web interface",
+          "Ethernet-based communication for reliability",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1927139/circuit_diagram_58vnMDGQPz.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1927138/components_needed_iosE06MSPQ.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Object Detection & Trigger Logic",
+        body:
+          "The system continuously measures distance and triggers image capture when objects enter a predefined range.",
+        bullets: [
+          "Ultrasonic distance measurement (2–400 cm)",
+          "Detection threshold (~20 cm)",
+          "Cooldown mechanism to prevent repeated captures",
+          "Event-driven processing loop",
+        ],
+      },
+
+      {
+        heading: "Image Capture Pipeline",
+        body:
+          "Captured images are processed and stored efficiently within limited memory constraints.",
+        bullets: [
+          "JPEG image capture using camera module",
+          "Validation using JPEG header markers",
+          "Buffered storage (~40KB frame buffer)",
+          "Dynamic memory management and cleanup",
+        ],
+      },
+
+      {
+        heading: "Embedded Web Server",
+        body:
+          "A lightweight HTTP server runs directly on the microcontroller to serve data and images.",
+        bullets: [
+          "Custom HTTP response handling",
+          "Dynamic HTML page generation",
+          "Auto-refresh web interface",
+          "Image endpoint for real-time streaming",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1927121/screenshot_2026-01-30_173517_53M7Lw2d6q.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1927124/screenshot_2026-01-30_173546_ZhSSWAeOy9.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Networking & Data Handling",
+        body:
+          "The system implements efficient network communication and data transmission techniques.",
+        bullets: [
+          "Ethernet-based communication using WIZnet stack",
+          "DHCP-based IP assignment",
+          "Chunked image transmission (2048-byte segments)",
+          "Connection handling and resource cleanup",
+        ],
+      },
+
+      {
+        heading: "Firmware Design",
+        body:
+          "The firmware is designed for real-time responsiveness and resource efficiency.",
+        bullets: [
+          "Event-driven main loop architecture",
+          "Non-blocking network handling",
+          "Periodic DHCP maintenance",
+          "Garbage collection for memory optimization",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates advanced embedded system design, combining real-time sensing, image processing, and low-level networking. It highlights the ability to build efficient, standalone vision systems capable of delivering responsive monitoring functionality in constrained environments.",
+      },
+    ],
+  },
+  {
     slug: "a7f3c9",
     title: "On-Device Cardiac Anomaly Detection System",
     category: "AI & Edge Computing",
