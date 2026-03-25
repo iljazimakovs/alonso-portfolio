@@ -1334,151 +1334,123 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "c8f1e4",
-    title: "Standalone Solar Energy Conversion & Battery Management Module",
+    slug: "a4d9e2",
+    title: "Analog Solar Charging & Voltage Regulation Circuit",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "power-electronics"],
 
     description:
-      "Compact solar-powered battery charging system with adaptive energy conversion and integrated protection mechanisms.",
+      "Analog solar charging circuit with adjustable output voltage and linear regulation for battery charging applications.",
 
     longDescription:
-      "Designed a standalone solar-powered battery charging module optimized for efficient energy conversion and safe Li-ion battery management. The system dynamically adapts to varying input conditions to maximize energy utilization while maintaining stable charging behavior. It integrates constant-current/constant-voltage charging, thermal regulation, and protection features into a compact PCB form factor. Additional enhancements such as input surge protection, polarity protection, and USB-C interface improve reliability and usability in real-world deployments.",
+      "Designed a low-dropout analog solar charging circuit using discrete components to regulate and control battery charging from a variable solar input. The system uses a P-channel MOSFET linear regulator combined with a differential amplifier to maintain stable output voltage. An adjustable potentiometer allows fine tuning of charging voltage, enabling compatibility with different battery types. The design emphasizes simplicity, reliability, and efficiency without relying on microcontrollers or complex control logic.",
 
     tags: [
       "Power Electronics",
+      "Analog Design",
       "Solar Energy",
-      "Battery Management",
+      "Voltage Regulation",
       "PCB Design",
-      "Embedded Systems",
-      "Energy Conversion",
+      "Embedded Hardware",
     ],
 
     icon: Sun,
-    highlight: "Solar Power Module",
+    highlight: "Analog Power Control",
 
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1826644/_ChGBGz4HQa.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "https://hackster.imgix.net/uploads/attachments/1336226/_nJVd6N3DJJ.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
       },
     ],
 
     hidden: false,
 
     deliverables: [
-      "Solar Charging Hardware Module",
-      "Battery Charging & Protection System",
+      "Analog Charging Circuit Design",
+      "Adjustable Voltage Regulation System",
+      "Discrete Component Implementation",
       "Custom PCB Layout",
-      "Energy Conversion Design",
-      "Standalone Power Solution",
+      "Battery Charging Control System",
     ],
 
     sections: [
       {
         heading: "Project Overview",
         body:
-          "Developed a compact solar-powered module capable of efficiently converting variable input energy into controlled battery charging. The system is designed for standalone operation in portable and off-grid applications.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1826654/mini_img_1900_STWZUhz4DD.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "Developed an analog solar charging circuit capable of regulating battery charging voltage using discrete components. The system provides a simple and cost-effective solution for solar-powered battery charging applications.",
+      },
+
+      {
+        heading: "Core Design Concept",
+        body:
+          "The design uses linear regulation to stabilize output voltage despite variations in solar input.",
+        bullets: [
+          "Low-dropout linear regulator architecture",
+          "Adjustable output voltage via potentiometer",
+          "Analog control without microcontroller dependency",
+          "Cost-effective and easy-to-build design",
         ],
       },
 
       {
-        heading: "System Architecture",
+        heading: "Circuit Architecture",
         body:
-          "The system integrates energy conversion, battery charging, and protection into a unified embedded hardware platform.",
+          "The circuit integrates voltage sensing, amplification, and power regulation stages.",
         bullets: [
-          "Adaptive energy conversion from variable input sources",
-          "Standalone operation without microcontroller",
-          "Integrated charging and protection circuitry",
-          "Compact and deployment-ready design",
-        ],
-      },
-
-      {
-        heading: "Charging & Power Management",
-        body:
-          "Implements a complete Li-ion charging profile with safety and efficiency optimization.",
-        bullets: [
-          "Constant-current / constant-voltage charging",
-          "Automatic recharge and termination control",
-          "Undervoltage lockout and sleep mode",
-          "Thermal feedback for current regulation",
+          "P-channel MOSFET used as series pass element",
+          "Differential amplifier for voltage comparison",
+          "Zener diode for reference voltage stabilization",
+          "Passive components for filtering and stability",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1826652/screenshot_2025_03_03-2_LMhn1dDmBu.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1336222/schematic_diy_solar_charger_2021-08-15_cropped_Wz5lXXro5H.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
       {
-        heading: "Hardware Design",
-        numbered: [
-          {
-            title: "Energy Conversion Stage",
-            body:
-              "Implements adaptive charging using an integrated controller with internal power switching, reducing external component requirements.",
-            image: "https://hackster.imgix.net/uploads/attachments/1826653/mini_img_1847_h29U195Xfd.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          },
-          {
-            title: "Protection System",
-            body:
-              "Includes surge protection, polarity protection, and battery safety mechanisms to ensure stable and reliable operation.",
-            image: "https://hackster.imgix.net/uploads/attachments/1826651/screenshot_2025_02_28-6_iBUpGwL0BM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          },
-          {
-            title: "Input Interface",
-            body:
-              "Supports both solar input and USB-C connectivity for flexible power sourcing.",
-          },
+        heading: "Power Characteristics",
+        body:
+          "The system is designed for moderate power solar charging applications.",
+        bullets: [
+          "Supports ~12V solar panel input",
+          "Adjustable output range (7V – 14V)",
+          "Handles up to ~4A current",
+          "Low dropout voltage (~1.25V)",
+        ],
+      },
+
+      {
+        heading: "Protection & Indicators",
+        body:
+          "Includes basic protection and user feedback mechanisms.",
+        bullets: [
+          "Reverse polarity protection",
+          "LED indicators for charging and regulation states",
+          "Low battery discharge current (~1mA)",
         ],
       },
 
       {
         heading: "PCB Design",
         body:
-          "The PCB layout is optimized for current handling, thermal performance, and noise reduction.",
+          "The PCB is designed for practical implementation using through-hole components.",
         bullets: [
-          "High-current trace design for efficient power delivery",
-          "Thermal-aware component placement",
-          "Compact layout aligned with practical charger form factors",
-          "Segregated input/output paths to reduce noise coupling",
+          "Simple layout for easy assembly",
+          "Optimized for analog signal stability",
+          "Supports rapid prototyping and DIY builds",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1826650/screenshot_2025_02_28-9_epByvg4gni.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-
-      {
-        heading: "Assembly & Integration",
-        body:
-          "The module is assembled with careful component sequencing to ensure reliability and ease of manufacturing.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1826649/mini_2020_0102_004534_002_TpUUFMIr3U.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-
-      {
-        heading: "Testing & Validation",
-        body:
-          "Validated under real operating conditions to ensure efficiency, stability, and protection reliability.",
-        bullets: [
-          "Battery charging validation under controlled conditions",
-          "Thermal performance verification",
-          "Efficiency evaluation (~94%)",
-          "Protection feature testing",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1826648/mini_img_1901_m3PDPhpBNU.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1826646/mini_img_1898_uK9gpLa91V.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1826647/mini_img_1901_mNp0jOk1D6.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1336081/pcb_pcb_diy_solar_charger_2021-08-15_mqHFilrLOX.png",
+          "https://hackster.imgix.net/uploads/attachments/1336076/pcb_pcb_diy_solar_charger_2021-08-15_full_YbFu5lYToM.png",
+          "https://hackster.imgix.net/uploads/attachments/1336089/pcb_pcb_diy_solar_charger_2021-08-15_back_5CxAQZw3BH.png",
         ],
       },
 
       {
         heading: "Engineering Outcome",
         body:
-          "This project demonstrates strong expertise in power electronics and energy system design, including efficient energy conversion, battery management, and protection integration. It highlights the ability to build reliable standalone power solutions for renewable and portable applications.",
+          "This project demonstrates strong understanding of analog circuit design and power electronics. It highlights the ability to build efficient, low-cost solar charging solutions using discrete components without relying on digital control systems.",
       },
     ],
   },
