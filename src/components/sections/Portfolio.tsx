@@ -1235,9 +1235,6 @@ const projects: Project[] = [
         heading: "Project Overview",
         body:
           "Developed a solar-powered battery charging module capable of efficiently harvesting energy from variable input sources and safely charging Li-ion batteries. The system is designed for standalone operation in portable and off-grid applications.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1826654/mini_img_1900_STWZUhz4DD.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
 
       {
@@ -1500,9 +1497,6 @@ const projects: Project[] = [
         heading: "Project Overview",
         body:
           "Developed a complete solar-powered energy system designed for long-term deployment of embedded devices in outdoor environments. The system ensures continuous operation by intelligently managing multiple power sources and maintaining battery charge levels.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/302073/img_0121_xfPQti5ka9.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
       },
 
       {
@@ -1581,6 +1575,144 @@ const projects: Project[] = [
         heading: "Engineering Outcome",
         body:
           "This project demonstrates advanced system-level power electronics design, combining energy harvesting, battery management, voltage regulation, and monitoring into a single platform. It highlights the ability to design robust, autonomous energy systems for real-world embedded deployments.",
+      },
+    ],
+  },
+  {
+    slug: "d7b3a9",
+    title: "Distributed Sensor Monitoring & Alert System",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware"],
+
+    description:
+      "Multi-node IoT system for real-time sensor monitoring with cloud dashboard integration and automated alerting.",
+
+    longDescription:
+      "Developed a distributed IoT monitoring system that collects environmental and motion data from multiple sensor nodes and streams it to a cloud-based dashboard. The system enables real-time visualization and automated alerts through messaging services. It integrates microcontroller-based sensor acquisition, WiFi communication, cloud data pipelines, and dashboard visualization into a complete end-to-end IoT architecture suitable for smart home and monitoring applications.",
+
+    tags: [
+      "IoT",
+      "Embedded Systems",
+      "WiFi",
+      "Cloud Integration",
+      "Sensor Systems",
+      "Data Streaming",
+      "Real-Time Monitoring",
+    ],
+
+    icon: Activity,
+    highlight: "IoT Monitoring System",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/cover_image/file/44309/Dashboard_1.png?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Multi-Node Sensor System",
+      "Cloud Data Pipeline Integration",
+      "Real-Time Dashboard",
+      "Automated Alert System",
+      "Embedded Firmware (WiFi + REST)",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a distributed IoT platform that aggregates sensor data from multiple devices and presents it through a centralized dashboard with real-time updates and alert capabilities.",
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system integrates embedded hardware, wireless communication, and cloud services into a unified monitoring platform.",
+        bullets: [
+          "Microcontroller-based sensor nodes",
+          "WiFi communication using embedded network stacks",
+          "Cloud-based data streaming via REST APIs",
+          "Dashboard visualization for real-time monitoring",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/44311/Dashboard_1.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/image/file/44320/Dashboard_2.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Sensor Integration",
+        body:
+          "The platform supports multiple sensor types for environmental and motion monitoring.",
+        bullets: [
+          "Motion detection using IR sensors",
+          "Environmental sensing (temperature, humidity)",
+          "IMU-based activity detection",
+          "Expandable sensor architecture",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/44323/Esquilio_with_sensors.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/image/file/44322/TM4C123G.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Cloud & Data Pipeline",
+        body:
+          "Sensor data is transmitted to cloud services and visualized through a real-time dashboard.",
+        bullets: [
+          "REST-based data transmission to cloud endpoints",
+          "Data streaming to Dweet.io platform",
+          "Dashboard visualization using Freeboard.io",
+          "Multi-device data aggregation",
+        ],
+      },
+
+      {
+        heading: "Alert System",
+        body:
+          "The system provides automated alerts based on sensor conditions.",
+        bullets: [
+          "Event-triggered alerts for motion detection",
+          "Weather-based notifications",
+          "SMS notifications using external APIs",
+          "Threshold-based monitoring logic",
+        ],
+      },
+
+      {
+        heading: "Firmware Implementation",
+        body:
+          "Embedded firmware handles sensor acquisition, data processing, and communication.",
+        bullets: [
+          "WiFi connectivity and network handling",
+          "Sensor data acquisition and filtering",
+          "REST API communication with cloud services",
+          "Event-driven alert logic implementation",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/44324/Energia_and_Debug.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Development & Integration",
+        body:
+          "The system was developed and tested across multiple hardware nodes and cloud services.",
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/44326/Development.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/image/file/44325/Team_IOT_Baby_and_Weather_Monitor.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/image/file/44321/Esquilio.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates full-stack IoT system design, combining embedded hardware, wireless communication, cloud integration, and real-time data visualization. It highlights the ability to build scalable monitoring systems with automated alerting for real-world applications.",
       },
     ],
   },
