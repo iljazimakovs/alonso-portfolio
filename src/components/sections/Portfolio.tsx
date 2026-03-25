@@ -1606,7 +1606,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/cover_image/file/44309/Dashboard_1.png?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "https://hackster.imgix.net/uploads/image/file/44322/TM4C123G.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
       },
     ],
 
@@ -1692,20 +1692,6 @@ const projects: Project[] = [
           "Sensor data acquisition and filtering",
           "REST API communication with cloud services",
           "Event-driven alert logic implementation",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/44324/Energia_and_Debug.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-        ],
-      },
-
-      {
-        heading: "Development & Integration",
-        body:
-          "The system was developed and tested across multiple hardware nodes and cloud services.",
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/44326/Development.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/image/file/44325/Team_IOT_Baby_and_Weather_Monitor.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/image/file/44321/Esquilio.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
