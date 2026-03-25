@@ -1483,6 +1483,136 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "e9a4d7",
+    title: "Autonomous Solar Power Management & Regulation System",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "power-electronics"],
+
+    description:
+      "Integrated solar power system with battery management, voltage regulation, and real-time energy monitoring.",
+
+    longDescription:
+      "Designed a fully integrated solar power management system capable of maintaining a continuously charged battery for remote deployments. The system seamlessly switches between solar input, external power, and battery while delivering a stable regulated output to embedded devices. It incorporates battery charging, fuel gauging, and high-efficiency buck-boost conversion to ensure reliable operation under varying environmental conditions. The architecture is optimized for long-term unattended operation in outdoor and off-grid applications.",
+
+    tags: [
+      "Power Electronics",
+      "Solar Energy",
+      "Battery Management",
+      "Energy Systems",
+      "PCB Design",
+      "Embedded Systems",
+    ],
+
+    icon: Sun,
+    highlight: "Power Management System",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/301798/img_0352_sPzaNzw4Qc.JPG?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Solar Power Management System",
+      "Battery Monitoring & Fuel Gauge Integration",
+      "Buck-Boost Voltage Regulation",
+      "Multi-Source Power Switching",
+      "Custom PCB Design",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a complete solar-powered energy system designed for long-term deployment of embedded devices in outdoor environments. The system ensures continuous operation by intelligently managing multiple power sources and maintaining battery charge levels.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/302073/img_0121_xfPQti5ka9.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The design integrates charging, regulation, monitoring, and power switching into a single embedded platform.",
+        bullets: [
+          "Solar and DC input charging integration",
+          "Automatic switching between power sources",
+          "Stable regulated output for embedded systems",
+          "Continuous battery monitoring and protection",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/302069/screen_shot_2017-05-09_at_9_09_43_am_ElmXnIby3B.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Charging & Power Control",
+        body:
+          "The system manages battery charging from multiple sources while ensuring safe operation.",
+        bullets: [
+          "Integrated LiPo charging controller",
+          "Automatic charge regulation based on input conditions",
+          "Thermal-aware charging control",
+          "Safe handling of varying solar input levels",
+        ],
+      },
+
+      {
+        heading: "Voltage Regulation",
+        body:
+          "A high-efficiency buck-boost converter ensures consistent output regardless of input or battery conditions.",
+        bullets: [
+          "Stable 4.2V output for microcontroller systems",
+          "Handles wide input voltage range",
+          "High-efficiency energy conversion",
+          "Supports dynamic load conditions",
+        ],
+      },
+
+      {
+        heading: "Battery Monitoring",
+        body:
+          "Integrated fuel gauge provides real-time insight into battery status and system health.",
+        bullets: [
+          "State-of-charge monitoring via I2C",
+          "Accurate battery voltage measurement",
+          "Automatic load cutoff at critical levels",
+          "Supports intelligent power management decisions",
+        ],
+      },
+
+      {
+        heading: "PCB Design & Implementation",
+        body:
+          "The PCB is designed for reliable operation with attention to power routing, thermal performance, and manufacturability.",
+        bullets: [
+          "Custom fabricated PCB for compact integration",
+          "Optimized layout for power and signal separation",
+          "Designed for assembly using reflow techniques",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/302071/screen_shot_2017-05-09_at_9_13_57_am_LINGIRGpG6.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/302052/screen_shot_2017-05-09_at_7_40_56_am_3zij1uOsZ2.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Real-World Deployment",
+        body:
+          "The system is deployed in outdoor environments powering connected sensors, demonstrating long-term reliability and автономous operation.",
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates advanced system-level power electronics design, combining energy harvesting, battery management, voltage regulation, and monitoring into a single platform. It highlights the ability to design robust, autonomous energy systems for real-world embedded deployments.",
+      },
+    ],
+  },
+  {
     slug: "6b2f9a",
     title: "Embedded Prototyping Hardware Platform",
     category: "PCB & Hardware",
