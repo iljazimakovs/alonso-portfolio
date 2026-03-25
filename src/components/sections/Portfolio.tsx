@@ -1216,7 +1216,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1826644/_ChGBGz4HQa.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "https://hackster.imgix.net/uploads/attachments/1826653/mini_img_1847_h29U195Xfd.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
       },
     ],
 
@@ -1324,6 +1324,150 @@ const projects: Project[] = [
           "Efficiency evaluation (~94% peak)",
           "Protection feature verification",
         ],
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates advanced power electronics design, including energy harvesting, battery charging systems, and protection mechanisms. It highlights the ability to design efficient standalone power modules for renewable energy and portable applications.",
+      },
+    ],
+  },
+  {
+    slug: "c8f1e4",
+    title: "Standalone Solar Energy Conversion & Battery Management Module",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "power-electronics"],
+
+    description:
+      "Compact solar-powered battery charging system with adaptive energy conversion and integrated protection mechanisms.",
+
+    longDescription:
+      "Designed a standalone solar-powered battery charging module optimized for efficient energy conversion and safe Li-ion battery management. The system dynamically adapts to varying input conditions to maximize energy utilization while maintaining stable charging behavior. It integrates constant-current/constant-voltage charging, thermal regulation, and protection features into a compact PCB form factor. Additional enhancements such as input surge protection, polarity protection, and USB-C interface improve reliability and usability in real-world deployments.",
+
+    tags: [
+      "Power Electronics",
+      "Solar Energy",
+      "Battery Management",
+      "PCB Design",
+      "Embedded Systems",
+      "Energy Conversion",
+    ],
+
+    icon: Sun,
+    highlight: "Solar Power Module",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1826644/_ChGBGz4HQa.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+      },
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "Solar Charging Hardware Module",
+      "Battery Charging & Protection System",
+      "Custom PCB Layout",
+      "Energy Conversion Design",
+      "Standalone Power Solution",
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Developed a compact solar-powered module capable of efficiently converting variable input energy into controlled battery charging. The system is designed for standalone operation in portable and off-grid applications.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1826654/mini_img_1900_STWZUhz4DD.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system integrates energy conversion, battery charging, and protection into a unified embedded hardware platform.",
+        bullets: [
+          "Adaptive energy conversion from variable input sources",
+          "Standalone operation without microcontroller",
+          "Integrated charging and protection circuitry",
+          "Compact and deployment-ready design",
+        ],
+      },
+
+      {
+        heading: "Charging & Power Management",
+        body:
+          "Implements a complete Li-ion charging profile with safety and efficiency optimization.",
+        bullets: [
+          "Constant-current / constant-voltage charging",
+          "Automatic recharge and termination control",
+          "Undervoltage lockout and sleep mode",
+          "Thermal feedback for current regulation",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1826652/screenshot_2025_03_03-2_LMhn1dDmBu.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Hardware Design",
+        numbered: [
+          {
+            title: "Energy Conversion Stage",
+            body:
+              "Implements adaptive charging using an integrated controller with internal power switching, reducing external component requirements.",
+            image: "https://hackster.imgix.net/uploads/attachments/1826653/mini_img_1847_h29U195Xfd.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          },
+          {
+            title: "Protection System",
+            body:
+              "Includes surge protection, polarity protection, and battery safety mechanisms to ensure stable and reliable operation.",
+            image: "https://hackster.imgix.net/uploads/attachments/1826651/screenshot_2025_02_28-6_iBUpGwL0BM.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          },
+          {
+            title: "Input Interface",
+            body:
+              "Supports both solar input and USB-C connectivity for flexible power sourcing.",
+          },
+        ],
+      },
+
+      {
+        heading: "PCB Design",
+        body:
+          "The PCB layout is optimized for current handling, thermal performance, and noise reduction.",
+        bullets: [
+          "High-current trace design for efficient power delivery",
+          "Thermal-aware component placement",
+          "Compact layout aligned with practical charger form factors",
+          "Segregated input/output paths to reduce noise coupling",
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1826650/screenshot_2025_02_28-9_epByvg4gni.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Assembly & Integration",
+        body:
+          "The module is assembled with careful component sequencing to ensure reliability and ease of manufacturing.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1826649/mini_2020_0102_004534_002_TpUUFMIr3U.JPG?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        ],
+      },
+
+      {
+        heading: "Testing & Validation",
+        body:
+          "Validated under real operating conditions to ensure efficiency, stability, and protection reliability.",
+        bullets: [
+          "Battery charging validation under controlled conditions",
+          "Thermal performance verification",
+          "Efficiency evaluation (~94%)",
+          "Protection feature testing",
+        ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/1826648/mini_img_1901_m3PDPhpBNU.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1826646/mini_img_1898_uK9gpLa91V.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
@@ -1334,7 +1478,7 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body:
-          "This project demonstrates advanced power electronics design, including energy harvesting, battery charging systems, and protection mechanisms. It highlights the ability to design efficient standalone power modules for renewable energy and portable applications.",
+          "This project demonstrates strong expertise in power electronics and energy system design, including efficient energy conversion, battery management, and protection integration. It highlights the ability to build reliable standalone power solutions for renewable and portable applications.",
       },
     ],
   },
