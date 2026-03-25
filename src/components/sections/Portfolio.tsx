@@ -2429,7 +2429,7 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "Designed a WiFi-enabled robotic control system where a browser-based interface communicates with an embedded device acting as both access point and web server. The architecture separates networking logic from motor control, enabling modular system design.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1605095/image_POeRWSnGb3.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1485391/_QKeZ6HTyI8.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
         ],
       },
       {
