@@ -1638,8 +1638,8 @@ const projects: Project[] = [
           "Dashboard visualization for real-time monitoring",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/image/file/44311/Dashboard_1.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/image/file/44320/Dashboard_2.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
+          "/images/Dashboard_1.jpg",
+          "/images/Dashboard_2.jpg",
         ],
       },
 
