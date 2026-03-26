@@ -2413,7 +2413,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1485410/img_3641_4IliUhwScq.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
+        src: "/images/camera_robot.jpg",
       },
     ],
     hidden: false,
@@ -2600,10 +2600,6 @@ const projects: Project[] = [
           "Dynamic HTML page generation",
           "Auto-refresh web interface",
           "Image endpoint for real-time streaming",
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1927121/screenshot_2026-01-30_173517_53M7Lw2d6q.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1927124/screenshot_2026-01-30_173546_ZhSSWAeOy9.png?auto=compress%2Cformat&w=1280&h=960&fit=max",
         ],
       },
 
