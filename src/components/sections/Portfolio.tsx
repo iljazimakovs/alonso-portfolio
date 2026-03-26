@@ -266,7 +266,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_41pDWgCaDU.blob",
+        src: "/images/_41pDWgCaDU.jpg",
       },
     ],
     hidden: false,
@@ -360,7 +360,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_3HddXBvRpD.blob",
+        src: "/images/_3HddXBvRpD.jpg",
       },
     ],
     hidden: false,
@@ -474,7 +474,7 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "Developed a dual-microcontroller embedded system in Raspberry Pi form factor to address reliability limitations of Linux SBCs in continuous operation environments. The design enables reuse of Pi HATs and enclosures while replacing the software-heavy stack with a deterministic embedded architecture.",
         images: [
-          "/images/_7fhyhPxdZv.blob",
+          "/images/_7fhyhPxdZv.jpg",
         ],
       },
       {
@@ -581,7 +581,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_KOoa1uyXuP.blob",
+        src: "/images/_KOoa1uyXuP.jpg",
       },
     ],
 
@@ -695,7 +695,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_zJ41sg2WrV.blob",
+        src: "/images/_zJ41sg2WrV.jpg",
       },
     ],
 
@@ -844,7 +844,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_kVlac0BHjL.blob",
+        src: "/images/_kVlac0BHjL.jpg",
       },
     ],
 
@@ -987,7 +987,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_LA3kmP6sBI.blob",
+        src: "/images/_LA3kmP6sBI.jpg",
       },
     ],
 
@@ -1110,7 +1110,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_unlI3boDdj.blob",
+        src: "/images/_unlI3boDdj.jpg",
       },
     ],
     hidden: false,
@@ -1357,7 +1357,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_nJVd6N3DJJ.blob",
+        src: "/images/_nJVd6N3DJJ.jpg",
       },
     ],
 
@@ -1724,7 +1724,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_mi0rAzkkTd.blob",
+        src: "/images/_mi0rAzkkTd.jpg",
       },
     ],
     hidden: false,
@@ -1818,7 +1818,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_fX8bRTRZXj.blob",
+        src: "/images/_fX8bRTRZXj.jpg",
       },
     ],
     hidden: false,
@@ -1939,7 +1939,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_9AJ5MQyfmN.blob",
+        src: "/images/_9AJ5MQyfmN.jpg",
       },
     ],
 
@@ -2071,7 +2071,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_OXf2590Kja.blob",
+        src: "/images/_OXf2590Kja.jpg",
       },
     ],
 
@@ -2303,7 +2303,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_WSJLKa8SPT.blob",
+        src: "/images/_WSJLKa8SPT.jpg",
       },
     ],
     hidden: false,
@@ -2429,7 +2429,7 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "Designed a WiFi-enabled robotic control system where a browser-based interface communicates with an embedded device acting as both access point and web server. The architecture separates networking logic from motor control, enabling modular system design.",
         images: [
-          "/images/_QKeZ6HTyI8.blob",
+          "/images/_QKeZ6HTyI8.jpg",
         ],
       },
       {
@@ -2657,7 +2657,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_h8itjqr0Kc.blob",
+        src: "/images/_h8itjqr0Kc.jpg",
       },
     ],
     hidden: false,
