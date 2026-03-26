@@ -801,9 +801,6 @@ const projects: Project[] = [
           "Optimized placement for dense component layout",
         ],
         images: [
-          "/images/layout0_hnjUD4cAXc.jpg",
-          "/images/layout1_i8TyWDEqdK.jpg",
-          "/images/layout2_6nYmrYTYvF.jpg",
           "/images/layout5_AB0xAZ8wK4.jpg",
           "/images/layout6_8NQwHBBEek.jpg",
         ],
