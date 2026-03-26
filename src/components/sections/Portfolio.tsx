@@ -2413,7 +2413,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/camera_robot.jpg",
+        src: "https://hackster.imgix.net/uploads/attachments/1485410/img_3641_4IliUhwScq.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max",
       },
     ],
     hidden: false,
@@ -2530,7 +2530,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1927116/_lqSojDb7TH.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        src: "/images/camera_robot.jpg",
       },
     ],
 
