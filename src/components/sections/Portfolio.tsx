@@ -1478,7 +1478,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/img_0352_sPzaNzw4Qc.JPG",
+        src: "/images/img_0352_sPzaNzw4Qc.jpg",
       },
     ],
 
