@@ -3233,6 +3233,18 @@ function RichSection({ section }: { section: ContentSection }) {
           ))}
         </div>
       )}
+      {section.code && section.code.length > 0 && (
+        <div className="my-4">
+          {section.code.map((line, idx) => (
+            <pre
+              key={idx}
+              className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm font-mono"
+            >
+              {line}
+            </pre>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
