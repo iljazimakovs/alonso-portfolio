@@ -3234,15 +3234,15 @@ function RichSection({ section }: { section: ContentSection }) {
         </div>
       )}
       {section.code && section.code.length > 0 && (
-        <div className="my-4">
-          {section.code.map((line, idx) => (
-            <pre
-              key={idx}
-              className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm font-mono"
-            >
-              {line}
+        <div className="my-6">
+          <div className="bg-gray-900 rounded-lg shadow-md overflow-hidden">
+            <div className="px-4 py-2 bg-gray-800 border-b border-gray-700 text-gray-300 font-mono text-sm">
+              Terminal
+            </div>
+            <pre className="p-4 text-green-400 font-mono text-sm overflow-x-auto">
+              {section.code.join("\n")}
             </pre>
-          ))}
+          </div>
         </div>
       )}
     </div>
