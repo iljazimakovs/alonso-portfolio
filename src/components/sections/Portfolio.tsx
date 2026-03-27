@@ -2716,18 +2716,11 @@ const projects: Project[] = [
       {
         heading: "Hardware & Software Components",
         body: "This project uses the Zynq UltraScale+ MPSoC ZCU102 board paired with the Analog Devices ADRV9371-W/PCBZ FMC card. The development environment includes Vivado Design Suite and PetaLinux tools.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1146717/zcu102-evaluation-board-w.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/1537541/adrv9371-n_pcbz_NbRApzBTxe.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/657394/vivado_logo.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/1334237/petalinux_tools_v2_XXkCCQZR38.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Project Story",
         body: "Software defined radio (SDR) has been a prominent topic in FPGA development. Getting started with a development platform can be challenging, especially for newcomers. Analog Devices offers FMC boards for their RF transceiver chips, compatible with various FPGA boards. This tutorial uses the ZCU102 with the ADI ADRV9371-W/PCBZ and deploys the ADI drivers in embedded Linux.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1530190/screen_shot_2022-12-02_at_6_50_38_pm_Z0hLeS1McF.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1530188/screen_shot_2022-12-02_at_6_45_17_pm_pdcBh2iS6J.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1530189/screen_shot_2022-12-02_at_6_45_03_pm_0MBAtH638N.png?auto=compress,format&w=740&h=555&fit=max"
         ]
@@ -3234,16 +3227,9 @@ function RichSection({ section }: { section: ContentSection }) {
         </div>
       )}
       {section.code && section.code.length > 0 && (
-        <div className="my-6">
-          <div className="bg-gray-900 rounded-lg shadow-md overflow-hidden">
-            <div className="px-4 py-2 bg-gray-800 border-b border-gray-700 text-gray-300 font-mono text-sm">
-              Terminal
-            </div>
-            <pre className="p-4 text-green-400 font-mono text-sm overflow-x-auto">
-              {section.code.join("\n")}
-            </pre>
-          </div>
-        </div>
+        <pre className="my-6 bg-gray-900 rounded-lg shadow-md p-4 text-green-400 font-mono text-sm overflow-x-auto whitespace-pre-wrap break-words">
+          {section.code.join("\n")}
+        </pre>
       )}
     </div>
   );
