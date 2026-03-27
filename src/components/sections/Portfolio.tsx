@@ -2637,7 +2637,7 @@ const projects: Project[] = [
   },
   {
     slug: "d4a1f7", // new unique hex slug
-    title: "Practical FPGA Radio Workshop with SDR",
+    title: "Hands-On Wireless Signal Lab with Embedded Boards",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
     description: "Beginner-friendly exploration of software-defined radio using FPGA-powered hardware and open-source GNU Radio tools.",
@@ -2694,7 +2694,7 @@ const projects: Project[] = [
   },
   {
     slug: "e2b4c9", // new unique hex slug
-    title: "FPGA SDR Lab: ZCU102 with ADI RF Frontend",
+    title: "Hands-On Wireless Signal Workshop with Embedded Boards",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
     description: "Step-by-step setup of ZCU102 with AD9371 FMC board for FPGA-based SDR experimentation.",
