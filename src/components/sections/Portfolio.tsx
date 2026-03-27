@@ -108,6 +108,7 @@ interface ContentSection {
   bullets?: Array<string | { text: string; sub?: string[] }>;
   images?: string[];
   numbered?: Array<{ title: string; body: string; image?: string }>;
+  code?: string[];
 }
 
 interface Project {
@@ -2635,72 +2636,61 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "f1a3c9", // new unique hex slug
-    title: "Hands-On Intro to FPGA-Based Radio Experiments",
+    slug: "d4a1f7", // new unique hex slug
+    title: "Practical FPGA Radio Workshop with SDR",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
-    description: "Beginner-friendly exploration of radio signal processing using FPGA-enabled SDR hardware and open-source software tools.",
-    longDescription: "This project guides beginners through hands-on experiments with software-defined radio using an FPGA-powered SDR platform. Participants set up the SDR hardware, configure GNU Radio, and implement basic radio applications such as FM receivers and signal visualization tools. The project emphasizes practical experimentation, FPGA-based RF frontends, and real-world signal analysis workflows.",
-    tags: ["SDR", "FPGA", "Radio", "Signal Processing", "GNU Radio", "Embedded Systems"],
+    description: "Beginner-friendly exploration of software-defined radio using FPGA-powered hardware and open-source GNU Radio tools.",
+    longDescription: "This project provides a hands-on introduction to software-defined radio (SDR) with FPGA-based platforms. Using the Ettus USRP B206mini and GNU Radio, participants explore radio signal reception, FM receiver design, and signal visualization. The project emphasizes real-world SDR experimentation and FPGA-based RF frontends, demonstrating technical skills suitable for a professional portfolio.",
+    tags: ["SDR", "FPGA", "Radio", "GNU Radio", "Embedded Systems", "RF", "Signal Processing"],
     icon: Radio,
-    highlight: "FPGA Radio Experiments",
+    highlight: "FPGA-Based SDR Experiments",
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900096/_NqOtICfFvt.blob?auto=compress,format&w=900&h=675&fit=min" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900111/screenshot_2025-11-02_at_9_39_56pm_5hTtqpyV1l.png?auto=compress,format&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900110/screenshot_2025-11-02_at_9_38_09pm_81q4HiLniz.png?auto=compress,format&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900113/screenshot_2025-11-02_at_9_41_39pm_Pt9MoVDmDI.png?auto=compress,format&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900114/screenshot_2025-11-02_at_9_43_56pm_In1P4Kid2r.png?auto=compress,format&w=740&h=555&fit=max" }
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900096/_NqOtICfFvt.blob?auto=compress,format&w=900&h=675&fit=min" } // hero image
     ],
     deliverables: [
-      "FPGA SDR hardware configuration guide",
-      "GNU Radio setup workflow",
-      "Basic FM receiver design",
-      "Real-time signal capture and analysis pipeline",
-      "Beginner-friendly radio experiments"
+      "Comprehensive USRP B206mini setup guide",
+      "GNU Radio SDR workflow",
+      "FM receiver and signal processing examples",
+      "Hands-on RF signal capture and visualization pipeline",
+      "Professional-level SDR experimentation experience"
     ],
     sections: [
       {
-        heading: "Project Overview",
-        body: "This hands-on project introduces software-defined radio concepts using an FPGA-based SDR platform. It covers setup, signal streaming, and foundational applications, allowing beginners to explore RF signals in practice."
+        heading: "Introduction",
+        body: "If you've been around for a while, then you know that one of my favorite applications for FPGAs is any form of software defined radio (SDR). While I've enjoyed designing my own SDR hardware/software, all of those projects have started with a prebuilt development platform such as an Analog Devices FMC card with AMD FPGA development board or something from Ettus Research's universal software radio peripheral (USRP) catalog."
       },
       {
-        heading: "Hardware Components",
-        bullets: [
-          "FPGA-based SDR transceiver (USRP B206mini-i)",
-          "Premium 3-antenna bundle for SMA-input SDRs (Nooelec RaTLSnake M6 v2)",
-          "Multipurpose dipole antenna kit (RTL-SDR Blog)"
-        ]
+        heading: "Previous Tutorials",
+        body: "Previously I've posted tutorials for using the Ettus USRP B205mini with GNU Radio for SDR basics such as using matched filters and simple FM radio receivers."
       },
       {
-        heading: "Software Setup",
-        bullets: [
-          "GNU Radio for signal processing and flowgraph creation",
-          "Installation on Linux using PPA and package management",
-          "Commands for environment setup:"
-        ],
-        numbered: [
-          { title: "Add PPA", body: "~$ sudo add-apt-repository ppa:gnuradio/gnuradio-releases" },
-          { title: "List available versions", body: "~$ apt list --all-versions gnuradio" },
-          { title: "Install target version", body: "~$ sudo apt-get install gnuradio=3.10.12.0-2~noble1" }
-        ]
-      },
-      {
-        heading: "SDR Experiments",
-        bullets: [
-          "Build a simple FM radio receiver using GNU Radio flowgraphs",
-          "Experiment with matched filter detection for specific signals",
-          "Visualize and analyze RF signals in real time",
-          "Hands-on experience with FPGA-based RF frontends"
-        ],
+        heading: "About the B206mini",
+        body: "As I mentioned, the USRP B206mini is a part of Ettus' B200 series of cognitive software defined radios that is a refreshed version of the business card form-factored B200mini and B205mini devices.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1900322/fm_radio_rx_xshkPwggyD.png?auto=compress,format&w=740&h=555&fit=max"
+          "https://hackster.imgix.net/uploads/attachments/1900111/screenshot_2025-11-02_at_9_39_56pm_5hTtqpyV1l.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1900112/screenshot_2025-11-02_at_9_40_33pm_KpaR28d5hO.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Core Hardware",
+        body: "The core of the B206mini is still the tried and true combination of the AMD Spartan FPGA with Analog Devices AD9364 RF transceiver chip. The AD9364 is super flexible with its internal programmable filters that are easily configured to the desired settings for your application via a SPI interface. The B206mini is a refinement of the B205mini with the micro-USB 3.0 connector replaced with a USB-C 3.0 connector. For all intents and purposes, the B206mini is a drop-in replacement for the B205mini so long as the UHD driver and GNU Radio version requirements are met.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1900110/screenshot_2025-11-02_at_9_38_09pm_81q4HiLniz.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1900113/screenshot_2025-11-02_at_9_41_39pm_Pt9MoVDmDI.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1900114/screenshot_2025-11-02_at_9_43_56pm_In1P4Kid2r.png?auto=compress,format&w=740&h=555&fit=max"
+        ],
+        code: [
+          "~$ sudo add-apt-repository ppa:gnuradio/gnuradio-releases",
+          "~$ apt list --all-versions gnuradio",
+          "~$ sudo apt-get install gnuradio=3.10.12.0-2~noble1"
         ]
       },
       {
         heading: "Engineering Outcome",
-        body: "The project demonstrates practical skills in FPGA-powered SDR hardware and open-source signal processing software. It provides foundational experience in RF signal analysis, GNU Radio workflows, and radio experimentation for embedded systems and IoT applications."
+        body: "The project demonstrates hands-on experience with FPGA SDR hardware, GNU Radio workflows, and beginner-friendly RF experimentation while retaining professional-level technical depth suitable for a portfolio."
       }
-    ]
+    ],
   },
   {
     slug: "a7f3c9",
