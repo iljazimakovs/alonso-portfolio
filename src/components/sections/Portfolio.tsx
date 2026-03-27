@@ -2645,6 +2645,7 @@ const projects: Project[] = [
     tags: ["SDR", "FPGA", "Radio", "GNU Radio", "Embedded Systems", "RF", "Signal Processing"],
     icon: Radio,
     highlight: "FPGA-Based SDR Experiments",
+    hidden: false,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900096/_NqOtICfFvt.blob?auto=compress,format&w=900&h=675&fit=min" } // hero image
     ],
@@ -2702,6 +2703,7 @@ const projects: Project[] = [
     tags: ["SDR", "FPGA", "ZCU102", "AD9371", "PetaLinux", "Vivado", "Embedded Linux"],
     icon: Radio,
     highlight: "FPGA SDR Setup",
+    hidden: false,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1530186/_qpz8iqD885.blob?auto=compress,format&w=900&h=675&fit=min" } // hero image
     ],
