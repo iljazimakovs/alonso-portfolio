@@ -2647,7 +2647,7 @@ const projects: Project[] = [
     highlight: "FPGA-Based SDR Experiments",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900096/_NqOtICfFvt.blob?auto=compress,format&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images/project2.jpg" } // hero image
     ],
     deliverables: [
       "Comprehensive USRP B206mini setup guide",
@@ -2669,17 +2669,17 @@ const projects: Project[] = [
         heading: "About the B206mini",
         body: "As I mentioned, the USRP B206mini is a part of Ettus' B200 series of cognitive software defined radios that is a refreshed version of the business card form-factored B200mini and B205mini devices.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1900111/screenshot_2025-11-02_at_9_39_56pm_5hTtqpyV1l.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1900112/screenshot_2025-11-02_at_9_40_33pm_KpaR28d5hO.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images/screenshot_2025-11-02_at_9_39_56pm_5hTtqpyV1l.jpg",
+          "/images/screenshot_2025-11-02_at_9_40_33pm_KpaR28d5hO.jpg",
         ]
       },
       {
         heading: "Core Hardware",
         body: "The core of the B206mini is still the tried and true combination of the AMD Spartan FPGA with Analog Devices AD9364 RF transceiver chip. The AD9364 is super flexible with its internal programmable filters that are easily configured to the desired settings for your application via a SPI interface. The B206mini is a refinement of the B205mini with the micro-USB 3.0 connector replaced with a USB-C 3.0 connector. For all intents and purposes, the B206mini is a drop-in replacement for the B205mini so long as the UHD driver and GNU Radio version requirements are met.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1900110/screenshot_2025-11-02_at_9_38_09pm_81q4HiLniz.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1900113/screenshot_2025-11-02_at_9_41_39pm_Pt9MoVDmDI.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1900114/screenshot_2025-11-02_at_9_43_56pm_In1P4Kid2r.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images/screenshot_2025-11-02_at_9_38_09pm_81q4HiLniz.jpg",
+          "/images/screenshot_2025-11-02_at_9_41_39pm_Pt9MoVDmDI.jpg",
+          "/images/screenshot_2025-11-02_at_9_43_56pm_In1P4Kid2r.jpg",
         ],
         code: [
           "~$ sudo add-apt-repository ppa:gnuradio/gnuradio-releases",
@@ -2705,7 +2705,7 @@ const projects: Project[] = [
     highlight: "FPGA SDR Setup",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1530186/_qpz8iqD885.blob?auto=compress,format&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images/project1.jpg" } // hero image
     ],
     deliverables: [
       "ZCU102 SDR hardware setup guide",
@@ -2723,8 +2723,8 @@ const projects: Project[] = [
         heading: "Project Story",
         body: "Software defined radio (SDR) has been a prominent topic in FPGA development. Getting started with a development platform can be challenging, especially for newcomers. Analog Devices offers FMC boards for their RF transceiver chips, compatible with various FPGA boards. This tutorial uses the ZCU102 with the ADI ADRV9371-W/PCBZ and deploys the ADI drivers in embedded Linux.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1530188/screen_shot_2022-12-02_at_6_45_17_pm_pdcBh2iS6J.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1530189/screen_shot_2022-12-02_at_6_45_03_pm_0MBAtH638N.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images/screen_shot_2022-12-02_at_6_45_17_pm_pdcBh2iS6J.jpg",
+          "/images/screen_shot_2022-12-02_at_6_45_03_pm_0MBAtH638N.jpg",
         ]
       },
       {
