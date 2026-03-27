@@ -2693,6 +2693,73 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "e2b4c9", // new unique hex slug
+    title: "FPGA SDR Lab: ZCU102 with ADI RF Frontend",
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
+    description: "Step-by-step setup of ZCU102 with AD9371 FMC board for FPGA-based SDR experimentation.",
+    longDescription: "This project walks through the hardware and software setup for FPGA-based software-defined radio using the ZCU102 platform and ADI ADRV9371-W/PCBZ FMC card. Participants configure Vivado and PetaLinux environments, build FPGA and embedded Linux projects, and connect the SDR hardware for real-world signal experiments.",
+    tags: ["SDR", "FPGA", "ZCU102", "AD9371", "PetaLinux", "Vivado", "Embedded Linux"],
+    icon: Radio,
+    highlight: "FPGA SDR Setup",
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1530186/_qpz8iqD885.blob?auto=compress,format&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "ZCU102 SDR hardware setup guide",
+      "Vivado FPGA project configuration",
+      "PetaLinux embedded Linux setup for SDR",
+      "Step-by-step FPGA-to-AD9371 integration workflow",
+      "Hands-on FPGA SDR lab environment"
+    ],
+    sections: [
+      {
+        heading: "Hardware & Software Components",
+        body: "This project uses the Zynq UltraScale+ MPSoC ZCU102 board paired with the Analog Devices ADRV9371-W/PCBZ FMC card. The development environment includes Vivado Design Suite and PetaLinux tools.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1146717/zcu102-evaluation-board-w.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/1537541/adrv9371-n_pcbz_NbRApzBTxe.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/657394/vivado_logo.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/1334237/petalinux_tools_v2_XXkCCQZR38.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Project Story",
+        body: "Software defined radio (SDR) has been a prominent topic in FPGA development. Getting started with a development platform can be challenging, especially for newcomers. Analog Devices offers FMC boards for their RF transceiver chips, compatible with various FPGA boards. This tutorial uses the ZCU102 with the ADI ADRV9371-W/PCBZ and deploys the ADI drivers in embedded Linux.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1530190/screen_shot_2022-12-02_at_6_50_38_pm_Z0hLeS1McF.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1530188/screen_shot_2022-12-02_at_6_45_17_pm_pdcBh2iS6J.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1530189/screen_shot_2022-12-02_at_6_45_03_pm_0MBAtH638N.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Vivado Project Setup",
+        body: "Create the FPGA project in Vivado using the HDL repository from Analog Devices. Source the Vivado tools and run the makefile to generate the project for ZCU102 with AD9371-FMC.",
+        code: [
+          "~$ mkdir -p xilinx_sdr\n~$ cd ./xilinx_sdr/\n~$/xilinx_sdr$ git clone https://github.com/analogdevicesinc/hdl.git",
+          "~$/xilinx_sdr/hdl$ git checkout hdl_2021_r1",
+          "~$/xilinx_sdr/hdl$ cd ./projects/adrv9371x/zcu102/\n~$/xilinx_sdr/hdl/projects/adrv9371x/zcu102$ source /tools/Xilinx/Vivado/2021.1/settings64.sh\n~$/xilinx_sdr/hdl/projects/adrv9371x/zcu102$ make"
+        ]
+      },
+      {
+        heading: "PetaLinux Project Setup",
+        body: "Create a PetaLinux project for the ZCU102. Clone the ADI Yocto layers, import the hardware description from Vivado, and configure kernel and root filesystem settings as needed.",
+        code: [
+          "~$ cd ./xilinx_sdr/\n~$/xilinx_sdr$ source /tools/Xilinx/PetaLinux/2021.1/settings.sh\n~$/xilinx_sdr$ petalinux-create -t project -s ./xilinx-zcu102-v2021.1-final.bsp --name adi_os",
+          "~$/xilinx_sdr$ cd ./adi_os/project-spec/\n~$/xilinx_sdr/adi_os/project-spec$ git clone https://github.com/analogdevicesinc/meta-adi.git\n~$/xilinx_sdr/adi_os/project-spec/meta-adi$ git checkout 2021_R1\n~$/xilinx_sdr/adi_os/project-spec$ cd ../../",
+          "~$/xilinx_sdr/adi_os$ petalinux-config --get-hw-description ../hdl/projects/adrv9371x/zcu102/adrv9371x_zcu102.sdk/",
+          "~$/xilinx_sdr/adi_os$ petalinux-config -c kernel",
+          "~$/xilinx_sdr/adi_os$ petalinux-config -c rootfs",
+          "~$/xilinx_sdr/adi_os$ petalinux-build"
+        ]
+      },
+      {
+        heading: "Hardware Connection",
+        body: "Connect the ZCU102 with 12V power, USB to host PC, and attach the ADI ADRV9371-FMC board to the HPC0 connector. Connect Ethernet to the host PC or router."
+      }
+    ]
+  },
+  {
     slug: "a7f3c9",
     title: "On-Device Cardiac Anomaly Detection System",
     category: "AI & Edge Computing",
@@ -3153,10 +3220,10 @@ function RichSection({ section }: { section: ContentSection }) {
       {section.images && section.images.length > 0 && (
         <div
           className={`grid gap-3 ${section.images.length === 2
-              ? "sm:grid-cols-2"
-              : section.images.length >= 3
-                ? "sm:grid-cols-1"
-                : "sm:grid-cols-1"
+            ? "sm:grid-cols-2"
+            : section.images.length >= 3
+              ? "sm:grid-cols-1"
+              : "sm:grid-cols-1"
             }`}
         >
           {section.images.map((src, j) => (
