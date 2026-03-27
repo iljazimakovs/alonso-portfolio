@@ -2635,6 +2635,74 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "f1a3c9", // new unique hex slug
+    title: "Hands-On Intro to FPGA-Based Radio Experiments",
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
+    description: "Beginner-friendly exploration of radio signal processing using FPGA-enabled SDR hardware and open-source software tools.",
+    longDescription: "This project guides beginners through hands-on experiments with software-defined radio using an FPGA-powered SDR platform. Participants set up the SDR hardware, configure GNU Radio, and implement basic radio applications such as FM receivers and signal visualization tools. The project emphasizes practical experimentation, FPGA-based RF frontends, and real-world signal analysis workflows.",
+    tags: ["SDR", "FPGA", "Radio", "Signal Processing", "GNU Radio", "Embedded Systems"],
+    icon: Radio,
+    highlight: "FPGA Radio Experiments",
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900096/_NqOtICfFvt.blob?auto=compress,format&w=900&h=675&fit=min" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900111/screenshot_2025-11-02_at_9_39_56pm_5hTtqpyV1l.png?auto=compress,format&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900110/screenshot_2025-11-02_at_9_38_09pm_81q4HiLniz.png?auto=compress,format&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900113/screenshot_2025-11-02_at_9_41_39pm_Pt9MoVDmDI.png?auto=compress,format&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900114/screenshot_2025-11-02_at_9_43_56pm_In1P4Kid2r.png?auto=compress,format&w=740&h=555&fit=max" }
+    ],
+    deliverables: [
+      "FPGA SDR hardware configuration guide",
+      "GNU Radio setup workflow",
+      "Basic FM receiver design",
+      "Real-time signal capture and analysis pipeline",
+      "Beginner-friendly radio experiments"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "This hands-on project introduces software-defined radio concepts using an FPGA-based SDR platform. It covers setup, signal streaming, and foundational applications, allowing beginners to explore RF signals in practice."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "FPGA-based SDR transceiver (USRP B206mini-i)",
+          "Premium 3-antenna bundle for SMA-input SDRs (Nooelec RaTLSnake M6 v2)",
+          "Multipurpose dipole antenna kit (RTL-SDR Blog)"
+        ]
+      },
+      {
+        heading: "Software Setup",
+        bullets: [
+          "GNU Radio for signal processing and flowgraph creation",
+          "Installation on Linux using PPA and package management",
+          "Commands for environment setup:"
+        ],
+        numbered: [
+          { title: "Add PPA", body: "~$ sudo add-apt-repository ppa:gnuradio/gnuradio-releases" },
+          { title: "List available versions", body: "~$ apt list --all-versions gnuradio" },
+          { title: "Install target version", body: "~$ sudo apt-get install gnuradio=3.10.12.0-2~noble1" }
+        ]
+      },
+      {
+        heading: "SDR Experiments",
+        bullets: [
+          "Build a simple FM radio receiver using GNU Radio flowgraphs",
+          "Experiment with matched filter detection for specific signals",
+          "Visualize and analyze RF signals in real time",
+          "Hands-on experience with FPGA-based RF frontends"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1900322/fm_radio_rx_xshkPwggyD.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates practical skills in FPGA-powered SDR hardware and open-source signal processing software. It provides foundational experience in RF signal analysis, GNU Radio workflows, and radio experimentation for embedded systems and IoT applications."
+      }
+    ]
+  },
+  {
     slug: "a7f3c9",
     title: "On-Device Cardiac Anomaly Detection System",
     category: "AI & Edge Computing",
