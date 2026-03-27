@@ -2780,7 +2780,7 @@ const projects: Project[] = [
         src: "/images/_h8itjqr0Kc.jpg",
       },
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Edge ML Model (PPG Classification)",
       "ESP32 Firmware Integration",
