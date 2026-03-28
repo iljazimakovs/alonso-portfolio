@@ -1,7 +1,7 @@
-# Embedded Systems Engineer Portfolio
+# Embedded Systems Engineer Project
 
 ## Overview
-A modern, dark-themed portfolio website for a Senior Embedded Systems Engineer specializing in firmware, embedded Linux, IoT, and PCB design.
+A modern, dark-themed project website for a Senior Embedded Systems Engineer specializing in firmware, embedded Linux, IoT, and PCB design.
 
 ## Tech Stack
 - **Frontend:** React, Tailwind CSS, shadcn/ui, Wouter (routing), TanStack Query
@@ -10,12 +10,12 @@ A modern, dark-themed portfolio website for a Senior Embedded Systems Engineer s
 - **Styling:** Dark mode tech-inspired aesthetic with custom CSS utilities (grid patterns, glow effects)
 
 ## Architecture
-Single-page portfolio with sections (Upwork-compliant — no contact info or social links):
+Single-page project with sections (Upwork-compliant — no contact info or social links):
 - **Navbar** — Fixed top nav with smooth scroll anchors, "HIRE_ME()" CTA
 - **Hero** — Title, value proposition, tech highlights (7 fields)
 - **Services** — 6 core embedded engineering services
 - **Skills** — 5 categorized skill cards with unified cyan theme
-- **Portfolio** — 9 projects (6 shown, Load More for rest), multi-media slider per card, click-to-expand modal with prev/next project navigation
+- **Project** — 9 projects (6 shown, Load More for rest), multi-media slider per card, click-to-expand modal with prev/next project navigation
 - **Industries** — Industry badges
 - **Hire CTA** — Upwork-friendly call-to-action (replaces contact form)
 - **Footer** — Navigation links, "Available on Upwork" status

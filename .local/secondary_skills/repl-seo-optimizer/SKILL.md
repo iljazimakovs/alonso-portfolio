@@ -154,7 +154,7 @@ Add JSON-LD schema markup in a `<script type="application/ld+json">` block. Choo
 | Business / SaaS | `Organization`, `WebSite`, `WebApplication` |
 | Blog / Content | `Article`, `BlogPosting`, `BreadcrumbList` |
 | Product / Store | `Product`, `Offer`, `AggregateRating` |
-| Portfolio | `Person`, `CreativeWork` |
+| Project | `Person`, `CreativeWork` |
 | Local business | `LocalBusiness`, `PostalAddress` |
 
 Example for a SaaS landing page:

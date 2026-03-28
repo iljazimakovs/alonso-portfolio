@@ -57,7 +57,7 @@ export function Footer() {
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Projects", href: "#portfolio" },
+    { name: "Projects", href: "#project" },
     { name: "Expertise", href: "#skills" },
   ];
 

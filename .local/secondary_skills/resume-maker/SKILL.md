@@ -23,7 +23,7 @@ You MUST ask clarifying questions before writing any code. Ask about:
 2. **Work experience** — For each role: job title, company name, dates, location, and what they accomplished (not just responsibilities — ask for specific achievements, numbers, outcomes)
 3. **Education** — Degree(s), school(s), graduation year(s), honors/GPA if notable
 4. **Skills** — Technical skills, tools, languages, frameworks, certifications
-5. **Contact info** — Full name, email, phone, LinkedIn, location, portfolio/website
+5. **Contact info** — Full name, email, phone, LinkedIn, location, project/website
 6. **Optional extras** — Publications, talks, awards, volunteer work, projects
 
 ### How to ask

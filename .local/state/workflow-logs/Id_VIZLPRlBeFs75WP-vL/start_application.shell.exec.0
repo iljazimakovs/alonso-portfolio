@@ -34,8 +34,8 @@ Run `npm audit` for details.
 
 
 
-[1;1H[0J[2m8:29:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Portfolio.tsx, /src/index.css[22m
-[2m8:29:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/components/sections/Portfolio.tsx[22m Could not Fast Refresh ("filterCategories" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[1;1H[0J[2m8:29:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Project.tsx, /src/index.css[22m
+[2m8:29:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/components/sections/Project.tsx[22m Could not Fast Refresh ("filterCategories" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
 [2m8:29:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/home.tsx[22m
 
 
@@ -60,8 +60,8 @@ Run `npm audit` for details.
 
 
 
-[1;1H[0J[2m8:29:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Portfolio.tsx, /src/index.css[22m
-[2m8:29:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/components/sections/Portfolio.tsx[22m Could not Fast Refresh ("filterCategories" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[1;1H[0J[2m8:29:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Project.tsx, /src/index.css[22m
+[2m8:29:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/components/sections/Project.tsx[22m Could not Fast Refresh ("filterCategories" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
 [2m8:29:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/home.tsx[22m
 
 

@@ -5,14 +5,14 @@ description: Analyze stocks and companies with fundamental analysis, technical i
 
 # Stock & Investment Analyzer
 
-Analyze stocks, companies, and investment opportunities using financial market data. Provide company profiles, technical analysis, fundamental analysis, and portfolio insights.
+Analyze stocks, companies, and investment opportunities using financial market data. Provide company profiles, technical analysis, fundamental analysis, and project insights.
 
 ## When to Use
 
 - User wants to analyze a specific stock or company
 - User asks about financial metrics, earnings, or valuations
 - User wants to compare investment options
-- User needs portfolio analysis or allocation advice
+- User needs project analysis or allocation advice
 - User asks about market trends or sector performance
 
 ## When NOT to Use
@@ -279,12 +279,12 @@ The React web artifact reads the same report data (via a JSON endpoint, same pat
 2. **Sector-relative only** — a 30 P/E is cheap in software, expensive in utilities
 3. **Label facts vs thesis** — "FCF yield is 6%" (fact) vs "undervalued" (opinion)
 4. **Bear case required** — every analysis must include: what kills this trade?
-5. **Position sizing reality** — no single stock >5% for most retail portfolios; if conviction demands 20%, the conviction is the problem
+5. **Position sizing reality** — no single stock >5% for most retail projects; if conviction demands 20%, the conviction is the problem
 
 ## Limitations & Disclaimer
 
 - **This is NOT financial advice.** Informational analysis only. User is responsible for all investment decisions. Recommend consulting a licensed financial advisor before acting.
 - yfinance scrapes Yahoo — occasionally breaks, data may lag filings
 - Cannot access Bloomberg/FactSet/real-time Level 2
-- Cannot execute trades or provide personalized portfolio allocation
+- Cannot execute trades or provide personalized project allocation
 - Past performance does not indicate future results; all equities can go to zero

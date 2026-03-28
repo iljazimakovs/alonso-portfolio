@@ -1362,7 +1362,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: true,
+    hidden: false,
 
     deliverables: [
       "Analog Charging Circuit Design",
@@ -2076,7 +2076,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: true,
+    hidden: false,
 
     deliverables: [
       "Wireless LED Control System",
@@ -2213,7 +2213,7 @@ const projects: Project[] = [
         src: "https://hackster.imgix.net/uploads/images/file/82451/Screenshot_2015-10-14-15-39-28.jpg",
       },
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Particle Firmware",
       "Webhook Configuration",
@@ -2750,7 +2750,7 @@ const projects: Project[] = [
     tags: ["SDR", "FPGA", "Radio", "GNU Radio", "Embedded Systems", "RF", "Signal Processing"],
     icon: Radio,
     highlight: "FPGA-Based SDR Experiments",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/project2.jpg" } // hero image
     ],
@@ -2808,7 +2808,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Vehicle Electronics", "Hardware Design", "Prototyping", "Cloud Integration"],
     icon: Cpu,
     highlight: "IoT Vehicle Terminal",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/cover.jpg" } // hero image
     ],
@@ -3608,7 +3608,7 @@ function ProjectModal({
   );
 }
 
-export function Portfolio({
+export function Project({
   initialSlug,
   initialCategory,
   initialRecommendedIds,
@@ -3674,7 +3674,7 @@ export function Portfolio({
       }
       setTimeout(() => {
         document
-          .getElementById("portfolio")
+          .getElementById("project")
           ?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
@@ -3694,7 +3694,7 @@ export function Portfolio({
       setActiveCategory(initialCategory);
       setTimeout(() => {
         document
-          .getElementById("portfolio")
+          .getElementById("project")
           ?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
@@ -3865,7 +3865,7 @@ export function Portfolio({
       "All Projects";
 
   return (
-    <section id="portfolio" className="py-24 relative">
+    <section id="project" className="py-24 relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

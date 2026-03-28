@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Skills } from "@/components/sections/Skills";
-import { Portfolio } from "@/components/sections/Portfolio";
+import { Project } from "@/components/sections/Project";
 import { Industries } from "@/components/sections/Industries";
 import { Footer } from "@/components/sections/Footer";
 
@@ -16,7 +16,7 @@ export default function Home({ projectSlug, categorySlug, recommendedIds }: { pr
       <main className="relative flex-1">
         <Hero />
         <About />
-        <Portfolio initialSlug={projectSlug} initialCategory={categorySlug} initialRecommendedIds={recommendedIds} />
+        <Project initialSlug={projectSlug} initialCategory={categorySlug} initialRecommendedIds={recommendedIds} />
         <Services />
         <Skills />
         <Industries />
