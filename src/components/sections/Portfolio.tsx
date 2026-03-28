@@ -2726,14 +2726,14 @@ const projects: Project[] = [
           "17 timers, ADC/DAC, and various peripherals"
         ],
         images: [
-          "/image/attachment%3A560617a9-20f7-4d53-88cd-73327c8c76f6%3AalsLuAPmRZo4Akxf2gx8RnFPKvn167wi4kPBnWe2.jpg"
+          "/images/attachment%3A560617a9-20f7-4d53-88cd-73327c8c76f6%3AalsLuAPmRZo4Akxf2gx8RnFPKvn167wi4kPBnWe2.jpg"
         ]
       },
       {
         heading: "Key Circuit Design",
         body: "The hardware architecture meets current design requirements and provides necessary interfaces for expansion and robust vehicle data acquisition.",
         images: [
-          "/image/attachment%3A8ca903d0-a874-4162-95b7-ebffc26b8233%3Acover.jpg"
+          "/images/attachment%3A8ca903d0-a874-4162-95b7-ebffc26b8233%3Acover.jpg"
         ]
       },
       {
@@ -2745,7 +2745,7 @@ const projects: Project[] = [
           "Low-ESR solid capacitors at input/output for ripple reduction and power quality"
         ],
         images: [
-          "/image/attachment%3A1b668d71-d510-4e27-8e58-ccca76e3ef2d%3AScreenshot_2025-09-23_063631.jpg"
+          "/images/attachment%3A1b668d71-d510-4e27-8e58-ccca76e3ef2d%3AScreenshot_2025-09-23_063631.jpg"
         ]
       },
       {
@@ -2757,8 +2757,8 @@ const projects: Project[] = [
           "Two TVS diodes (NUP2105, PSM712) protect common-mode voltages"
         ],
         images: [
-          "/image/attachment%3A6ac62030-1aee-44a2-93bb-4579164e95b1%3AScreenshot_2025-09-23_063814.jpg",
-          "/image/attachment%3Ad495cf0b-807e-4330-aaff-fdb32c7e0e00%3AScreenshot_2025-09-23_064231.jpg"
+          "/images/attachment%3A6ac62030-1aee-44a2-93bb-4579164e95b1%3AScreenshot_2025-09-23_063814.jpg",
+          "/images/attachment%3Ad495cf0b-807e-4330-aaff-fdb32c7e0e00%3AScreenshot_2025-09-23_064231.jpg"
         ]
       },
       {
@@ -2784,8 +2784,8 @@ const projects: Project[] = [
           "RF signals transmitted through shielded coaxial jumpers to minimize loss and improve quality"
         ],
         images: [
-          "/image/attachment%3Ad5837b24-d9be-4abf-8991-9595d71871e2%3AScreenshot_2025-09-23_112135.jpg",
-          "/image/attachment%3A54063671-fb96-42e4-be9a-0215b879635e%3AUntitled_Diagram.drawio.jpg"
+          "/images/attachment%3Ad5837b24-d9be-4abf-8991-9595d71871e2%3AScreenshot_2025-09-23_112135.jpg",
+          "/images/attachment%3A54063671-fb96-42e4-be9a-0215b879635e%3AUntitled_Diagram.drawio.jpg"
         ]
       }
     ]
