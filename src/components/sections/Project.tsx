@@ -2621,7 +2621,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "Object Detection Trigger System",
