@@ -1607,7 +1607,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/image/file/44322/TM4C123G.jpg",
+        src: "https://hackster.imgix.net/uploads/images/file/44322/TM4C123G.jpg",
       },
     ],
 
@@ -1655,8 +1655,8 @@ const projects: Project[] = [
           "Expandable sensor architecture",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/image/file/44323/Esquilio_with_sensors.jpg",
-          "https://hackster.imgix.net/uploads/image/file/44322/TM4C123G.jpg",
+          "https://hackster.imgix.net/uploads/images/file/44323/Esquilio_with_sensors.jpg",
+          "https://hackster.imgix.net/uploads/images/file/44322/TM4C123G.jpg",
         ],
       },
 
@@ -2206,11 +2206,11 @@ const projects: Project[] = [
       },
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/image/file/81245/ParticleCloudPushbullet.jpg",
+        src: "https://hackster.imgix.net/uploads/images/file/81245/ParticleCloudPushbullet.jpg",
       },
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/image/file/82451/Screenshot_2015-10-14-15-39-28.jpg",
+        src: "https://hackster.imgix.net/uploads/images/file/82451/Screenshot_2015-10-14-15-39-28.jpg",
       },
     ],
     hidden: false,
@@ -2236,7 +2236,7 @@ const projects: Project[] = [
           "Webhook forwards alert payload to Pushbullet for multi-device notification",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/image/file/81245/ParticleCloudPushbullet.jpg",
+          "https://hackster.imgix.net/uploads/images/file/81245/ParticleCloudPushbullet.jpg",
         ],
       },
       {
@@ -2692,6 +2692,207 @@ const projects: Project[] = [
         body: "The project demonstrates hands-on experience with FPGA SDR hardware, GNU Radio workflows, and beginner-friendly RF experimentation while retaining professional-level technical depth suitable for a portfolio."
       }
     ],
+  },
+  {
+    slug: "c8f3d9", // new unique hex slug
+    title: "Remote-Operated Vehicle with Sensor Monitoring",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "A remote-controlled, sensor-equipped vehicle with global monitoring and cloud data access.",
+    longDescription: "This project demonstrates a mobile vehicle platform that can be controlled remotely, tracked globally, and provides real-time sensor and camera data access. It integrates multiple microcontrollers, motor drivers, and cloud platforms for data monitoring, positioning, and IoT capabilities.",
+    tags: ["Embedded Systems", "Firmware Development", "IoT", "Cloud Integration", "Sensors", "Motor Control", "Prototyping"],
+    icon: Cpu,
+    highlight: "Remote Vehicle Monitoring",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1463577/_RTpF17BU4C.blob?auto=compress,format&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Remote-controlled vehicle with multiple microcontrollers",
+      "Sensor integration including GPS, ultrasonic, and camera",
+      "Motor control using dual H-bridge drivers",
+      "Cloud-based monitoring and dashboard access",
+      "Battery-powered mobile platform for experimentation"
+    ],
+    sections: [
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Espressif ESP32 Cam Ai-thinker",
+          "STMicroelectronics STM32F103C8",
+          "NodeMCU ESP8266 Breakout Board",
+          "SparkFun Dual H-Bridge Motor Driver L298",
+          "u-blox Neo 6M GPS Module",
+          "Ultrasonic Sensor HC-SR04",
+          "DC Motors (12V) × 4",
+          "Servo Motor",
+          "Breadboard and jumper wires",
+          "Chassis",
+          "12V and 5V batteries"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/images/file/138245/nodemcu.PNG?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/images/file/96027/09670-01.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/182875/51GZZ5EU9PL._SX425_.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/833588/52Y4441-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/images/file/44496/11026-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/images/file/44494/12002-04.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software & Cloud Platforms",
+        bullets: [
+          "Arduino IDE",
+          "Microsoft Azure",
+          "Arduino IoT Cloud",
+          "Arduino Web Editor"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/540119/microsoft-azure-logo_7QghKHuiBq.png",
+          "https://hackster.imgix.net/uploads/attachments/1034524/arduino_logo_fwx2rSB3rG.png",
+          "https://hackster.imgix.net/uploads/images/file/154930/IDE_web.png"
+        ]
+      },
+      {
+        heading: "System Overview",
+        body: "The vehicle can be controlled remotely, tracked globally, and its sensor and camera data are accessible from anywhere. Mobile SIM connectivity allows cloud access wherever signal is available.",
+        bullets: [
+          "Remote control and GPS tracking",
+          "Global camera monitoring",
+          "Cloud data access via SIM connection"
+        ]
+      },
+      {
+        heading: "Power and Wiring",
+        body: "The vehicle uses separate batteries for motors and microcontrollers due to high power requirements.",
+        bullets: [
+          "12V battery powers 4 motors and servo motor",
+          "5V battery powers ESP32 Cam",
+          "5V battery powers ESP8266 and STM32F103C8"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1463584/image_RKBMz3K29n.png"
+        ]
+      },
+      {
+        heading: "Vehicle Dashboard",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1509760/image_i3lTJJU5Qu.png"
+        ]
+      },
+      {
+        heading: "Final Vehicle",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1463583/image_sIlwNIvt2h.png"
+        ]
+      },
+      {
+        heading: "System Block Diagram",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1463585/image_PgDRP0hN7F.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Video Demo",
+        body: "Working demo available."
+      }
+    ]
+  },
+  {
+    slug: "f9b2a7", // new unique hex slug
+    title: "Connected Vehicle Data Terminal",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Vehicle terminal for monitoring, communication, and cloud-based analytics.",
+    longDescription: "This in-vehicle terminal provides customizable data decoding, offline storage, GPS positioning, MQTT communication, and access to cloud IoT platforms. It integrates multiple interfaces and is designed for robust automotive operation, with expansion capabilities for future upgrades.",
+    tags: ["Embedded Systems", "Firmware Development", "IoT", "Vehicle Electronics", "Hardware Design", "Prototyping", "Cloud Integration"],
+    icon: Cpu,
+    highlight: "IoT Vehicle Terminal",
+    hidden: false,
+    media: [
+      { type: "image", src: "/images/cover.jpg" } // hero image
+    ],
+    deliverables: [
+      "Vehicle terminal with multi-interface connectivity",
+      "Firmware supporting HAL-based STM32 architecture",
+      "Offline storage and GPS tracking",
+      "MQTT and cloud communication capabilities",
+      "Expandable design for additional modules"
+    ],
+    sections: [
+      {
+        heading: "MCU Selection",
+        body: "A high-performance network microcontroller was chosen to ensure sufficient communication interfaces and processing power for vehicle data acquisition.",
+        bullets: [
+          "STM32F407VE ARM Cortex-M4, 168 MHz, 210 DMIPS",
+          "512 KB flash, 192 KB SRAM, 86 I/O ports",
+          "6 UARTs, 2 CAN, 3 SPI, 1 USB device, 1 USB host, 1 Ethernet",
+          "17 timers, ADC/DAC, various peripherals"
+        ],
+        images: [
+          "/images/img1.jpg"
+        ]
+      },
+      {
+        heading: "Power Module Design",
+        bullets: [
+          "MP4462 step-down module: 4.5–36V input, built-in MOSFET, soft start, undervoltage protection, current limiting, high efficiency",
+          "0650 alloy powder-molded inductors: 3.3uH @ 9A, 10uH @ 5.5A",
+          "SP1045L barrier diode for low voltage drop and high efficiency",
+          "Low-ESR solid capacitors at input/output for ripple reduction and power quality"
+        ],
+        images: [
+          "/images/mcu2.jpg"
+        ]
+      },
+      {
+        heading: "Interface Module Design",
+        bullets: [
+          "CAN and RS485 buses with isolation modules for safety and anti-interference",
+          "3R090A-5SS gas discharge tube for high-voltage protection",
+          "1MΩ capacitor and 10nF resistor for interface shielding",
+          "Two TVS diodes (NUP2105, PSM712) to protect against common-mode voltages"
+        ],
+        images: [
+          "/images/mcu3.jpg"
+        ]
+      },
+      {
+        heading: "Main Control Circuit Design",
+        bullets: [
+          "W25Q256 FLASH memory for configuration and data storage",
+          "SD card for raw bus data with timestamps",
+          "Debug port via 2.54mm header for bootloader control",
+          "RTC clock, 8M system clock, BOOT function to MCU flash",
+          "USB device port reserved for future use",
+          "Four status indicators: network, system, CAN, RS485"
+        ],
+        images: [
+          "/images/mcu5.jpg"
+        ]
+      },
+      {
+        heading: "Communication Module Design",
+        bullets: [
+          "Quectel EC20 R2.1 CAT4 module, 150 Mbps downlink / 50 Mbps uplink",
+          "PCIE format, easy installation and replacement",
+          "USB or UART interface with 1.8V to 3.3V level conversion via TI 8-way bidirectional converter",
+          "High-current supply and filtered 3.3V power rail for stability",
+          "4G and GPS antennas connected via IPEX-to-SMA jumpers, soldered to PCB",
+          "RF signals transmitted through shielded coaxial jumpers for minimal loss"
+        ],
+        images: [
+          "/images/mcu4.jpg",
+        ]
+      },
+      {
+        heading: "Firmware Development",
+        body: "Firmware was developed using STM32CubeMx with Keil MDK5, based on the HAL library. The architecture includes BSP and APP layers for CAN bus parsing, EC20 AT command drivers, FATFS file operations, and packaging JSON for AWS IoT upload.",
+        images: [
+          "/images/mcu6.jpg"
+        ]
+      }
+    ]
   },
   {
     slug: "e2b4c9", // new unique hex slug
