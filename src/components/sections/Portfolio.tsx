@@ -2705,7 +2705,7 @@ const projects: Project[] = [
     highlight: "Remote Vehicle Monitoring",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1463577/_RTpF17BU4C.blob?auto=compress,format&fit=min" } // hero image
+      { type: "image", src: "/images/remote_car.jpg" } // hero image
     ],
     deliverables: [
       "Remote-controlled vehicle with multiple microcontrollers",
