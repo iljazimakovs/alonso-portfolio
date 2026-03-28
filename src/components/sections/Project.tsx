@@ -3110,7 +3110,6 @@ const projects: Project[] = [
         heading: "Usage Examples",
         images: [
           "https://hackster.imgix.net/uploads/attachments/970205/1_XhqBXbQSB8m9VvMfx5H-tg.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1036883/untitled_8_B7ylBbrI56.png?auto=compress,format&w=740&h=555&fit=max"
         ],
         body: "The shield can be used connected to a laptop for high-speed biosignal capture. When paired with a Raspberry Pi 4, it enables wireless data transmission via Wi-Fi."
       }
@@ -3128,7 +3127,7 @@ const projects: Project[] = [
     highlight: "Multi-Voltage USB-C Supply",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1792829/_czUO4nwEWP.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1792858/mini_img_1007_jyD90jaciv.jpg?auto=compress,format&w=740&h=555&fit=max" } // hero image
     ],
     deliverables: [
       "Compact lab bench power supply",
