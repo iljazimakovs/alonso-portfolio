@@ -2694,6 +2694,103 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "b7c1d4", // new unique hex slug
+    title: "Connected Vehicle Terminal with IoT Capabilities",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "In-vehicle terminal for vehicle data monitoring, communication, and cloud integration.",
+    longDescription: "This vehicle terminal supports customizable data decoding, offline storage, GPS positioning, MQTT communication, and connectivity to cloud platforms. It is designed for robust operation in automotive environments with expandable interfaces for future upgrades.",
+    tags: ["Embedded Systems", "Firmware Development", "IoT", "CAN Bus", "Vehicle Electronics", "Prototyping", "Production-Ready"],
+    icon: Cpu,
+    highlight: "Vehicle IoT Terminal",
+    hidden: false,
+    media: [
+      { type: "image", src: "/image/attachment%3A560617a9-20f7-4d53-88cd-73327c8c76f6%3AalsLuAPmRZo4Akxf2gx8RnFPKvn167wi4kPBnWe2.jpg" } // hero image
+    ],
+    deliverables: [
+      "In-vehicle terminal with CAN and RS485 interfaces",
+      "Firmware with HAL-based STM32 architecture",
+      "Offline storage and GPS positioning",
+      "MQTT communication to cloud platforms",
+      "Expandable design for future modules"
+    ],
+    sections: [
+      {
+        heading: "MCU Selection",
+        body: "Considering performance, power consumption, interfaces, cost, and connectivity, a network-capable microcontroller was selected to ensure adequate processing power and communication capabilities.",
+        bullets: [
+          "STM32F407VE based on ARM Cortex-M4",
+          "168 MHz clock, 210 DMIPS processing power",
+          "512 KB flash, 192 KB SRAM, 86 I/O ports",
+          "6 UARTs, 2 CAN, 3 SPI, 1 USB device, 1 USB host, 1 Ethernet",
+          "17 timers, ADC/DAC, and various peripherals"
+        ],
+        images: [
+          "/image/attachment%3A560617a9-20f7-4d53-88cd-73327c8c76f6%3AalsLuAPmRZo4Akxf2gx8RnFPKvn167wi4kPBnWe2.jpg"
+        ]
+      },
+      {
+        heading: "Key Circuit Design",
+        body: "The hardware architecture meets current design requirements and provides necessary interfaces for expansion and robust vehicle data acquisition.",
+        images: [
+          "/image/attachment%3A8ca903d0-a874-4162-95b7-ebffc26b8233%3Acover.jpg"
+        ]
+      },
+      {
+        heading: "Power Module Design",
+        bullets: [
+          "MP4462 step-down module with built-in MOSFET, 4.5–36V input, soft start, undervoltage protection, automatic current limiting, adjustable frequency, high efficiency",
+          "0650 alloy powder-molded inductors: 3.3uH @ 9A, 10uH @ 5.5A, preventing saturation and reducing heat",
+          "SP1045L barrier diode in TO-277 for low voltage drop",
+          "Low-ESR solid capacitors at input/output for ripple reduction and power quality"
+        ],
+        images: [
+          "/image/attachment%3A1b668d71-d510-4e27-8e58-ccca76e3ef2d%3AScreenshot_2025-09-23_063631.jpg"
+        ]
+      },
+      {
+        heading: "Interface Module Design",
+        bullets: [
+          "CAN and RS485 buses use isolation modules from Guangzhou Mornsun for anti-interference and safety",
+          "3R090A-5SS gas discharge tube for high-voltage protection",
+          "1MΩ capacitor and 10nF resistor for interface shielding",
+          "Two TVS diodes (NUP2105, PSM712) protect common-mode voltages"
+        ],
+        images: [
+          "/image/attachment%3A6ac62030-1aee-44a2-93bb-4579164e95b1%3AScreenshot_2025-09-23_063814.jpg",
+          "/image/attachment%3Ad495cf0b-807e-4330-aaff-fdb32c7e0e00%3AScreenshot_2025-09-23_064231.jpg"
+        ]
+      },
+      {
+        heading: "Main Control Circuit Design",
+        bullets: [
+          "W25Q256 FLASH for fixed data and configuration storage",
+          "SD card for raw bus data storage with timestamps",
+          "Debug port via 2.54mm pin header for bootloader control",
+          "RTC clock and 8M system clock",
+          "BOOT function set for MCU flash memory boot",
+          "USB device port reserved for future functionality",
+          "Four status indicators: network, system, CAN, RS485"
+        ]
+      },
+      {
+        heading: "Communication Module Design",
+        bullets: [
+          "Quectel EC20 R2.1 CAT4 module (150 Mbps downlink / 50 Mbps uplink)",
+          "PCIE format, easy to install and replace",
+          "USB or UART interface with level conversion (1.8V to 3.3V) via TI 8-way bidirectional converter",
+          "High-current supply and filtered 3.3V power rail for stability",
+          "4G and GPS antennas connected via IPEX-to-SMA jumpers, soldered to PCB",
+          "RF signals transmitted through shielded coaxial jumpers to minimize loss and improve quality"
+        ],
+        images: [
+          "/image/attachment%3Ad5837b24-d9be-4abf-8991-9595d71871e2%3AScreenshot_2025-09-23_112135.jpg",
+          "/image/attachment%3A54063671-fb96-42e4-be9a-0215b879635e%3AUntitled_Diagram.drawio.jpg"
+        ]
+      }
+    ]
+  },
+  {
     slug: "e2b4c9", // new unique hex slug
     title: "Hands-On Wireless Signal Workshop with Embedded Boards",
     category: "FPGA & Digital Design",
