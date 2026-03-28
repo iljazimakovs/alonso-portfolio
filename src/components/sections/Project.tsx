@@ -1362,7 +1362,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "Analog Charging Circuit Design",
@@ -2076,7 +2076,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "Wireless LED Control System",
@@ -2213,7 +2213,7 @@ const projects: Project[] = [
         src: "https://hackster.imgix.net/uploads/images/file/82451/Screenshot_2015-10-14-15-39-28.jpg",
       },
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Particle Firmware",
       "Webhook Configuration",
@@ -2750,7 +2750,7 @@ const projects: Project[] = [
     tags: ["SDR", "FPGA", "Radio", "GNU Radio", "Embedded Systems", "RF", "Signal Processing"],
     icon: Radio,
     highlight: "FPGA-Based SDR Experiments",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/project2.jpg" } // hero image
     ],
@@ -2808,7 +2808,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Vehicle Electronics", "Hardware Design", "Prototyping", "Cloud Integration"],
     icon: Cpu,
     highlight: "IoT Vehicle Terminal",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/cover.jpg" } // hero image
     ],
