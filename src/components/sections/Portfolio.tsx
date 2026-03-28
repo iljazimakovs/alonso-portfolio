@@ -2705,7 +2705,7 @@ const projects: Project[] = [
     highlight: "Vehicle IoT Terminal",
     hidden: false,
     media: [
-      { type: "image", src: "/image/attachment%3A560617a9-20f7-4d53-88cd-73327c8c76f6%3AalsLuAPmRZo4Akxf2gx8RnFPKvn167wi4kPBnWe2.jpg" } // hero image
+      { type: "image", src: "/images/attachment%3A560617a9-20f7-4d53-88cd-73327c8c76f6%3AalsLuAPmRZo4Akxf2gx8RnFPKvn167wi4kPBnWe2.jpg" } // hero image
     ],
     deliverables: [
       "In-vehicle terminal with CAN and RS485 interfaces",
