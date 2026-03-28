@@ -1607,7 +1607,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/images/file/44322/TM4C123G.jpg",
+        src: "https://hackster.imgix.net/uploads/image/file/44322/TM4C123G.jpg",
       },
     ],
 
