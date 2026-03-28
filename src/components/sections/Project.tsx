@@ -2428,14 +2428,6 @@ const projects: Project[] = [
           "Chassis",
           "12V and 5V batteries"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/images/file/138245/nodemcu.PNG?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/images/file/96027/09670-01.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/182875/51GZZ5EU9PL._SX425_.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/833588/52Y4441-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/images/file/44496/11026-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/images/file/44494/12002-04.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software & Cloud Platforms",
@@ -2445,11 +2437,6 @@ const projects: Project[] = [
           "Arduino IoT Cloud",
           "Arduino Web Editor"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/540119/microsoft-azure-logo_7QghKHuiBq.png",
-          "https://hackster.imgix.net/uploads/attachments/1034524/arduino_logo_fwx2rSB3rG.png",
-          "https://hackster.imgix.net/uploads/images/file/154930/IDE_web.png"
-        ]
       },
       {
         heading: "System Overview",
@@ -2470,12 +2457,6 @@ const projects: Project[] = [
         ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/1463584/image_RKBMz3K29n.png"
-        ]
-      },
-      {
-        heading: "Vehicle Dashboard",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1509760/image_i3lTJJU5Qu.png"
         ]
       },
       {
