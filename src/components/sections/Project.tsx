@@ -3144,9 +3144,6 @@ const projects: Project[] = [
       {
         heading: "Design Story",
         body: "With USB-C chargers, different voltages can be obtained to fast charge batteries. The CH224K IC integrates USB PD and fast-charging protocols, providing high integration and efficiency.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1792858/mini_img_1007_jyD90jaciv.jpg?auto=compress,format&w=740&h=555&fit=max"
-        ]
       },
       {
         heading: "Voltage Configuration",
