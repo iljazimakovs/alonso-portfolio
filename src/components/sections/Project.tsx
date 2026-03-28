@@ -3068,6 +3068,118 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "c4d5f2", // new unique hex slug
+    title: "Multi-Channel Biosignal Acquisition Shield",
+    category: "Embedded Systems",
+    filterSlugs: ["hardware-design", "embedded-firmware", "biosignal-processing"],
+    description: "Arduino-compatible shield for capturing EEG, EMG, and EKG signals with multi-channel high-resolution ADCs.",
+    longDescription: "This project demonstrates a high-performance shield capable of digitizing biosignals including EEG, EMG, and EKG. The shield supports multiple synchronized channels, low-noise acquisition, and flexible connectivity with Arduino boards for both professional research and maker applications.",
+    tags: ["EEG", "EMG", "EKG", "Embedded Systems", "ADC", "Signal Processing", "Hardware Design"],
+    icon: Cpu,
+    highlight: "High-Resolution Biosignal Shield",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1036879/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
+    ],
+    deliverables: [
+      "Arduino-compatible shield for EEG, EMG, and EKG",
+      "Low-noise 8-channel 24-bit ADS1299 ADC",
+      "On-chip programmable gain amplifier",
+      "Supports up to four boards for 32 channels",
+      "USB and wireless data streaming via microcontroller"
+    ],
+    sections: [
+      {
+        heading: "Overview",
+        body: "This shield is capable of reading EEG, EMG, EKG, and other bio-based electrical signals. Its onboard SoC provides very low noise, sensitive enough to read microvolts, making it suitable for professional research as well as maker projects."
+      },
+      {
+        heading: "Key Features",
+        body: "Equipped with Texas Instruments ADS1299 EEG ADC, the shield includes an on-chip programmable gain amplifier (1–24x), SPI EEPROM, jumpers for configuring control lines, DMA drivers for high-speed sampling (up to 8000 samples/sec @ 24-bit), and USB 2.0 HS for fast data transfer when connected to an Arduino."
+      },
+      {
+        heading: "Expandability",
+        body: "Up to four shields can be connected simultaneously to provide 32 channels. The board can be programmed using Arduino IDE and can stream data via USB to a laptop or wirelessly through a Raspberry Pi 4 for Wi-Fi access."
+      },
+      {
+        heading: "Compatibility",
+        body: "The shield includes voltage level shifters, allowing use with Arduino Mega boards in addition to Arduino Due, providing flexible integration options for various projects."
+      },
+      {
+        heading: "Usage Examples",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/970205/1_XhqBXbQSB8m9VvMfx5H-tg.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1036883/untitled_8_B7ylBbrI56.png?auto=compress,format&w=740&h=555&fit=max"
+        ],
+        body: "The shield can be used connected to a laptop for high-speed biosignal capture. When paired with a Raspberry Pi 4, it enables wireless data transmission via Wi-Fi."
+      }
+    ]
+  },
+  {
+    slug: "f8a4d1", // new unique hex slug
+    title: "Compact Multi-Voltage Test Supply",
+    category: "Hardware Design",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "prototyping"],
+    description: "Small, high-performance power supply capable of multiple voltage outputs from a USB-C fast charger.",
+    longDescription: "This project demonstrates a compact power supply that leverages USB-C fast charging protocols to deliver multiple voltage levels efficiently. It integrates configurable input/output, protection modules, and high integration for lab and prototyping applications.",
+    tags: ["Power Electronics", "USB-C PD", "Embedded Hardware", "Prototyping", "PCB Design"],
+    icon: Zap,
+    highlight: "Multi-Voltage USB-C Supply",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1792829/_czUO4nwEWP.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Compact lab bench power supply",
+      "Multiple voltage outputs (5V, 9V, 12V, 15V, 20V)",
+      "CH224K IC-based PD support",
+      "High efficiency and integrated protection modules",
+      "Configurable input/output for lab testing"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Power supplies are essential for testing electronic circuits. This design allows multiple constant voltage outputs from a single USB-C fast charger, making it compact and efficient for lab and prototyping use."
+      },
+      {
+        heading: "Design Story",
+        body: "With USB-C chargers, different voltages can be obtained to fast charge batteries. The CH224K IC integrates USB PD and fast-charging protocols, providing high integration and efficiency.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792858/mini_img_1007_jyD90jaciv.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Voltage Configuration",
+        body: "The CH224K allows multiple voltages like 5, 9, 12, 15, and 20V through input jumper settings and internal programming.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792860/mini_img_1022_BldrPdqhzz.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Component Layout",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792857/mini_img_0990_7CB6VJowpQ.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Schematics Overview",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792856/screenshot_2024_11_29-9_ikyQgBErhM.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792855/screenshot_2024_11_29-10_3jE8QEzDkr.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792854/screenshot_2024_11_29-11_6Bq7YGvfNt.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "PCB Layout",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792849/mini_img_0989_KNvdWYpOdD.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792848/screenshot_2024_11_27-5_d0cNxAeq7u.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792852/component_arrangement_i3Hi2sAktQ.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      }
+    ]
+  },
 ];
 
 export { projects };
