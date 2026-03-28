@@ -3163,7 +3163,6 @@ const projects: Project[] = [
         images: [
           "https://hackster.imgix.net/uploads/attachments/1792856/screenshot_2024_11_29-9_ikyQgBErhM.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1792855/screenshot_2024_11_29-10_3jE8QEzDkr.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792854/screenshot_2024_11_29-11_6Bq7YGvfNt.png?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
