@@ -2392,6 +2392,111 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "c8f3d9", // new unique hex slug
+    title: "Remote-Operated Vehicle with Sensor Monitoring",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "A remote-controlled, sensor-equipped vehicle with global monitoring and cloud data access.",
+    longDescription: "This project demonstrates a mobile vehicle platform that can be controlled remotely, tracked globally, and provides real-time sensor and camera data access. It integrates multiple microcontrollers, motor drivers, and cloud platforms for data monitoring, positioning, and IoT capabilities.",
+    tags: ["Embedded Systems", "Firmware Development", "IoT", "Cloud Integration", "Sensors", "Motor Control", "Prototyping"],
+    icon: Cpu,
+    highlight: "Remote Vehicle Monitoring",
+    hidden: false,
+    media: [
+      { type: "image", src: "/images/remote_car.jpg" } // hero image
+    ],
+    deliverables: [
+      "Remote-controlled vehicle with multiple microcontrollers",
+      "Sensor integration including GPS, ultrasonic, and camera",
+      "Motor control using dual H-bridge drivers",
+      "Cloud-based monitoring and dashboard access",
+      "Battery-powered mobile platform for experimentation"
+    ],
+    sections: [
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Espressif ESP32 Cam Ai-thinker",
+          "STMicroelectronics STM32F103C8",
+          "NodeMCU ESP8266 Breakout Board",
+          "SparkFun Dual H-Bridge Motor Driver L298",
+          "u-blox Neo 6M GPS Module",
+          "Ultrasonic Sensor HC-SR04",
+          "DC Motors (12V) × 4",
+          "Servo Motor",
+          "Breadboard and jumper wires",
+          "Chassis",
+          "12V and 5V batteries"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/images/file/138245/nodemcu.PNG?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/images/file/96027/09670-01.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/182875/51GZZ5EU9PL._SX425_.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/833588/52Y4441-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/images/file/44496/11026-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/images/file/44494/12002-04.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software & Cloud Platforms",
+        bullets: [
+          "Arduino IDE",
+          "Microsoft Azure",
+          "Arduino IoT Cloud",
+          "Arduino Web Editor"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/540119/microsoft-azure-logo_7QghKHuiBq.png",
+          "https://hackster.imgix.net/uploads/attachments/1034524/arduino_logo_fwx2rSB3rG.png",
+          "https://hackster.imgix.net/uploads/images/file/154930/IDE_web.png"
+        ]
+      },
+      {
+        heading: "System Overview",
+        body: "The vehicle can be controlled remotely, tracked globally, and its sensor and camera data are accessible from anywhere. Mobile SIM connectivity allows cloud access wherever signal is available.",
+        bullets: [
+          "Remote control and GPS tracking",
+          "Global camera monitoring",
+          "Cloud data access via SIM connection"
+        ]
+      },
+      {
+        heading: "Power and Wiring",
+        body: "The vehicle uses separate batteries for motors and microcontrollers due to high power requirements.",
+        bullets: [
+          "12V battery powers 4 motors and servo motor",
+          "5V battery powers ESP32 Cam",
+          "5V battery powers ESP8266 and STM32F103C8"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1463584/image_RKBMz3K29n.png"
+        ]
+      },
+      {
+        heading: "Vehicle Dashboard",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1509760/image_i3lTJJU5Qu.png"
+        ]
+      },
+      {
+        heading: "Final Vehicle",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1463583/image_sIlwNIvt2h.png"
+        ]
+      },
+      {
+        heading: "System Block Diagram",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1463585/image_PgDRP0hN7F.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Video Demo",
+        body: "Working demo available."
+      }
+    ]
+  },
+  {
     slug: "1a7e5c",
     title: "Browser-Based Mobile Robotics Platform",
     category: "IoT & Connected Devices",
@@ -2692,111 +2797,6 @@ const projects: Project[] = [
         body: "The project demonstrates hands-on experience with FPGA SDR hardware, GNU Radio workflows, and beginner-friendly RF experimentation while retaining professional-level technical depth suitable for a portfolio."
       }
     ],
-  },
-  {
-    slug: "c8f3d9", // new unique hex slug
-    title: "Remote-Operated Vehicle with Sensor Monitoring",
-    category: "Embedded Systems",
-    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
-    description: "A remote-controlled, sensor-equipped vehicle with global monitoring and cloud data access.",
-    longDescription: "This project demonstrates a mobile vehicle platform that can be controlled remotely, tracked globally, and provides real-time sensor and camera data access. It integrates multiple microcontrollers, motor drivers, and cloud platforms for data monitoring, positioning, and IoT capabilities.",
-    tags: ["Embedded Systems", "Firmware Development", "IoT", "Cloud Integration", "Sensors", "Motor Control", "Prototyping"],
-    icon: Cpu,
-    highlight: "Remote Vehicle Monitoring",
-    hidden: false,
-    media: [
-      { type: "image", src: "/images/remote_car.jpg" } // hero image
-    ],
-    deliverables: [
-      "Remote-controlled vehicle with multiple microcontrollers",
-      "Sensor integration including GPS, ultrasonic, and camera",
-      "Motor control using dual H-bridge drivers",
-      "Cloud-based monitoring and dashboard access",
-      "Battery-powered mobile platform for experimentation"
-    ],
-    sections: [
-      {
-        heading: "Hardware Components",
-        bullets: [
-          "Espressif ESP32 Cam Ai-thinker",
-          "STMicroelectronics STM32F103C8",
-          "NodeMCU ESP8266 Breakout Board",
-          "SparkFun Dual H-Bridge Motor Driver L298",
-          "u-blox Neo 6M GPS Module",
-          "Ultrasonic Sensor HC-SR04",
-          "DC Motors (12V) × 4",
-          "Servo Motor",
-          "Breadboard and jumper wires",
-          "Chassis",
-          "12V and 5V batteries"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/images/file/138245/nodemcu.PNG?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/images/file/96027/09670-01.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/182875/51GZZ5EU9PL._SX425_.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/833588/52Y4441-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/images/file/44496/11026-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/images/file/44494/12002-04.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
-      },
-      {
-        heading: "Software & Cloud Platforms",
-        bullets: [
-          "Arduino IDE",
-          "Microsoft Azure",
-          "Arduino IoT Cloud",
-          "Arduino Web Editor"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/540119/microsoft-azure-logo_7QghKHuiBq.png",
-          "https://hackster.imgix.net/uploads/attachments/1034524/arduino_logo_fwx2rSB3rG.png",
-          "https://hackster.imgix.net/uploads/images/file/154930/IDE_web.png"
-        ]
-      },
-      {
-        heading: "System Overview",
-        body: "The vehicle can be controlled remotely, tracked globally, and its sensor and camera data are accessible from anywhere. Mobile SIM connectivity allows cloud access wherever signal is available.",
-        bullets: [
-          "Remote control and GPS tracking",
-          "Global camera monitoring",
-          "Cloud data access via SIM connection"
-        ]
-      },
-      {
-        heading: "Power and Wiring",
-        body: "The vehicle uses separate batteries for motors and microcontrollers due to high power requirements.",
-        bullets: [
-          "12V battery powers 4 motors and servo motor",
-          "5V battery powers ESP32 Cam",
-          "5V battery powers ESP8266 and STM32F103C8"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1463584/image_RKBMz3K29n.png"
-        ]
-      },
-      {
-        heading: "Vehicle Dashboard",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1509760/image_i3lTJJU5Qu.png"
-        ]
-      },
-      {
-        heading: "Final Vehicle",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1463583/image_sIlwNIvt2h.png"
-        ]
-      },
-      {
-        heading: "System Block Diagram",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1463585/image_PgDRP0hN7F.png?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "Video Demo",
-        body: "Working demo available."
-      }
-    ]
   },
   {
     slug: "f9b2a7", // new unique hex slug
