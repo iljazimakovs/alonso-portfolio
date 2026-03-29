@@ -1483,7 +1483,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "Solar Power Management System",
@@ -3197,7 +3197,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Ethernet", "Camera", "Python", "Cloud Integration", "Real-Time", "IoT"],
     icon: Camera,
     highlight: "High-Speed Ethernet Camera Streaming",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png" } // hero image
     ],
