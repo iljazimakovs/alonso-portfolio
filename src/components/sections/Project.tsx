@@ -2518,7 +2518,6 @@ const projects: Project[] = [
           "https://hackster.imgix.net/uploads/attachments/1259129/img_7279_YxIsjWue77.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1259130/img_7280_LFUassZrST.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1258777/9887551581810078359.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1259106/esp32cam-cam_ofIgqhyVOn.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
