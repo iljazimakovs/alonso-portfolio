@@ -2478,6 +2478,89 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "f5d9b8", // new unique hex slug
+    title: "Embedded Audio Visualizer with TFT Display",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "hardware-design", "signal-processing"],
+    description: "Plot real-time audio signals on a small TFT display using an embedded microcontroller and analog microphone input.",
+    longDescription: "This project demonstrates an embedded system that records audio signals and displays them on a TFT screen. Using an electret microphone, the analog signal is converted to a digital stream via the microcontroller and plotted in real time. It includes audio gain adjustment, biasing without soldering, and high-speed SPI data transfer to the display.",
+    tags: ["Audio Processing", "Embedded Systems", "TFT Display", "Signal Visualization", "Microcontroller", "Arduino"],
+    icon: Cpu,
+    highlight: "Real-Time Audio Visualization",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/647384/spresense_lighter2_Uj3rX2jUJ7.JPG?auto=compress&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Embedded audio visualization system",
+      "Electret microphone input with biasing",
+      "Real-time plotting on ST7735 TFT display",
+      "Step-by-step Arduino IDE setup",
+      "Professional-grade audio scope for microcontrollers"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "The system records audio using a microphone connected to an embedded microcontroller and plots the waveform on a TFT display in real time."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "1.8 inch ST7735R SPI 128*160 TFT LCD Display Module",
+          "Embedded microcontroller board with main & extension boards",
+          "Male/Female Jumper Wires",
+          "Adafruit Electret Microphone (20Hz–20kHz Omnidirectional)",
+          "2.21kΩ Resistor for microphone biasing"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/510638/spresense_maex-s_ido2IGNOU5.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/96107/826-04.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/96044/MFR-25FBF52-2K21_sml.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software Setup",
+        bullets: [
+          "Arduino IDE",
+          "Embedded board package for Arduino IDE",
+          "Audio scope source code with libraries and sketch"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Microphone Configuration",
+        body: "The electret microphone requires biasing. This can be done without soldering by connecting between the BIAS pin and MIC_X pin. Only channel A is used in this project.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/640191/biasing_spresense_OqsGHQudNM.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/642611/spresense_mic_nBa1pyEFWK.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Microphone Gain",
+        body: "Microphone gain can be adjusted by editing Audio.cpp in the Arduino library. Linux path: ~/.arduino15/packages/SPRESENSE/hardware/spresense/1.0.2/libraries/, Windows path: %userprofile%\\AppData\\Local\\Arduino15\\packages\\SPRESENSE\\hardware\\spresense\\1.0.2\\libraries\\audio",
+        code: [
+          "init_mic_gain(input_device, 0)"
+        ]
+      },
+      {
+        heading: "TFT Display",
+        body: "The display uses an ST7735 controller. Data is transferred via SPI. Reset and backlight wires are required. SPI frequency may need adjustment if long wires cause instability. Drivers are ported from Adafruit TFT library v1.0.6."
+      },
+      {
+        heading: "Code and Step-by-Step Instructions",
+        body: "The main sketch fetches the audio data stream using the audio library and displays it on the TFT. The WAV codec is required. Steps:\n1. Install Arduino IDE and Spresense package\n2. Flash bootloader if needed\n3. Fetch source code from GitHub\n4. Install TFT drivers via Arduino IDE\n5. Open sketch and upload\n6. Observe audio waveform on the display"
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hacksterio.s3.amazonaws.com/uploads/attachments/652420/spresense_all_vZxXQTzHBM.jpg"
+        ]
+      }
+    ]
+  },
+  {
     slug: "f2b8d6", // new unique hex slug
     title: "Compact High-Power Metal Heating Device",
     category: "Hardware Design",
