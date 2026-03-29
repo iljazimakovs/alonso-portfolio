@@ -2478,6 +2478,169 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "f1c7d9", // new unique hex slug
+    title: "Remote-Controlled Pan-Tilt Camera Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Battery-powered pan-and-tilt camera platform for remote monitoring and control through a mobile app.",
+    longDescription: "This project demonstrates a pan-and-tilt camera system controlled remotely via an embedded microcontroller. It integrates servo control, battery power, and real-time video streaming, making it suitable for IoT monitoring and embedded vision applications.",
+    tags: ["Embedded Systems", "Camera", "Servo Control", "IoT", "Remote Monitoring", "Battery Powered"],
+    icon: Camera,
+    highlight: "Remote Pan-Tilt Camera",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1259080/_BXy4qesCQI.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Pan-and-tilt camera platform",
+      "Embedded firmware for ESP32 boards",
+      "Battery-powered operation",
+      "Integration with mobile app for live viewing",
+      "Real-time video streaming and servo control"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "The system is a pan-and-tilt camera platform controlled remotely via a mobile app, providing a compact solution for real-time monitoring."
+      },
+      {
+        heading: "Components",
+        bullets: [
+          "ESP32-CAM module",
+          "FT232RL FTDI Mini USB",
+          "18650 Battery Holder ×1",
+          "18650 Batteries ×2",
+          "Mini Pan/Tilt Platform with 2 SG-90 Servos",
+          "MB102 Breadboard Power Supply Module",
+          "iRobbie-A mobile app"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1259100/img_7275_RTwPpDdtHZ.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1259101/esp32-cam_cam_bb_Q2WaHavntk.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1258771/3477681581809739134.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1258772/3652691581809739422.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1259129/img_7279_YxIsjWue77.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1259130/img_7280_LFUassZrST.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1259133/ardouno_code_esp32cam_cam_nkqQBfnAxJ.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1258777/9887551581810078359.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1258778/8812421581810078928.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1258779/854911581810079085.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1259106/esp32cam-cam_ofIgqhyVOn.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Hardware Setup",
+        body: "Connect the ESP32-CAM to the pan-and-tilt platform and attach power via 18650 batteries. Tilt servo → IO2, Pan servo → IO14, MB102 provides regulated power."
+      },
+      {
+        heading: "Firmware Setup",
+        code: [
+          "/*\nESP32-CAM Remote Control \n*/\n\nconst char* ssid = \"Your_WIFI_Network\";\nconst char* password = \"Your password\";\n\n#include \"esp_wifi.h\"\n#include \"esp_camera.h\"\n#include <WiFi.h>\n#include \"soc/soc.h\"\n#include \"soc/rtc_cntl_reg.h\"\n// ... rest of code as in HTML"
+        ],
+        body: "Upload firmware using Arduino IDE. GPIO0 to GND during upload, then release. Use Serial Monitor to get IP address."
+      },
+      {
+        heading: "Final Steps",
+        body: "Attach ESP32-CAM to pan-and-tilt platform, power on, and control using mobile app. Configure router port forwarding for remote access if required."
+      },
+      {
+        heading: "Conclusion",
+        bullets: [
+          "Reliable remote camera monitoring",
+          "Battery-powered pan-and-tilt operation",
+          "Mobile app integration for live viewing",
+          "Compact embedded vision solution"
+        ]
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1259132/esp32-cam_cam_bb_G5ElZHG825.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "f3d9c2", // new unique hex slug
+    title: "Compact Remote-Controlled Camera Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Small embedded camera module with remote control capability via mobile app, supporting real-time streaming.",
+    longDescription: "This project demonstrates a compact camera platform capable of remote operation over the internet. The system integrates microcontrollers, pan-and-tilt hardware, and firmware to stream images in real time, making it suitable for IoT monitoring, embedded vision, and small-scale remote surveillance.",
+    tags: ["Embedded Systems", "Camera", "IoT", "Remote Monitoring", "Servo Control", "Wi-Fi", "Microcontroller"],
+    icon: Camera,
+    highlight: "Remote Embedded Camera",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/925687/esp-eye-1-1317x800_mD2IVcBoSI.png?auto=compress,format&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Compact remote camera platform",
+      "Firmware for ESP32 microcontroller",
+      "Pan-and-tilt control integration",
+      "Battery-powered with mobile app access",
+      "Real-time image streaming"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "This system provides a small, remotely accessible camera platform capable of streaming images to a mobile app. It combines microcontroller-based firmware with pan-and-tilt hardware for flexible viewing angles."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ESP32-EYE or ESP32-CAM module",
+          "FT232RL FTDI Mini USB",
+          "18650 Battery Holder ×1",
+          "18650 Batteries ×2",
+          "Mini Pan/Tilt Platform with 2 SG-90 Servos",
+          "MB102 Breadboard Power Supply Module",
+          "Mobile app for control"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/925691/nabto_firewall_flow-1_KznIRDn2vO.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/925692/download_6AvS0FdvdZ.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/925693/m5stack_zvAf5ZkKMW.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/925694/esp-eye_5n07I27aUr.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "System Architecture",
+        body: "The camera platform streams images over a P2P tunnel, allowing the client app to access the web server on the camera as if it were local. The tunnel ensures secure and low-latency communication."
+      },
+      {
+        heading: "Firmware & Setup",
+        code: [
+          "$ cd nabto-esp32cam",
+          "$ make menuconfig",
+          "$ make -j 4",
+          "$ make flash",
+          "$ make monitor"
+        ],
+        body: "Configure Wi-Fi credentials, set device ID and key, and flash firmware onto the camera module. Ensure the Nabto state reaches ATTACHED for remote connectivity."
+      },
+      {
+        heading: "Operation",
+        body: "Once flashed, attach the camera to the pan-and-tilt platform, power it, and use the mobile app to remotely control and view images. Port forwarding may be configured for external access.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/925697/esp32cam-overview-262x400_APeNfQLtob.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/925713/esp32-cam_cam_bb_G5ElZHG825.jpg"
+        ]
+      },
+      {
+        heading: "Code Snippets",
+        code: [
+          "/*\nESP32-CAM Remote Control \n*/\nconst char* ssid = \"Your_WIFI_Network\";\nconst char* password = \"Your password\";\n#include \"esp_wifi.h\"\n#include \"esp_camera.h\"\n#include <WiFi.h>\n#include \"soc/soc.h\"\n#include \"soc/rtc_cntl_reg.h\"\n// ... rest of code as in HTML"
+        ]
+      }
+    ]
+  },
+  {
     slug: "1a7e5c",
     title: "Browser-Based Mobile Robotics Platform",
     category: "IoT & Connected Devices",
