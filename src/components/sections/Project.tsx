@@ -3116,6 +3116,170 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "d9e3a6", // new unique hex slug
+    title: "Real-Time Embedded Camera Streaming System",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "High-speed camera streaming using an embedded microcontroller board, Ethernet, and Python decoding.",
+    longDescription: "This project demonstrates a real-time embedded system for capturing, transmitting, and decoding camera images over Ethernet. The system consists of a microcontroller board with a camera module capturing frames via DVP, splitting them into UDP packets, and a PC-side Python program that reassembles and decodes the frames in real time. It provides a foundation for IoT vision, robotics, and remote monitoring applications.",
+    tags: ["Embedded Systems", "Camera", "Ethernet", "Python", "UDP Streaming", "IoT", "Real-Time"],
+    icon: Camera,
+    highlight: "High-Speed Image Streaming",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1895495/_CWzMEnpcbf.blob?auto=compress&format&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Embedded board streaming system",
+      "DVP camera interface for real-time image capture",
+      "UDP-based transmission protocol",
+      "Python software for frame reassembly and decoding",
+      "Foundation for IoT vision and robotics applications"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "The system uses an embedded microcontroller board and a DVP camera to capture JPEG frames, split them into UDP packets, and stream them over Ethernet. A Python program on a PC reassembles and decodes the images in real time."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "WIZnet Pico microcontroller board (RP2040/RP2350 compatible)",
+          "Quick-Bootup 3MP DVP Camera Module"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1895499/image_xfU8Qdm63M.png"
+        ]
+      },
+      {
+        heading: "JPEG Frame Capture Sequence",
+        code: [
+          "① VSYNC ↑ → Frame Start\n② HSYNC ↑ → New Line Start\n③ PCLK ↑ → Sample D0–D7 (8-bit pixel)\n④ DMA stores 32-bit chunks into line buffer\n⑤ HSYNC ↓ → Line End\n⑥ VSYNC ↓ → Frame End"
+        ],
+        body: "The PIO handles the timing logic, while DMA continuously transfers 32-bit data blocks into RAM. The system retries until a valid frame is captured."
+      },
+      {
+        heading: "UDP Transmission Process",
+        body: "JPEG frames are split into ≤1,400-byte payloads with a 4-byte header for transmission over UDP.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1895503/image_AzuiPpcOBk.png"
+        ],
+        code: [
+          "total_packets = (jpeg_size + PAYLOAD_SIZE - 1) / PAYLOAD_SIZE;\nfor (pkt_id = 0; pkt_id < total_packets; pkt_id++) {\n    tx_packet[0] = frame_id;\n    tx_packet[1] = pkt_id;\n    tx_packet[2] = total_packets;\n    tx_packet[3] = (pkt_id == total_packets - 1) ? 0x01 : 0x00;\n    memcpy(tx_packet + 4, jpeg_data + offset, chunk_size);\n    sendto(socket, tx_packet, chunk_size + 4, destip, destport);\n}"
+        ]
+      },
+      {
+        heading: "Python Reassembly",
+        code: [
+          "fid, pid, tot = pkt[0], pkt[1], pkt[2]\nself.buf.setdefault(fid, {})[pid] = pkt[4:]\nif len(self.buf[fid]) == tot:\n    data = b\"\".join(self.buf[fid][i] for i in range(tot))\n    return data  # Complete JPEG frame restored"
+        ],
+        body: "OpenCV decodes and displays the frames in real time, achieving lossless assembly with intelligent ID-based reordering."
+      },
+      {
+        heading: "Execution Guide",
+        body: "Steps to build, flash, and run the demo:\n1. Select the board in CMakeLists.txt.\n2. Build the firmware using cmake and make.\n3. Flash the firmware to the Pico using BOOTSEL.\n4. Run the Python GUI to display live images."
+      },
+      {
+        heading: "Key Takeaways",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1895504/image_Ph0eWCc9IK.png"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "b8f5d2", // new unique hex slug
+    title: "Real-Time Embedded Ethernet Camera System",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Embedded system for real-time Ethernet-based camera streaming with flexible protocol support.",
+    longDescription: "This project demonstrates an embedded platform that captures images from an OV2640 camera and streams them over Ethernet to a cloud dashboard. It supports dual protocol operation, adaptive memory management, and robust error recovery, providing a versatile solution for real-time embedded vision applications.",
+    tags: ["Embedded Systems", "Ethernet", "Camera", "Python", "Cloud Integration", "Real-Time", "IoT"],
+    icon: Camera,
+    highlight: "High-Speed Ethernet Camera Streaming",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1912317/_aYbV906Wb8.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Ethernet-powered camera platform",
+      "Real-time image capture from OV2640 module",
+      "Dual protocol support (HTTP/MQTT)",
+      "Python-based reassembly and live decoding",
+      "Robust error recovery and memory management"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Modern embedded vision applications require reliable, real-time image streaming. This project demonstrates a robust Ethernet-powered camera system, streaming live images to a cloud dashboard for monitoring and IoT applications."
+      },
+      {
+        heading: "Components",
+        bullets: [
+          "W6300-EVB-PICO2 Microcontroller Board",
+          "OV2640 Camera Module",
+          "2K ohm Resistors × 2",
+          "Breadboard and jumper wires"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1912328/image_4cTYqguIEH.png",
+          "https://hackster.imgix.net/uploads/attachments/1912326/image_Xu5MzVmmK8.png",
+          "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png",
+          "https://hackster.imgix.net/uploads/attachments/1912331/image_iQAxMLlQLc.png",
+          "https://hackster.imgix.net/uploads/attachments/1912334/image_xw9XqoTFEr.png"
+        ]
+      },
+      {
+        heading: "Hardware Setup",
+        body: "The microcontroller board connects to the OV2640 camera. Important wiring includes VSYNC → GP12, HREF → GP11, PCLK → GP10, D0-D7 → GP0-GP7, SCL → GP9, SDA → GP8, and RESET → GP13. Pull-up resistors ensure proper I2C communication.",
+        bullets: [
+          "RP2350 dual Cortex-M33 with 520KB SRAM",
+          "16MB flash memory with network buffers",
+          "8 sockets for HTTP/MQTT",
+          "IPv4/IPv6 dual stack support",
+          "Enhanced security with TrustZone + secure boot"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png"
+        ]
+      },
+      {
+        heading: "Code and Firmware",
+        code: [
+          "import time\nimport board\nimport busio\nimport adafruit_ov2640\nimport wiznet\nimport digitalio\nimport binascii\nimport gc\nimport ssl\nfrom adafruit_wiznet5k.adafruit_wiznet5k import WIZNET5K\nimport adafruit_wiznet5k.adafruit_wiznet5k_socketpool as socketpool\nimport adafruit_minimqtt.adafruit_minimqtt as MQTT\nfrom adafruit_io.adafruit_io import IO_HTTP\nimport adafruit_requests\ntry:\n    from secrets import secrets\nexcept ImportError:\n    print(\"MQTT secrets are kept in secrets.py, please add them there!\")\n    raise",
+          "secrets = {\n    \"aio_username\": \"YOUR_ADAFRUIT_IO_USERNAME\",\n    \"aio_key\": \"YOUR_ADAFRUIT_IO_KEY\"\n}",
+          "# Ethernet reset pin\nethernetRst = digitalio.DigitalInOut(board.W5K_RST)\nethernetRst.direction = digitalio.Direction.OUTPUT\n# SPI configuration for Ethernet\ncs = digitalio.DigitalInOut(board.W5K_CS)\nspi_bus = wiznet.PIO_SPI(board.W5K_SCK, \n                     quad_io0=board.W5K_MOSI, \n                     quad_io1=board.W5K_MISO, \n                     quad_io2=board.W5K_IO2, \n                     quad_io3=board.W5K_IO3)\n# Reset\nethernetRst.value = False\ntime.sleep(1)\nethernetRst.value = True\neth = WIZNET5K(spi_bus, cs, is_dhcp=True, mac=MY_MAC, debug=False)\npool = socketpool.SocketPool(eth)"
+        ]
+      },
+      {
+        heading: "Features",
+        bullets: [
+          "Dual protocol support (HTTP/MQTT)",
+          "Adaptive memory management",
+          "Real-time image transmission",
+          "Robust error recovery",
+          "Hardware camera/Ethernet integration"
+        ]
+      },
+      {
+        heading: "Conclusion",
+        bullets: [
+          "Reliable camera-to-cloud transmission",
+          "Effective memory management in constrained systems",
+          "Flexible protocol support for different deployments",
+          "Foundation for embedded vision applications"
+        ],
+        body: "The solution balances performance with resource constraints, providing a versatile platform for IoT vision use cases."
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1912320/1_rnmgttwgst_ChTjTtpiwz.png"
+        ]
+      }
+    ]
+  },
+  {
     slug: "f8a4d1", // new unique hex slug
     title: "Compact Multi-Voltage Test Supply",
     category: "Hardware Design",
