@@ -2489,7 +2489,7 @@ const projects: Project[] = [
     highlight: "Remote Pan-Tilt Camera",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1259080/_BXy4qesCQI.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1259100/img_7275_RTwPpDdtHZ.jpeg?auto=compress,format&w=740&h=555&fit=max" } // hero image
     ],
     deliverables: [
       "Pan-and-tilt camera platform",
@@ -2515,16 +2515,9 @@ const projects: Project[] = [
           "iRobbie-A mobile app"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1259100/img_7275_RTwPpDdtHZ.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1259101/esp32-cam_cam_bb_Q2WaHavntk.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1258771/3477681581809739134.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1258772/3652691581809739422.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1259129/img_7279_YxIsjWue77.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1259130/img_7280_LFUassZrST.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1259133/ardouno_code_esp32cam_cam_nkqQBfnAxJ.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1258777/9887551581810078359.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1258778/8812421581810078928.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1258779/854911581810079085.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1259106/esp32cam-cam_ofIgqhyVOn.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
@@ -2599,7 +2592,6 @@ const projects: Project[] = [
         ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/925691/nabto_firewall_flow-1_KznIRDn2vO.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/925692/download_6AvS0FdvdZ.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/925693/m5stack_zvAf5ZkKMW.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/925694/esp-eye_5n07I27aUr.png?auto=compress,format&w=740&h=555&fit=max"
         ]
@@ -2622,9 +2614,6 @@ const projects: Project[] = [
       {
         heading: "Operation",
         body: "Once flashed, attach the camera to the pan-and-tilt platform, power it, and use the mobile app to remotely control and view images. Port forwarding may be configured for external access.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/925697/esp32cam-overview-262x400_APeNfQLtob.png?auto=compress,format&w=740&h=555&fit=max"
-        ]
       },
       {
         heading: "Schematics",
