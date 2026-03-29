@@ -2478,6 +2478,45 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "f2b8d6", // new unique hex slug
+    title: "Compact High-Power Metal Heating Device",
+    category: "Hardware Design",
+    filterSlugs: ["hardware-design", "power-electronics", "prototyping"],
+    description: "A compact induction heating system capable of rapidly heating ferrous metals using high-power MOSFET circuits and custom wound inductors.",
+    longDescription: "This project demonstrates a compact, high-power induction heater built for DIY applications. It leverages MOSFETs, high-voltage capacitors, and custom-wound copper coils to heat ferrous metals quickly. While aluminum requires additional design modifications, the system showcases professional-level power electronics design in a small form factor.",
+    tags: ["Power Electronics", "Induction Heating", "DIY", "MOSFETs", "Capacitors", "Hardware Design"],
+    icon: Zap,
+    highlight: "Compact High-Power Induction Heater",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1225712/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
+    ],
+    deliverables: [
+      "Compact induction heater with custom coil",
+      "High-power MOSFET circuit design",
+      "Capacitor-based resonant tank",
+      "Rapid ferrous metal heating",
+      "Professional DIY hardware design"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "An induction heater uses electromagnetic induction to heat metals via eddy currents generated as the metal passes through a coil. This method is common in industrial furnaces and welders, and has also been adopted in DIY projects for efficient metal heating."
+      },
+      {
+        heading: "Design Details",
+        body: "The device is compact, about the size of a small shoebox. It features IRFP4668PBF MOSFETs, ceramic and WIMA capacitors, FR307 fast diodes, metal oxide resistors, and Zener diodes. Custom inductors are wound using 1.25mm enamel-insulated copper wire around an iron powder toroid (~100uH).",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1225711/a27d24_3625bb9327074721ac2353edb52b6cd9mv2_NwcN123Q5s.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Performance & Considerations",
+        body: "The heater efficiently heats ferrous metals, but aluminum requires higher voltages and additional cooling. Water-cooling could be implemented to manage heat while increasing voltage for non-ferrous metals. Future iterations may incorporate water-cooled designs to improve performance."
+      }
+    ]
+  },
+  {
     slug: "f1c7d9", // new unique hex slug
     title: "Remote-Controlled Pan-Tilt Camera Platform",
     category: "Embedded Systems",
