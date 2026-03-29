@@ -364,7 +364,7 @@ const projects: Project[] = [
         src: "/images/_3HddXBvRpD.jpg",
       },
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "ESP8266 Firmware",
       "RFID Reader Integration",
@@ -992,7 +992,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "RTL Encoder & Decoder Design",
@@ -1114,7 +1114,7 @@ const projects: Project[] = [
         src: "/images/_unlI3boDdj.jpg",
       },
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Cross-Platform AI Porting Workflow",
       "TIDL Compilation Setup",
@@ -1221,7 +1221,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "MPPT-Based Charging Module",
@@ -1611,7 +1611,7 @@ const projects: Project[] = [
       },
     ],
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "Multi-Node Sensor System",
@@ -1822,7 +1822,7 @@ const projects: Project[] = [
         src: "/images/_fX8bRTRZXj.jpg",
       },
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "ESP32 Firmware",
       "Tello API Integration",
@@ -2487,7 +2487,7 @@ const projects: Project[] = [
     tags: ["Audio Processing", "Embedded Systems", "TFT Display", "Signal Visualization", "Microcontroller", "Arduino"],
     icon: Cpu,
     highlight: "Real-Time Audio Visualization",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/647384/spresense_lighter2_Uj3rX2jUJ7.JPG?auto=compress&w=900&h=675&fit=min" } // hero image
     ],
@@ -2564,7 +2564,7 @@ const projects: Project[] = [
     tags: ["Power Electronics", "Induction Heating", "DIY", "MOSFETs", "Capacitors", "Hardware Design"],
     icon: Zap,
     highlight: "Compact High-Power Induction Heater",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1225712/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
     ],
@@ -3392,7 +3392,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Camera", "Ethernet", "Python", "UDP Streaming", "IoT", "Real-Time"],
     icon: Camera,
     highlight: "High-Speed Image Streaming",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1895495/_CWzMEnpcbf.blob?auto=compress&format&w=900&h=675&fit=min" } // hero image
     ],
@@ -3550,7 +3550,7 @@ const projects: Project[] = [
     tags: ["Power Electronics", "USB-C PD", "Embedded Hardware", "Prototyping", "PCB Design"],
     icon: Zap,
     highlight: "Multi-Voltage USB-C Supply",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1792858/mini_img_1007_jyD90jaciv.jpg?auto=compress,format&w=740&h=555&fit=max" } // hero image
     ],
