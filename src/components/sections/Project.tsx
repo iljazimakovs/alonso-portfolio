@@ -2512,11 +2512,6 @@ const projects: Project[] = [
           "Adafruit Electret Microphone (20Hz–20kHz Omnidirectional)",
           "2.21kΩ Resistor for microphone biasing"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/510638/spresense_maex-s_ido2IGNOU5.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/96107/826-04.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/96044/MFR-25FBF52-2K21_sml.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software Setup",
@@ -2525,16 +2520,12 @@ const projects: Project[] = [
           "Embedded board package for Arduino IDE",
           "Audio scope source code with libraries and sketch"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Microphone Configuration",
         body: "The electret microphone requires biasing. This can be done without soldering by connecting between the BIAS pin and MIC_X pin. Only channel A is used in this project.",
         images: [
           "https://hackster.imgix.net/uploads/attachments/640191/biasing_spresense_OqsGHQudNM.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/642611/spresense_mic_nBa1pyEFWK.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
@@ -2542,6 +2533,9 @@ const projects: Project[] = [
         body: "Microphone gain can be adjusted by editing Audio.cpp in the Arduino library. Linux path: ~/.arduino15/packages/SPRESENSE/hardware/spresense/1.0.2/libraries/, Windows path: %userprofile%\\AppData\\Local\\Arduino15\\packages\\SPRESENSE\\hardware\\spresense\\1.0.2\\libraries\\audio",
         code: [
           "init_mic_gain(input_device, 0)"
+        ],
+                images: [
+          "https://hackster.imgix.net/uploads/attachments/642611/spresense_mic_nBa1pyEFWK.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
