@@ -1607,7 +1607,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/image/file/44322/TM4C123G.jpg",
+        src: "/images/file/44322/TM4C123G.jpg",
       },
     ],
 
@@ -1655,8 +1655,8 @@ const projects: Project[] = [
           "Expandable sensor architecture",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/images/file/44323/Esquilio_with_sensors.jpg",
-          "https://hackster.imgix.net/uploads/images/file/44322/TM4C123G.jpg",
+          "/images/file/44323/Esquilio_with_sensors.jpg",
+          "/images/file/44322/TM4C123G.jpg",
         ],
       },
 
@@ -2190,8 +2190,8 @@ const projects: Project[] = [
       "Developed a connected water leak detection system using a Particle Photon and conductivity-based leak sensor to identify flooding events in real time. The firmware continuously monitors the sensor state, applies non-blocking timing logic, and publishes cloud events when water is detected. A webhook integration forwards these events to Pushbullet, enabling multi-device notifications on phones and computers. The system also implements an escalating alert schedule, ensuring persistent user awareness until the leak condition is resolved.",
     tags: [
       "Particle Photon",
-      "Embedded C++",
       "Pushbullet",
+      "Embedded C++",
       "Webhooks",
       "IoT Alerts",
       "Sensor Integration",
@@ -2202,15 +2202,15 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/cover_image/file/84537/acc34cba-ccd9-42da-9453-6c32af2e05d4.jpg",
+        src: "/images/file/84537/acc34cba-ccd9-42da-9453-6c32af2e05d4.jpg",
       },
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/images/file/81245/ParticleCloudPushbullet.jpg",
+        src: "/images/file/81245/ParticleCloudPushbullet.jpg",
       },
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/images/file/82451/Screenshot_2015-10-14-15-39-28.jpg",
+        src: "/images/file/82451/Screenshot_2015-10-14-15-39-28.jpg",
       },
     ],
     hidden: true,
@@ -2236,7 +2236,7 @@ const projects: Project[] = [
           "Webhook forwards alert payload to Pushbullet for multi-device notification",
         ],
         images: [
-          "https://hackster.imgix.net/uploads/images/file/81245/ParticleCloudPushbullet.jpg",
+          "/images/file/81245/ParticleCloudPushbullet.jpg",
         ],
       },
       {
@@ -2456,19 +2456,19 @@ const projects: Project[] = [
           "5V battery powers ESP8266 and STM32F103C8"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1463584/image_RKBMz3K29n.png"
+          "/images1463584/image_RKBMz3K29n.png"
         ]
       },
       {
         heading: "Final Vehicle",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1463583/image_sIlwNIvt2h.png"
+          "/images1463583/image_sIlwNIvt2h.png"
         ]
       },
       {
         heading: "System Block Diagram",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1463585/image_PgDRP0hN7F.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images1463585/image_PgDRP0hN7F.png",
         ]
       },
       {
@@ -2489,7 +2489,7 @@ const projects: Project[] = [
     highlight: "Real-Time Audio Visualization",
     hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/647384/spresense_lighter2_Uj3rX2jUJ7.JPG?auto=compress&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images647384/spresense_lighter2_Uj3rX2jUJ7.JPG"},
     ],
     deliverables: [
       "Embedded audio visualization system",
@@ -2525,7 +2525,7 @@ const projects: Project[] = [
         heading: "Microphone Configuration",
         body: "The electret microphone requires biasing. This can be done without soldering by connecting between the BIAS pin and MIC_X pin. Only channel A is used in this project.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/640191/biasing_spresense_OqsGHQudNM.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images640191/biasing_spresense_OqsGHQudNM.jpg",
         ]
       },
       {
@@ -2534,8 +2534,8 @@ const projects: Project[] = [
         code: [
           "init_mic_gain(input_device, 0)"
         ],
-                images: [
-          "https://hackster.imgix.net/uploads/attachments/642611/spresense_mic_nBa1pyEFWK.jpg?auto=compress,format&w=740&h=555&fit=max"
+        images: [
+          "/images642611/spresense_mic_nBa1pyEFWK.jpg",
         ]
       },
       {
@@ -2566,7 +2566,7 @@ const projects: Project[] = [
     highlight: "Compact High-Power Induction Heater",
     hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1225712/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
+      { type: "image", src: "/images1225712/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg"},
     ],
     deliverables: [
       "Compact induction heater with custom coil",
@@ -2584,7 +2584,7 @@ const projects: Project[] = [
         heading: "Design Details",
         body: "The device is compact, about the size of a small shoebox. It features IRFP4668PBF MOSFETs, ceramic and WIMA capacitors, FR307 fast diodes, metal oxide resistors, and Zener diodes. Custom inductors are wound using 1.25mm enamel-insulated copper wire around an iron powder toroid (~100uH).",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1225711/a27d24_3625bb9327074721ac2353edb52b6cd9mv2_NwcN123Q5s.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images1225711/a27d24_3625bb9327074721ac2353edb52b6cd9mv2_NwcN123Q5s.jpg",
         ]
       },
       {
@@ -2605,7 +2605,7 @@ const projects: Project[] = [
     highlight: "Remote Pan-Tilt Camera",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1259100/img_7275_RTwPpDdtHZ.jpeg?auto=compress,format&w=740&h=555&fit=max" } // hero image
+      { type: "image", src: "/images1259100/img_7275_RTwPpDdtHZ.jpeg"},
     ],
     deliverables: [
       "Pan-and-tilt camera platform",
@@ -2631,9 +2631,9 @@ const projects: Project[] = [
           "iRobbie-A mobile app"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1259129/img_7279_YxIsjWue77.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1259130/img_7280_LFUassZrST.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1258777/9887551581810078359.png?auto=compress,format&w=740&h=555&fit=max",
+          "/images1259129/img_7279_YxIsjWue77.jpeg",
+          "/images1259130/img_7280_LFUassZrST.jpeg",
+          "/images1258777/9887551581810078359.png",
         ]
       },
       {
@@ -2663,7 +2663,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1259132/esp32-cam_cam_bb_G5ElZHG825.jpg"
+          "/images1259132/esp32-cam_cam_bb_G5ElZHG825.jpg"
         ]
       }
     ]
@@ -2680,7 +2680,7 @@ const projects: Project[] = [
     highlight: "Remote Embedded Camera",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/925687/esp-eye-1-1317x800_mD2IVcBoSI.png?auto=compress,format&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images925687/esp-eye-1-1317x800_mD2IVcBoSI.png"},
     ],
     deliverables: [
       "Compact remote camera platform",
@@ -2706,9 +2706,9 @@ const projects: Project[] = [
           "Mobile app for control"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/925691/nabto_firewall_flow-1_KznIRDn2vO.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/925693/m5stack_zvAf5ZkKMW.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/925694/esp-eye_5n07I27aUr.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images925691/nabto_firewall_flow-1_KznIRDn2vO.png",
+          "/images925693/m5stack_zvAf5ZkKMW.png",
+          "/images925694/esp-eye_5n07I27aUr.png",
         ]
       },
       {
@@ -2733,7 +2733,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/925713/esp32-cam_cam_bb_G5ElZHG825.jpg"
+          "/images925713/esp32-cam_cam_bb_G5ElZHG825.jpg"
         ]
       },
       {
@@ -3347,7 +3347,7 @@ const projects: Project[] = [
     highlight: "High-Resolution Biosignal Shield",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1036879/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
+      { type: "image", src: "/images1036879/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg"},
     ],
     deliverables: [
       "Arduino-compatible shield for EEG, EMG, and EKG",
@@ -3376,7 +3376,7 @@ const projects: Project[] = [
       {
         heading: "Usage Examples",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/970205/1_XhqBXbQSB8m9VvMfx5H-tg.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "/images970205/1_XhqBXbQSB8m9VvMfx5H-tg.jpeg",
         ],
         body: "The shield can be used connected to a laptop for high-speed biosignal capture. When paired with a Raspberry Pi 4, it enables wireless data transmission via Wi-Fi."
       }
@@ -3394,7 +3394,7 @@ const projects: Project[] = [
     highlight: "High-Speed Image Streaming",
     hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1895495/_CWzMEnpcbf.blob?auto=compress&format&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images1895495/_CWzMEnpcbf.blob"},
     ],
     deliverables: [
       "Embedded board streaming system",
@@ -3415,7 +3415,7 @@ const projects: Project[] = [
           "Quick-Bootup 3MP DVP Camera Module"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1895499/image_xfU8Qdm63M.png"
+          "/images1895499/image_xfU8Qdm63M.png"
         ]
       },
       {
@@ -3429,7 +3429,7 @@ const projects: Project[] = [
         heading: "UDP Transmission Process",
         body: "JPEG frames are split into ≤1,400-byte payloads with a 4-byte header for transmission over UDP.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1895503/image_AzuiPpcOBk.png"
+          "/images1895503/image_AzuiPpcOBk.png"
         ],
         code: [
           "total_packets = (jpeg_size + PAYLOAD_SIZE - 1) / PAYLOAD_SIZE;\nfor (pkt_id = 0; pkt_id < total_packets; pkt_id++) {\n    tx_packet[0] = frame_id;\n    tx_packet[1] = pkt_id;\n    tx_packet[2] = total_packets;\n    tx_packet[3] = (pkt_id == total_packets - 1) ? 0x01 : 0x00;\n    memcpy(tx_packet + 4, jpeg_data + offset, chunk_size);\n    sendto(socket, tx_packet, chunk_size + 4, destip, destport);\n}"
@@ -3449,7 +3449,7 @@ const projects: Project[] = [
       {
         heading: "Key Takeaways",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1895504/image_Ph0eWCc9IK.png"
+          "/images1895504/image_Ph0eWCc9IK.png"
         ]
       }
     ]
@@ -3466,7 +3466,7 @@ const projects: Project[] = [
     highlight: "High-Speed Ethernet Camera Streaming",
     hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png" } // hero image
+      { type: "image", src: "/images1912329/image_NiZXznDryx.png" } // hero image
     ],
     deliverables: [
       "Ethernet-powered camera platform",
@@ -3489,8 +3489,8 @@ const projects: Project[] = [
           "Breadboard and jumper wires"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1912328/image_4cTYqguIEH.png",
-          "https://hackster.imgix.net/uploads/attachments/1912326/image_Xu5MzVmmK8.png",
+          "/images1912328/image_4cTYqguIEH.png",
+          "/images1912326/image_Xu5MzVmmK8.png",
         ]
       },
       {
@@ -3535,7 +3535,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1912320/1_rnmgttwgst_ChTjTtpiwz.png"
+          "/images1912320/1_rnmgttwgst_ChTjTtpiwz.png"
         ]
       }
     ]
@@ -3552,7 +3552,7 @@ const projects: Project[] = [
     highlight: "Multi-Voltage USB-C Supply",
     hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1792858/mini_img_1007_jyD90jaciv.jpg?auto=compress,format&w=740&h=555&fit=max" } // hero image
+      { type: "image", src: "/images1792858/mini_img_1007_jyD90jaciv.jpg"},
     ],
     deliverables: [
       "Compact lab bench power supply",
@@ -3574,28 +3574,28 @@ const projects: Project[] = [
         heading: "Voltage Configuration",
         body: "The CH224K allows multiple voltages like 5, 9, 12, 15, and 20V through input jumper settings and internal programming.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792860/mini_img_1022_BldrPdqhzz.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images1792860/mini_img_1022_BldrPdqhzz.jpg",
         ]
       },
       {
         heading: "Component Layout",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792857/mini_img_0990_7CB6VJowpQ.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images1792857/mini_img_0990_7CB6VJowpQ.jpg",
         ]
       },
       {
         heading: "Schematics Overview",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792856/screenshot_2024_11_29-9_ikyQgBErhM.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792855/screenshot_2024_11_29-10_3jE8QEzDkr.png?auto=compress,format&w=740&h=555&fit=max",
+          "/images1792856/screenshot_2024_11_29-9_ikyQgBErhM.png",
+          "/images1792855/screenshot_2024_11_29-10_3jE8QEzDkr.png",
         ]
       },
       {
         heading: "PCB Layout",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792849/mini_img_0989_KNvdWYpOdD.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792848/screenshot_2024_11_27-5_d0cNxAeq7u.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792852/component_arrangement_i3Hi2sAktQ.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images1792849/mini_img_0989_KNvdWYpOdD.jpg",
+          "/images1792848/screenshot_2024_11_27-5_d0cNxAeq7u.png",
+          "/images1792852/component_arrangement_i3Hi2sAktQ.jpg",
         ]
       }
     ]
