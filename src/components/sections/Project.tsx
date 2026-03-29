@@ -3199,7 +3199,7 @@ const projects: Project[] = [
     highlight: "High-Speed Ethernet Camera Streaming",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1912317/_aYbV906Wb8.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png" } // hero image
     ],
     deliverables: [
       "Ethernet-powered camera platform",
@@ -3224,9 +3224,6 @@ const projects: Project[] = [
         images: [
           "https://hackster.imgix.net/uploads/attachments/1912328/image_4cTYqguIEH.png",
           "https://hackster.imgix.net/uploads/attachments/1912326/image_Xu5MzVmmK8.png",
-          "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png",
-          "https://hackster.imgix.net/uploads/attachments/1912331/image_iQAxMLlQLc.png",
-          "https://hackster.imgix.net/uploads/attachments/1912334/image_xw9XqoTFEr.png"
         ]
       },
       {
@@ -3239,9 +3236,6 @@ const projects: Project[] = [
           "IPv4/IPv6 dual stack support",
           "Enhanced security with TrustZone + secure boot"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1912329/image_NiZXznDryx.png"
-        ]
       },
       {
         heading: "Code and Firmware",
