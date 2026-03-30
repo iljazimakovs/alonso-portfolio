@@ -1809,7 +1809,7 @@ const projects: Project[] = [
     highlight: "Scalable EV Battery Monitoring",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1823294/_qfcRSffjLb.blob?auto=compress&w=900&h=675&fit=min&fm=jpg" } // hero image
+      { type: "image", src: "/images/_qfcRSffjLb.jpg" } // hero image
     ],
     deliverables: [
       "Scalable EV BMS with BQ76PL455 IC",
@@ -1832,8 +1832,8 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1823303/pcb_layout_QBbFFRFEJj.png",
-          "https://hackster.imgix.net/uploads/attachments/1823307/real_cut_S1i9IADIfg.jpg",
+          "/images/pcb_layout_QBbFFRFEJj.png",
+          "/images/real_cut_S1i9IADIfg.jpg",
         ]
       }
     ]
