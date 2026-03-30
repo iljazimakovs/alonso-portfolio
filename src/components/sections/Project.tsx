@@ -3190,7 +3190,6 @@ const projects: Project[] = [
         heading: "Assembly & Wiring",
         body: "Step-by-step instructions for mounting fans, connecting sensors, routing wires, and configuring the Arduino Nano. Includes drilling holes, installing waterproof glands, mounting keystone jacks, and setting up airflow.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/737766/oled_Dxi8JZdx9P.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737767/arduino_bk8kMRARsy.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737769/fans_rtfTy62XFC.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737770/enclosure_A2Cz6f0qVb.jpg?auto=compress,format&w=740&h=555&fit=max",
