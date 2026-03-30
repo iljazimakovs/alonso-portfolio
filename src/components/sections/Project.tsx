@@ -1841,12 +1841,6 @@ const projects: Project[] = [
           "/images/schematic_pico-breakout_2022-09-28_cKvJjDmelK.jpg"
         ]
       },
-      {
-        heading: "Code",
-        code: [
-          "Use your own preferred coding environment, this is a hardware-only breakout."
-        ]
-      }
     ]
   },
   {
