@@ -3628,7 +3628,7 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: "a8c3f2", // new unique hex slug
+    slug: "a8c3f3", // new unique hex slug
     title: "Smart Moisture Control Ventilation",
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "hardware-design", "iot-connected-devices"],
