@@ -1798,6 +1798,53 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "a9e7f1", // new unique hex slug
+    title: "High-Performance EV Cell Monitoring System",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
+    description: "Scalable EV cell monitoring and balancing system for high-performance racing applications.",
+    longDescription: "This project demonstrates a scalable Battery Management System (BMS) designed for electric vehicle racing teams. It monitors multiple cells, auxiliary inputs, and daisy-chained ICs to measure up to 256 cells in a single network, ensuring safe operation and performance optimization for EVs.",
+    tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
+    icon: Cpu,
+    highlight: "Scalable EV Battery Monitoring",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1823294/_qfcRSffjLb.blob?auto=compress&w=900&h=675&fit=min&fm=jpg" } // hero image
+    ],
+    deliverables: [
+      "Scalable EV BMS with BQ76PL455 IC",
+      "Safe cell monitoring and balancing",
+      "CAN bus data output for telemetry",
+      "Optimized for Formula SAE racing teams",
+      "PCB layout and 3D model for rapid prototyping"
+    ],
+    sections: [
+      {
+        heading: "Components Used",
+        bullets: [
+          "Texas Instruments BQ76PL455 IC ×1"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/636165/mcumon(74)_4YUDWziWQ8.png?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Story",
+        body: "A BMS is essential for any EV, monitoring cell behavior and ensuring a safe ride. This project was developed to reduce cost while providing a scalable solution for each battery module. The BQ76PL455 can monitor 6–16 cells, 8 auxiliary inputs for temperature, and daisy-chain up to 15 ICs, measuring up to 256 cells in a single network. This system was designed for the Formula EMotion UFPB team. Note: BQ76PL455 is entering NRND and is being replaced by the new BQ79616 IC."
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hacksterio.s3.amazonaws.com/uploads/attachments/1823302/bms_pdf_Y0iKrdDa1I.pdf",
+          "https://hackster.imgix.net/uploads/attachments/1823303/pcb_layout_QBbFFRFEJj.png",
+          "https://hackster.imgix.net/uploads/attachments/1823307/real_cut_S1i9IADIfg.jpg",
+          "https://hackster.imgix.net/uploads/attachments/1823304/render_v4_81Dmu0C5X2.png",
+          "https://hackster.imgix.net/uploads/attachments/1823311/jlcpcb-1024x300_r46urL8hEV.png"
+        ]
+      }
+    ]
+  },
+  {
     slug: "f6c2d8", // new unique hex slug
     title: "Custom Microcontroller Breakout Board",
     category: "Hardware Design",
