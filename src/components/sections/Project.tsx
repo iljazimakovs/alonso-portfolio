@@ -1797,6 +1797,100 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "f6c2d8", // new unique hex slug
+    title: "Custom Microcontroller Breakout Board",
+    category: "Hardware Design",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "prototyping"],
+    description: "Breakout board for microcontrollers to simplify prototyping without using a breadboard.",
+    longDescription: "This project demonstrates a compact breakout board for an RP2040-based microcontroller. The design allows easy access to pins, clear labeling on the front, and optional female headers for connectivity. It reduces assembly complexity and facilitates prototyping for both Pico and Pico W variants.",
+    tags: ["PCB Design", "Embedded Systems", "Prototyping", "IoT", "Microcontroller"],
+    icon: Cpu,
+    highlight: "Microcontroller Breakout Solution",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1503168/_06Ck6Qr4WW.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "Custom breakout PCB for RP2040",
+      "Clear pin labeling for easy prototyping",
+      "Female headers for connectivity",
+      "Support for Pico and Pico W modules",
+      "Rapid assembly for embedded projects"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "The RP2040 chip from the Raspberry Pi Foundation is widely known and used in various development boards. The original Raspberry Pi Pico is small, which is convenient for breadboards but can make accessing pinouts cumbersome."
+      },
+      {
+        heading: "Design Motivation",
+        body: "To address small size and pin accessibility, a custom RP2040-based PCB was designed with clear front labeling and optional female headers. This allows users to easily solder the Pico or Pico W module and access all pins without needing to memorize layouts.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1503175/pico-carrier-1200x1600.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1503176/pico-1024x768.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1503177/pico-reel-1024x629.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1503178/pico-carrier-1-768x1024.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1503180/pico-on-carrier-1024x768.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Assembly",
+        body: "Assembling the PCB involves soldering the Pico or Pico W and the female headers. The board can be used by itself or with the new Pico W, noting that the Pico W lacks castellated holes.",
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1503188/schematic_pico-breakout_2022-09-28_cKvJjDmelK.png"
+        ]
+      },
+      {
+        heading: "Code",
+        code: [
+          "Use your own preferred coding environment, this is a hardware-only breakout."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "f7d2e4", // new unique hex slug
+    title: "Custom Carrier Board for Embedded Display Module",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "display-integration"],
+    description: "A custom PCB carrier board designed for a compact embedded display module with multiple I/O interfaces.",
+    longDescription: "This project demonstrates a custom carrier board for an embedded display module powered by a Compute Module. It integrates USB ports, a battery connector, HDMI, GPIO headers, and connectors for camera and microSD. The design was implemented in KiCAD, offering a compact and expandable solution for tablet-style embedded devices.",
+    tags: ["PCB Design", "Embedded Systems", "Display Module", "Hardware Integration", "KiCAD"],
+    icon: Cpu,
+    highlight: "Custom Embedded Carrier Board",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1255631/pipcb_bKKYPxhpl5.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
+    ],
+    deliverables: [
+      "Custom PCB carrier board for embedded display module",
+      "Supports USB, HDMI, GPIO, camera, and microSD interfaces",
+      "KiCAD-designed PCB layout",
+      "Expandable for future battery and Ethernet integration",
+      "Compact tablet-style embedded hardware solution"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Touchscreens are becoming increasingly popular, and embedded modules are getting bulky, making compact carrier boards the next step for tablet-style embedded devices."
+      },
+      {
+        heading: "Carrier Board Design",
+        body: "A custom PCB carrier board was developed for a Compute Module-powered display. It includes two USB 2.0 ports, a 5V battery connector, HDMI support, a 40-pin GPIO header, and USB Type-C input power. Slots are provided for camera and display connectors as well as microSD cards.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1255632/pipcb2_19VWI8JlYy.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "PCB Implementation",
+        body: "The PCB layout was designed using KiCAD, optimized for compactness and future expandability. Current version does not include a battery circuit, but future iterations plan to integrate one along with a metal shield to cool the Compute Module, and possibly Ethernet support."
+      }
+    ]
+  },
+  {
     slug: "8c4d2f",
     title: "Wireless Multi-Input Flight Controller",
     category: "IoT & Connected Devices",
@@ -2489,7 +2583,7 @@ const projects: Project[] = [
     highlight: "Real-Time Audio Visualization",
     hidden: true,
     media: [
-      { type: "image", src: "/images/spresense_lighter2_Uj3rX2jUJ7.JPG"},
+      { type: "image", src: "/images/spresense_lighter2_Uj3rX2jUJ7.JPG" },
     ],
     deliverables: [
       "Embedded audio visualization system",
@@ -2534,7 +2628,7 @@ const projects: Project[] = [
         code: [
           "init_mic_gain(input_device, 0)"
         ],
-                images: [
+        images: [
           "/images/spresense_mic_nBa1pyEFWK.jpg",
         ]
       },
@@ -2566,7 +2660,7 @@ const projects: Project[] = [
     highlight: "Compact High-Power Induction Heater",
     hidden: true,
     media: [
-      { type: "image", src: "/images/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg"},
+      { type: "image", src: "/images/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg" },
     ],
     deliverables: [
       "Compact induction heater with custom coil",
@@ -2605,7 +2699,7 @@ const projects: Project[] = [
     highlight: "Remote Pan-Tilt Camera",
     hidden: false,
     media: [
-      { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpg"},
+      { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpg" },
     ],
     deliverables: [
       "Pan-and-tilt camera platform",
@@ -2680,7 +2774,7 @@ const projects: Project[] = [
     highlight: "Remote Embedded Camera",
     hidden: false,
     media: [
-      { type: "image", src: "/images/esp-eye-1-1317x800_mD2IVcBoSI.jpg"},
+      { type: "image", src: "/images/esp-eye-1-1317x800_mD2IVcBoSI.jpg" },
     ],
     deliverables: [
       "Compact remote camera platform",
@@ -3347,7 +3441,7 @@ const projects: Project[] = [
     highlight: "High-Resolution Biosignal Shield",
     hidden: false,
     media: [
-      { type: "image", src: "/images/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg"},
+      { type: "image", src: "/images/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg" },
     ],
     deliverables: [
       "Arduino-compatible shield for EEG, EMG, and EKG",
@@ -3394,7 +3488,7 @@ const projects: Project[] = [
     highlight: "High-Speed Image Streaming",
     hidden: true,
     media: [
-      { type: "image", src: "/images/_CWzMEnpcbf.blob"},
+      { type: "image", src: "/images/_CWzMEnpcbf.blob" },
     ],
     deliverables: [
       "Embedded board streaming system",
@@ -3552,7 +3646,7 @@ const projects: Project[] = [
     highlight: "Multi-Voltage USB-C Supply",
     hidden: true,
     media: [
-      { type: "image", src: "/images/mini_img_1007_jyD90jaciv.jpg"},
+      { type: "image", src: "/images/mini_img_1007_jyD90jaciv.jpg" },
     ],
     deliverables: [
       "Compact lab bench power supply",
