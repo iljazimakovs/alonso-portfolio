@@ -1874,7 +1874,7 @@ const projects: Project[] = [
         heading: "Carrier Board Design",
         body: "A custom PCB carrier board was developed for a Compute Module-powered display. It includes two USB 2.0 ports, a 5V battery connector, HDMI support, a 40-pin GPIO header, and USB Type-C input power. Slots are provided for camera and display connectors as well as microSD cards.",
         images: [
-          "/images/pipcb2_19VWI8JlYy.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images/pipcb2_19VWI8JlYy.jpg"
         ]
       },
       {
@@ -3145,7 +3145,7 @@ const projects: Project[] = [
     highlight: "Automated Basement Ventilation",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/737759/blob_sVsyiyTWwd.blob?auto=compress,format&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/blob_sVsyiyTWwd.jpg" }
     ],
     deliverables: [
       "Arduino-based automated ventilation system",
@@ -3183,17 +3183,17 @@ const projects: Project[] = [
           "Smart ventilation saves power"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/737762/parts_c3oJ7zYnsh.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images/parts_c3oJ7zYnsh.jpg"
         ]
       },
       {
         heading: "Assembly & Wiring",
         body: "Step-by-step instructions for mounting fans, connecting sensors, routing wires, and configuring the Arduino Nano. Includes drilling holes, installing waterproof glands, mounting keystone jacks, and setting up airflow.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/737767/arduino_bk8kMRARsy.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737769/fans_rtfTy62XFC.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737770/enclosure_A2Cz6f0qVb.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737780/wire_cMuf8bLq7R.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images/arduino_bk8kMRARsy.jpg",
+          "/images/fans_rtfTy62XFC.jpg",
+          "/images/enclosure_A2Cz6f0qVb.jpg",
+          "/images/wire_cMuf8bLq7R.jpg",
         ]
       },
       {
@@ -3216,7 +3216,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hacksterio.s3.amazonaws.com/uploads/attachments/737790/wiring_ic1R9D54zN.jpg"
+          "/images/wiring_ic1R9D54zN.jpg"
         ]
       }
     ]
