@@ -3166,18 +3166,12 @@ const projects: Project[] = [
           "IO Expander ×1",
           "IO Expander Bundle ×1"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/97103/Ard_Nano.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software Tools",
         bullets: [
           "Arduino IDE"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Story & Features",
@@ -3196,20 +3190,11 @@ const projects: Project[] = [
         heading: "Assembly & Wiring",
         body: "Step-by-step instructions for mounting fans, connecting sensors, routing wires, and configuring the Arduino Nano. Includes drilling holes, installing waterproof glands, mounting keystone jacks, and setting up airflow.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/737765/wiring_6tzWu9RHdj.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737766/oled_Dxi8JZdx9P.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737767/arduino_bk8kMRARsy.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737769/fans_rtfTy62XFC.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737770/enclosure_A2Cz6f0qVb.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737771/air_Cyy38pyPv0.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737773/airfan_Jj4yQMbdbu.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737774/outside_WoSUEwS1jK.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737775/keystone_CL8xDk0k2b.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737778/inside_OYpcnjQ4xc.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737779/runwires_AQtCRg1lhU.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/737780/wire_cMuf8bLq7R.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/737782/update_9KUwy9jn4W.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/816184/largeroled_6eOSVQc6uz.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
