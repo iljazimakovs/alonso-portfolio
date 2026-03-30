@@ -1808,7 +1808,7 @@ const projects: Project[] = [
     highlight: "Microcontroller Breakout Solution",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1503168/_06Ck6Qr4WW.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images/_06Ck6Qr4WW.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
     ],
     deliverables: [
       "Custom breakout PCB for RP2040",
@@ -1826,11 +1826,9 @@ const projects: Project[] = [
         heading: "Design Motivation",
         body: "To address small size and pin accessibility, a custom RP2040-based PCB was designed with clear front labeling and optional female headers. This allows users to easily solder the Pico or Pico W module and access all pins without needing to memorize layouts.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1503175/pico-carrier-1200x1600.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1503176/pico-1024x768.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1503177/pico-reel-1024x629.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1503178/pico-carrier-1-768x1024.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1503180/pico-on-carrier-1024x768.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/pico-carrier-1200x1600.jpg",
+          "/images/pico-1024x768.jpg",
+          "/images/pico-reel-1024x629.jpg",
         ]
       },
       {
@@ -1840,7 +1838,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1503188/schematic_pico-breakout_2022-09-28_cKvJjDmelK.png"
+          "/images/schematic_pico-breakout_2022-09-28_cKvJjDmelK.jpg"
         ]
       },
       {
@@ -1863,7 +1861,7 @@ const projects: Project[] = [
     highlight: "Custom Embedded Carrier Board",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1255631/pipcb_bKKYPxhpl5.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
+      { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
     ],
     deliverables: [
       "Custom PCB carrier board for embedded display module",
@@ -1881,7 +1879,7 @@ const projects: Project[] = [
         heading: "Carrier Board Design",
         body: "A custom PCB carrier board was developed for a Compute Module-powered display. It includes two USB 2.0 ports, a 5V battery connector, HDMI support, a 40-pin GPIO header, and USB Type-C input power. Slots are provided for camera and display connectors as well as microSD cards.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1255632/pipcb2_19VWI8JlYy.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images/pipcb2_19VWI8JlYy.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
@@ -2643,7 +2641,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hacksterio.s3.amazonaws.com/uploads/attachments/652420/spresense_all_vZxXQTzHBM.jpg"
+          "/images/spresense_all_vZxXQTzHBM.jpg"
         ]
       }
     ]
