@@ -1824,13 +1824,10 @@ const projects: Project[] = [
         bullets: [
           "Texas Instruments BQ76PL455 IC ×1"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/636165/mcumon(74)_4YUDWziWQ8.png?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Story",
-        body: "A BMS is essential for any EV, monitoring cell behavior and ensuring a safe ride. This project was developed to reduce cost while providing a scalable solution for each battery module. The BQ76PL455 can monitor 6–16 cells, 8 auxiliary inputs for temperature, and daisy-chain up to 15 ICs, measuring up to 256 cells in a single network. This system was designed for the Formula EMotion UFPB team. Note: BQ76PL455 is entering NRND and is being replaced by the new BQ79616 IC."
+        body: "A BMS is essential for any EV, monitoring cell behavior and ensuring a safe ride. This project was developed to reduce cost while providing a scalable solution for each battery module. The BQ76PL455 can monitor 6–16 cells, 8 auxiliary inputs for temperature, and daisy-chain up to 15 ICs, measuring up to 256 cells in a single network."
       },
       {
         heading: "Schematics",
@@ -1839,7 +1836,6 @@ const projects: Project[] = [
           "https://hackster.imgix.net/uploads/attachments/1823303/pcb_layout_QBbFFRFEJj.png",
           "https://hackster.imgix.net/uploads/attachments/1823307/real_cut_S1i9IADIfg.jpg",
           "https://hackster.imgix.net/uploads/attachments/1823304/render_v4_81Dmu0C5X2.png",
-          "https://hackster.imgix.net/uploads/attachments/1823311/jlcpcb-1024x300_r46urL8hEV.png"
         ]
       }
     ]
