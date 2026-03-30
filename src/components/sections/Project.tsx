@@ -2456,19 +2456,19 @@ const projects: Project[] = [
           "5V battery powers ESP8266 and STM32F103C8"
         ],
         images: [
-          "/images/image_RKBMz3K29n.png"
+          "/images/image_RKBMz3K29n.jpg"
         ]
       },
       {
         heading: "Final Vehicle",
         images: [
-          "/images/image_sIlwNIvt2h.png"
+          "/images/image_sIlwNIvt2h.jpg"
         ]
       },
       {
         heading: "System Block Diagram",
         images: [
-          "/images/image_PgDRP0hN7F.png",
+          "/images/image_PgDRP0hN7F.jpg",
         ]
       },
       {
@@ -2605,7 +2605,7 @@ const projects: Project[] = [
     highlight: "Remote Pan-Tilt Camera",
     hidden: false,
     media: [
-      { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpeg"},
+      { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpg"},
     ],
     deliverables: [
       "Pan-and-tilt camera platform",
@@ -2631,9 +2631,9 @@ const projects: Project[] = [
           "iRobbie-A mobile app"
         ],
         images: [
-          "/images/img_7279_YxIsjWue77.jpeg",
-          "/images/img_7280_LFUassZrST.jpeg",
-          "/images/9887551581810078359.png",
+          "/images/img_7279_YxIsjWue77.jpg",
+          "/images/img_7280_LFUassZrST.jpg",
+          "/images/9887551581810078359.jpg",
         ]
       },
       {
@@ -2680,7 +2680,7 @@ const projects: Project[] = [
     highlight: "Remote Embedded Camera",
     hidden: false,
     media: [
-      { type: "image", src: "/images/esp-eye-1-1317x800_mD2IVcBoSI.png"},
+      { type: "image", src: "/images/esp-eye-1-1317x800_mD2IVcBoSI.jpg"},
     ],
     deliverables: [
       "Compact remote camera platform",
@@ -2706,9 +2706,9 @@ const projects: Project[] = [
           "Mobile app for control"
         ],
         images: [
-          "/images/nabto_firewall_flow-1_KznIRDn2vO.png",
-          "/images/m5stack_zvAf5ZkKMW.png",
-          "/images/esp-eye_5n07I27aUr.png",
+          "/images/nabto_firewall_flow-1_KznIRDn2vO.jpg",
+          "/images/m5stack_zvAf5ZkKMW.jpg",
+          "/images/esp-eye_5n07I27aUr.jpg",
         ]
       },
       {
@@ -3376,7 +3376,7 @@ const projects: Project[] = [
       {
         heading: "Usage Examples",
         images: [
-          "/images/1_XhqBXbQSB8m9VvMfx5H-tg.jpeg",
+          "/images/1_XhqBXbQSB8m9VvMfx5H-tg.jpg",
         ],
         body: "The shield can be used connected to a laptop for high-speed biosignal capture. When paired with a Raspberry Pi 4, it enables wireless data transmission via Wi-Fi."
       }
@@ -3415,7 +3415,7 @@ const projects: Project[] = [
           "Quick-Bootup 3MP DVP Camera Module"
         ],
         images: [
-          "/images/image_xfU8Qdm63M.png"
+          "/images/image_xfU8Qdm63M.jpg"
         ]
       },
       {
@@ -3429,7 +3429,7 @@ const projects: Project[] = [
         heading: "UDP Transmission Process",
         body: "JPEG frames are split into ≤1,400-byte payloads with a 4-byte header for transmission over UDP.",
         images: [
-          "/images/image_AzuiPpcOBk.png"
+          "/images/image_AzuiPpcOBk.jpg"
         ],
         code: [
           "total_packets = (jpeg_size + PAYLOAD_SIZE - 1) / PAYLOAD_SIZE;\nfor (pkt_id = 0; pkt_id < total_packets; pkt_id++) {\n    tx_packet[0] = frame_id;\n    tx_packet[1] = pkt_id;\n    tx_packet[2] = total_packets;\n    tx_packet[3] = (pkt_id == total_packets - 1) ? 0x01 : 0x00;\n    memcpy(tx_packet + 4, jpeg_data + offset, chunk_size);\n    sendto(socket, tx_packet, chunk_size + 4, destip, destport);\n}"
@@ -3449,7 +3449,7 @@ const projects: Project[] = [
       {
         heading: "Key Takeaways",
         images: [
-          "/images/image_Ph0eWCc9IK.png"
+          "/images/image_Ph0eWCc9IK.jpg"
         ]
       }
     ]
@@ -3466,7 +3466,7 @@ const projects: Project[] = [
     highlight: "High-Speed Ethernet Camera Streaming",
     hidden: true,
     media: [
-      { type: "image", src: "/images/image_NiZXznDryx.png" } // hero image
+      { type: "image", src: "/images/image_NiZXznDryx.jpg" } // hero image
     ],
     deliverables: [
       "Ethernet-powered camera platform",
@@ -3489,8 +3489,8 @@ const projects: Project[] = [
           "Breadboard and jumper wires"
         ],
         images: [
-          "/images/image_4cTYqguIEH.png",
-          "/images/image_Xu5MzVmmK8.png",
+          "/images/image_4cTYqguIEH.jpg",
+          "/images/image_Xu5MzVmmK8.jpg",
         ]
       },
       {
@@ -3535,7 +3535,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "/images/1_rnmgttwgst_ChTjTtpiwz.png"
+          "/images/1_rnmgttwgst_ChTjTtpiwz.jpg"
         ]
       }
     ]
@@ -3586,15 +3586,15 @@ const projects: Project[] = [
       {
         heading: "Schematics Overview",
         images: [
-          "/images/screenshot_2024_11_29-9_ikyQgBErhM.png",
-          "/images/screenshot_2024_11_29-10_3jE8QEzDkr.png",
+          "/images/screenshot_2024_11_29-9_ikyQgBErhM.jpg",
+          "/images/screenshot_2024_11_29-10_3jE8QEzDkr.jpg",
         ]
       },
       {
         heading: "PCB Layout",
         images: [
           "/images/mini_img_0989_KNvdWYpOdD.jpg",
-          "/images/screenshot_2024_11_27-5_d0cNxAeq7u.png",
+          "/images/screenshot_2024_11_27-5_d0cNxAeq7u.jpg",
           "/images/component_arrangement_i3Hi2sAktQ.jpg",
         ]
       }
