@@ -27,7 +27,8 @@ import {
   Gauge,
   Activity,
   Lightbulb,
-  Sun
+  Sun,
+  Cloud
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -2636,6 +2637,110 @@ const projects: Project[] = [
         heading: "Schematics",
         images: [
           "/images/spresense_all_vZxXQTzHBM.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "a8c3f2", // new unique hex slug
+    title: "Smart Moisture Control Ventilation",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "hardware-design", "iot-connected-devices"],
+    description: "Intelligent ventilation system to reduce moisture in basements or crawlspaces, controlling mildew and optimizing energy use.",
+    longDescription: "This project demonstrates a smart ventilation system using Arduino Nano with IO expanders, temperature/humidity sensors, and relay-controlled fans. It monitors indoor and outdoor conditions, automatically controls airflow, and provides reliable humidity reduction and energy savings.",
+    tags: ["Embedded Systems", "Arduino", "IoT", "HVAC", "Humidity Control", "Sensors"],
+    icon: Cloud,
+    highlight: "Automated Basement Ventilation",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/737759/blob_sVsyiyTWwd.blob?auto=compress,format&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "Arduino-based automated ventilation system",
+      "Humidity and temperature monitoring with IO expanders",
+      "Relay-controlled fans for air circulation",
+      "Step-by-step assembly and wiring instructions",
+      "Reliable performance and energy efficiency"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Intelligently reduce the moisture in your basement or crawlspace to control mildew growth and lower heating/cooling costs."
+      },
+      {
+        heading: "Components & Tools",
+        bullets: [
+          "Arduino Nano R3 ×1",
+          "IO Expander ×1",
+          "IO Expander Bundle ×1"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/97103/Ard_Nano.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software Tools",
+        bullets: [
+          "Arduino IDE"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Story & Features",
+        bullets: [
+          "Inside/outside temperature and humidity sensors",
+          "Smart vent fan control with moisture comparison",
+          "Reduce the moisture in the basement/crawlspace",
+          "Help reduce mildew growth",
+          "Smart ventilation saves power"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/737762/parts_c3oJ7zYnsh.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Assembly & Wiring",
+        body: "Step-by-step instructions for mounting fans, connecting sensors, routing wires, and configuring the Arduino Nano. Includes drilling holes, installing waterproof glands, mounting keystone jacks, and setting up airflow.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/737765/wiring_6tzWu9RHdj.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737766/oled_Dxi8JZdx9P.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737767/arduino_bk8kMRARsy.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737769/fans_rtfTy62XFC.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737770/enclosure_A2Cz6f0qVb.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737771/air_Cyy38pyPv0.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737773/airfan_Jj4yQMbdbu.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737774/outside_WoSUEwS1jK.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737775/keystone_CL8xDk0k2b.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737778/inside_OYpcnjQ4xc.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737779/runwires_AQtCRg1lhU.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737780/wire_cMuf8bLq7R.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/737782/update_9KUwy9jn4W.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/816184/largeroled_6eOSVQc6uz.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Software & Programming",
+        body: "The Arduino Nano firmware reads humidity and temperature from inside and outside sensors, calculates absolute and relative humidity, and controls the fans based on thresholds.",
+        code: [
+          "/* IO Expander */",
+          "/* Basement/Crawlspace Ventilation System v1.1 */",
+          "#include <math.h>",
+          "#include <SoftwareSerial.h>",
+          "#include <avr/wdt.h>",
+          "#include \"IOExpander.h\"",
+          "// ...rest of code as in original"
+        ]
+      },
+      {
+        heading: "Performance & Updates",
+        body: "After several months of operation, the system reduced relative humidity from over 95% to less than 50%, and updated firmware fixed cold boot issues with the OLED display."
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hacksterio.s3.amazonaws.com/uploads/attachments/737790/wiring_ic1R9D54zN.jpg"
         ]
       }
     ]
