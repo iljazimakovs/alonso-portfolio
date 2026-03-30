@@ -1832,7 +1832,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "/images/pcb_layout_QBbFFRFEJj.png",
+          "/images/pcb_layout_QBbFFRFEJj.jpg",
           "/images/real_cut_S1i9IADIfg.jpg",
         ]
       }
