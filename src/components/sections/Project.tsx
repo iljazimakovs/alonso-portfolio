@@ -1895,7 +1895,7 @@ const projects: Project[] = [
     tags: ["PCB Design", "Embedded Systems", "Display Module", "Hardware Integration", "KiCAD"],
     icon: Cpu,
     highlight: "Custom Embedded Carrier Board",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" } // hero image
     ],
@@ -3240,15 +3240,6 @@ const projects: Project[] = [
       {
         heading: "Software & Programming",
         body: "The Arduino Nano firmware reads humidity and temperature from inside and outside sensors, calculates absolute and relative humidity, and controls the fans based on thresholds.",
-        code: [
-          "/* IO Expander */",
-          "/* Basement/Crawlspace Ventilation System v1.1 */",
-          "#include <math.h>",
-          "#include <SoftwareSerial.h>",
-          "#include <avr/wdt.h>",
-          "#include \"IOExpander.h\"",
-          "// ...rest of code as in original"
-        ]
       },
       {
         heading: "Performance & Updates",
