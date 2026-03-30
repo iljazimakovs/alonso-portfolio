@@ -1834,7 +1834,6 @@ const projects: Project[] = [
         images: [
           "https://hackster.imgix.net/uploads/attachments/1823303/pcb_layout_QBbFFRFEJj.png",
           "https://hackster.imgix.net/uploads/attachments/1823307/real_cut_S1i9IADIfg.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1823304/render_v4_81Dmu0C5X2.png",
         ]
       }
     ]
