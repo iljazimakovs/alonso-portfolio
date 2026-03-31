@@ -4312,9 +4312,6 @@ function ProjectModal({
               <h3 className="text-2xl md:text-3xl font-display font-bold leading-tight flex-1 min-w-0">
                 {project.title}
               </h3>
-              <span className="inline-flex items-center text-[11px] font-mono bg-primary/20 text-primary border border-primary/40 rounded-full px-3 py-0.5 font-semibold shrink-0 mt-1">
-                {project.highlight}
-              </span>
             </div>
 
             {/* Short description */}
@@ -4772,7 +4769,9 @@ export function Project({
                     onClick={(e) => toggleRecommended(project.slug, e)}
                     data-testid={`badge-highlight-${idx}`}
                   >
-
+                    <span className="text-[10px] font-mono text-primary font-semibold tracking-wide">
+                      ◆ {project.highlight}
+                    </span>
                   </div>
                 </div>
 
