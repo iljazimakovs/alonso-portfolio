@@ -4772,9 +4772,7 @@ export function Project({
                     onClick={(e) => toggleRecommended(project.slug, e)}
                     data-testid={`badge-highlight-${idx}`}
                   >
-                    <span className="text-[10px] font-mono text-primary font-semibold tracking-wide">
-                      ◆ {project.highlight}
-                    </span>
+
                   </div>
                 </div>
 
