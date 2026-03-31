@@ -3759,7 +3759,7 @@ const projects: Project[] = [
     highlight: "High-Precision Multi-Phase Energy Control",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1619296/_SgSKULlyfj.blob?auto=compress%2Cformat&w=900&h=675&fit=min" } // hero image
+      { type: "image", src: "/images/_SgSKULlyfj.jpg" } // hero image
     ],
     deliverables: [
       "ESP32-based multi-phase energy monitoring system",
@@ -3776,12 +3776,12 @@ const projects: Project[] = [
       {
         heading: "Hardware Deployment",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1619285/ipec_boards_prepared_AyTnWHKsXK.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1619289/ipec_esp32ue_atm90e32_sdk_production_1_2307_102p_-_kit_angled_yjZ6sQoSd0.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1612575/ipec_ipex_beta_testing_230716_iKUwV8G19p.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1612580/ipex_beta_testing_230716_97NrHivRU9.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1612587/ipec_and_ipec_stacked_2_S89uurT8Km.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1613990/_Vx03rStLbZ.blob?auto=compress,format&w=740&h=555&fit=max"
+          "/images/ipec_boards_prepared_AyTnWHKsXK.jpg",
+          "/images/ipec_esp32ue_atm90e32_sdk_production_1_2307_102p_-_kit_angled_yjZ6sQoSd0.jpg",
+          "/images/ipec_ipex_beta_testing_230716_iKUwV8G19p.jpg",
+          "/images/ipex_beta_testing_230716_97NrHivRU9.jpg",
+          "/images/ipec_and_ipec_stacked_2_S89uurT8Km.jpg",
+          "/images/_Vx03rStLbZ.jpg"
         ]
       },
       {
