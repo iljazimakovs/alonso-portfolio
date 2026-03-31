@@ -3776,30 +3776,17 @@ const projects: Project[] = [
       {
         heading: "Hardware Deployment",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1619736/ipec_power_energy_monitor_board_overview_6sPT3lnRko.jpg",
           "https://hackster.imgix.net/uploads/attachments/1619285/ipec_boards_prepared_AyTnWHKsXK.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1619288/ipec_esp32e_atm90e32_sdk_production_1_2307_102p_-_kit_angled_u1A7zt0UjJ.jpg",
           "https://hackster.imgix.net/uploads/attachments/1619289/ipec_esp32ue_atm90e32_sdk_production_1_2307_102p_-_kit_angled_yjZ6sQoSd0.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1619291/ipec_board_bring_up_and_testing_Iv9FaScBb5.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1619290/ipec_esp32e_atm90e32_sdk_production_1_2307_102p_-_schematic_Me8tvMdoVq.png",
-          "https://hackster.imgix.net/uploads/attachments/1618194/ditronix_net_power_energy_monitor_boards_sdk_overview_pSY3X9Wl9h.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1612574/ipec_ipex_beta_ac_bring_up_230716_EyidZdrlHn.jpg",
           "https://hackster.imgix.net/uploads/attachments/1612575/ipec_ipex_beta_testing_230716_iKUwV8G19p.jpg",
           "https://hackster.imgix.net/uploads/attachments/1612580/ipex_beta_testing_230716_97NrHivRU9.jpg",
           "https://hackster.imgix.net/uploads/attachments/1612587/ipec_and_ipec_stacked_2_S89uurT8Km.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1612576/ipec_ipex_beta_testing_with_automating_of_charger_230716_uoLdD0Dl5G.jpg",
           "https://hackster.imgix.net/uploads/attachments/1613990/_Vx03rStLbZ.blob?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
         heading: "Technical Implementation",
         body: "The platform supports single-phase or three-phase operation with high precision. DAC outputs can generate fixed voltage, PWM, MPPT, or modulated outputs. Firmware development focused on robust synchronization with current transformers and high-speed telemetry."
-      },
-      {
-        heading: "Firmware Artifacts",
-        code: [
-          "IPEC Test Firmware Output Example\nConfiguring Board.. Please Wait..\nHardware Options and Auto Configuration...\n... (full serial output preserved from original HTML)"
-        ]
       },
       {
         heading: "CAD & Schematics",
