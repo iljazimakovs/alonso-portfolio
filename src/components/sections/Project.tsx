@@ -2082,16 +2082,6 @@ const projects: Project[] = [
           "Electromagnet ×1",
           "LoRa/GPS Shield v1.3 ×1"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1206251/ph-a000066_iso_(1)_ztBMuBhMHo.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/138053/A000057_featured.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/96137/181-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/830663/60AC2983-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/916413/rfid_kDI7D49Cx7.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/95943/Adafruit_Industries-ADA1536-image.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/525347/bazaar578654_1010200733.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Connection & Wiring",
@@ -2121,26 +2111,6 @@ const projects: Project[] = [
           "https://hackster.imgix.net/uploads/attachments/1459643/288565255_414386207075663_8578949859971466358_n_LUGapkx7HH.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1459650/288358470_731436648108523_7662792537885720309_n_VZQeQWsfc8.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1459651/288283206_554471102979868_1327681167803820387_n_NbjJdfYVzm.jpg?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "Cloud Dashboard & Analytics",
-        body: "The ReactJS front-end, NodeJS backend, and MariaDB database provide telemetry, usage analytics, and cart monitoring in real time.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1459669/telechargement_(3)_umbML8udsU.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1459654/image_gKZXDDd4pV.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1459655/image_baaplOSY9H.png?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "3D-Printed Housing",
-        body: "All components are installed within a custom OnShape 3D-printed enclosure, providing mechanical stability and proper layout.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1458692/image_pP5oyQTe2b.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1458691/image_msMUmhw7wK.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1458689/image_xuIcMrhap8.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1458686/image_2TmQ412fu8.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1458687/image_F45chs3V51.png?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
