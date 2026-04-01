@@ -1139,7 +1139,7 @@ const projects: Project[] = [
           "Average latency: 223 ms per inference",
         ],
         images: [
-          "/images/dsc_7551_WZqr6P6Slb.JPG",
+          "/images/dsc_7551_WZqr6P6Slb.jpg",
         ],
       },
       {
@@ -1309,7 +1309,7 @@ const projects: Project[] = [
         body:
           "The module is assembled using standard PCB techniques with careful component placement for reliability.",
         images: [
-          "/images/mini_2020_0102_004534_002_TpUUFMIr3U.JPG",
+          "/images/mini_2020_0102_004534_002_TpUUFMIr3U.jpg",
         ],
       },
 
@@ -2458,7 +2458,7 @@ const projects: Project[] = [
           "Supports both unidirectional and bidirectional control",
         ],
         images: [
-          "/images/possible_applications_2_UFUIo32qw7.JPG",
+          "/images/possible_applications_2_UFUIo32qw7.jpg",
         ],
       },
       {
@@ -2493,7 +2493,7 @@ const projects: Project[] = [
           "Supports field weakening mode for higher speed operation",
         ],
         images: [
-          "/images/terminals_kvuCFIpenj.JPG",
+          "/images/terminals_kvuCFIpenj.jpg",
         ],
       },
       {
@@ -2617,7 +2617,7 @@ const projects: Project[] = [
     highlight: "Real-Time Audio Visualization",
     hidden: true,
     media: [
-      { type: "image", src: "/images/spresense_lighter2_Uj3rX2jUJ7.JPG" },
+      { type: "image", src: "/images/spresense_lighter2_Uj3rX2jUJ7.jpg" },
     ],
     deliverables: [
       "Embedded audio visualization system",
