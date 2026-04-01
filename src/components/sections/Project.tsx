@@ -2041,6 +2041,126 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "e7f2d1", // new unique hex slug
+    title: "IoT-Integrated Smart Cart Monitoring Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Professional IoT module for shopping carts, integrating GPS, RFID, LoRaWAN, and cloud telemetry for real-time monitoring and access control.",
+    longDescription: "This project demonstrates a connected shopping cart module designed for supermarkets and hypermarkets. It integrates GPS tracking, RFID-based access control, an electromagnetic locking system, and LoRaWAN communication to a cloud dashboard. The project highlights senior-level embedded systems engineering, IoT integration, and real-time telemetry suitable for commercial deployment.",
+    tags: ["Embedded Systems", "IoT", "GPS", "RFID", "LoRaWAN", "Arduino", "Smart Devices", "Telemetry"],
+    icon: Cpu,
+    highlight: "Connected Cart IoT System",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1458615/_HJOChZEFMY.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "GPS-enabled shopping cart tracking module",
+      "RFID-based access control and electromagnetic locking system",
+      "LoRaWAN communication to cloud dashboard",
+      "Embedded firmware integrating sensors and actuators",
+      "Cloud-based analytics for usage and theft prevention"
+    ],
+    sections: [
+      {
+        heading: "System Overview & Motivation",
+        body: "Retailers face financial losses due to stolen or misused carts. This project addresses security and operational monitoring with a professional IoT solution.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1458615/_HJOChZEFMY.blob?auto=compress,format&w=900&h=675&fit=min"
+        ]
+      },
+      {
+        heading: "Hardware Components & Sensors",
+        bullets: [
+          "Arduino UNO ×1",
+          "Arduino Leonardo ×1",
+          "Adafruit 16x2 LCD ×1",
+          "Breadboard ×1",
+          "GPS Antenna ×1",
+          "M5Stack Mini RFID RC522 Module ×1",
+          "Buzzer ×1",
+          "Electromagnet ×1",
+          "LoRa/GPS Shield v1.3 ×1"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1206251/ph-a000066_iso_(1)_ztBMuBhMHo.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/138053/A000057_featured.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/96137/181-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/830663/60AC2983-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/916413/rfid_kDI7D49Cx7.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/95943/Adafruit_Industries-ADA1536-image.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/525347/bazaar578654_1010200733.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Connection & Wiring",
+        body: "Wiring and electrical connections for sensors, RFID, GPS, and the electromagnetic lock are implemented to ensure reliable operation and robust data transmission. Proper cabling ensures minimal interference and maintains signal integrity across the LoRaWAN network.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1458700/image_D86khjfCCX.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1458702/image_o2epdMWmhI.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "System Objectives & Operational Goals",
+        body: "The platform ensures secure cart usage and operational analytics. Key objectives include GPS-based location tracking, RFID-controlled access, electromagnetic locking, and real-time telemetry on the embedded LCD."
+      },
+      {
+        heading: "Communication Architecture",
+        body: "LoRaWAN ensures long-range, low-power communication between carts and the cloud dashboard, supporting multiple devices efficiently.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1458639/image_(1)_2h5X8h0yvY.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "GPS & Sensor Integration",
+        body: "GPS coordinates and sensor data are acquired by Arduino UNO and Arduino Leonardo, converted to TTN-compliant byte arrays, and sent to the cloud. RFID reader and electromagnet are integrated with the LCD for real-time status display.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1459641/288239538_5300875929979988_9065925352052733416_n_91YNuhvB7L.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1459642/288326016_749641756231514_3771965816284488619_n_e0F9UTgahC.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1459643/288565255_414386207075663_8578949859971466358_n_LUGapkx7HH.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1459650/288358470_731436648108523_7662792537885720309_n_VZQeQWsfc8.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1459651/288283206_554471102979868_1327681167803820387_n_NbjJdfYVzm.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Cloud Dashboard & Analytics",
+        body: "The ReactJS front-end, NodeJS backend, and MariaDB database provide telemetry, usage analytics, and cart monitoring in real time.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1459669/telechargement_(3)_umbML8udsU.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1459654/image_gKZXDDd4pV.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1459655/image_baaplOSY9H.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "3D-Printed Housing",
+        body: "All components are installed within a custom OnShape 3D-printed enclosure, providing mechanical stability and proper layout.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1458692/image_pP5oyQTe2b.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1458691/image_msMUmhw7wK.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1458689/image_xuIcMrhap8.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1458686/image_2TmQ412fu8.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1458687/image_F45chs3V51.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Embedded Firmware & TTN Processing",
+        code: [
+          "/* Arduino UNO firmware: GPS, LoRa, RFID, Electromagnet */",
+          "// TinyGPS++ library for GPS",
+          "// LMIC library for LoRaWAN transmission",
+          "// SoftwareSerial for GPS input",
+          "// Code converts GPS and sensor data to TTN-compliant bytes",
+          "// Functions include bytesToHex(), reverseString(), hexStringToFloat()"
+        ]
+      },
+      {
+        heading: "Project Conclusion",
+        body: "The connected cart module demonstrates advanced embedded engineering, IoT integration, real-time telemetry, and professional cloud analytics. It is suitable for commercial retail deployment and showcases senior-level engineering design."
+      }
+    ]
+  },
+  {
     slug: "c5e8a2",
     title: "Multi-Channel Intelligent Lighting Control System",
     category: "PCB & Hardware",
