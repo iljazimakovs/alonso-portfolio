@@ -2041,6 +2041,83 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "d7f6c3", // new unique hex slug
+    title: "IoT-Enabled Smart Shopping Cart Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Professional IoT system integrating GPS, RFID, and LoRa communication for smart shopping cart monitoring and theft prevention.",
+    longDescription: "This project demonstrates a smart shopping cart module designed for supermarkets and hypermarkets. It integrates GPS tracking, RFID-based access control, an electromagnetic locking system, and LoRa communication for real-time monitoring. The system enables secure usage, operational analytics, and remote management, highlighting advanced embedded system integration and IoT engineering practices.",
+    tags: ["Embedded Systems", "IoT", "GPS", "RFID", "LoRaWAN", "Arduino", "Smart Devices"],
+    icon: Cpu,
+    highlight: "Connected Cart IoT Module",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1458615/_HJOChZEFMY.blob?auto=compress%2Cw=900%2Ch=675&fit=min" } // hero image
+    ],
+    deliverables: [
+      "GPS-enabled shopping cart tracking module",
+      "RFID-based access control and locking system",
+      "LoRaWAN communication to cloud dashboard",
+      "Arduino-based embedded firmware with sensor integration",
+      "Professional-level dashboard for monitoring usage and location"
+    ],
+    sections: [
+      {
+        heading: "Project Context & Motivation",
+        body: "Shopping carts are frequently lost or stolen, resulting in significant financial losses for retailers. This project addresses theft prevention and operational monitoring for supermarket and hypermarket carts through advanced IoT integration."
+      },
+      {
+        heading: "System Objectives",
+        bullets: [
+          "Secure cart access and operational monitoring",
+          "GPS module for precise cart location tracking",
+          "RFID card reader for authorized user access",
+          "Electromagnetic lock automatically controlled via RFID",
+          "LCD screen displays real-time cart status"
+        ]
+      },
+      {
+        heading: "Communication Architecture",
+        body: "LoRaWAN protocol ensures long-range, low-power communication between the cart module and the cloud dashboard. The protocol is ideal for intermittent telemetry and supports extended operational range."
+      },
+      {
+        heading: "GPS Subsystem",
+        body: "The GPS antenna captures latitude and longitude coordinates. Data is acquired by an Arduino UNO via GPS Shield, converted to bytes, and transmitted through The Things Network (TTN) to the cloud application."
+      },
+      {
+        heading: "RFID & Electromagnetic Lock Control",
+        body: "RFID allows authorized access. Swiping the card demagnetizes the electromagnet, unlocking the cart. Users can re-lock by swiping again. All status is displayed on the embedded LCD. The system uses Arduino Leonardo with breadboard connections for the sensors and lock."
+      },
+      {
+        heading: "Cloud Dashboard & Data Management",
+        body: "A ReactJS front-end interfaces with a NodeJS backend and MariaDB. The server processes TTN frames, converts raw bytes to structured telemetry, and provides analytics on cart usage, distance traveled, and real-time location."
+      },
+      {
+        heading: "3D-Printed Housing",
+        body: "The module is enclosed in a custom 3D-printed case designed in OnShape, ensuring proper placement and mechanical stability for all components."
+      },
+      {
+        heading: "Software Stack",
+        bullets: [
+          "ReactJS for front-end dashboard",
+          "NodeJS backend server for data processing",
+          "MariaDB for telemetry and usage data storage",
+          "Arduino IDE for firmware development"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1206251/ph-a000066_iso_(1)_ztBMuBhMHo.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/138053/A000057_featured.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/96137/181-02.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Project Conclusion",
+        body: "This connected cart module integrates advanced embedded systems, IoT networking, and cloud services to prevent theft, monitor usage, and provide actionable analytics. The project demonstrates senior-level engineering design, system integration, and professional IoT deployment skills."
+      }
+    ]
+  },
+  {
     slug: "c5e8a2",
     title: "Multi-Channel Intelligent Lighting Control System",
     category: "PCB & Hardware",
