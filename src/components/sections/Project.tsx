@@ -2379,7 +2379,7 @@ const projects: Project[] = [
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "hardware-design", "mechatronics"],
     description: "This system using ATtiny1614 microcontroller with PID-style solenoid control and hall-effect sensor feedback.",
-    longDescription: "This project presents a digital magnetic levitation platform using an ATtiny1614 microcontroller, 12V solenoid, and hall-effect sensor feedback. It demonstrates PID-style stabilization, SMD PCB integration, 3D-printed enclosures, and embedded firmware implementation, highlighting advanced engineering skills suitable for senior portfolios.",
+    longDescription: "This project presents a digital magnetic levitation platform using an ATtiny1614 microcontroller, 12V solenoid, and hall-effect sensor feedback. It demonstrates PID-style stabilization, SMD PCB integration, 3D-printed enclosures, and embedded firmware implementation, highlighting advanced engineering skills.",
     tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
     icon: Cpu,
     highlight: "ATtiny1614 Magnetic Levitation",
@@ -2475,10 +2475,6 @@ const projects: Project[] = [
           "}"
         ]
       },
-      {
-        heading: "Project Conclusion",
-        body: "The digital magnetic levitation system demonstrates precise embedded control, PID-style stabilization, SMD PCB integration, and professional mechatronic design, suitable for senior-level engineering portfolios."
-      }
     ]
   },
   {
@@ -3188,7 +3184,7 @@ const projects: Project[] = [
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
     description: "Beginner-friendly exploration of software-defined radio using FPGA-powered hardware and open-source GNU Radio tools.",
-    longDescription: "This project provides a hands-on introduction to software-defined radio (SDR) with FPGA-based platforms. Using the Ettus USRP B206mini and GNU Radio, participants explore radio signal reception, FM receiver design, and signal visualization. The project emphasizes real-world SDR experimentation and FPGA-based RF frontends, demonstrating technical skills suitable for a professional portfolio.",
+    longDescription: "This project provides a hands-on introduction to software-defined radio (SDR) with FPGA-based platforms. Using the Ettus USRP B206mini and GNU Radio, participants explore radio signal reception, FM receiver design, and signal visualization. The project emphasizes real-world SDR experimentation and FPGA-based RF frontends, demonstrating technical skills.",
     tags: ["SDR", "FPGA", "Radio", "GNU Radio", "Embedded Systems", "RF", "Signal Processing"],
     icon: Radio,
     highlight: "FPGA-Based SDR Experiments",
@@ -3236,7 +3232,7 @@ const projects: Project[] = [
       },
       {
         heading: "Engineering Outcome",
-        body: "The project demonstrates hands-on experience with FPGA SDR hardware, GNU Radio workflows, and beginner-friendly RF experimentation while retaining professional-level technical depth suitable for a portfolio."
+        body: "The project demonstrates hands-on experience with FPGA SDR hardware, GNU Radio workflows, and beginner-friendly RF experimentation while retaining professional-level technical depth suitable."
       }
     ],
   },
