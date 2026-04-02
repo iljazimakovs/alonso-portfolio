@@ -701,7 +701,7 @@ const projects: Project[] = [
           {
             title: "Ethernet Subsystem",
             body: "Gigabit-capable Ethernet implemented with dedicated PHY and RJ45 connector for reliable high-speed communication.",
-            image: "/images/ethernet_cq1MeWKds3.jpg"
+            image: "/images/ethernet.jpg"
           },
           {
             title: "Debug & Programming Interface",
