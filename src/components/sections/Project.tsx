@@ -2379,7 +2379,7 @@ const projects: Project[] = [
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "hardware-design", "mechatronics"],
     description: "This system using ATtiny1614 microcontroller with PID-style solenoid control and hall-effect sensor feedback.",
-    longDescription: "This project presents a digital magnetic levitation platform using an ATtiny1614 microcontroller, 12V solenoid, and hall-effect sensor feedback. It demonstrates PID-style stabilization, SMD PCB integration, 3D-printed enclosures, and embedded firmware implementation, highlighting advanced engineering skills.",
+    longDescription: "Digital magnetic stabilization platform using ATtiny1614 microcontroller, 12V solenoid, and hall-effect sensor feedback. Includes PID-style stabilization, SMD PCB layout, 3D-printed mechanical supports, and embedded firmware for real-time control.",
     tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
     icon: Cpu,
     highlight: "ATtiny1614 Magnetic Levitation",
