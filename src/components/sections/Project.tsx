@@ -2588,7 +2588,7 @@ const projects: Project[] = [
       {
         heading: "Firmware Setup",
         code: [
-          "/*\nESP32-CAM Remote Control \n*/\n\nconst char* ssid = \"Your_WIFI_Network\";\nconst char* password = \"Your password\";\n\n#include \"esp_wifi.h\"\n#include \"esp_camera.h\"\n#include <WiFi.h>\n#include \"soc/soc.h\"\n#include \"soc/rtc_cntl_reg.h\"\n// ... rest of code as in HTML"
+          "/*\nESP32-CAM Remote Control \n*/\n\nconst char* ssid = \"WIFI_Network\";\nconst char* password = \"Password\";\n\n#include \"esp_wifi.h\"\n#include \"esp_camera.h\"\n#include <WiFi.h>\n#include \"soc/soc.h\"\n#include \"soc/rtc_cntl_reg.h\"\n// ... rest of code as in HTML"
         ],
         body: "Upload firmware using Arduino IDE. Hold GPIO0 to GND during upload, then release. Use Serial Monitor to obtain the assigned IP address."
       },
@@ -2684,7 +2684,7 @@ const projects: Project[] = [
       {
         heading: "Code Snippets",
         code: [
-          "/*\nESP32-CAM Remote Control \n*/\nconst char* ssid = \"Your_WIFI_Network\";\nconst char* password = \"Your password\";\n#include \"esp_wifi.h\"\n#include \"esp_camera.h\"\n#include <WiFi.h>\n#include \"soc/soc.h\"\n#include \"soc/rtc_cntl_reg.h\"\n// ... rest of code as in HTML"
+          "/*\nESP32-CAM Remote Control \n*/\nconst char* ssid = \"WIFI_Network\";\nconst char* password = \"password\";\n#include \"esp_wifi.h\"\n#include \"esp_camera.h\"\n#include <WiFi.h>\n#include \"soc/soc.h\"\n#include \"soc/rtc_cntl_reg.h\"\n// ... rest of code as in HTML"
         ]
       }
     ]
@@ -3495,7 +3495,7 @@ const projects: Project[] = [
         heading: "Code and Firmware",
         code: [
           "import time\nimport board\nimport busio\nimport adafruit_ov2640\nimport wiznet\nimport digitalio\nimport binascii\nimport gc\nimport ssl\nfrom adafruit_wiznet5k.adafruit_wiznet5k import WIZNET5K\nimport adafruit_wiznet5k.adafruit_wiznet5k_socketpool as socketpool\nimport adafruit_minimqtt.adafruit_minimqtt as MQTT\nfrom adafruit_io.adafruit_io import IO_HTTP\nimport adafruit_requests\ntry:\n    from secrets import secrets\nexcept ImportError:\n    print(\"MQTT secrets are kept in secrets.py, please add them there!\")\n    raise",
-          "secrets = {\n    \"aio_username\": \"YOUR_ADAFRUIT_IO_USERNAME\",\n    \"aio_key\": \"YOUR_ADAFRUIT_IO_KEY\"\n}",
+          "secrets = {\n    \"aio_username\": \"ADAFRUIT_IO_USERNAME\",\n    \"aio_key\": \"ADAFRUIT_IO_KEY\"\n}",
           "# Ethernet reset pin\nethernetRst = digitalio.DigitalInOut(board.W5K_RST)\nethernetRst.direction = digitalio.Direction.OUTPUT\n# SPI configuration for Ethernet\ncs = digitalio.DigitalInOut(board.W5K_CS)\nspi_bus = wiznet.PIO_SPI(board.W5K_SCK, \n                     quad_io0=board.W5K_MOSI, \n                     quad_io1=board.W5K_MISO, \n                     quad_io2=board.W5K_IO2, \n                     quad_io3=board.W5K_IO3)\n# Reset\nethernetRst.value = False\ntime.sleep(1)\nethernetRst.value = True\neth = WIZNET5K(spi_bus, cs, is_dhcp=True, mac=MY_MAC, debug=False)\npool = socketpool.SocketPool(eth)"
         ]
       },
