@@ -2023,7 +2023,6 @@ const projects: Project[] = [
           "User interface validation through mobile app"
         ],
         images: [
-          "/images/unnamed.jpg",
           "/images/unnamed.jpg"
         ]
       },
