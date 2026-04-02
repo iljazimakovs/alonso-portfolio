@@ -3570,9 +3570,6 @@ const projects: Project[] = [
       {
         heading: "System Overview",
         body: "Digital magnetic stabilization platform using ESP32Pico, hall-effect sensor, and modified 5V relay. Demonstrates real-time stabilization and embedded control for small payloads.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1152584/_ShHV5r0NTV.blob?auto=compress,format&w=900&h=675&fit=min"
-        ]
       },
       {
         heading: "Hardware Components",
@@ -3584,14 +3581,10 @@ const projects: Project[] = [
           "SMD resistors, capacitors, and diodes for control circuit"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1152570/img_7105.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152571/db7cbc6e-bdfd-4d62-8088-8ba91913bc9f.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152572/1865be80-49d6-457c-9c6e-232ee3bd916f.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152573/2c5ab185-b6e7-4e74-b912-6c10c02506be.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152574/309798e4-4bbe-4c6f-a746-6b81804f058d.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152575/ce5d8d41-5428-400c-abde-fc85efadcd02.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152576/c17edce1-df32-4ac2-932c-3ef34f83d9d4.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152577/d0ca4775-a3fb-4d76-b1b0-2cc74995b93f.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152578/04c3c5c0-e735-463d-b745-f6c000fa92ce.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152579/0af40956-c2e3-4c4f-a6b0-2e8da653e366.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152580/66cb0ecb-8ad3-4695-937f-e51f51033ec0.jpeg?auto=compress,format&w=740&h=555&fit=max"
@@ -3685,15 +3678,7 @@ const projects: Project[] = [
           "3D-printed mechanical support components"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/840305/19C7994-40.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff",
           "https://hackster.imgix.net/uploads/attachments/1544858/board_WVKG06L2vG.JPG?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "Software Environment",
-        bullets: ["Arduino IDE for firmware development"],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress,format&w=48&h=48&fit=fill&bg=ffffff"
         ]
       },
       {
@@ -3711,16 +3696,21 @@ const projects: Project[] = [
           "https://hackster.imgix.net/uploads/attachments/1544862/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1544863/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1544866/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544867/image_PbMqob8NhS.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1544868/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1544869/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
-        heading: "Circuit Design & PCB",
-        body: "PCB designed with SMD components to accommodate ATtiny1614. Eagle files available for commercial fabrication.",
+        heading: "PCB Layout Overview",
+        body: "Top-layer PCB layout showing SMD component placement, copper routing, and connection pads optimized for the ATtiny1614 magnetic levitation system.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544854/board_W9zo629mFW.JPG",
+          "https://hackster.imgix.net/uploads/attachments/1544854/board_W9zo629mFW.JPG"
+        ]
+      },
+      {
+        heading: "Schematic Diagram",
+        body: "Electrical schematic showing ATtiny1614 connections, MOSFET driver for the solenoid, hall-effect sensor inputs, and supporting passive components. Provides clear reference for assembly and troubleshooting.",
+        images: [
           "https://hackster.imgix.net/uploads/attachments/1544853/schematic_a6Emr769uF.png"
         ]
       },
