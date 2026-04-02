@@ -2374,6 +2374,202 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "f3d8c1", // unique hex slug
+    title: "Precision Electromagnetic Stabilization Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "mechatronics", "hardware-design"],
+    description: "High-precision electromagnetic stabilization platform using ESP32Pico, hall-effect sensor, and relay-based actuation for controlled levitation.",
+    longDescription: "This project demonstrates a digital magnetic stabilization platform using ESP32Pico (M5Stack ATOM LITE or MATRIX), a hall-effect sensor, and a modified 5V relay as the electromagnet. It features real-time stabilization with Arduino IDE firmware, 3D-printed mechanical supports, and precise PID-style control suitable for senior-level embedded systems portfolios.",
+    tags: ["Embedded Systems", "ESP32Pico", "PID Control", "Mechatronics", "Firmware", "Electromagnetic Control"],
+    icon: Cpu,
+    highlight: "Digital Magnetic Stabilization",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1152584/_ShHV5r0NTV.blob?auto=compress,format&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "ESP32Pico-based magnetic stabilization controller",
+      "Relay-controlled electromagnet with hall-effect feedback",
+      "3D-printed mechanical support components",
+      "Arduino firmware implementing real-time PID-style control",
+      "Professional PCB design and schematic documentation"
+    ],
+    sections: [
+      {
+        heading: "System Overview",
+        body: "Digital magnetic stabilization platform using ESP32Pico, hall-effect sensor, and modified 5V relay. Demonstrates real-time stabilization and embedded control for small payloads.",
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ESP32Pico (M5Stack ATOM LITE or ATOM MATRIX)",
+          "Hall-effect sensor (A1302/A1308)",
+          "Modified 5V relay as electromagnet",
+          "Wooden carrier or base",
+          "SMD resistors, capacitors, and diodes for control circuit"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1152571/db7cbc6e-bdfd-4d62-8088-8ba91913bc9f.png?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1152572/1865be80-49d6-457c-9c6e-232ee3bd916f.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1152573/2c5ab185-b6e7-4e74-b912-6c10c02506be.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1152579/0af40956-c2e3-4c4f-a6b0-2e8da653e366.jpeg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1152580/66cb0ecb-8ad3-4695-937f-e51f51033ec0.jpeg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Digital Control Implementation",
+        body: "The ESP32 reads hall sensor values and controls the modified relay acting as the electromagnet. Trigger and hysteresis values stabilize levitation. Arduino IDE firmware implements the real-time control logic, replacing the analog comparator from the original design."
+      },
+      {
+        heading: "Firmware Implementation",
+        code: [
+          "int TRIGGER = 2740; // Trigger level for payload weight",
+          "int HYST = 35;       // Hysteresis for stability",
+          "int HALL_PIN = 33;   // Analog input from hall sensor",
+          "int RELAIS_PIN = 23; // Output to MOSFET controlling relay",
+          "int HALL_VAL = 0;",
+          "int offset = 0;",
+          "",
+          "void setup() {",
+          "  pinMode(RELAIS_PIN, OUTPUT);",
+          "  Serial.begin(115200);",
+          "  Serial.println(\"Magnetic Levitation System START\");",
+          "}",
+          "",
+          "void loop() {",
+          "  HALL_VAL = analogRead(HALL_PIN);",
+          "  if(HALL_VAL < (TRIGGER + offset)) {",
+          "    digitalWrite(RELAIS_PIN, HIGH);",
+          "    offset = HYST;",
+          "  } else {",
+          "    digitalWrite(RELAIS_PIN, LOW);",
+          "    offset = -HYST;",
+          "  }",
+          "  delayMicroseconds(10); // continuous control for stability",
+          "}"
+        ]
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1152585/levitation_digital_schematic_HqAwugfgPv.png"
+        ]
+      },
+      {
+        heading: "Project Conclusion",
+        body: "This digital magnetic stabilization system demonstrates precise embedded control, real-time feedback using hall-effect sensors, and modern ESP32Pico hardware integration. It is compact, stable, and suitable for inclusion in a senior engineer portfolio."
+      }
+    ]
+  },
+  {
+    slug: "f2c7e9",
+    title: "Precision Electromagnetic Positioning Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "hardware-design", "mechatronics"],
+    description: "This system using ATtiny1614 microcontroller with PID-style solenoid control and hall-effect sensor feedback.",
+    longDescription: "This project presents a digital magnetic levitation platform using an ATtiny1614 microcontroller, 12V solenoid, and hall-effect sensor feedback. It demonstrates PID-style stabilization, SMD PCB integration, 3D-printed enclosures, and embedded firmware implementation, highlighting advanced engineering skills suitable for senior portfolios.",
+    tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
+    icon: Cpu,
+    highlight: "ATtiny1614 Magnetic Levitation",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1544851/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "ATtiny1614-based levitation controller",
+      "PID-controlled solenoid with hall-effect feedback",
+      "Custom PCB with SMD component integration",
+      "3D-printed enclosures for mechanical stability",
+      "Firmware with core logic for real-time levitation control"
+    ],
+    sections: [
+      {
+        heading: "System Overview",
+        body: "High-precision magnetic levitation system using ATtiny1614 MCU, solenoid, and hall-effect sensor. Demonstrates PID-style stabilization and mechatronic integration.",
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ATtiny1614 Microprocessor",
+          "AO4406 N-Channel MOSFET",
+          "12V Solenoid (D25mm x H20mm, 5KG/50N)",
+          "1117-5 5V Regulator",
+          "Hall-effect sensor OH49E / linear variant",
+          "Tactile switches (8mm shafts)",
+          "Resistors and capacitors for analog circuitry",
+          "SMD diodes",
+          "3D-printed mechanical support components"
+        ],
+      },
+      {
+        heading: "3D-Printed Enclosures",
+        body: "Custom 3D-printed components include base cover, UFO, rocker switch, and base plug, designed for mechanical support and integration of PCB and solenoid.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1544857/image_AfQGMpegG8.png?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Assembly Procedure",
+        body: "Stepwise assembly including SMD placement, header insertion, switches, solenoid and hall sensor integration, and final enclosure assembly.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1544859/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1544862/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1544863/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1544866/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1544868/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1544869/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "PCB Layout Overview",
+        body: "Top-layer PCB layout showing SMD component placement, copper routing, and connection pads optimized for the ATtiny1614 magnetic levitation system.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1544854/board_W9zo629mFW.JPG"
+        ]
+      },
+      {
+        heading: "Schematic Diagram",
+        body: "Electrical schematic showing ATtiny1614 connections, MOSFET driver for the solenoid, hall-effect sensor inputs, and supporting passive components. Provides clear reference for assembly and troubleshooting.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1544853/schematic_a6Emr769uF.png"
+        ]
+      },
+      {
+        heading: "Firmware Implementation",
+        code: [
+          "// ATtiny1614 Magnetic Levitation Core Logic",
+          "int TRIGGER = 2740; // ADC trigger level",
+          "int HYST = 35;       // Hysteresis",
+          "int HALL_PIN = 33;   // Analog input from hall sensor",
+          "int RELAIS_PIN = 23; // Output to solenoid",
+          "int HALL_VAL = 0;",
+          "int offset = 0;",
+          "void setup() {",
+          "  pinMode(RELAIS_PIN, OUTPUT);",
+          "  pinMode(HALL_PIN, INPUT);",
+          "  Serial.begin(57600);",
+          "  Serial.println(\"Magnetic Levitation System START\");",
+          "}",
+          "void loop() {",
+          "  HALL_VAL = analogRead(HALL_PIN);",
+          "  if(HALL_VAL < (TRIGGER + offset)) {",
+          "    digitalWrite(RELAIS_PIN, HIGH);",
+          "    offset = HYST;",
+          "  } else {",
+          "    digitalWrite(RELAIS_PIN, LOW);",
+          "    offset = -HYST;",
+          "  }",
+          "  delayMicroseconds(10);",
+          "}"
+        ]
+      },
+      {
+        heading: "Project Conclusion",
+        body: "The digital magnetic levitation system demonstrates precise embedded control, PID-style stabilization, SMD PCB integration, and professional mechatronic design, suitable for senior-level engineering portfolios."
+      }
+    ]
+  },
+  {
     slug: "4f8c2e",
     title: "Multi-Topology Motor Drive Platform",
     category: "PCB & Hardware",
@@ -3542,202 +3738,6 @@ const projects: Project[] = [
           "/images/1_XhqBXbQSB8m9VvMfx5H-tg.jpg",
         ],
         body: "The shield can be used connected to a laptop for high-speed biosignal capture. When paired with a Raspberry Pi 4, it enables wireless data transmission via Wi-Fi."
-      }
-    ]
-  },
-  {
-    slug: "f3d8c1", // unique hex slug
-    title: "Precision Electromagnetic Stabilization Platform",
-    category: "Embedded Systems",
-    filterSlugs: ["embedded-firmware", "mechatronics", "hardware-design"],
-    description: "High-precision electromagnetic stabilization platform using ESP32Pico, hall-effect sensor, and relay-based actuation for controlled levitation.",
-    longDescription: "This project demonstrates a digital magnetic stabilization platform using ESP32Pico (M5Stack ATOM LITE or MATRIX), a hall-effect sensor, and a modified 5V relay as the electromagnet. It features real-time stabilization with Arduino IDE firmware, 3D-printed mechanical supports, and precise PID-style control suitable for senior-level embedded systems portfolios.",
-    tags: ["Embedded Systems", "ESP32Pico", "PID Control", "Mechatronics", "Firmware", "Electromagnetic Control"],
-    icon: Cpu,
-    highlight: "Digital Magnetic Stabilization",
-    hidden: false,
-    media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1152584/_ShHV5r0NTV.blob?auto=compress,format&w=900&h=675&fit=min" }
-    ],
-    deliverables: [
-      "ESP32Pico-based magnetic stabilization controller",
-      "Relay-controlled electromagnet with hall-effect feedback",
-      "3D-printed mechanical support components",
-      "Arduino firmware implementing real-time PID-style control",
-      "Professional PCB design and schematic documentation"
-    ],
-    sections: [
-      {
-        heading: "System Overview",
-        body: "Digital magnetic stabilization platform using ESP32Pico, hall-effect sensor, and modified 5V relay. Demonstrates real-time stabilization and embedded control for small payloads.",
-      },
-      {
-        heading: "Hardware Components",
-        bullets: [
-          "ESP32Pico (M5Stack ATOM LITE or ATOM MATRIX)",
-          "Hall-effect sensor (A1302/A1308)",
-          "Modified 5V relay as electromagnet",
-          "Wooden carrier or base",
-          "SMD resistors, capacitors, and diodes for control circuit"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1152571/db7cbc6e-bdfd-4d62-8088-8ba91913bc9f.png?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152572/1865be80-49d6-457c-9c6e-232ee3bd916f.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152573/2c5ab185-b6e7-4e74-b912-6c10c02506be.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152579/0af40956-c2e3-4c4f-a6b0-2e8da653e366.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152580/66cb0ecb-8ad3-4695-937f-e51f51033ec0.jpeg?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "Digital Control Implementation",
-        body: "The ESP32 reads hall sensor values and controls the modified relay acting as the electromagnet. Trigger and hysteresis values stabilize levitation. Arduino IDE firmware implements the real-time control logic, replacing the analog comparator from the original design."
-      },
-      {
-        heading: "Firmware Implementation",
-        code: [
-          "int TRIGGER = 2740; // Trigger level for payload weight",
-          "int HYST = 35;       // Hysteresis for stability",
-          "int HALL_PIN = 33;   // Analog input from hall sensor",
-          "int RELAIS_PIN = 23; // Output to MOSFET controlling relay",
-          "int HALL_VAL = 0;",
-          "int offset = 0;",
-          "",
-          "void setup() {",
-          "  pinMode(RELAIS_PIN, OUTPUT);",
-          "  Serial.begin(115200);",
-          "  Serial.println(\"Magnetic Levitation System START\");",
-          "}",
-          "",
-          "void loop() {",
-          "  HALL_VAL = analogRead(HALL_PIN);",
-          "  if(HALL_VAL < (TRIGGER + offset)) {",
-          "    digitalWrite(RELAIS_PIN, HIGH);",
-          "    offset = HYST;",
-          "  } else {",
-          "    digitalWrite(RELAIS_PIN, LOW);",
-          "    offset = -HYST;",
-          "  }",
-          "  delayMicroseconds(10); // continuous control for stability",
-          "}"
-        ]
-      },
-      {
-        heading: "Schematics",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1152585/levitation_digital_schematic_HqAwugfgPv.png"
-        ]
-      },
-      {
-        heading: "Project Conclusion",
-        body: "This digital magnetic stabilization system demonstrates precise embedded control, real-time feedback using hall-effect sensors, and modern ESP32Pico hardware integration. It is compact, stable, and suitable for inclusion in a senior engineer portfolio."
-      }
-    ]
-  },
-  {
-    slug: "f2c7e9",
-    title: "Precision Electromagnetic Positioning Platform",
-    category: "Embedded Systems",
-    filterSlugs: ["embedded-firmware", "hardware-design", "mechatronics"],
-    description: "This system using ATtiny1614 microcontroller with PID-style solenoid control and hall-effect sensor feedback.",
-    longDescription: "This project presents a digital magnetic levitation platform using an ATtiny1614 microcontroller, 12V solenoid, and hall-effect sensor feedback. It demonstrates PID-style stabilization, SMD PCB integration, 3D-printed enclosures, and embedded firmware implementation, highlighting advanced engineering skills suitable for senior portfolios.",
-    tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
-    icon: Cpu,
-    highlight: "ATtiny1614 Magnetic Levitation",
-    hidden: false,
-    media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1544851/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
-    ],
-    deliverables: [
-      "ATtiny1614-based levitation controller",
-      "PID-controlled solenoid with hall-effect feedback",
-      "Custom PCB with SMD component integration",
-      "3D-printed enclosures for mechanical stability",
-      "Firmware with core logic for real-time levitation control"
-    ],
-    sections: [
-      {
-        heading: "System Overview",
-        body: "High-precision magnetic levitation system using ATtiny1614 MCU, solenoid, and hall-effect sensor. Demonstrates PID-style stabilization and mechatronic integration.",
-      },
-      {
-        heading: "Hardware Components",
-        bullets: [
-          "ATtiny1614 Microprocessor",
-          "AO4406 N-Channel MOSFET",
-          "12V Solenoid (D25mm x H20mm, 5KG/50N)",
-          "1117-5 5V Regulator",
-          "Hall-effect sensor OH49E / linear variant",
-          "Tactile switches (8mm shafts)",
-          "Resistors and capacitors for analog circuitry",
-          "SMD diodes",
-          "3D-printed mechanical support components"
-        ],
-      },
-      {
-        heading: "3D-Printed Enclosures",
-        body: "Custom 3D-printed components include base cover, UFO, rocker switch, and base plug, designed for mechanical support and integration of PCB and solenoid.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1544857/image_AfQGMpegG8.png?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "Assembly Procedure",
-        body: "Stepwise assembly including SMD placement, header insertion, switches, solenoid and hall sensor integration, and final enclosure assembly.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1544859/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544862/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544863/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544866/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544868/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544869/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
-        ]
-      },
-      {
-        heading: "PCB Layout Overview",
-        body: "Top-layer PCB layout showing SMD component placement, copper routing, and connection pads optimized for the ATtiny1614 magnetic levitation system.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1544854/board_W9zo629mFW.JPG"
-        ]
-      },
-      {
-        heading: "Schematic Diagram",
-        body: "Electrical schematic showing ATtiny1614 connections, MOSFET driver for the solenoid, hall-effect sensor inputs, and supporting passive components. Provides clear reference for assembly and troubleshooting.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1544853/schematic_a6Emr769uF.png"
-        ]
-      },
-      {
-        heading: "Firmware Implementation",
-        code: [
-          "// ATtiny1614 Magnetic Levitation Core Logic",
-          "int TRIGGER = 2740; // ADC trigger level",
-          "int HYST = 35;       // Hysteresis",
-          "int HALL_PIN = 33;   // Analog input from hall sensor",
-          "int RELAIS_PIN = 23; // Output to solenoid",
-          "int HALL_VAL = 0;",
-          "int offset = 0;",
-          "void setup() {",
-          "  pinMode(RELAIS_PIN, OUTPUT);",
-          "  pinMode(HALL_PIN, INPUT);",
-          "  Serial.begin(57600);",
-          "  Serial.println(\"Magnetic Levitation System START\");",
-          "}",
-          "void loop() {",
-          "  HALL_VAL = analogRead(HALL_PIN);",
-          "  if(HALL_VAL < (TRIGGER + offset)) {",
-          "    digitalWrite(RELAIS_PIN, HIGH);",
-          "    offset = HYST;",
-          "  } else {",
-          "    digitalWrite(RELAIS_PIN, LOW);",
-          "    offset = -HYST;",
-          "  }",
-          "  delayMicroseconds(10);",
-          "}"
-        ]
-      },
-      {
-        heading: "Project Conclusion",
-        body: "The digital magnetic levitation system demonstrates precise embedded control, PID-style stabilization, SMD PCB integration, and professional mechatronic design, suitable for senior-level engineering portfolios."
       }
     ]
   },
