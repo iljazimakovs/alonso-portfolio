@@ -3961,14 +3961,7 @@ function RichSection({ section }: { section: ContentSection }) {
         </div>
       )}
       {section.images && section.images.length > 0 && (
-        <div
-          className={`grid gap-3 ${section.images.length === 2
-            ? "sm:grid-cols-2"
-            : section.images.length >= 3
-              ? "sm:grid-cols-1"
-              : "sm:grid-cols-1"
-            }`}
-        >
+        <div className="grid grid-cols-1 gap-4">
           {section.images.map((src, j) => (
             <div key={j} className="rounded-lg overflow-hidden border border-border/40">
               <img src={src} alt="" className="w-full h-auto object-cover" />
