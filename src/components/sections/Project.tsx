@@ -1995,9 +1995,6 @@ const projects: Project[] = [
           "Adjustable color and brightness",
           "User-friendly interface integration"
         ],
-        images: [
-          "/images/unnamed.jpg"
-        ]
       },
       {
         heading: "PCB Design",
