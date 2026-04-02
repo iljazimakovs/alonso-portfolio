@@ -63,7 +63,7 @@ export function Navbar() {
         <a href="#" className="flex items-center gap-3 group">
           <ChipLogo className="group-hover:opacity-100 opacity-75 transition-opacity" />
           <span className="font-display font-semibold text-base text-foreground group-hover:text-primary transition-colors tracking-tight">
-            Alonso Rodriguez
+            AlonsoFernandez
           </span>
         </a>
 
