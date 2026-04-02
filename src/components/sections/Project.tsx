@@ -3172,7 +3172,7 @@ const projects: Project[] = [
         heading: "Vivado Project Setup",
         body: "Create FPGA project in Vivado using Analog Devices HDL repository. Source Vivado tools and run makefile to generate ZCU102 project for AD9371 FMC.",
         code: [
-          "~$ mkdir -p xilinx_sdr\n~$ cd ./xilinx_sdr/\n~$/xilinx_sdr$ git clone https://github.com/analogdevicesinc/hdl.git",
+          "~$ mkdir -p xilinx_sdr\n~$ cd ./xilinx_sdr/\n~$/xilinx_sdr$",
           "~$/xilinx_sdr/hdl$ git checkout hdl_2021_r1",
           "~$/xilinx_sdr/hdl$ cd ./projects/adrv9371x/zcu102/\n~$/xilinx_sdr/hdl/projects/adrv9371x/zcu102$ source /tools/Xilinx/Vivado/2021.1/settings64.sh\n~$/xilinx_sdr/hdl/projects/adrv9371x/zcu102$ make"
         ]
