@@ -2027,7 +2027,6 @@ const projects: Project[] = [
         ],
         images: [
           "/images/unnamed2.jpg",
-          "/images/unnamed3.jpg"
         ]
       },
       {
