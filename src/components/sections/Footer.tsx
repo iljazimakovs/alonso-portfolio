@@ -88,7 +88,7 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <ChipBadge />
           <span className="text-sm text-muted-foreground font-mono">
-            © {currentYear} Alonso Rodriguez
+            © {currentYear} AlonsoFernandez
           </span>
         </div>
 
