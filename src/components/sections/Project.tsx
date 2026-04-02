@@ -1995,6 +1995,9 @@ const projects: Project[] = [
           "Adjustable color and brightness",
           "User-friendly interface integration"
         ],
+        images: [
+          "/images/unnamed1.jpg"
+        ]
       },
       {
         heading: "PCB Design",
@@ -2023,7 +2026,8 @@ const projects: Project[] = [
           "User interface validation through mobile app"
         ],
         images: [
-          "/images/unnamed.jpg"
+          "/images/unnamed2.jpg",
+          "/images/unnamed3.jpg"
         ]
       },
       {
