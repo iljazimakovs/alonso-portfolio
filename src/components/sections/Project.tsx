@@ -3584,8 +3584,6 @@ const projects: Project[] = [
           "https://hackster.imgix.net/uploads/attachments/1152571/db7cbc6e-bdfd-4d62-8088-8ba91913bc9f.png?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152572/1865be80-49d6-457c-9c6e-232ee3bd916f.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152573/2c5ab185-b6e7-4e74-b912-6c10c02506be.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152574/309798e4-4bbe-4c6f-a746-6b81804f058d.jpeg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1152578/04c3c5c0-e735-463d-b745-f6c000fa92ce.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152579/0af40956-c2e3-4c4f-a6b0-2e8da653e366.jpeg?auto=compress,format&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1152580/66cb0ecb-8ad3-4695-937f-e51f51033ec0.jpeg?auto=compress,format&w=740&h=555&fit=max"
         ]
@@ -3660,9 +3658,6 @@ const projects: Project[] = [
       {
         heading: "System Overview",
         body: "High-precision magnetic levitation system using ATtiny1614 MCU, solenoid, and hall-effect sensor. Demonstrates PID-style stabilization and mechatronic integration.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1544851/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min"
-        ]
       },
       {
         heading: "Hardware Components",
@@ -3677,9 +3672,6 @@ const projects: Project[] = [
           "SMD diodes",
           "3D-printed mechanical support components"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1544858/board_WVKG06L2vG.JPG?auto=compress,format&w=740&h=555&fit=max"
-        ]
       },
       {
         heading: "3D-Printed Enclosures",
