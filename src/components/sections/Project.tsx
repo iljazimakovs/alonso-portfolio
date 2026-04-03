@@ -1596,7 +1596,7 @@ const projects: Project[] = [
     tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
     icon: Cpu,
     highlight: "Scalable EV Battery Monitoring",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_qfcRSffjLb.jpg" }
     ],
@@ -2136,7 +2136,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
     icon: Cpu,
     highlight: "ATtiny1614 Magnetic Levitation",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1544851/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
     ],
@@ -2404,12 +2404,6 @@ const projects: Project[] = [
         ]
       },
       {
-        heading: "Final Vehicle",
-        images: [
-          "/images/image_sIlwNIvt2h.jpg"
-        ]
-      },
-      {
         heading: "System Block Diagram",
         images: [
           "/images/image_PgDRP0hN7F.jpg"
@@ -2547,7 +2541,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Camera", "Servo Control", "IoT", "Remote Monitoring", "Battery Powered"],
     icon: Camera,
     highlight: "Remote Pan-Tilt Camera",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpg" }
     ],
@@ -3536,7 +3530,7 @@ const projects: Project[] = [
     tags: ["Energy Monitoring", "Power Electronics", "Embedded Systems", "ESP32", "DAC", "PWM", "MPPT"],
     icon: Cpu,
     highlight: "High-Precision Multi-Phase Energy Control",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_SgSKULlyfj.jpg" }
     ],
