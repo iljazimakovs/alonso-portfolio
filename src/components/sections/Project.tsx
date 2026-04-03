@@ -2487,7 +2487,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "/images/spresense_all_vZxXQTzHBM.jpg"
+          "/images/schematics2.jpg"
         ]
       }
     ]
