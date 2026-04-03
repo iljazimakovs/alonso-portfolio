@@ -2345,7 +2345,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Cloud Integration", "Sensors", "Motor Control", "Prototyping"],
     icon: Cpu,
     highlight: "Remote Vehicle Monitoring",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/remote_car.jpg" }
     ],
