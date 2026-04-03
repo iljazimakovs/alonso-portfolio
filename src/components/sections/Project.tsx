@@ -2345,7 +2345,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Cloud Integration", "Sensors", "Motor Control", "Prototyping"],
     icon: Cpu,
     highlight: "Remote Vehicle Monitoring",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/remote_car.jpg" }
     ],
@@ -2744,7 +2744,6 @@ const projects: Project[] = [
           "Optional encoder modules for feedback"
         ],
         images: [
-          "/images/img_3641_4IliUhwScq.jpg",
           "/images/img_3643_8OTJsTlsBu.jpg",
           "/images/schematicdiagram_Gy4WnIxRhh.jpg"
         ]
@@ -3026,7 +3025,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "/images/wiring_ic1R9D54zN.jpg"
+          "/images/schematics.jpg"
         ]
       }
     ]
@@ -3325,7 +3324,7 @@ const projects: Project[] = [
     tags: ["EEG", "EMG", "EKG", "Embedded Systems", "ADC", "Signal Processing", "Hardware Design"],
     icon: Cpu,
     highlight: "High-Resolution Biosignal Shield",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg" }
     ],
