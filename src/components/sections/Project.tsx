@@ -813,7 +813,6 @@ const projects: Project[] = [
         ],
         images: [
           "/images/image_jbejuB65tr.jpg",
-          "/images/image_ZFQ1VlIRGN.jpg"
         ]
       },
       {
