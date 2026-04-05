@@ -1530,7 +1530,7 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "ESP32 development board in Arduino Uno form factor designed to improve usability and reliability for embedded development. Revision 2.0 addresses practical limitations observed during real-world use.",
         images: [
-          "/images/image_POeRWSnGb3.jpg"
+          "/images/stressimage.jpg"
         ]
       },
       {
