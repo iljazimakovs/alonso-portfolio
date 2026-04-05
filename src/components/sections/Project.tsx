@@ -1930,7 +1930,7 @@ const projects: Project[] = [
   },
   {
     slug: "b3f6d1",
-    title: "Advanced Multi-Channel Smart Lighting Platform",
+    title: "Precision Multi-Channel Smart Lighting Controller",
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
     description: "Compact, professional-grade LED controller for five independently driven channels with high-current capability and IoT connectivity.",
