@@ -1930,29 +1930,29 @@ const projects: Project[] = [
   },
   {
     slug: "b3f6d1",
-    title: "High-Density RGB+CCT LED Control Platform",
+    title: "Advanced Multi-Channel Smart Lighting Platform",
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
-    description: "Compact, professional-grade RGB+CCT LED controller supporting five channels with high-current capability, wireless control, and robust protections.",
-    longDescription: "This project demonstrates a compact RGB+CCT LED controller optimized for professional lighting applications. Features include five independently driven channels (RGB + Warm White + Cool White), high-current MOSFET switching, and reliable power regulation. The platform integrates an ESP32-C3-WROOM-02 with efficient LM2678 buck and TPS7A20 LDO regulators on a 2-layer PCB. USB-C programming and WiFi/BLE connectivity provide flexibility for prototyping and deployment in smart lighting systems.",
+    description: "Compact, professional-grade LED controller for five independently driven channels with high-current capability and IoT connectivity.",
+    longDescription: "This project demonstrates a high-performance LED control platform with five independently managed channels, supporting both warm/cool and RGB strips. The design integrates an ESP32-C3 microcontroller, robust MOSFET-based switching, and high-efficiency power regulation. USB-C programming, WiFi/BLE connectivity, and optimized PCB layout ensure reliable operation for professional lighting applications.",
     tags: ["Embedded Systems", "RGB LED", "CCT Control", "ESP32-C3", "Power Electronics", "PWM Control", "IoT"],
     icon: Lightbulb,
-    highlight: "High-Performance LED Control",
+    highlight: "Precision Multi-Channel Lighting",
     hidden: false,
     media: [
       { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1908285/_3sxi2gqqKV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
     ],
     deliverables: [
-      "Compact RGB+CCT LED controller hardware",
-      "Five-channel independent high-current driver",
+      "Compact multi-channel LED controller",
+      "Independent channel drivers with high-current MOSFETs",
       "LM2678 buck and TPS7A20 LDO power stages",
       "USB-C programming interface",
-      "WiFi/BLE connectivity for IoT lighting integration"
+      "WiFi/BLE connectivity for IoT integration"
     ],
     sections: [
       {
         heading: "Project Overview",
-        body: "Professional-grade RGB+CCT LED controller designed for five independent channels. Capable of driving up to 2A per channel with robust power management and protection circuitry for smart lighting applications."
+        body: "Professional-grade LED controller for five independently driven channels. Capable of delivering up to 2A per channel with robust power management and protection for modern smart lighting applications."
       },
       {
         heading: "Hardware Components",
@@ -1971,30 +1971,30 @@ const projects: Project[] = [
       },
       {
         heading: "Operation Principles",
-        body: "Controller provides mutually exclusive output connectors for RGB (5V) and CCT (12V) strips to prevent overloading. USB-C interface provides 5V logic power and programming access."
+        body: "Provides dedicated output connectors for different LED strips with proper electrical isolation. USB-C interface supplies logic power and programming access."
       },
       {
         heading: "Power Conversion",
-        body: "LM2678T buck regulator converts 12V input for RGB strips; TPS7A20 LDO regulates 5V to 3.3V for ESP32-C3 microcontroller."
+        body: "LM2678T buck regulator supplies RGB strips, while TPS7A20 LDO powers the ESP32-C3 microcontroller, ensuring stable operation."
       },
       {
         heading: "LED Driving Architecture",
-        body: "Four-pin connector for RGB strips and three-pin connector for CCT strips. Each channel is switched on the low side via IRLZ44N MOSFETs. Ground separation between GND_PWR and GND_LOGIC reduces noise coupling."
+        body: "Channels are switched via IRLZ44N MOSFETs. GND separation between logic and power minimizes noise and ensures signal integrity."
       },
       {
         heading: "Key Technical Features",
         bullets: [
-          "Supports five independent channels, 2A each",
+          "Five independent channels, each supporting up to 2A",
           "WiFi and BLE connectivity for remote control",
           "USB-C programming interface",
-          "Robust protections: polyfuse, TVS diodes, Schottky diodes",
-          "Optimized PCB layout for thermal dissipation and high-current paths",
-          "Exclusive output selection for RGB or CCT"
+          "Robust electrical protections: polyfuse, TVS diodes, Schottky diodes",
+          "Optimized PCB layout for thermal management and high-current paths",
+          "Mutually exclusive output for RGB or CCT strips"
         ]
       },
       {
         heading: "Engineering Outcome",
-        body: "This project illustrates professional-grade LED control with cost-effective design, high-current capability, robust protection, and IoT connectivity. Suitable for smart homes, architectural lighting, and creative installations."
+        body: "Demonstrates professional-level LED control, combining high-current capability, IoT integration, and robust protections. Suitable for smart homes, architectural lighting, and commercial installations."
       }
     ]
   },
