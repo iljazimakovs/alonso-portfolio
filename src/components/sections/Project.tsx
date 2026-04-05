@@ -1929,6 +1929,76 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "b3f6d1",
+    title: "High-Density RGB+CCT LED Control Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
+    description: "Compact, professional-grade RGB+CCT LED controller supporting five channels with high-current capability, wireless control, and robust protections.",
+    longDescription: "This project demonstrates a compact RGB+CCT LED controller optimized for professional lighting applications. Features include five independently driven channels (RGB + Warm White + Cool White), high-current MOSFET switching, and reliable power regulation. The platform integrates an ESP32-C3-WROOM-02 with efficient LM2678 buck and TPS7A20 LDO regulators on a 2-layer PCB. USB-C programming and WiFi/BLE connectivity provide flexibility for prototyping and deployment in smart lighting systems.",
+    tags: ["Embedded Systems", "RGB LED", "CCT Control", "ESP32-C3", "Power Electronics", "PWM Control", "IoT"],
+    icon: Lightbulb,
+    highlight: "High-Performance LED Control",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1908285/_3sxi2gqqKV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "Compact RGB+CCT LED controller hardware",
+      "Five-channel independent high-current driver",
+      "LM2678 buck and TPS7A20 LDO power stages",
+      "USB-C programming interface",
+      "WiFi/BLE connectivity for IoT lighting integration"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Professional-grade RGB+CCT LED controller designed for five independent channels. Capable of driving up to 2A per channel with robust power management and protection circuitry for smart lighting applications."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ESP32-C3-WROOM-02 microcontroller",
+          "LM2678T buck converter (12V→5V)",
+          "TPS7A20 LDO (5V→3.3V)",
+          "IRLZ44N MOSFET drivers",
+          "2-layer PCB layout"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1908286/bottom_9cV7GEabuo.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1908287/top_B19vTRjtYF.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1908288/top_QegcRwxIa5.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Operation Principles",
+        body: "Controller provides mutually exclusive output connectors for RGB (5V) and CCT (12V) strips to prevent overloading. USB-C interface provides 5V logic power and programming access."
+      },
+      {
+        heading: "Power Conversion",
+        body: "LM2678T buck regulator converts 12V input for RGB strips; TPS7A20 LDO regulates 5V to 3.3V for ESP32-C3 microcontroller."
+      },
+      {
+        heading: "LED Driving Architecture",
+        body: "Four-pin connector for RGB strips and three-pin connector for CCT strips. Each channel is switched on the low side via IRLZ44N MOSFETs. Ground separation between GND_PWR and GND_LOGIC reduces noise coupling."
+      },
+      {
+        heading: "Key Technical Features",
+        bullets: [
+          "Supports five independent channels, 2A each",
+          "WiFi and BLE connectivity for remote control",
+          "USB-C programming interface",
+          "Robust protections: polyfuse, TVS diodes, Schottky diodes",
+          "Optimized PCB layout for thermal dissipation and high-current paths",
+          "Exclusive output selection for RGB or CCT"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project illustrates professional-grade LED control with cost-effective design, high-current capability, robust protection, and IoT connectivity. Suitable for smart homes, architectural lighting, and creative installations."
+      }
+    ]
+  },
+  {
     slug: "9c7e4b",
     title: "Wireless RGB LED Control Module",
     category: "IoT & Connected Devices",
