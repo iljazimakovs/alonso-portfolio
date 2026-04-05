@@ -1940,7 +1940,7 @@ const projects: Project[] = [
     highlight: "Precision Multi-Channel Lighting",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1908285/_3sxi2gqqKV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_3sxi2gqqKV.jpg" }
     ],
     deliverables: [
       "Compact multi-channel LED controller",
@@ -1964,9 +1964,9 @@ const projects: Project[] = [
           "2-layer PCB layout"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1908286/bottom_9cV7GEabuo.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1908287/top_B19vTRjtYF.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1908288/top_QegcRwxIa5.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/bottom_9cV7GEabuo.jpg",
+          "/images/top_B19vTRjtYF.jpg",
+          "/images/top_QegcRwxIa5.jpg"
         ]
       },
       {
@@ -2207,7 +2207,7 @@ const projects: Project[] = [
     highlight: "ATtiny1614 Magnetic Levitation",
     hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1544851/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
     ],
     deliverables: [
       "ATtiny1614-based levitation controller",
@@ -2239,33 +2239,33 @@ const projects: Project[] = [
         heading: "3D-Printed Enclosures",
         body: "Custom 3D-printed components include base cover, UFO, rocker switch, and base plug, designed for mechanical support and integration of PCB and solenoid.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544857/image_AfQGMpegG8.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images/image_AfQGMpegG8.png?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
         heading: "Assembly Procedure",
         body: "Stepwise assembly including SMD placement, header insertion, switches, solenoid and hall sensor integration, and final enclosure assembly.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544859/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544862/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544863/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544866/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544868/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544869/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
+          "/images/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
         ]
       },
       {
         heading: "PCB Layout Overview",
         body: "Top-layer PCB layout showing SMD component placement, copper routing, and connection pads optimized for the ATtiny1614 magnetic levitation system.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544854/board_W9zo629mFW.JPG"
+          "/images/board_W9zo629mFW.JPG"
         ]
       },
       {
         heading: "Schematic Diagram",
         body: "Electrical schematic showing ATtiny1614 connections, MOSFET driver for the solenoid, hall-effect sensor inputs, and supporting passive components. Provides clear reference for assembly and troubleshooting.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544853/schematic_a6Emr769uF.png"
+          "/images/schematic_a6Emr769uF.png"
         ]
       },
       {
