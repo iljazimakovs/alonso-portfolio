@@ -1999,6 +1999,75 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "d6a9b4",
+    title: "Precision Embedded IMU Platform with Full Sensor Integration",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "hardware-design", "sensor-integration"],
+    description: "High-precision IMU development board with STM32F405 MCU, ICM42688-P sensor, external clocks, and advanced communication protocols.",
+    longDescription: "Professional-grade Inertial Measurement Unit (IMU) platform designed for embedded systems experimentation and advanced navigation algorithm development. The board integrates a high-precision ICM42688-P sensor with STM32F405 microcontroller, supports multiple communication protocols (MAVLink, CAN2.0B, DroneCAN, ROS2), and features external crystals for stable timing. The platform enables accurate orientation, motion tracking, and AHRS computation in real-time.",
+    tags: ["IMU", "Embedded Systems", "STM32F405", "ICM42688-P", "AHRS", "Sensor Fusion", "Navigation"],
+    icon: Activity,
+    highlight: "High-Precision IMU Platform",
+    hidden: false,
+    media: [
+      { type: "image", src: "7JJxhUUOqd.jpg" }
+    ],
+    deliverables: [
+      "STM32F405-based IMU development board",
+      "ICM42688-P high-precision IMU sensor",
+      "External MCU and sensor clocking",
+      "Python GUI for live data visualization and parameter tuning",
+      "Support for MAVLink, CAN2.0B, DroneCAN, and ROS2 protocols"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "This IMU platform enables engineers and researchers to work with high-precision inertial sensors, supporting embedded experimentation, AHRS, and sensor fusion applications."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "STM32F405 Processor",
+          "ICM42688-P high-precision, low-noise IMU sensor",
+          "External 8 MHz crystal for MCU",
+          "External 32.768 kHz crystal for IMU timing",
+          "Interfaces: USB-C serial, UART (TTL), I2C, CAN 2.0B",
+          "Flexible USB-C power supply"
+        ]
+      },
+      {
+        heading: "Communication & Protocols",
+        bullets: [
+          "MAVLink for UAV integration",
+          "CAN2.0B for automotive/industrial use",
+          "DroneCAN for multi-node UAV systems",
+          "ROS2 support for robotics applications"
+        ]
+      },
+      {
+        heading: "Performance",
+        bullets: [
+          "Static yaw instability: 0.01°/hour",
+          "High-resolution, low-noise data acquisition",
+          "Stable timing via external crystal oscillators"
+        ]
+      },
+      {
+        heading: "Software Integration",
+        bullets: [
+          "Firmware developed for STM32CubeIDE / CubeMX",
+          "Real-time sensor acquisition and processing",
+          "AHRS and orientation calculation",
+          "Python-based GUI for monitoring and tuning"
+        ]
+      },
+      {
+        heading: "Application Scope",
+        body: "Suitable for embedded systems education, UAV navigation, robotics, sensor fusion research, and real-time AHRS development. Fully modular, high-precision design enables professional experimentation and evaluation."
+      }
+    ]
+  },
+  {
     slug: "9c7e4b",
     title: "Wireless RGB LED Control Module",
     category: "IoT & Connected Devices",
