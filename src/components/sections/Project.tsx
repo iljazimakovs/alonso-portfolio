@@ -2010,7 +2010,7 @@ const projects: Project[] = [
     highlight: "High-Precision IMU Platform",
     hidden: false,
     media: [
-      { type: "image", src: "7JJxhUUOqd.jpg" }
+      { type: "image", src: "/images/7JJxhUUOqd.jpg" }
     ],
     deliverables: [
       "STM32F405-based IMU development board",
