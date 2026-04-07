@@ -1414,7 +1414,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/44322/TM4C123G.jpg"
+        src: "/images/TM4C123G.jpg"
       }
     ],
     hidden: true,
