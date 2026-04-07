@@ -1685,7 +1685,7 @@ const projects: Project[] = [
     highlight: "Custom Embedded Carrier Board",
     hidden: true,
     media: [
-      { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" }
+      { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg" }
     ],
     deliverables: [
       "Custom PCB carrier board for embedded display module",
@@ -2468,12 +2468,12 @@ const projects: Project[] = [
         heading: "Assembly Procedure",
         body: "Stepwise assembly including SMD placement, header insertion, switches, solenoid and hall sensor integration, and final enclosure assembly.",
         images: [
-          "/images/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "/images/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "/images/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "/images/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "/images/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "/images/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg",
+          "/images/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg",
+          "/images/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg",
+          "/images/oh40e_sensor_Zig3NVQP71.jpg",
+          "/images/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg",
+          "/images/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg"
         ]
       },
       {
