@@ -358,7 +358,7 @@ const projects: Project[] = [
         src: "/images/_3HddXBvRpD.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "ESP8266 Firmware",
       "RFID Reader Integration",
@@ -900,7 +900,7 @@ const projects: Project[] = [
         src: "/images/_LA3kmP6sBI.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "RTL Encoder & Decoder Design",
       "High-Throughput Data Pipeline",
@@ -1003,7 +1003,7 @@ const projects: Project[] = [
         src: "/images/_unlI3boDdj.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Cross-Platform AI Porting Workflow",
       "TIDL Compilation Setup",
@@ -1102,7 +1102,7 @@ const projects: Project[] = [
         src: "/images/mini_img_1847_h29U195Xfd.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "MPPT-Based Charging Module",
       "Li-ion Charging Circuit Design",
@@ -1216,7 +1216,7 @@ const projects: Project[] = [
         src: "/images/_nJVd6N3DJJ.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Analog Charging Circuit Design",
       "Adjustable Voltage Regulation System",
@@ -1314,7 +1314,7 @@ const projects: Project[] = [
         src: "/images/img_0352_sPzaNzw4Qc.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Solar Power Management System",
       "Battery Monitoring & Fuel Gauge Integration",
@@ -1417,7 +1417,7 @@ const projects: Project[] = [
         src: "/images/44322/TM4C123G.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Multi-Node Sensor System",
       "Cloud Data Pipeline Integration",
@@ -1595,7 +1595,7 @@ const projects: Project[] = [
     tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
     icon: Cpu,
     highlight: "Scalable EV Battery Monitoring",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_qfcRSffjLb.jpg" }
     ],
@@ -1683,7 +1683,7 @@ const projects: Project[] = [
     tags: ["PCB Design", "Embedded Systems", "Display Module", "Hardware Integration", "KiCAD"],
     icon: Cpu,
     highlight: "Custom Embedded Carrier Board",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg" }
     ],
@@ -1734,7 +1734,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/_fX8bRTRZXj.jpg" }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "ESP32 Firmware",
       "Tello API Integration",
@@ -2241,7 +2241,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/_OXf2590Kja.jpg" }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Wireless LED Control System",
       "ESP32 Firmware Integration",
@@ -2349,7 +2349,7 @@ const projects: Project[] = [
       { type: "image", src: "/images/ParticleCloudPushbullet.jpg" },
       { type: "image", src: "/images/Screenshot_2015-10-14-15-39-28.jpg" }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Particle Firmware",
       "Webhook Configuration",
@@ -2427,7 +2427,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
     icon: Cpu,
     highlight: "ATtiny1614 Magnetic Levitation",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_SqZ7rjw7xf.jpg" }
     ],
@@ -2716,7 +2716,7 @@ const projects: Project[] = [
     tags: ["Audio Processing", "Embedded Systems", "TFT Display", "Signal Visualization", "Microcontroller", "Arduino"],
     icon: Cpu,
     highlight: "Real-Time Audio Visualization",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/spresense_lighter2_Uj3rX2jUJ7.jpg" }
     ],
@@ -2793,7 +2793,7 @@ const projects: Project[] = [
     tags: ["Power Electronics", "Induction Heating", "DIY", "MOSFETs", "Capacitors", "Hardware Design"],
     icon: Zap,
     highlight: "Compact High-Power Induction Heater",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/a27d24_8e327d29eab04ff3a6eeb7414e9abfb1mv2-1_XoMq1HJvx7.jpg" }
     ],
@@ -2832,7 +2832,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Camera", "Servo Control", "IoT", "Remote Monitoring", "Battery Powered"],
     icon: Camera,
     highlight: "Remote Pan-Tilt Camera",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpg" }
     ],
@@ -3100,7 +3100,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/camera_robot.jpg" }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Object Detection Trigger System",
       "Embedded Camera Integration",
@@ -3193,7 +3193,7 @@ const projects: Project[] = [
     tags: ["SDR", "FPGA", "Radio", "GNU Radio", "Embedded Systems", "RF", "Signal Processing"],
     icon: Radio,
     highlight: "FPGA-Based SDR Experiments",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/project2.jpg" }
     ],
@@ -3331,7 +3331,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Vehicle Electronics", "Hardware Design", "Prototyping", "Cloud Integration"],
     icon: Cpu,
     highlight: "IoT Vehicle Terminal",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/cover.jpg" }
     ],
@@ -3496,7 +3496,7 @@ const projects: Project[] = [
     ],
     icon: Activity,
     highlight: "Edge AI Health Monitoring",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_h8itjqr0Kc.jpg" }
     ],
@@ -3615,7 +3615,7 @@ const projects: Project[] = [
     tags: ["EEG", "EMG", "EKG", "Embedded Systems", "ADC", "Signal Processing", "Hardware Design"],
     icon: Cpu,
     highlight: "High-Resolution Biosignal Shield",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg" }
     ],
@@ -3662,7 +3662,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Camera", "Ethernet", "Python", "UDP Streaming", "IoT", "Real-Time"],
     icon: Camera,
     highlight: "High-Speed Image Streaming",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_CWzMEnpcbf.jpg" }
     ],
@@ -3734,7 +3734,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Ethernet", "Camera", "Python", "Cloud Integration", "Real-Time", "IoT"],
     icon: Camera,
     highlight: "High-Speed Ethernet Camera Streaming",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/image_NiZXznDryx.jpg" }
     ],
@@ -3820,7 +3820,7 @@ const projects: Project[] = [
     tags: ["Energy Monitoring", "Power Electronics", "Embedded Systems", "ESP32", "DAC", "PWM", "MPPT"],
     icon: Cpu,
     highlight: "High-Precision Multi-Phase Energy Control",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_SgSKULlyfj.jpg" }
     ],
@@ -3867,7 +3867,7 @@ const projects: Project[] = [
     tags: ["Power Electronics", "USB-C PD", "Embedded Hardware", "Prototyping", "PCB Design"],
     icon: Zap,
     highlight: "Multi-Voltage USB-C Supply",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/mini_img_1007_jyD90jaciv.jpg" }
     ],
