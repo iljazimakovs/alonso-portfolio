@@ -2010,7 +2010,7 @@ const projects: Project[] = [
     highlight: "Professional USB PD Debug Tool",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1748657/image_rjpw4I8IGn.png?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=1.1041666269302368" }
+      { type: "image", src: "/images/image_rjpw4I8IGn.jpg" }
     ],
     deliverables: [
       "USB-C PD monitoring and injection interface",
@@ -2033,8 +2033,8 @@ const projects: Project[] = [
           "Four-layer PCB for signal integrity and high-current handling"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1748661/image_bHqcfQa721.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1748660/image_4xDgesPZwg.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_bHqcfQa721.jpg",
+          "/images/image_4xDgesPZwg.jpg"
         ]
       },
       {
@@ -2072,7 +2072,7 @@ const projects: Project[] = [
     highlight: "Professional BLDC Motor Control",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1936717/_5cSan2KQek.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_5cSan2KQek.jpg" }
     ],
     deliverables: [
       "Turnkey BLDC motor controller PCB",
@@ -2096,9 +2096,6 @@ const projects: Project[] = [
           "4-layer PCB, 95×75 mm",
           "Current sensing via low-side shunt resistors"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/179547/ALBU0005_00.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Design Specifications",
@@ -2114,7 +2111,7 @@ const projects: Project[] = [
         heading: "Schematic Design",
         body: "Schematic created in Altium Designer covering power stage, gate drive, current sensing, MCU interface, and protection circuits.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1945342/circuit_drv8301_tq3pzziuDb.png"
+          "/images/circuit_drv8301_tq3pzziuDb.jpg"
         ]
       },
       {
@@ -2432,7 +2429,7 @@ const projects: Project[] = [
     highlight: "ATtiny1614 Magnetic Levitation",
     hidden: true,
     media: [
-      { type: "image", src: "/images/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_SqZ7rjw7xf.jpg" }
     ],
     deliverables: [
       "ATtiny1614-based levitation controller",
@@ -2464,7 +2461,7 @@ const projects: Project[] = [
         heading: "3D-Printed Enclosures",
         body: "Custom 3D-printed components include base cover, UFO, rocker switch, and base plug, designed for mechanical support and integration of PCB and solenoid.",
         images: [
-          "/images/image_AfQGMpegG8.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images/image_AfQGMpegG8.jpg"
         ]
       },
       {
@@ -2490,7 +2487,7 @@ const projects: Project[] = [
         heading: "Schematic Diagram",
         body: "Electrical schematic showing ATtiny1614 connections, MOSFET driver for the solenoid, hall-effect sensor inputs, and supporting passive components. Provides clear reference for assembly and troubleshooting.",
         images: [
-          "/images/schematic_a6Emr769uF.png"
+          "/images/schematic_a6Emr769uF.jpg"
         ]
       },
       {
