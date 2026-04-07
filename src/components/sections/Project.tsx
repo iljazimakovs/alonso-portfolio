@@ -1999,6 +1999,162 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "d2e8f4",
+    title: "High-Fidelity USB PD Debug and Monitoring Tool",
+    category: "Hardware Design",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+    description: "USB Power Delivery interface tool for capturing, injecting, and monitoring PD communications and accessing SBU debug signals.",
+    longDescription: "This project demonstrates a professional-grade USB Power Delivery interface platform designed for engineers to monitor, test, and access SBU (Sideband Use) debug consoles on USB-C devices. The tool integrates an STM32G071CB microcontroller with dual USB PD interfaces and a CH342 dual UART-to-USB converter, enabling full monitoring, man-in-the-middle injection, and debug console access. The platform provides advanced features for PD experimentation while ensuring signal integrity and real-time data acquisition.",
+    tags: ["USB PD", "STM32", "Embedded Systems", "UART", "Power Delivery", "Debug Tools", "PCB Design"],
+    icon: Cpu,
+    highlight: "Professional USB PD Debug Tool",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1748657/image_rjpw4I8IGn.png?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=1.1041666269302368" }
+    ],
+    deliverables: [
+      "USB-C PD monitoring and injection interface",
+      "STM32G071CB microcontroller for real-time protocol handling",
+      "CH342 dual UART-to-USB interface for SBU debug access",
+      "Dual USB-C connectors supporting PD and USB 2.0 passthrough",
+      "High-fidelity four-layer PCB design with robust layout"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Professional USB PD interface tool for monitoring, injecting, and accessing debug signals over USB-C SBU lines. Designed for engineers working with PD-enabled devices and embedded debugging."
+      },
+      {
+        heading: "Hardware Architecture",
+        bullets: [
+          "STM32G071CB microcontroller with dual USB PD interfaces",
+          "CH342 dual UART-to-USB (CDC ACM) converter for SBU signal access",
+          "Dual USB-C connectors supporting power delivery and USB 2.0 data",
+          "Four-layer PCB for signal integrity and high-current handling"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1748661/image_bHqcfQa721.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1748660/image_4xDgesPZwg.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Functional Capabilities",
+        bullets: [
+          "Monitoring of USB Power Delivery communications",
+          "Man-in-the-middle injection for protocol testing",
+          "Access to SBU debug UART signals (3.3V logic)",
+          "Real-time data acquisition and logging"
+        ]
+      },
+      {
+        heading: "Operational Considerations",
+        bullets: [
+          "Requires negotiated voltage agreement to avoid damage",
+          "Fast Role Swap signals can be received but not sent",
+          "CC lines are 5V tolerant; higher voltages can cause damage"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced hardware design for USB PD monitoring, combining embedded microcontroller control, high-fidelity UART capture, and robust PCB architecture. Suitable for professional evaluation, debugging, and testing of USB-C PD-enabled devices."
+      }
+    ]
+  },
+  {
+    slug: "d7f4c8",
+    title: "High-Precision Multi-Mode BLDC Motor Controller",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+    description: "Custom BLDC motor controller PCB with STM32F4 MCU, DRV8301 gate drivers, and high-current three-phase power stage.",
+    longDescription: "This project demonstrates the design and assembly of a professional BLDC motor controller PCB capable of precise speed and torque control. It integrates STM32F4 microcontroller, DRV8301 gate drivers, and a three-phase high-current power stage with comprehensive thermal and signal integrity management. The platform is designed for industrial automation applications, enabling compact form factor deployment with reliable performance.",
+    tags: ["BLDC", "Motor Control", "STM32F4", "DRV8301", "PCB Design", "Power Electronics", "Embedded Systems"],
+    icon: Gauge,
+    highlight: "Professional BLDC Motor Control",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1936717/_5cSan2KQek.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "Turnkey BLDC motor controller PCB",
+      "STM32F4 MCU with SPI/UART interfaces",
+      "DRV8301 gate drivers for high-current FETs",
+      "Three-phase half-bridge power stage",
+      "Thermal and signal integrity optimized PCB",
+      "Functional validation with 400W BLDC motor"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Complete development of a high-performance BLDC motor controller from schematic design to assembly and functional testing. The PCB supports industrial automation requiring precise motor control and efficient thermal management."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "STM32F103RB compatible microcontroller (Leaf Maple / Mini MapleTree)",
+          "DRV8301 gate driver IC (Texas Instruments)",
+          "Three-phase half-bridge MOSFETs",
+          "4-layer PCB, 95×75 mm",
+          "Current sensing via low-side shunt resistors"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/179547/ALBU0005_00.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Design Specifications",
+        bullets: [
+          "Input voltage: 24–48V DC",
+          "Continuous current: 20A",
+          "PWM frequency: up to 20 kHz",
+          "Layer count: 4-layer PCB",
+          "Thermal and overcurrent protection integrated"
+        ]
+      },
+      {
+        heading: "Schematic Design",
+        body: "Schematic created in Altium Designer covering power stage, gate drive, current sensing, MCU interface, and protection circuits.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1945342/circuit_drv8301_tq3pzziuDb.png"
+        ]
+      },
+      {
+        heading: "PCB Layout & Thermal Management",
+        body: "Critical layout considerations were applied to minimize parasitic inductance, optimize thermal dissipation, and maintain signal integrity across power and analog sections.",
+        bullets: [
+          "Power loops minimized for high-current paths",
+          "MOSFETs placed near board edge with thermal copper connected to chassis",
+          "Gate drive traces matched and kept short",
+          "Analog current sense traces routed away from switching nodes"
+        ]
+      },
+      {
+        heading: "Assembly & Validation",
+        body: "Turnkey PCB assembly included solder paste application, automated pick-and-place, reflow soldering, AOI inspection, and manual through-hole soldering. Functional testing verified motor spin-up, current measurement, and thermal performance at full load.",
+        bullets: [
+          "First-pass yield: 98.5%",
+          "Smooth torque control with 400W BLDC motor",
+          "Thermal performance validated up to 50°C ambient"
+        ]
+      },
+      {
+        heading: "Firmware Integration",
+        body: "STM32 firmware includes initialization, PWM generation, and DRV8301 control routines for full 6-channel PWM operation.",
+        code: [
+          "// Example DRV8301 initialization",
+          "DRV8301_Init();",
+          "TIM1_PWM_Init();",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 500);",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 500);"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates end-to-end professional BLDC motor controller development including embedded firmware, high-current power stage, thermal and signal integrity design, PCB layout, and turnkey assembly suitable for industrial applications."
+      }
+    ]
+  },
+  {
     slug: "d6a9b4",
     title: "Precision Embedded IMU Platform with Full Sensor Integration",
     category: "Embedded Systems",
