@@ -2652,7 +2652,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1459929/_2EtkdD0Lc3.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/hero_led_light.jpg"
       }
     ],
 
@@ -2720,8 +2720,8 @@ const projects: Project[] = [
           "Suitable for consumer and IoT lighting products"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1459937/led_light_control_bluetooth_module_for_ios_android_pinout_dJHunu5vLY.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1459938/led_light_control_bluetooth_module_for_ios_android_schematics_JrmpwpgNge.jpg"
+          "/images/led_light_control_bluetooth_module_for_ios_android_pinout_dJHunu5vLY.jpg",
+          "/images/led_light_control_bluetooth_module_for_ios_android_schematics_JrmpwpgNge.jpg"
         ]
       },
 
