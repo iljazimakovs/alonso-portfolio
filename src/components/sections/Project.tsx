@@ -701,7 +701,7 @@ const projects: Project[] = [
           {
             title: "Ethernet Subsystem",
             body: "Gigabit-capable Ethernet implemented with dedicated PHY and RJ45 connector for reliable high-speed communication.",
-            image: "/images/ethernet_cq1MeWKds3.jpg"
+            image: "/images/ethernet.jpg"
           },
           {
             title: "Debug & Programming Interface",
@@ -813,7 +813,6 @@ const projects: Project[] = [
         ],
         images: [
           "/images/image_jbejuB65tr.jpg",
-          "/images/image_ZFQ1VlIRGN.jpg"
         ]
       },
       {
@@ -1415,7 +1414,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/44322/TM4C123G.jpg"
+        src: "/images/TM4C123G.jpg"
       }
     ],
     hidden: true,
@@ -1531,7 +1530,7 @@ const projects: Project[] = [
         heading: "Project Overview",
         body: "ESP32 development board in Arduino Uno form factor designed to improve usability and reliability for embedded development. Revision 2.0 addresses practical limitations observed during real-world use.",
         images: [
-          "/images/image_POeRWSnGb3.jpg"
+          "/images/stressimage.jpg"
         ]
       },
       {
@@ -1596,7 +1595,7 @@ const projects: Project[] = [
     tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
     icon: Cpu,
     highlight: "Scalable EV Battery Monitoring",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_qfcRSffjLb.jpg" }
     ],
@@ -1686,7 +1685,7 @@ const projects: Project[] = [
     highlight: "Custom Embedded Carrier Board",
     hidden: true,
     media: [
-      { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg?auto=compress,format&w=830&h=466.875&fit=min&dpr=1.1041666269302368" }
+      { type: "image", src: "/images/pipcb_bKKYPxhpl5.jpg" }
     ],
     deliverables: [
       "Custom PCB carrier board for embedded display module",
@@ -1930,6 +1929,298 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "b3f6d1",
+    title: "Precision Multi-Channel Smart Lighting Controller",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
+    description: "Compact, professional-grade LED controller for five independently driven channels with high-current capability and IoT connectivity.",
+    longDescription: "This project demonstrates a high-performance LED control platform with five independently managed channels, supporting both warm/cool and RGB strips. The design integrates an ESP32-C3 microcontroller, robust MOSFET-based switching, and high-efficiency power regulation. USB-C programming, WiFi/BLE connectivity, and optimized PCB layout ensure reliable operation for professional lighting applications.",
+    tags: ["Embedded Systems", "RGB LED", "CCT Control", "ESP32-C3", "Power Electronics", "PWM Control", "IoT"],
+    icon: Lightbulb,
+    highlight: "Precision Multi-Channel Lighting",
+    hidden: false,
+    media: [
+      { type: "image", src: "/images/_3sxi2gqqKV.jpg" }
+    ],
+    deliverables: [
+      "Compact multi-channel LED controller",
+      "Independent channel drivers with high-current MOSFETs",
+      "LM2678 buck and TPS7A20 LDO power stages",
+      "USB-C programming interface",
+      "WiFi/BLE connectivity for IoT integration"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Professional-grade LED controller for five independently driven channels. Capable of delivering up to 2A per channel with robust power management and protection for modern smart lighting applications."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ESP32-C3-WROOM-02 microcontroller",
+          "LM2678T buck converter (12V→5V)",
+          "TPS7A20 LDO (5V→3.3V)",
+          "IRLZ44N MOSFET drivers",
+          "2-layer PCB layout"
+        ],
+        images: [
+          "/images/bottom_9cV7GEabuo.jpg",
+          "/images/top_B19vTRjtYF.jpg",
+          "/images/top_QegcRwxIa5.jpg"
+        ]
+      },
+      {
+        heading: "Operation Principles",
+        body: "Provides dedicated output connectors for different LED strips with proper electrical isolation. USB-C interface supplies logic power and programming access."
+      },
+      {
+        heading: "Power Conversion",
+        body: "LM2678T buck regulator supplies RGB strips, while TPS7A20 LDO powers the ESP32-C3 microcontroller, ensuring stable operation."
+      },
+      {
+        heading: "LED Driving Architecture",
+        body: "Channels are switched via IRLZ44N MOSFETs. GND separation between logic and power minimizes noise and ensures signal integrity."
+      },
+      {
+        heading: "Key Technical Features",
+        bullets: [
+          "Five independent channels, each supporting up to 2A",
+          "WiFi and BLE connectivity for remote control",
+          "USB-C programming interface",
+          "Robust electrical protections: polyfuse, TVS diodes, Schottky diodes",
+          "Optimized PCB layout for thermal management and high-current paths",
+          "Mutually exclusive output for RGB or CCT strips"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "Demonstrates professional-level LED control, combining high-current capability, IoT integration, and robust protections. Suitable for smart homes, architectural lighting, and commercial installations."
+      }
+    ]
+  },
+  {
+    slug: "d2e8f4",
+    title: "High-Fidelity USB PD Debug and Monitoring Tool",
+    category: "Hardware Design",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+    description: "USB Power Delivery interface tool for capturing, injecting, and monitoring PD communications and accessing SBU debug signals.",
+    longDescription: "This project demonstrates a professional-grade USB Power Delivery interface platform designed for engineers to monitor, test, and access SBU (Sideband Use) debug consoles on USB-C devices. The tool integrates an STM32G071CB microcontroller with dual USB PD interfaces and a CH342 dual UART-to-USB converter, enabling full monitoring, man-in-the-middle injection, and debug console access. The platform provides advanced features for PD experimentation while ensuring signal integrity and real-time data acquisition.",
+    tags: ["USB PD", "STM32", "Embedded Systems", "UART", "Power Delivery", "Debug Tools", "PCB Design"],
+    icon: Cpu,
+    highlight: "Professional USB PD Debug Tool",
+    hidden: false,
+    media: [
+      { type: "image", src: "/images/image_rjpw4I8IGn.jpg" }
+    ],
+    deliverables: [
+      "USB-C PD monitoring and injection interface",
+      "STM32G071CB microcontroller for real-time protocol handling",
+      "CH342 dual UART-to-USB interface for SBU debug access",
+      "Dual USB-C connectors supporting PD and USB 2.0 passthrough",
+      "High-fidelity four-layer PCB design with robust layout"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Professional USB PD interface tool for monitoring, injecting, and accessing debug signals over USB-C SBU lines. Designed for engineers working with PD-enabled devices and embedded debugging."
+      },
+      {
+        heading: "Hardware Architecture",
+        bullets: [
+          "STM32G071CB microcontroller with dual USB PD interfaces",
+          "CH342 dual UART-to-USB (CDC ACM) converter for SBU signal access",
+          "Dual USB-C connectors supporting power delivery and USB 2.0 data",
+          "Four-layer PCB for signal integrity and high-current handling"
+        ],
+        images: [
+          "/images/image_bHqcfQa721.jpg",
+          "/images/image_4xDgesPZwg.jpg"
+        ]
+      },
+      {
+        heading: "Functional Capabilities",
+        bullets: [
+          "Monitoring of USB Power Delivery communications",
+          "Man-in-the-middle injection for protocol testing",
+          "Access to SBU debug UART signals (3.3V logic)",
+          "Real-time data acquisition and logging"
+        ]
+      },
+      {
+        heading: "Operational Considerations",
+        bullets: [
+          "Requires negotiated voltage agreement to avoid damage",
+          "Fast Role Swap signals can be received but not sent",
+          "CC lines are 5V tolerant; higher voltages can cause damage"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced hardware design for USB PD monitoring, combining embedded microcontroller control, high-fidelity UART capture, and robust PCB architecture. Suitable for professional evaluation, debugging, and testing of USB-C PD-enabled devices."
+      }
+    ]
+  },
+  {
+    slug: "d7f4c8",
+    title: "High-Precision Multi-Mode BLDC Motor Controller",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+    description: "Custom BLDC motor controller PCB with STM32F4 MCU, DRV8301 gate drivers, and high-current three-phase power stage.",
+    longDescription: "This project demonstrates the design and assembly of a professional BLDC motor controller PCB capable of precise speed and torque control. It integrates STM32F4 microcontroller, DRV8301 gate drivers, and a three-phase high-current power stage with comprehensive thermal and signal integrity management. The platform is designed for industrial automation applications, enabling compact form factor deployment with reliable performance.",
+    tags: ["BLDC", "Motor Control", "STM32F4", "DRV8301", "PCB Design", "Power Electronics", "Embedded Systems"],
+    icon: Gauge,
+    highlight: "Professional BLDC Motor Control",
+    hidden: false,
+    media: [
+      { type: "image", src: "/images/_5cSan2KQek.jpg" }
+    ],
+    deliverables: [
+      "Turnkey BLDC motor controller PCB",
+      "STM32F4 MCU with SPI/UART interfaces",
+      "DRV8301 gate drivers for high-current FETs",
+      "Three-phase half-bridge power stage",
+      "Thermal and signal integrity optimized PCB",
+      "Functional validation with 400W BLDC motor"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Complete development of a high-performance BLDC motor controller from schematic design to assembly and functional testing. The PCB supports industrial automation requiring precise motor control and efficient thermal management."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "STM32F103RB compatible microcontroller (Leaf Maple / Mini MapleTree)",
+          "DRV8301 gate driver IC (Texas Instruments)",
+          "Three-phase half-bridge MOSFETs",
+          "4-layer PCB, 95×75 mm",
+          "Current sensing via low-side shunt resistors"
+        ],
+      },
+      {
+        heading: "Design Specifications",
+        bullets: [
+          "Input voltage: 24–48V DC",
+          "Continuous current: 20A",
+          "PWM frequency: up to 20 kHz",
+          "Layer count: 4-layer PCB",
+          "Thermal and overcurrent protection integrated"
+        ]
+      },
+      {
+        heading: "Schematic Design",
+        body: "Schematic created in Altium Designer covering power stage, gate drive, current sensing, MCU interface, and protection circuits.",
+        images: [
+          "/images/circuit_drv8301_tq3pzziuDb.jpg"
+        ]
+      },
+      {
+        heading: "PCB Layout & Thermal Management",
+        body: "Critical layout considerations were applied to minimize parasitic inductance, optimize thermal dissipation, and maintain signal integrity across power and analog sections.",
+        bullets: [
+          "Power loops minimized for high-current paths",
+          "MOSFETs placed near board edge with thermal copper connected to chassis",
+          "Gate drive traces matched and kept short",
+          "Analog current sense traces routed away from switching nodes"
+        ]
+      },
+      {
+        heading: "Assembly & Validation",
+        body: "Turnkey PCB assembly included solder paste application, automated pick-and-place, reflow soldering, AOI inspection, and manual through-hole soldering. Functional testing verified motor spin-up, current measurement, and thermal performance at full load.",
+        bullets: [
+          "First-pass yield: 98.5%",
+          "Smooth torque control with 400W BLDC motor",
+          "Thermal performance validated up to 50°C ambient"
+        ]
+      },
+      {
+        heading: "Firmware Integration",
+        body: "STM32 firmware includes initialization, PWM generation, and DRV8301 control routines for full 6-channel PWM operation.",
+        code: [
+          "// Example DRV8301 initialization",
+          "DRV8301_Init();",
+          "TIM1_PWM_Init();",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 500);",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 500);"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates end-to-end professional BLDC motor controller development including embedded firmware, high-current power stage, thermal and signal integrity design, PCB layout, and turnkey assembly suitable for industrial applications."
+      }
+    ]
+  },
+  {
+    slug: "d6a9b4",
+    title: "Precision Embedded IMU Platform with Full Sensor Integration",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "hardware-design", "sensor-integration"],
+    description: "High-precision IMU development board with STM32F405 MCU, ICM42688-P sensor, external clocks, and advanced communication protocols.",
+    longDescription: "Professional-grade Inertial Measurement Unit (IMU) platform designed for embedded systems experimentation and advanced navigation algorithm development. The board integrates a high-precision ICM42688-P sensor with STM32F405 microcontroller, supports multiple communication protocols (MAVLink, CAN2.0B, DroneCAN, ROS2), and features external crystals for stable timing. The platform enables accurate orientation, motion tracking, and AHRS computation in real-time.",
+    tags: ["IMU", "Embedded Systems", "STM32F405", "ICM42688-P", "AHRS", "Sensor Fusion", "Navigation"],
+    icon: Activity,
+    highlight: "High-Precision IMU Platform",
+    hidden: false,
+    media: [
+      { type: "image", src: "/images/7JJxhUUOqd.jpg" }
+    ],
+    deliverables: [
+      "STM32F405-based IMU development board",
+      "ICM42688-P high-precision IMU sensor",
+      "External MCU and sensor clocking",
+      "Python GUI for live data visualization and parameter tuning",
+      "Support for MAVLink, CAN2.0B, DroneCAN, and ROS2 protocols"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "This IMU platform enables engineers and researchers to work with high-precision inertial sensors, supporting embedded experimentation, AHRS, and sensor fusion applications."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "STM32F405 Processor",
+          "ICM42688-P high-precision, low-noise IMU sensor",
+          "External 8 MHz crystal for MCU",
+          "External 32.768 kHz crystal for IMU timing",
+          "Interfaces: USB-C serial, UART (TTL), I2C, CAN 2.0B",
+          "Flexible USB-C power supply"
+        ]
+      },
+      {
+        heading: "Communication & Protocols",
+        bullets: [
+          "MAVLink for UAV integration",
+          "CAN2.0B for automotive/industrial use",
+          "DroneCAN for multi-node UAV systems",
+          "ROS2 support for robotics applications"
+        ]
+      },
+      {
+        heading: "Performance",
+        bullets: [
+          "Static yaw instability: 0.01°/hour",
+          "High-resolution, low-noise data acquisition",
+          "Stable timing via external crystal oscillators"
+        ]
+      },
+      {
+        heading: "Software Integration",
+        bullets: [
+          "Firmware developed for STM32CubeIDE / CubeMX",
+          "Real-time sensor acquisition and processing",
+          "AHRS and orientation calculation",
+          "Python-based GUI for monitoring and tuning"
+        ]
+      },
+      {
+        heading: "Application Scope",
+        body: "Suitable for embedded systems education, UAV navigation, robotics, sensor fusion research, and real-time AHRS development. Fully modular, high-precision design enables professional experimentation and evaluation."
+      }
+    ]
+  },
+  {
     slug: "9c7e4b",
     title: "Wireless RGB LED Control Module",
     category: "IoT & Connected Devices",
@@ -2027,7 +2318,6 @@ const projects: Project[] = [
         ],
         images: [
           "/images/unnamed2.jpg",
-          "/images/unnamed3.jpg"
         ]
       },
       {
@@ -2137,9 +2427,9 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Magnetic Levitation", "ATtiny1614", "PID Control", "Firmware", "SMD PCB", "Mechatronics"],
     icon: Cpu,
     highlight: "ATtiny1614 Magnetic Levitation",
-    hidden: false,
+    hidden: true,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1544851/_SqZ7rjw7xf.blob?auto=compress,format&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_SqZ7rjw7xf.jpg" }
     ],
     deliverables: [
       "ATtiny1614-based levitation controller",
@@ -2171,33 +2461,33 @@ const projects: Project[] = [
         heading: "3D-Printed Enclosures",
         body: "Custom 3D-printed components include base cover, UFO, rocker switch, and base plug, designed for mechanical support and integration of PCB and solenoid.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544857/image_AfQGMpegG8.png?auto=compress,format&w=740&h=555&fit=max"
+          "/images/image_AfQGMpegG8.jpg"
         ]
       },
       {
         heading: "Assembly Procedure",
         body: "Stepwise assembly including SMD placement, header insertion, switches, solenoid and hall sensor integration, and final enclosure assembly.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544859/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544862/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544863/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544866/oh40e_sensor_Zig3NVQP71.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544868/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg?auto=compress,format&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1544869/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg?auto=compress,format&w=740&h=555&fit=max"
+          "/images/1__add_smd_components_and_links_(small)_8QKgNUlXsx.jpg",
+          "/images/2__add_headers_to_copper_side_(small)_Ln1ohojEAp.jpg",
+          "/images/3__add_board_to_case_and_program_cpu_(small)_jX0Ien2QGi.jpg",
+          "/images/oh40e_sensor_Zig3NVQP71.jpg",
+          "/images/4__wire_up_power_and_solenoid_(small)_uPPybJhTe5.jpg",
+          "/images/img_20230107_090259136_hdr_ZU3DVnWh6w.jpg"
         ]
       },
       {
         heading: "PCB Layout Overview",
         body: "Top-layer PCB layout showing SMD component placement, copper routing, and connection pads optimized for the ATtiny1614 magnetic levitation system.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544854/board_W9zo629mFW.JPG"
+          "/images/board_W9zo629mFW.JPG"
         ]
       },
       {
         heading: "Schematic Diagram",
         body: "Electrical schematic showing ATtiny1614 connections, MOSFET driver for the solenoid, hall-effect sensor inputs, and supporting passive components. Provides clear reference for assembly and troubleshooting.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1544853/schematic_a6Emr769uF.png"
+          "/images/schematic_a6Emr769uF.jpg"
         ]
       },
       {
@@ -2337,6 +2627,113 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "e3b7c1",
+    title: "Bluetooth-Enabled Multi-Channel LED Control Interface",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "pcb-hardware"],
+
+    description: "Compact BLE-based lighting control module supporting PWM dimming, dynamic patterns, and mobile app integration.",
+
+    longDescription: "This project demonstrates the integration and evaluation of a compact Bluetooth Low Energy (BLE) lighting control module for real-time LED control applications. The system enables wireless control of color, brightness, and dynamic lighting patterns through a mobile interface, supporting both iOS and Android platforms. The design focuses on low-power operation, high-frequency PWM control, and seamless user interaction, making it suitable for consumer lighting products and embedded IoT systems.",
+
+    tags: [
+      "BLE",
+      "LED Control",
+      "PWM",
+      "Embedded Systems",
+      "IoT",
+      "Wireless Control",
+      "Mobile Integration"
+    ],
+
+    icon: Wifi,
+    highlight: "Wireless Lighting Control",
+
+    media: [
+      {
+        type: "image",
+        src: "/images/led_light.jpg"
+      }
+    ],
+    
+ 
+    hidden: false,
+
+    deliverables: [
+      "BLE-based LED control system",
+      "Mobile app integration (iOS & Android)",
+      "PWM-based brightness and color control",
+      "Low-power embedded operation",
+      "Custom PCB integration capability"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Integrated a Bluetooth Low Energy lighting control module to enable wireless management of LED systems. The platform allows real-time control of brightness, color, and dynamic lighting effects through a mobile application interface."
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system combines wireless communication, embedded control, and LED driving into a compact and efficient platform.",
+        bullets: [
+          "BLE 4.0 communication for low-power wireless control",
+          "Mobile application interface for real-time interaction",
+          "PWM-based LED driving at 20 kHz for smooth dimming",
+          "Support for customizable lighting patterns and effects"
+        ]
+      },
+
+      {
+        heading: "Electrical Characteristics",
+        bullets: [
+          "Operating voltage: 3.6V – 5V",
+          "Operating current: ~15 mA",
+          "Sleep current: ~2 µA",
+          "PWM frequency: 20 kHz",
+          "Wireless frequency: 2.4 GHz (BLE)"
+        ]
+      },
+
+      {
+        heading: "Control Features",
+        body:
+          "The module supports flexible and user-configurable lighting control through a mobile interface.",
+        bullets: [
+          "Full RGB color spectrum control",
+          "Dynamic lighting patterns and animations",
+          "Brightness adjustment via PWM",
+          "Music-reactive lighting modes",
+          "Cross-platform compatibility (iOS and Android)"
+        ]
+      },
+
+      {
+        heading: "Embedded Integration",
+        body:
+          "The module can be integrated into custom embedded designs and PCB systems for product-level deployment.",
+        bullets: [
+          "Micro-USB power interface",
+          "Compact form factor (~50 mm)",
+          "Easy integration with LED driver circuits",
+          "Suitable for consumer and IoT lighting products"
+        ],
+        images: [
+          "/images/led_light_control_bluetooth_module_for_ios_android_pinout_dJHunu5vLY.jpg",
+          "/images/led_light_control_bluetooth_module_for_ios_android_schematics_JrmpwpgNge.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates practical integration of BLE-based control into embedded lighting systems. It highlights experience in wireless communication, PWM-based LED control, and user interface integration for real-world IoT applications."
+      }
+    ]
+  },
+  {
     slug: "c8f3d9",
     title: "IoT-Enabled Remote Vehicle Platform",
     category: "Embedded Systems",
@@ -2402,12 +2799,6 @@ const projects: Project[] = [
         ],
         images: [
           "/images/image_RKBMz3K29n.jpg"
-        ]
-      },
-      {
-        heading: "Final Vehicle",
-        images: [
-          "/images/image_sIlwNIvt2h.jpg"
         ]
       },
       {
@@ -2494,7 +2885,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "/images/spresense_all_vZxXQTzHBM.jpg"
+          "/images/schematics2.jpg"
         ]
       }
     ]
@@ -2548,7 +2939,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Camera", "Servo Control", "IoT", "Remote Monitoring", "Battery Powered"],
     icon: Camera,
     highlight: "Remote Pan-Tilt Camera",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/img_7275_RTwPpDdtHZ.jpg" }
     ],
@@ -2751,7 +3142,6 @@ const projects: Project[] = [
           "Optional encoder modules for feedback"
         ],
         images: [
-          "/images/img_3641_4IliUhwScq.jpg",
           "/images/img_3643_8OTJsTlsBu.jpg",
           "/images/schematicdiagram_Gy4WnIxRhh.jpg"
         ]
@@ -3033,7 +3423,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "/images/wiring_ic1R9D54zN.jpg"
+          "/images/schematics.jpg"
         ]
       }
     ]
@@ -3332,7 +3722,7 @@ const projects: Project[] = [
     tags: ["EEG", "EMG", "EKG", "Embedded Systems", "ADC", "Signal Processing", "Hardware Design"],
     icon: Cpu,
     highlight: "High-Resolution Biosignal Shield",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/hackeeg-angle-01_png_project-body_XXhhNa5B8W.jpg" }
     ],
