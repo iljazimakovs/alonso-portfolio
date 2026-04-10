@@ -3100,7 +3100,7 @@ const projects: Project[] = [
     highlight: "Autonomous Water Level Control",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900371/_N544nvpBYs.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_N544nvpBYs.jpg" }
     ],
     deliverables: [
       "ESP32 firmware for water level acquisition",
@@ -3131,9 +3131,6 @@ const projects: Project[] = [
           "Blynk IoT platform for cloud dashboard",
           "Serial Monitor for real-time debugging"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Sensor Placement & Data Acquisition",
