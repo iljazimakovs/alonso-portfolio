@@ -2655,8 +2655,8 @@ const projects: Project[] = [
         src: "/images/led_light.jpg"
       }
     ],
-    
- 
+
+
     hidden: false,
 
     deliverables: [
@@ -3081,6 +3081,121 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "w7d3e2", // new unique hex slug
+    title: "Autonomous IoT Water Level Monitoring & Control System",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "sensor-integration"],
+    description: "ESP32-based water level monitoring system with ultrasonic sensing, automated motor control, and real-time cloud updates via Blynk.",
+    longDescription: "This project demonstrates a compact and reliable embedded IoT platform for real-time water tank monitoring and control. Using an ESP32 microcontroller with an HC-SR04 ultrasonic sensor, the system continuously measures water levels, calculates percentages, and updates a Blynk dashboard in real time. Optional relay integration allows automated motor control to prevent overflow. The design emphasizes robustness, low power consumption, and ease of deployment in household or small-scale commercial environments.",
+    tags: [
+      "ESP32",
+      "IoT",
+      "Ultrasonic Sensor",
+      "Water Level Monitoring",
+      "Embedded Systems",
+      "Blynk",
+      "Automation"
+    ],
+    icon: Activity,
+    highlight: "Autonomous Water Level Control",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1900371/_N544nvpBYs.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "ESP32 firmware for water level acquisition",
+      "Ultrasonic sensor integration",
+      "Blynk cloud dashboard for real-time monitoring",
+      "Optional relay-controlled motor automation",
+      "Simulation-ready setup and calibration"
+    ],
+    sections: [
+      {
+        heading: "System Overview",
+        body: "The system monitors water levels in real time using an ESP32 and an HC-SR04 ultrasonic sensor, providing cloud visualization and optional automatic motor control to prevent overflow."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ESP32 Wi-Fi enabled microcontroller",
+          "HC-SR04 Ultrasonic Distance Sensor",
+          "Relay module for motor control (optional)",
+          "Standard breadboard and jumper wires",
+          "12V/5V water pump and power supply"
+        ]
+      },
+      {
+        heading: "Software Stack",
+        bullets: [
+          "Arduino IDE for firmware development",
+          "Blynk IoT platform for cloud dashboard",
+          "Serial Monitor for real-time debugging"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Sensor Placement & Data Acquisition",
+        body: "The ultrasonic sensor is mounted on the top of the water tank, facing downward. Distance measurements are converted into water height and percentage of tank filled.",
+        bullets: [
+          "Distance = time-of-flight * speed of sound / 2",
+          "Water level = tank height - measured distance",
+          "Percentage = (water level / tank height) * 100"
+        ]
+      },
+      {
+        heading: "Blynk Dashboard Configuration",
+        body: "Water level and percentage values are transmitted to Blynk every second. Real-time notifications alert when tank is full or low.",
+        bullets: [
+          "Gauge for water level in cm",
+          "Gauge for water percentage",
+          "Threshold alerts: full (≥95%), low (≤10%)",
+          "Optional push notifications for motor ON/OFF"
+        ]
+      },
+      {
+        heading: "Motor Automation",
+        body: "A relay module can be integrated to automatically switch the water pump based on measured tank levels."
+      },
+      {
+        heading: "Firmware Implementation",
+        code: [
+          "/************* Smart Water Level Monitoring System *************",
+          "Hardware: ESP32, HC-SR04 Ultrasonic Sensor, Blynk App",
+          "Features:",
+          "✔ Measure water level in tank",
+          "✔ Send percentage to Blynk App",
+          "✔ Show water level on Serial Monitor",
+          "✔ Automatically detect tank full or empty",
+          "✔ Motor control via relay",
+          "****************************************************************/",
+          "#define BLYNK_TEMPLATE_ID \"Template_ID\"",
+          "#define BLYNK_TEMPLATE_NAME \"Water Level Monitor\"",
+          "#define BLYNK_AUTH_TOKEN \"Blynk_Auth_Token\"",
+          "#include <WiFi.h>",
+          "#include <WiFiClient.h>",
+          "#include <BlynkSimpleEsp32.h>",
+          "char ssid[] = \"WiFi_Name\";",
+          "char pass[] = \"WiFi_Password\";",
+          "#define TRIG_PIN 5",
+          "#define ECHO_PIN 18",
+          "const int TANK_DEPTH = 100;",
+          "long duration;",
+          "float distance, waterLevel, waterPercent;",
+          "BlynkTimer timer;",
+          "void measureWaterLevel() { /* Ultrasonic measurement & Blynk update */ }",
+          "void setup() { Serial.begin(115200); /* Initialize pins, Blynk, timer */ }",
+          "void loop() { Blynk.run(); timer.run(); }"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates end-to-end IoT integration for environmental monitoring and automation. It highlights skills in embedded firmware, sensor integration, real-time cloud data handling, and optional actuator control for autonomous operation."
+      }
+    ]
+  },
+  {
     slug: "1a7e5c",
     title: "WiFi-Enabled Browser-Controlled Robotic Platform",
     category: "IoT & Connected Devices",
@@ -3101,7 +3216,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/img_3641_4IliUhwScq.jpg" }
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Embedded Web Server (ESP8266)",
       "HTML Control Interface",
