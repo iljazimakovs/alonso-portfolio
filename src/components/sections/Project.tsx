@@ -2627,6 +2627,112 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "e3b7c1",
+    title: "Bluetooth-Enabled Multi-Channel LED Control Interface",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "pcb-hardware"],
+
+    description: "Compact BLE-based lighting control module supporting PWM dimming, dynamic patterns, and mobile app integration.",
+
+    longDescription: "This project demonstrates the integration and evaluation of a compact Bluetooth Low Energy (BLE) lighting control module for real-time LED control applications. The system enables wireless control of color, brightness, and dynamic lighting patterns through a mobile interface, supporting both iOS and Android platforms. The design focuses on low-power operation, high-frequency PWM control, and seamless user interaction, making it suitable for consumer lighting products and embedded IoT systems.",
+
+    tags: [
+      "BLE",
+      "LED Control",
+      "PWM",
+      "Embedded Systems",
+      "IoT",
+      "Wireless Control",
+      "Mobile Integration"
+    ],
+
+    icon: Wifi,
+    highlight: "Wireless Lighting Control",
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1459929/_2EtkdD0Lc3.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    hidden: false,
+
+    deliverables: [
+      "BLE-based LED control system",
+      "Mobile app integration (iOS & Android)",
+      "PWM-based brightness and color control",
+      "Low-power embedded operation",
+      "Custom PCB integration capability"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body:
+          "Integrated a Bluetooth Low Energy lighting control module to enable wireless management of LED systems. The platform allows real-time control of brightness, color, and dynamic lighting effects through a mobile application interface."
+      },
+
+      {
+        heading: "System Architecture",
+        body:
+          "The system combines wireless communication, embedded control, and LED driving into a compact and efficient platform.",
+        bullets: [
+          "BLE 4.0 communication for low-power wireless control",
+          "Mobile application interface for real-time interaction",
+          "PWM-based LED driving at 20 kHz for smooth dimming",
+          "Support for customizable lighting patterns and effects"
+        ]
+      },
+
+      {
+        heading: "Electrical Characteristics",
+        bullets: [
+          "Operating voltage: 3.6V – 5V",
+          "Operating current: ~15 mA",
+          "Sleep current: ~2 µA",
+          "PWM frequency: 20 kHz",
+          "Wireless frequency: 2.4 GHz (BLE)"
+        ]
+      },
+
+      {
+        heading: "Control Features",
+        body:
+          "The module supports flexible and user-configurable lighting control through a mobile interface.",
+        bullets: [
+          "Full RGB color spectrum control",
+          "Dynamic lighting patterns and animations",
+          "Brightness adjustment via PWM",
+          "Music-reactive lighting modes",
+          "Cross-platform compatibility (iOS and Android)"
+        ]
+      },
+
+      {
+        heading: "Embedded Integration",
+        body:
+          "The module can be integrated into custom embedded designs and PCB systems for product-level deployment.",
+        bullets: [
+          "Micro-USB power interface",
+          "Compact form factor (~50 mm)",
+          "Easy integration with LED driver circuits",
+          "Suitable for consumer and IoT lighting products"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1459937/led_light_control_bluetooth_module_for_ios_android_pinout_dJHunu5vLY.jpg",
+          "https://hackster.imgix.net/uploads/attachments/1459938/led_light_control_bluetooth_module_for_ios_android_schematics_JrmpwpgNge.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body:
+          "This project demonstrates practical integration of BLE-based control into embedded lighting systems. It highlights experience in wireless communication, PWM-based LED control, and user interface integration for real-world IoT applications."
+      }
+    ]
+  },
+  {
     slug: "c8f3d9",
     title: "IoT-Enabled Remote Vehicle Platform",
     category: "Embedded Systems",
