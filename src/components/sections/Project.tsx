@@ -3722,6 +3722,184 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "d6f1b2", // new unique hex slug
+    title: "IoT Asset Location & Environmental Tracking System",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "hardware-design"],
+    description: "Battery-powered IoT tracker capturing GPS location, motion, and environmental data with cloud visualization and low-power operation.",
+    longDescription: "Developed a portable asset tracking system using a cellular IoT module with integrated GPS and motion sensing. The system transmits real-time data to a cloud dashboard via a lightweight HTTP pipeline, providing geolocation, motion detection, and environmental monitoring. Designed for low-power operation, the tracker ensures reliable data logging during mobile use, with periodic synchronization for battery efficiency.",
+    tags: ["IoT", "GPS Tracking", "Embedded Systems", "Cloud Integration", "Low-Power Design", "Asset Monitoring", "Real-Time Data"],
+    icon: Activity,
+    highlight: "Mobile Asset Monitoring",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1339046/_tdTrgmXb44.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "Portable asset tracking module",
+      "GPS and motion data acquisition",
+      "Periodic cloud synchronization via HTTP",
+      "Low-power battery operation",
+      "Cloud dashboard visualization with maps and telemetry"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "A portable IoT tracker for real-time monitoring of assets, capable of capturing GPS location, motion, and environmental parameters while operating efficiently on battery power."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Blues Wireless Notecarrier-AF cellular IoT module",
+          "LiPo Battery (3.7V, 2500mAh) with JST connector",
+          "Optional solar charging interface",
+          "Adafruit Feather ESP32 removed to optimize power usage"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1484475/carr-f-dev-kit-esp32_ca6b1fc7-cc98-4a38-8f9e-0d49dac8aeb7_1800x1800.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/1339140/robin-glauser-zp7x_b86xog-unsplash_ROAOHnulcP.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Software & Cloud Integration",
+        body: "The Notecarrier-AF transmits location and motion data to a cloud service via HTTP. A lightweight cloud dashboard interprets the incoming JSON data and visualizes asset position and telemetry.",
+        bullets: [
+          "Periodic mode with movement detection to conserve battery",
+          "JSON-based data structure for GPS, motion, and time",
+          "HTTP route configured to Datacake for dashboard visualization",
+          "Dashboard includes interactive map and chart widgets"
+        ]
+      },
+      {
+        heading: "Tracker Configuration",
+        code: [
+          "{ \"req\": \"card.restore\", \"delete\": true }",
+          "{ \"req\": \"hub.set\", \"mode\": \"periodic\", \"product\": \"[DEVICE_UID]\", \"outbound\": 60, \"inbound\": 720 }",
+          "{ \"req\": \"card.location.mode\", \"mode\": \"periodic\", \"seconds\": 3600 }",
+          "{ \"req\": \"card.location.track\", \"start\": true, \"heartbeat\": true, \"hours\": 12 }"
+        ],
+        body: "Configured the Notecarrier to periodically report GPS location, motion, and telemetry while conserving battery life. Heartbeat ensures tracking continues even if the asset remains stationary."
+      },
+      {
+        heading: "Cloud Data Decoding",
+        code: [
+          "function Decoder(request) {",
+          "  var data = JSON.parse(request.body);",
+          "  var device = data.device;",
+          "  var decoded = {};",
+          "  decoded.temp = data.body.temperature;",
+          "  decoded.motion = data.body.motion || 0;",
+          "  decoded.location = '(' + data.where_lat + ',' + data.where_lon + ')';",
+          "  decoded.time = data.when;",
+          "  return [",
+          "    { device: device, field: 'TEMP', value: decoded.temp },",
+          "    { device: device, field: 'MOTION', value: decoded.motion },",
+          "    { device: device, field: 'LOCATION', value: decoded.location },",
+          "    { device: device, field: 'TIME', value: decoded.time }",
+          "  ];",
+          "}"
+        ],
+        body: "Decoder function processes JSON payload from the Notecarrier and extracts temperature, motion, location, and timestamp for visualization."
+      },
+      {
+        heading: "Dashboard Visualization",
+        body: "The processed data is displayed on an interactive dashboard. Map and chart widgets allow real-time tracking and telemetry visualization of moving assets.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1339046/_tdTrgmXb44.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates real-time IoT asset tracking with cloud integration and low-power embedded operation. It highlights expertise in microcontroller configuration, GPS telemetry, cloud-based visualization, and battery-efficient design suitable for professional IoT deployments."
+      }
+    ]
+  },
+  {
+    slug: "g7e5f1", // new unique hex slug
+    title: "Cellular IoT GPS Tracking & Telemetry System",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "gps-tracking"],
+    description: "GPS-based vehicle telemetry system using SIM7000 LTE shield and Arduino, with real-time cloud data visualization on ThingsBoard.",
+    longDescription: "Developed a professional-grade GPS tracking and telemetry system using Arduino and the SIM7000 LTE shield. The system captures real-time location, speed, heading, altitude, temperature, and battery status, and posts the data to a cloud platform (ThingsBoard) for visualization and monitoring. The architecture supports LTE CAT-M1/NB-IoT connectivity, serial interfacing with the Arduino, and a modular cloud dashboard for real-time analytics.",
+    tags: ["GPS", "IoT", "LTE", "Arduino", "Telemetry", "Embedded Systems", "Cloud Integration"],
+    icon: Wifi,
+    highlight: "Cellular GPS IoT Platform",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/401040/gps_tracker_tutorial_cover_image_2_UVQc1EUY7m.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "GPS data acquisition via SIM7000 LTE shield",
+      "Serial communication with Arduino for sensor integration",
+      "Real-time cloud posting using HTTP POST or MQTT",
+      "ThingsBoard dashboard visualization setup",
+      "Modular architecture supporting multiple vehicles and sensors"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "The system captures GPS, speed, heading, altitude, temperature, and battery status from a vehicle and posts it to a cloud platform for real-time monitoring. The design leverages LTE connectivity for reliable cellular communication, making it suitable for mobile telemetry applications.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1206251/ph-a000066_iso_(1)_ztBMuBhMHo.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Arduino Uno / Mega / Leonardo",
+          "Botletics SIM7000 LTE Shield with GNSS antenna",
+          "Hologram Global SIM Card",
+          "5V USB adapter or LiPo battery for power",
+          "Optional car USB adapter for mobile power"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/162776/Hologram%20Dash.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "System Setup & Assembly",
+        body: "Stack the SIM7000 LTE shield onto the Arduino, insert the SIM card with correct orientation, and attach LTE/GNSS antennas. Ensure the power LED on the shield can be activated via the PWRKEY pulse sequence before proceeding with firmware upload.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/467926/sim_card_insertion_v5_G6ve12IWZH.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Arduino Firmware Configuration",
+        body: "Upload the provided IoT example sketch. Configure the communication protocol (HTTP GET/POST or MQTT) and sampling rate. The shield automatically retrieves the unique IMEI number for device identification. Serial monitor output confirms connectivity and GPS lock.",
+        code: [
+          "// Define data transfer protocol",
+          "#define PROTOCOL_HTTP_GET",
+          "// #define PROTOCOL_MQTT_AIO",
+          "// #define PROTOCOL_MQTT_CLOUDMQTT",
+          "// Set sampling rate in seconds",
+          "#define samplingRate 30"
+        ]
+      },
+      {
+        heading: "Cloud Data Integration",
+        body: "Configure ThingsBoard IoT platform: create device, copy access token, and connect Arduino telemetry output to cloud endpoint. Data includes latitude, longitude, speed, heading, altitude, temperature, and battery voltage.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/401052/freeboard_final_dashboard_fZqyjcJVCT.PNG?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Dashboard Configuration",
+        body: "Create widgets in the cloud dashboard to visualize GPS coordinates, speed, heading, altitude, temperature, and battery status. Utilize map widgets for location tracking and gauge/graph widgets for telemetry metrics."
+      },
+      {
+        heading: "Testing & Validation",
+        body: "Conduct on-road or mobile testing with the Arduino + LTE shield system. Adjust sampling rate as needed for resolution. Confirm data integrity on ThingsBoard dashboard. Verify GPS lock, telemetry frequency, and real-time updates.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/401071/fonatest_serial_monitor_1_I1Ycnfhj42.PNG?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "Demonstrates integration of embedded microcontrollers, LTE-based cellular communication, GPS telemetry, and cloud dashboards. Highlights expertise in IoT data acquisition, real-time monitoring, and modular firmware design for vehicle-based telemetry applications."
+      }
+    ]
+  },
+  {
     slug: "a8c3f3",
     title: "Automated Moisture-Controlled Ventilation System",
     category: "Embedded Systems",
