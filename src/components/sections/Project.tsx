@@ -346,7 +346,7 @@ const projects: Project[] = [
     highlight: "High-Precision Ultrasonic Sensing",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/815643/hqdefault.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/hqdefault.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
     ],
     deliverables: [
       "PIC18F45K22 firmware for ultrasonic distance measurement",
@@ -369,14 +369,6 @@ const projects: Project[] = [
           "Solderless breadboard (half-size)",
           "Jumper wires and resistors (330 Ω)"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/323534/PIC18F87J11.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/182875/51GZZ5EU9PL._SX425_.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/44495/09590-01.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/96079/Adafruit_Industries-ADA64-image_75px.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/44496/11026-02.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/96126/08377-02-L.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software Stack",
@@ -385,9 +377,6 @@ const projects: Project[] = [
           "Proteus 8 simulation",
           "Serial debugging via PORTD LEDs"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/411489/mikroc-pic-lifetime-license-overview_yi7FcXttc1.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Measurement Methodology",
@@ -414,7 +403,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/815695/boardd_5PbUd9n7AX.PNG"
+          "/images/boardd_5PbUd9n7AX.jpg"
         ]
       },
       {
@@ -449,7 +438,7 @@ const projects: Project[] = [
     hidden: false,
 
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1371836/_JESKkVKdRc.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_JESKkVKdRc.jpg" }
     ],
 
     deliverables: [
@@ -474,11 +463,6 @@ const projects: Project[] = [
           "Generic USB-powered 5V fan",
           "USB Micro-B breakout and jumper wires"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1336801/2021-08-17_11_13_45_iktDtmkGww.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/555162/bazaar881127_3.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/44496/11026-02.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software Environment",
@@ -487,16 +471,13 @@ const projects: Project[] = [
           "Sensirion I2C SCD4x library for CO₂ sensor",
           "TFT_eSPI library for LCD graphics"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Hardware Integration",
         body: "CO₂ and environmental data are captured by the SCD41 sensor. Fan activation is handled through a relay module connected to the Wio Terminal D0 pin. The LCD displays live sensor readings and CO₂ status in ppm, temperature in °C, and relative humidity.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1371903/picture1_oGEivQ6z86.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1371902/co2_wirings_kkDFGdN8SV.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/picture1_oGEivQ6z86.jpg",
+          "/images/co2_wirings_kkDFGdN8SV.jpeg"
         ]
       },
       {
@@ -520,7 +501,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1371847/schematics_co2_wio_terminal_tP0LN81KTy.png"
+          "/images/schematics_co2_wio_terminal_tP0LN81KTy.jpg"
         ]
       },
       {
@@ -541,13 +522,7 @@ const projects: Project[] = [
     highlight: "Cloud-Connected Environmental Monitoring",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633017/cws1_2-600x400_kZGQsO9o1v.png?auto=compress%2Cformat&w=900&h=675&fit=min" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633046/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633047/image_x4FFDFaCH2.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633022/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633023/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633024/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633025/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" }
+      { type: "image", src: "/images/cws1_2-600x400_kZGQsO9o1v.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" },
     ],
     deliverables: [
       "ESP32 firmware for SHT31 sensor data acquisition",
@@ -570,9 +545,6 @@ const projects: Project[] = [
           "Power Supply (USB or 5V)",
           "Optional Breadboard for prototyping"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/127603/Pi_3-02.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software Tools",
@@ -582,9 +554,6 @@ const projects: Project[] = [
           "Python-Firebase library for data posting",
           "Optional development and simulation tools"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/310391/logo_firebase_8FXZJc8wKi.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Sensor Data Acquisition",
@@ -599,8 +568,8 @@ const projects: Project[] = [
           "humidity = data[3]*256 + data[4]"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/633046/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/633047/image_x4FFDFaCH2.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/pasted_image_0.jpg",
+          "/images/image_x4FFDFaCH2.jpg"
         ]
       },
       {
@@ -612,10 +581,7 @@ const projects: Project[] = [
           "result = firebase.post('sensor_data', {'cTemp': str(cTemp), 'fTemp': str(fTemp), 'humidity': str(humidity)})"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/633022/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/633023/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/633024/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/633025/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/pasted_image_2.jpg",
         ]
       },
       {
