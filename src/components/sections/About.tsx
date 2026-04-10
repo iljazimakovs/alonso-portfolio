@@ -69,7 +69,7 @@ export function About() {
                 <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-primary/40 ring-4 ring-primary/10 shadow-xl shadow-black/40">
                   <img
                     src={profilePhoto}
-                    alt="Alonso Rodriguez"
+                    alt="Alonso Fernandez"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -77,7 +77,7 @@ export function About() {
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
-                  Alonso Rodriguez
+                  Alonso Fernandez
                 </h2>
                 <p className="text-[11px] font-mono text-primary tracking-widest uppercase mt-2">
                   Senior Embedded Systems Engineer
