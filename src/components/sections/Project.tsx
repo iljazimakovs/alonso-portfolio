@@ -2652,7 +2652,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/hero_led_light.jpg"
+        src: "/images/led_light.jpg"
       }
     ],
     
