@@ -335,6 +335,300 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "h6c5d1", // new unique hex slug
+    title: "Precision Ultrasonic Distance Monitoring Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "sensor-integration", "hardware-design"],
+    description: "PIC18F45K22-based embedded platform for high-accuracy distance measurement using an HC-SR04 ultrasonic sensor with binary LED output.",
+    longDescription: "This project demonstrates a high-precision embedded distance measurement platform using a PIC18F45K22 microcontroller and HC-SR04 ultrasonic sensor. The system continuously measures distance in centimeters and outputs the value to an LED array in binary form. The platform leverages CCP modules for precise timing, interrupts for non-blocking measurement, and a 32 MHz oscillator for accurate timing. It includes simulation validation, robust GPIO configuration, and optimized firmware for real-time acquisition.",
+    tags: ["PIC18F45K22", "Ultrasonic Sensor", "Embedded Systems", "Distance Measurement", "CCP Modules", "Real-Time Firmware"],
+    icon: Activity,
+    highlight: "High-Precision Ultrasonic Sensing",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/815643/hqdefault.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "PIC18F45K22 firmware for ultrasonic distance measurement",
+      "HC-SR04 ultrasonic sensor integration",
+      "Real-time binary LED display output",
+      "Timer/CCP-based interrupt-driven architecture",
+      "Proteus simulation setup for functional validation"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a precision distance measurement platform using PIC18F45K22 and HC-SR04 ultrasonic sensor. The system calculates distance in centimeters and outputs the values to a binary LED array in real time."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Microchip PIC18F45K22 MCU (32 MHz)",
+          "HC-SR04 Ultrasonic Sensor",
+          "Generic LEDs for binary display",
+          "Solderless breadboard (half-size)",
+          "Jumper wires and resistors (330 Ω)"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/323534/PIC18F87J11.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/182875/51GZZ5EU9PL._SX425_.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/44495/09590-01.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/96079/Adafruit_Industries-ADA64-image_75px.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/44496/11026-02.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/96126/08377-02-L.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software Stack",
+        bullets: [
+          "mikroC PRO for PIC",
+          "Proteus 8 simulation",
+          "Serial debugging via PORTD LEDs"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/411489/mikroc-pic-lifetime-license-overview_yi7FcXttc1.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Measurement Methodology",
+        body: "Distance is measured using the ultrasonic sensor in microsecond intervals. The microcontroller calculates distance in centimeters based on echo timing, outputs the value to PORTD LEDs in binary form, and handles the timing using CCP modules.",
+        bullets: [
+          "CCP1: compare module generates 10µs trigger pulses every 65.535ms",
+          "CCP2: capture module measures echo pulse width",
+          "Distance calculated as (time_us / 58) → cm",
+          "Non-blocking measurement with interrupts for high precision"
+        ]
+      },
+      {
+        heading: "Firmware Implementation",
+        code: [
+          "sbit TRIG at LATC0_bit;",
+          "sbit ECHO at RC1_bit;",
+          "short i = 0;",
+          "int Dist = 0;",
+          "void interrupt() { /* CCP1/CCP2 interrupt handlers for distance calculation */ }",
+          "void S_Distance() { CCPR1H=0; CCPR1L=10; TRIG=1; CCP1IE_bit=1; }",
+          "void main() { /* MCU initialization, GPIO setup, timer configuration, infinite loop */ }"
+        ]
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/815695/boardd_5PbUd9n7AX.PNG"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The project demonstrates precision real-time distance measurement with embedded microcontrollers. It highlights skills in timer/CCP module usage, ultrasonic sensing, binary output display, and hardware/software co-design suitable for professional embedded system portfolios."
+      }
+    ]
+  },
+  {
+    slug: "g4c8f2", // new unique hex slug
+    title: "Autonomous CO₂ Monitoring & Environmental Control Platform",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["embedded-firmware", "sensor-integration", "hardware-design"],
+
+    description: "ESP32-based Wio Terminal system for real-time CO₂ monitoring, humidity and temperature sensing, with automated fan control and cloud connectivity.",
+
+    longDescription: "This project demonstrates a robust embedded system for continuous monitoring of CO₂ levels, temperature, and humidity using the Wio Terminal platform. When CO₂ exceeds predefined thresholds, a 5V ventilation fan is automatically activated, and alerts are visualized on the built-in LCD screen. The system can also log environmental data for further analysis or transmit it to cloud services via the integrated Wi-Fi module. Designed for home, bedroom, or office deployment, it emphasizes real-time response, reliability, and scalability for IoT applications.",
+
+    tags: [
+      "ESP32",
+      "Wio Terminal",
+      "CO₂ Sensor",
+      "Humidity & Temperature",
+      "IoT",
+      "Embedded Systems",
+      "Automation",
+      "Blynk"
+    ],
+
+    icon: Cloud,
+    highlight: "Real-Time Environmental Monitoring",
+    hidden: false,
+
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1371836/_JESKkVKdRc.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+
+    deliverables: [
+      "ESP32 firmware for CO₂, temperature, and humidity monitoring",
+      "Wio Terminal LCD visualization",
+      "Automated fan control via relay",
+      "Blynk cloud dashboard integration",
+      "Data logging and environmental analysis capability"
+    ],
+
+    sections: [
+      {
+        heading: "System Overview",
+        body: "The platform continuously monitors CO₂ concentration, temperature, and relative humidity. Automated actions, such as switching on a ventilation fan, ensure safe and comfortable indoor air quality."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Seeed Studio Wio Terminal",
+          "Grove CO₂ / Temperature / Humidity Sensor (SCD41)",
+          "Grove Relay Module for fan control",
+          "Generic USB-powered 5V fan",
+          "USB Micro-B breakout and jumper wires"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1336801/2021-08-17_11_13_45_iktDtmkGww.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/attachments/555162/bazaar881127_3.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/44496/11026-02.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software Environment",
+        bullets: [
+          "Arduino IDE with Wio Terminal board support",
+          "Sensirion I2C SCD4x library for CO₂ sensor",
+          "TFT_eSPI library for LCD graphics"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/144203/IDE_web.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Hardware Integration",
+        body: "CO₂ and environmental data are captured by the SCD41 sensor. Fan activation is handled through a relay module connected to the Wio Terminal D0 pin. The LCD displays live sensor readings and CO₂ status in ppm, temperature in °C, and relative humidity.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1371903/picture1_oGEivQ6z86.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1371902/co2_wirings_kkDFGdN8SV.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Firmware Implementation",
+        code: [
+          "#include <SPI.h>",
+          "#include <Wire.h>",
+          "#include <TFT_eSPI.h>",
+          "#include <SensirionI2CScd4x.h>",
+          "#define CO2_THRESHOLD 1200",
+          "SensirionI2CScd4x scd4x;",
+          "TFT_eSPI tft = TFT_eSPI();",
+          "void setup() { /* initialize Wio Terminal, sensor, and display */ }",
+          "void loop() { /* periodic measurement, fan control, and LCD update */ }"
+        ]
+      },
+      {
+        heading: "LCD Display",
+        body: "Live readings for CO₂, temperature, and humidity are visualized on the Wio Terminal LCD with intuitive icons and color coding for quick recognition."
+      },
+      {
+        heading: "Schematics",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1371847/schematics_co2_wio_terminal_tP0LN81KTy.png"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "The system demonstrates full-stack embedded engineering, combining real-time sensor acquisition, actuator control, and cloud-enabled visualization. It highlights expertise in IoT system design, embedded firmware, environmental sensing, and automation for professional indoor air quality solutions."
+      }
+    ]
+  },
+  {
+    slug: "i9d3f7", // new unique hex slug
+    title: "IoT Temperature & Humidity Telemetry with Cloud Integration",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["embedded-firmware", "sensor-integration", "cloud-integration"],
+    description: "ESP32-based IoT system for real-time temperature and humidity monitoring using SHT31 sensor and Firebase cloud database.",
+    longDescription: "This project demonstrates a real-time embedded IoT platform for environmental monitoring. The system uses an ESP32 or Raspberry Pi microcontroller to interface with an SHT31 I2C temperature and humidity sensor. Sensor readings are processed and transmitted over Wi-Fi to a Firebase Realtime Database, allowing for live data visualization, logging, and remote monitoring. The architecture emphasizes reliable data acquisition, cloud synchronization, and secure communication, suitable for professional IoT deployments.",
+    tags: ["ESP32", "Raspberry Pi", "SHT31", "I2C", "Firebase", "IoT", "Humidity", "Temperature"],
+    icon: Cloud,
+    highlight: "Cloud-Connected Environmental Monitoring",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633017/cws1_2-600x400_kZGQsO9o1v.png?auto=compress%2Cformat&w=900&h=675&fit=min" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633046/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633047/image_x4FFDFaCH2.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633022/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633023/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633024/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" },
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/633025/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max" }
+    ],
+    deliverables: [
+      "ESP32 firmware for SHT31 sensor data acquisition",
+      "Wi-Fi connectivity for real-time cloud updates",
+      "Firebase Realtime Database integration",
+      "Secure and structured JSON-based data logging",
+      "Visual dashboard display for remote monitoring"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a reliable IoT platform for monitoring temperature and humidity, transmitting data to Firebase Realtime Database for live visualization and logging."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "Raspberry Pi 3 Model B or ESP32 Microcontroller",
+          "SHT31 Temperature & Humidity Sensor",
+          "I2C Communication Cable",
+          "Power Supply (USB or 5V)",
+          "Optional Breadboard for prototyping"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/127603/Pi_3-02.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software Tools",
+        bullets: [
+          "Python for firmware and data acquisition",
+          "Raspbian OS (Wheezy) for Raspberry Pi",
+          "Python-Firebase library for data posting",
+          "Optional development and simulation tools"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/310391/logo_firebase_8FXZJc8wKi.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Sensor Data Acquisition",
+        body: "The SHT31 sensor communicates via I2C protocol. Data is read in 16-bit format, converted into temperature (°C/°F) and relative humidity, and sent to the microcontroller.",
+        code: [
+          "bus = smbus.SMBus(1)",
+          "bus.write_i2c_block_data(0x44, 0x2C, [0x06])",
+          "data = bus.read_i2c_block_data(0x44, 0x00, 6)",
+          "temp = data[0]*256 + data[1]",
+          "cTemp = -45 + (175 * temp / 65535.0)",
+          "fTemp = -49 + (315 * temp / 65535.0)",
+          "humidity = data[3]*256 + data[4]"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/633046/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/633047/image_x4FFDFaCH2.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Firebase Integration",
+        body: "Sensor data is transmitted to Firebase Realtime Database using JSON POST requests. The database URL acts as the backend endpoint, enabling secure cloud synchronization.",
+        code: [
+          "from firebase import firebase",
+          "firebase = firebase.FirebaseApplication('https://<Your_DB>.firebaseio.com')",
+          "result = firebase.post('sensor_data', {'cTemp': str(cTemp), 'fTemp': str(fTemp), 'humidity': str(humidity)})"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/633022/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/633023/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/633024/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/633025/pasted_image_0.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Security Considerations",
+        body: "For demonstration purposes, Firebase read/write rules can be temporarily set to true for public access. For production, authentication and secure rules must be implemented."
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates a professional IoT telemetry system, combining embedded firmware, sensor integration, I2C communication, real-time cloud logging, and data visualization. It highlights expertise in connecting microcontroller-based platforms to cloud services for real-time monitoring and IoT application development."
+      }
+    ]
+  },
+  {
     slug: "7a3e91",
     title: "WiFi-Enabled Embedded Access Logging System",
     category: "IoT & Connected Devices",
