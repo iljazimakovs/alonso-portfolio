@@ -3733,7 +3733,7 @@ const projects: Project[] = [
     highlight: "Mobile Asset Monitoring",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1339046/_tdTrgmXb44.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/_tdTrgmXb44.jpg" }
     ],
     deliverables: [
       "Portable asset tracking module",
@@ -3756,8 +3756,7 @@ const projects: Project[] = [
           "Adafruit Feather ESP32 removed to optimize power usage"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1484475/carr-f-dev-kit-esp32_ca6b1fc7-cc98-4a38-8f9e-0d49dac8aeb7_1800x1800.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/attachments/1339140/robin-glauser-zp7x_b86xog-unsplash_ROAOHnulcP.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/robin-glauser-zp7x_b86xog-unsplash_ROAOHnulcP.jpg"
         ]
       },
       {
@@ -3804,9 +3803,6 @@ const projects: Project[] = [
       {
         heading: "Dashboard Visualization",
         body: "The processed data is displayed on an interactive dashboard. Map and chart widgets allow real-time tracking and telemetry visualization of moving assets.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1339046/_tdTrgmXb44.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
-        ]
       },
       {
         heading: "Engineering Outcome",
@@ -3826,7 +3822,7 @@ const projects: Project[] = [
     highlight: "Cellular GPS IoT Platform",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/401040/gps_tracker_tutorial_cover_image_2_UVQc1EUY7m.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/gps_tracker_tutorial_cover_image_2_UVQc1EUY7m.jpg" }
     ],
     deliverables: [
       "GPS data acquisition via SIM7000 LTE shield",
@@ -3839,9 +3835,6 @@ const projects: Project[] = [
       {
         heading: "Project Overview",
         body: "The system captures GPS, speed, heading, altitude, temperature, and battery status from a vehicle and posts it to a cloud platform for real-time monitoring. The design leverages LTE connectivity for reliable cellular communication, making it suitable for mobile telemetry applications.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1206251/ph-a000066_iso_(1)_ztBMuBhMHo.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Hardware Components",
@@ -3852,15 +3845,12 @@ const projects: Project[] = [
           "5V USB adapter or LiPo battery for power",
           "Optional car USB adapter for mobile power"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/162776/Hologram%20Dash.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "System Setup & Assembly",
         body: "Stack the SIM7000 LTE shield onto the Arduino, insert the SIM card with correct orientation, and attach LTE/GNSS antennas. Ensure the power LED on the shield can be activated via the PWRKEY pulse sequence before proceeding with firmware upload.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/467926/sim_card_insertion_v5_G6ve12IWZH.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/sim_card_insertion_v5_G6ve12IWZH.jpg"
         ]
       },
       {
@@ -3879,7 +3869,7 @@ const projects: Project[] = [
         heading: "Cloud Data Integration",
         body: "Configure ThingsBoard IoT platform: create device, copy access token, and connect Arduino telemetry output to cloud endpoint. Data includes latitude, longitude, speed, heading, altitude, temperature, and battery voltage.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/401052/freeboard_final_dashboard_fZqyjcJVCT.PNG?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/freeboard_final_dashboard_fZqyjcJVCT.PNG"
         ]
       },
       {
@@ -3889,9 +3879,6 @@ const projects: Project[] = [
       {
         heading: "Testing & Validation",
         body: "Conduct on-road or mobile testing with the Arduino + LTE shield system. Adjust sampling rate as needed for resolution. Confirm data integrity on ThingsBoard dashboard. Verify GPS lock, telemetry frequency, and real-time updates.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/401071/fonatest_serial_monitor_1_I1Ycnfhj42.PNG?auto=compress%2Cformat&w=740&h=555&fit=max"
-        ]
       },
       {
         heading: "Engineering Outcome",
