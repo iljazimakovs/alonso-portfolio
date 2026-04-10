@@ -435,7 +435,7 @@ const projects: Project[] = [
 
     icon: Cloud,
     highlight: "Real-Time Environmental Monitoring",
-    hidden: false,
+    hidden: true,
 
     media: [
       { type: "image", src: "/images/_JESKkVKdRc.jpg" }
@@ -3003,7 +3003,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Cloud Integration", "Sensors", "Motor Control", "Prototyping"],
     icon: Cpu,
     highlight: "Remote Vehicle Monitoring",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/remote_car.jpg" }
     ],
@@ -3731,7 +3731,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Arduino", "IoT", "HVAC", "Humidity Control", "Sensors"],
     icon: Cloud,
     highlight: "Automated Basement Ventilation",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/blob_sVsyiyTWwd.jpg" }
     ],
@@ -4299,7 +4299,7 @@ const projects: Project[] = [
     tags: ["Energy Monitoring", "Power Electronics", "Embedded Systems", "ESP32", "DAC", "PWM", "MPPT"],
     icon: Cpu,
     highlight: "High-Precision Multi-Phase Energy Control",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_SgSKULlyfj.jpg" }
     ],
