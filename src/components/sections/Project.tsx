@@ -3927,7 +3927,7 @@ const projects: Project[] = [
     tags: ["Energy Monitoring", "Power Electronics", "Embedded Systems", "ESP32", "DAC", "PWM", "MPPT"],
     icon: Cpu,
     highlight: "High-Precision Multi-Phase Energy Control",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_SgSKULlyfj.jpg" }
     ],
