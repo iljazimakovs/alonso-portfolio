@@ -2655,7 +2655,8 @@ const projects: Project[] = [
         src: "/images/hero_led_light.jpg"
       }
     ],
-
+    
+ 
     hidden: false,
 
     deliverables: [
