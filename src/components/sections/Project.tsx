@@ -3822,7 +3822,7 @@ const projects: Project[] = [
     highlight: "LiPo Charging Telemetry",
     hidden: false,
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/683760/photo_dec_08_1_11_42_pm_oL1nccHpbX.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/photo_dec_08_1_11_42_pm_oL1nccHpbX.jpg" }
     ],
     deliverables: [
       "LiPo charging monitor hardware integration",
@@ -3846,10 +3846,6 @@ const projects: Project[] = [
           "220 µF capacitor",
           "OLED I2C display 1.3\""
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/image/file/51067/esp01.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
-          "https://hackster.imgix.net/uploads/image/file/95974/Panasonic-ECA-1HM221.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "Software & Cloud Integration",
@@ -3857,15 +3853,12 @@ const projects: Project[] = [
           "Arduino IDE for firmware development",
           "Blynk app for cloud monitoring and visualization"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/570466/blynk_logo_new_svAWbywyIp.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
-        ]
       },
       {
         heading: "System Operation",
         body: "The system continuously measures charge current, bus and load voltages, and cumulative charging time. Data is displayed on the OLED and transmitted to Blynk virtual pins for cloud visualization. The firmware includes averaging for stable readings and automatic time tracking.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/683783/dccharger_schem_N7o9cW3jOd.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/dccharger_schem_N7o9cW3jOd.jpg"
         ]
       },
       {
