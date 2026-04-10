@@ -3811,6 +3811,77 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "h7f3c9", // new unique hex slug
+    title: "Real-Time LiPo Battery Charging Monitor",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "hardware-design"],
+    description: "Battery-powered LiPo charging system with real-time voltage, current, load monitoring, and cloud visualization using OLED and IoT integration.",
+    longDescription: "Developed a 3.7V LiPo battery monitoring system using an ESP8266-01, INA219 current sensor, and OLED display. The system tracks charge current, bus and load voltages, and elapsed charging time in real time, while sending data to a cloud dashboard for remote monitoring. The project emphasizes low-latency acquisition, reliable sensor integration, and professional-level visualization of battery telemetry.",
+    tags: ["ESP8266", "LiPo Battery", "Blynk", "IoT", "Current Monitoring", "Voltage Monitoring", "Embedded Systems", "OLED Display"],
+    icon: Activity,
+    highlight: "LiPo Charging Telemetry",
+    hidden: false,
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/683760/photo_dec_08_1_11_42_pm_oL1nccHpbX.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    deliverables: [
+      "LiPo charging monitor hardware integration",
+      "INA219 current and voltage acquisition",
+      "OLED real-time display for charge metrics",
+      "Blynk-based cloud telemetry and dashboard",
+      "Arduino firmware for data acquisition and communication"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "A professional-grade LiPo battery monitor that acquires voltage, current, and load information, displaying it locally on an OLED screen and remotely via cloud dashboards for live monitoring."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "ESP8266-01 microcontroller",
+          "INA219 DC current/voltage sensor",
+          "Basic 1.0A DC LiPo Charger",
+          "3.3V voltage regulator",
+          "220 µF capacitor",
+          "OLED I2C display 1.3\""
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/image/file/51067/esp01.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff",
+          "https://hackster.imgix.net/uploads/image/file/95974/Panasonic-ECA-1HM221.jpg?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "Software & Cloud Integration",
+        bullets: [
+          "Arduino IDE for firmware development",
+          "Blynk app for cloud monitoring and visualization"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/570466/blynk_logo_new_svAWbywyIp.png?auto=compress%2Cformat&w=48&h=48&fit=fill&bg=ffffff"
+        ]
+      },
+      {
+        heading: "System Operation",
+        body: "The system continuously measures charge current, bus and load voltages, and cumulative charging time. Data is displayed on the OLED and transmitted to Blynk virtual pins for cloud visualization. The firmware includes averaging for stable readings and automatic time tracking.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/683783/dccharger_schem_N7o9cW3jOd.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Firmware Features",
+        code: [
+          "// Initialize INA219 sensor and OLED display\nina219.begin();\nu8g2.begin();\nBlynk.begin(auth, ssid, pass);\n// Main loop collects and averages voltage/current, updates display, sends to Blynk"
+        ],
+        body: "The firmware performs high-resolution ADC reads from the HX711/INA219, computes average values, updates the OLED display, and writes telemetry to Blynk cloud in real time. Automatic start/stop tracking is included for charging session timing."
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "Demonstrates integration of embedded microcontrollers, precision sensing, real-time display, and cloud telemetry. Highlights expertise in battery monitoring, low-power IoT design, and professional data visualization suitable for senior-level embedded projects."
+      }
+    ]
+  },
+  {
     slug: "g7e5f1", // new unique hex slug
     title: "Cellular IoT GPS Tracking & Telemetry System",
     category: "IoT & Connected Devices",
