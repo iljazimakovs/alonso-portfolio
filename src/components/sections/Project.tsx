@@ -477,7 +477,7 @@ const projects: Project[] = [
         body: "CO₂ and environmental data are captured by the SCD41 sensor. Fan activation is handled through a relay module connected to the Wio Terminal D0 pin. The LCD displays live sensor readings and CO₂ status in ppm, temperature in °C, and relative humidity.",
         images: [
           "/images/picture1_oGEivQ6z86.jpg",
-          "/images/co2_wirings_kkDFGdN8SV.jpeg"
+          "/images/co2_wirings_kkDFGdN8SV.jpg"
         ]
       },
       {
@@ -1164,7 +1164,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1610960/_TNpoG1kiQf.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/_TNpoG1kiQf.jpg"
       }
     ],
 
@@ -1193,8 +1193,8 @@ const projects: Project[] = [
           "Custom PCB optimized for ultra-low-power operation"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1626180/module_KWi6fuxF66.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1616749/wio_o2dAdIBjuW.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/module_KWi6fuxF66.jpg",
+          "/images/wio_o2dAdIBjuW.jpg"
         ]
       },
 
@@ -1202,9 +1202,9 @@ const projects: Project[] = [
         heading: "Mechanical & Deployment Design",
         body: "A transparent enclosure was used to protect the system while maintaining solar exposure, enabling reliable outdoor deployment.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1615345/3d_caja_lsR0fDqRqX.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1635937/circuito-1_338G53j3xU.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1635938/circuito-3_yDrlZ46rDW.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/3d_caja_lsR0fDqRqX.jpg",
+          "/images/circuito-1_338G53j3xU.jpg",
+          "/images/circuito-3_yDrlZ46rDW.jpg"
         ]
       },
 
@@ -1218,8 +1218,8 @@ const projects: Project[] = [
           "LIC storage enables high cycle durability (~10× LiPo lifecycle)"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1610964/deep_sleep_Mh0mAYcdvj.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1610965/simple_lora_application-lora_transmit_SgvKe699LQ.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/deep_sleep_Mh0mAYcdvj.jpg",
+          "/images/simple_lora_application-lora_transmit_SgvKe699LQ.jpg"
         ]
       },
 
@@ -1233,9 +1233,9 @@ const projects: Project[] = [
           "Detection of imbalance, misalignment, and wear patterns"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1615295/whatsapp_image_2023-07-26_at_16_05_31_OaQN9PmUKg.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1615294/whatsapp_image_2023-07-26_at_16_05_31(1)_24YB1El1lQ.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1615298/whatsapp_image_2023-07-26_at_16_05_33_xyPp7vMy3R.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/whatsapp_image_2023-07-26_at_16_05_31_OaQN9PmUKg.jpg",
+          "/images/whatsapp_image_2023-07-26_at_16_05_31(1)_24YB1El1lQ.jpg",
+          "/images/whatsapp_image_2023-07-26_at_16_05_33_xyPp7vMy3R.jpg"
         ]
       },
 
@@ -1249,9 +1249,9 @@ const projects: Project[] = [
           "Real-time detection without cloud dependency"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1625692/abnormal_signal_t0bnswp62a.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1625693/iterations_WiSnpXEoIY.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1625694/detection_benchmark_V9URsWySwC.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/abnormal_signal_t0bnswp62a.jpg",
+          "/images/iterations_WiSnpXEoIY.jpg",
+          "/images/detection_benchmark_V9URsWySwC.jpg"
         ]
       },
 
@@ -1265,8 +1265,8 @@ const projects: Project[] = [
           "Marine and cargo transport vibration analysis"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1624452/cylog_7BVkAYoO11.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1615684/dynamic_logistics_wVarNw9GOR.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/cylog_7BVkAYoO11.jpg",
+          "/images/dynamic_logistics_wVarNw9GOR.jpg"
         ]
       },
 
@@ -1304,7 +1304,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1812123/_fnR2fiEd8N.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/_fnR2fiEd8N.jpg"
       }
     ],
 
@@ -1333,8 +1333,8 @@ const projects: Project[] = [
           "Cloud integration for analytics and visualization"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1816314/nrf5340-dk-v_2_0_0_prod_page_qYcHTpNrc4.bmp?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1816315/nrf52840-dongle-rev2-prod_page_0iLFH13ee0.bmp?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/nrf5340-dk-v_2_0_0_prod_page_qYcHTpNrc4.bmp",
+          "/images/nrf52840-dongle-rev2-prod_page_0iLFH13ee0.bmp"
         ]
       },
 
@@ -1372,7 +1372,7 @@ const projects: Project[] = [
           "High reliability in large-scale deployments"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1816151/iot_mesh_overview_TxOplYpsql.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/iot_mesh_overview_TxOplYpsql.jpg"
         ]
       },
 
@@ -1380,7 +1380,7 @@ const projects: Project[] = [
         heading: "Vibration Analysis Results",
         body: "Frequency-domain analysis reveals distinct vibration patterns used for machine condition monitoring.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1816524/image_lj72wsgTga.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_lj72wsgTga.jpg"
         ]
       },
 
@@ -1394,7 +1394,7 @@ const projects: Project[] = [
           "Mechanical design for industrial deployment"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1812129/image_hdJFmtveXG.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_hdJFmtveXG.jpg"
         ]
       },
 
@@ -1415,7 +1415,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "AI-Driven Structural Monitoring",
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1916136/espressif_esp32c6_devkitc_1.jpg" }
+      { type: "image", src: "/images/espressif_esp32c6_devkitc_1.jpg" }
     ],
     hidden: false,
     deliverables: [
@@ -1434,10 +1434,10 @@ const projects: Project[] = [
         heading: "Sensor Node Architecture",
         body: "Each node acquires multi-axis acceleration and environmental parameters, preprocesses data locally, and transmits summarized features to the cloud for further analysis.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1916137/MPU6050.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1916138/Dht11_he1.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1916140/image_ICeXM7zDcq.png",
-          "https://hackster.imgix.net/uploads/attachments/1916141/WhatsApp_Image_2025-11-30_at_91313_PM.jpeg",
+          "/images/MPU6050.jpg",
+          "/images/Dht11_he1.jpg",
+          "/images/image_ICeXM7zDcq.jpg",
+          "/images/WhatsApp_Image_2025-11-30_at_91313_PM.jpg",
         ]
       },
       {
@@ -1460,8 +1460,8 @@ const projects: Project[] = [
         heading: "Dashboard Visualization",
         body: "Web dashboard built with Three.js, Chart.js, HTML, and CSS. Displays a 3D digital twin, risk-colored bridge segments, gauges for thermal and corrosion indices, trend charts for degradation and forecast, and real-time vibration waveforms.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1916146/Screenshot__205_.png",
-          "https://hackster.imgix.net/uploads/attachments/1916148/schematic_11302025230909_VP33ArxWyp.jpeg"
+          "/images/Screenshot__205_.jpg",
+          "/images/schematic_11302025230909_VP33ArxWyp.jpg"
         ]
       },
       {
@@ -1484,7 +1484,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1515930/wizfi360-evb-pico_LrXNS0OKzt.png"
+        src: "/images/wizfi360-evb-pico_LrXNS0OKzt.jpg"
       }
     ],
     deliverables: [
@@ -1503,7 +1503,7 @@ const projects: Project[] = [
         heading: "Hardware Architecture",
         body: "The system integrates a high-resolution accelerometer with a microcontroller-based IoT platform to capture and process vibration signals.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1521240/device_xhM7ot3oRr.JPG"
+          "/images/device_xhM7ot3oRr.JPG"
         ]
       },
       {
@@ -1514,9 +1514,9 @@ const projects: Project[] = [
         heading: "Machine Learning Pipeline",
         body: "A lightweight machine learning model was trained using spectral features derived from vibration signals. FFT-based preprocessing was applied to extract meaningful frequency-domain characteristics, enabling accurate classification of machine states.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1516212/image_IiqV6Ji2zM.png",
-          "https://hackster.imgix.net/uploads/attachments/1516213/image_sjbfHD170u.png",
-          "https://hackster.imgix.net/uploads/attachments/1516211/image_oygGNr630O.png"
+          "/images/image_IiqV6Ji2zM.jpg",
+          "/images/image_sjbfHD170u.jpg",
+          "/images/image_oygGNr630O.jpg"
         ]
       },
       {
@@ -4334,7 +4334,7 @@ const projects: Project[] = [
         heading: "Cloud Data Integration",
         body: "Configure ThingsBoard IoT platform: create device, copy access token, and connect Arduino telemetry output to cloud endpoint. Data includes latitude, longitude, speed, heading, altitude, temperature, and battery voltage.",
         images: [
-          "/images/freeboard_final_dashboard_fZqyjcJVCT.PNG"
+          "/images/freeboard_final_dashboard_fZqyjcJVCT.jpg"
         ]
       },
       {
