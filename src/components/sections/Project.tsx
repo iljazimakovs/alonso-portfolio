@@ -2506,7 +2506,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/_9AJ5MQyfmN.jpg" }
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Multi-Channel LED Driver Hardware",
       "PWM Control Firmware",
@@ -2599,7 +2599,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "RGB LED", "CCT Control", "ESP32-C3", "Power Electronics", "PWM Control", "IoT"],
     icon: Lightbulb,
     highlight: "Precision Multi-Channel Lighting",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_3sxi2gqqKV.jpg" }
     ],
@@ -2669,7 +2669,7 @@ const projects: Project[] = [
     tags: ["USB PD", "STM32", "Embedded Systems", "UART", "Power Delivery", "Debug Tools", "PCB Design"],
     icon: Cpu,
     highlight: "Professional USB PD Debug Tool",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/image_rjpw4I8IGn.jpg" }
     ],
@@ -2731,7 +2731,7 @@ const projects: Project[] = [
     tags: ["BLDC", "Motor Control", "STM32F4", "DRV8301", "PCB Design", "Power Electronics", "Embedded Systems"],
     icon: Gauge,
     highlight: "Professional BLDC Motor Control",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_5cSan2KQek.jpg" }
     ],
@@ -3203,7 +3203,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/_WSJLKa8SPT.jpg" }
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Motor Control Firmware",
       "Multi-Mode Driver Configuration",
@@ -3318,7 +3318,7 @@ const projects: Project[] = [
     ],
 
 
-    hidden: false,
+    hidden: true,
 
     deliverables: [
       "BLE-based LED control system",
@@ -3675,7 +3675,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Camera", "IoT", "Remote Monitoring", "Servo Control", "Wi-Fi", "Microcontroller"],
     icon: Camera,
     highlight: "Remote Embedded Camera",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/esp-eye-1-1317x800_mD2IVcBoSI.jpg" }
     ],
@@ -3759,7 +3759,7 @@ const projects: Project[] = [
     ],
     icon: Activity,
     highlight: "Autonomous Water Level Control",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_N544nvpBYs.jpg" }
     ],
@@ -4132,7 +4132,7 @@ const projects: Project[] = [
     tags: ["IoT", "GPS Tracking", "Embedded Systems", "Cloud Integration", "Low-Power Design", "Asset Monitoring", "Real-Time Data"],
     icon: Activity,
     highlight: "Mobile Asset Monitoring",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/_tdTrgmXb44.jpg" }
     ],
@@ -4221,7 +4221,7 @@ const projects: Project[] = [
     tags: ["ESP8266", "LiPo Battery", "Blynk", "IoT", "Current Monitoring", "Voltage Monitoring", "Embedded Systems", "OLED Display"],
     icon: Activity,
     highlight: "LiPo Charging Telemetry",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/photo_dec_08_1_11_42_pm_oL1nccHpbX.jpg" }
     ],
@@ -4285,7 +4285,7 @@ const projects: Project[] = [
     tags: ["GPS", "IoT", "LTE", "Arduino", "Telemetry", "Embedded Systems", "Cloud Integration"],
     icon: Wifi,
     highlight: "Cellular GPS IoT Platform",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/gps_tracker_tutorial_cover_image_2_UVQc1EUY7m.jpg" }
     ],
@@ -4536,7 +4536,7 @@ const projects: Project[] = [
     tags: ["SDR", "FPGA", "ZCU102", "AD9371", "PetaLinux", "Vivado", "Embedded Linux"],
     icon: Radio,
     highlight: "FPGA SDR Setup",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/project1.jpg" }
     ],
