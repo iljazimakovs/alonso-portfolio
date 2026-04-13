@@ -1194,7 +1194,7 @@ const projects: Project[] = [
         ],
         images: [
           "https://hackster.imgix.net/uploads/attachments/1626180/module_KWi6fuxF66.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1622835/16926823509764_Tce4DJDltB.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "https://hackster.imgix.net/uploads/attachments/1616749/wio_o2dAdIBjuW.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
         ]
       },
 
@@ -1348,10 +1348,6 @@ const projects: Project[] = [
           "FFT-based frequency analysis using hardware acceleration",
           "Spectrogram generation for condition monitoring"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1816323/image_53GV8ykVxX.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1816325/image_4obFCfeydk.png?auto=compress%2Cformat&w=740&h=555&fit=max"
-        ]
       },
 
       {
@@ -1419,7 +1415,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "AI-Driven Structural Monitoring",
     media: [
-      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1916129/_hZbGayJIjo.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1916136/espressif_esp32c6_devkitc_1.jpg" }
     ],
     hidden: false,
     deliverables: [
@@ -1438,13 +1434,10 @@ const projects: Project[] = [
         heading: "Sensor Node Architecture",
         body: "Each node acquires multi-axis acceleration and environmental parameters, preprocesses data locally, and transmits summarized features to the cloud for further analysis.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1916136/espressif_esp32c6_devkitc_1.jpg",
           "https://hackster.imgix.net/uploads/attachments/1916137/MPU6050.jpg",
           "https://hackster.imgix.net/uploads/attachments/1916138/Dht11_he1.jpg",
           "https://hackster.imgix.net/uploads/attachments/1916140/image_ICeXM7zDcq.png",
           "https://hackster.imgix.net/uploads/attachments/1916141/WhatsApp_Image_2025-11-30_at_91313_PM.jpeg",
-          "https://hackster.imgix.net/uploads/attachments/1916142/WhatsApp_Image_2025-11-30_at_82659_PM.jpeg",
-          "https://hackster.imgix.net/uploads/attachments/1916143/WhatsApp_Image_2025-11-30_at_82659_PM__1_.jpeg"
         ]
       },
       {
@@ -1467,9 +1460,7 @@ const projects: Project[] = [
         heading: "Dashboard Visualization",
         body: "Web dashboard built with Three.js, Chart.js, HTML, and CSS. Displays a 3D digital twin, risk-colored bridge segments, gauges for thermal and corrosion indices, trend charts for degradation and forecast, and real-time vibration waveforms.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1916145/WhatsApp_Image_2025-11-30_at_82658_PM__1_.jpeg",
           "https://hackster.imgix.net/uploads/attachments/1916146/Screenshot__205_.png",
-          "https://hackster.imgix.net/uploads/attachments/1916147/WhatsApp_Image_2025-11-30_at_82658_PM.jpeg",
           "https://hackster.imgix.net/uploads/attachments/1916148/schematic_11302025230909_VP33ArxWyp.jpeg"
         ]
       },
@@ -1493,7 +1484,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1516207/_iny5In0pv0.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "https://hackster.imgix.net/uploads/attachments/1515930/wizfi360-evb-pico_LrXNS0OKzt.png"
       }
     ],
     deliverables: [
@@ -1512,19 +1503,12 @@ const projects: Project[] = [
         heading: "Hardware Architecture",
         body: "The system integrates a high-resolution accelerometer with a microcontroller-based IoT platform to capture and process vibration signals.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1515930/wizfi360-evb-pico_LrXNS0OKzt.png",
-          "https://hackster.imgix.net/uploads/attachments/1521189/prototype_1UltiTVV1s.JPG",
           "https://hackster.imgix.net/uploads/attachments/1521240/device_xhM7ot3oRr.JPG"
         ]
       },
       {
         heading: "Data Acquisition",
         body: "Vibration data is collected across X, Y, and Z axes using a precision accelerometer with a sampling frequency of approximately 85 Hz. Multiple operating scenarios were recorded including normal operation, airflow anomalies, and shutdown conditions to build a comprehensive dataset for model training. :contentReference[oaicite:1]{index=1}",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1516208/data-aquisition_ZQbR4Cfhzn.png",
-          "https://hackster.imgix.net/uploads/attachments/1516209/image_nZJB9JpT7Q.png",
-          "https://hackster.imgix.net/uploads/attachments/1516210/img_0443_l1FyXh8GZk.JPG"
-        ]
       },
       {
         heading: "Machine Learning Pipeline",
