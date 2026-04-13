@@ -1137,6 +1137,423 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "b3f6d1",
+    title: "Autonomous Vibration Intelligence Node for Infrastructure Monitoring",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
+
+    description: "Solar-powered vibration monitoring system with embedded AI for anomaly detection in industrial and logistics infrastructure.",
+
+    longDescription: "Designed a fully autonomous vibration monitoring node capable of detecting structural and mechanical anomalies using embedded AI. The system integrates a high-bandwidth industrial accelerometer, ultra-low-power wireless communication, and solar energy harvesting with Lithium-Ion Capacitor (LIC) storage. Optimized for long-term deployment, the platform continuously captures vibration data, performs frequency-domain analysis, and applies TinyML-based models to classify abnormal patterns in real time. The architecture is tailored for logistics infrastructure such as railways, bridges, and transport systems where predictive maintenance is critical.",
+
+    tags: [
+      "Vibration Monitoring",
+      "Embedded AI",
+      "TinyML",
+      "LoRa",
+      "Low Power Design",
+      "Industrial IoT",
+      "Signal Processing"
+    ],
+
+    icon: Activity,
+    highlight: "Edge AI Monitoring",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1610960/_TNpoG1kiQf.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Solar-powered embedded monitoring node",
+      "Vibration data acquisition and FFT processing",
+      "TinyML-based anomaly detection model",
+      "Ultra-low-power firmware architecture",
+      "LoRa-based long-range communication system"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed an автономous vibration monitoring system for industrial and logistics infrastructure. The platform continuously measures vibration signals and detects anomalies using embedded AI, enabling predictive maintenance and early fault detection."
+      },
+
+      {
+        heading: "Hardware Architecture",
+        body: "The system integrates sensing, processing, communication, and energy harvesting into a compact embedded platform.",
+        bullets: [
+          "Wio-WM1110 module with integrated MCU and LoRa communication",
+          "IIS3DWB high-bandwidth industrial accelerometer",
+          "Solar energy harvesting using multiple micro solar cells",
+          "Lithium-Ion Capacitor (LIC) for long lifecycle energy storage",
+          "Custom PCB optimized for ultra-low-power operation"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1626180/module_KWi6fuxF66.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1622835/16926823509764_Tce4DJDltB.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Mechanical & Deployment Design",
+        body: "A transparent enclosure was used to protect the system while maintaining solar exposure, enabling reliable outdoor deployment.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1615345/3d_caja_lsR0fDqRqX.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1635937/circuito-1_338G53j3xU.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1635938/circuito-3_yDrlZ46rDW.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Power Optimization",
+        body: "Power efficiency is critical for autonomous operation. The system is optimized for ultra-low consumption with aggressive sleep strategies.",
+        bullets: [
+          "Deep sleep current ~12µA",
+          "Transmission spikes up to ~48mA during LoRa communication",
+          "Energy harvesting ensures continuous operation",
+          "LIC storage enables high cycle durability (~10× LiPo lifecycle)"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1610964/deep_sleep_Mh0mAYcdvj.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1610965/simple_lora_application-lora_transmit_SgvKe699LQ.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Vibration Signal Processing",
+        body: "High-resolution vibration data is captured and analyzed in both time and frequency domains.",
+        bullets: [
+          "Sampling frequency: 1024 Hz",
+          "3-axis vibration measurement",
+          "FFT analysis for frequency-domain insights",
+          "Detection of imbalance, misalignment, and wear patterns"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1615295/whatsapp_image_2023-07-26_at_16_05_31_OaQN9PmUKg.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1615294/whatsapp_image_2023-07-26_at_16_05_31(1)_24YB1El1lQ.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1615298/whatsapp_image_2023-07-26_at_16_05_33_xyPp7vMy3R.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Anomaly Detection with Embedded AI",
+        body: "Machine learning models were trained using vibration data to detect abnormal behavior directly on the device.",
+        bullets: [
+          "Feature extraction from vibration signals",
+          "Model training using iterative optimization",
+          "On-device anomaly classification",
+          "Real-time detection without cloud dependency"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1625692/abnormal_signal_t0bnswp62a.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1625693/iterations_WiSnpXEoIY.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1625694/detection_benchmark_V9URsWySwC.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Applications",
+        body: "The system is designed for deployment in infrastructure monitoring and predictive maintenance scenarios.",
+        bullets: [
+          "Railway and bridge structural monitoring",
+          "Road and transport infrastructure diagnostics",
+          "Industrial machinery condition monitoring",
+          "Marine and cargo transport vibration analysis"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1624452/cylog_7BVkAYoO11.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1615684/dynamic_logistics_wVarNw9GOR.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced system-level design combining ultra-low-power electronics, energy harvesting, high-frequency signal processing, and embedded AI. It highlights strong capability in developing autonomous IoT systems for predictive maintenance and real-world industrial deployment."
+      }
+    ]
+  },
+  {
+    slug: "f7d2e4",
+    title: "Edge-Connected Machine Health Monitoring System",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
+
+    description: "Battery-powered vibration monitoring system with edge signal processing, mesh networking, and cloud-based analytics.",
+
+    longDescription: "Developed a distributed machine monitoring system that captures vibration data and performs edge-level signal processing before transmitting insights through a resilient mesh network to cloud analytics platforms. The architecture combines embedded DSP, low-power wireless communication, and scalable IoT infrastructure to enable predictive maintenance across industrial environments. Designed for reliability and extensibility, the system supports real-time anomaly detection, efficient data encoding, and seamless integration with cloud-based monitoring services.",
+
+    tags: [
+      "Industrial IoT",
+      "Vibration Analysis",
+      "Embedded DSP",
+      "Mesh Networking",
+      "Edge Computing",
+      "Predictive Maintenance",
+      "Wireless Systems"
+    ],
+
+    icon: Activity,
+    highlight: "Machine Health Monitoring",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1812123/_fnR2fiEd8N.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Battery-powered vibration monitoring node",
+      "Embedded FFT-based signal processing",
+      "Mesh networking communication system",
+      "Cloud integration pipeline",
+      "Scalable IoT monitoring architecture"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Designed a connected machine monitoring platform that captures vibration signals and processes them locally to detect early signs of failure. The system enables predictive maintenance by combining embedded processing, wireless networking, and cloud analytics."
+      },
+
+      {
+        heading: "System Architecture",
+        body: "The platform integrates sensing, processing, networking, and cloud connectivity into a unified architecture.",
+        bullets: [
+          "Embedded microcontroller with dual-core processing",
+          "3-axis accelerometer for vibration acquisition",
+          "Edge signal processing using DSP libraries",
+          "Mesh-based wireless communication network",
+          "Cloud integration for analytics and visualization"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1816314/nrf5340-dk-v_2_0_0_prod_page_qYcHTpNrc4.bmp?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1816315/nrf52840-dongle-rev2-prod_page_0iLFH13ee0.bmp?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Signal Acquisition & Processing",
+        body: "Vibration data is continuously sampled and processed locally to extract meaningful frequency-domain features.",
+        bullets: [
+          "Interrupt-based vibration event detection",
+          "Time-series sampling with fixed intervals",
+          "Vector magnitude calculation from 3-axis data",
+          "FFT-based frequency analysis using hardware acceleration",
+          "Spectrogram generation for condition monitoring"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1816323/image_53GV8ykVxX.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1816325/image_4obFCfeydk.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Data Communication",
+        body: "Efficient data transport is achieved through compact encoding and low-power wireless protocols.",
+        bullets: [
+          "CBOR-based compact data encoding",
+          "CoAP protocol for lightweight communication",
+          "Mesh networking using Thread architecture",
+          "Gateway integration via border router",
+          "Seamless bridging to IP-based networks"
+        ]
+      },
+
+      {
+        heading: "Mesh Networking Architecture",
+        body: "A self-healing mesh network enables scalable deployment across industrial environments.",
+        bullets: [
+          "Distributed sensor nodes for data collection",
+          "Dynamic routing within mesh topology",
+          "Gateway node for cloud connectivity",
+          "High reliability in large-scale deployments"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1816151/iot_mesh_overview_TxOplYpsql.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Vibration Analysis Results",
+        body: "Frequency-domain analysis reveals distinct vibration patterns used for machine condition monitoring.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1816524/image_lj72wsgTga.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Hardware Design Direction",
+        body: "The system is designed for transition from development kits to a compact, production-ready embedded device.",
+        bullets: [
+          "Integration into custom multi-layer PCB",
+          "Battery-powered operation with optimized consumption",
+          "Environmental protection via sealed enclosure",
+          "Mechanical design for industrial deployment"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1812129/image_hdJFmtveXG.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced expertise in embedded systems, signal processing, and IoT architecture. It highlights the ability to design scalable, low-power monitoring systems that combine edge computation, wireless networking, and cloud analytics for real-world industrial applications."
+      }
+    ]
+  },
+  {
+    slug: "tether_browsing_display",
+    title: "Advanced Bridge Health Monitoring System",
+    category: "IoT & Embedded AI",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "ai-embedded-systems"],
+    description: "AI-enabled bridge monitoring system that tracks real-time vibrations, temperature, and environmental factors to predict structural health and forecast risks.",
+    longDescription: "This project demonstrates a professional structural health monitoring platform for bridges. It combines edge sensor nodes with AI-based degradation analysis to continuously track vibrations, temperature, humidity, and other environmental factors. The system predicts potential structural risks in real time, provides anomaly detection, and visualizes data via a comprehensive web dashboard, enabling actionable insights for civil engineering and maintenance teams.",
+    tags: ["Structural Health Monitoring", "IoT", "AI", "Embedded Systems", "Vibration Analysis", "Edge Computing", "Predictive Maintenance"],
+    icon: Cpu,
+    highlight: "AI-Driven Structural Monitoring",
+    media: [
+      { type: "image", src: "https://hackster.imgix.net/uploads/attachments/1916129/_hZbGayJIjo.blob?auto=compress%2Cformat&w=900&h=675&fit=min" }
+    ],
+    hidden: false,
+    deliverables: [
+      "Bridge-mounted sensor nodes with vibration and environmental sensing",
+      "Edge AI algorithms for degradation scoring and anomaly detection",
+      "Realtime forecasting of structural health",
+      "Web dashboard with 3D digital twin visualization",
+      "Integrated alerting system based on predicted structural risks"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a bridge health monitoring system that continuously captures vibration, motion, temperature, and humidity data. Edge AI models compute degradation scores, classify structural health, detect anomalies, and forecast risk trends in real time."
+      },
+      {
+        heading: "Sensor Node Architecture",
+        body: "Each node acquires multi-axis acceleration and environmental parameters, preprocesses data locally, and transmits summarized features to the cloud for further analysis.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1916136/espressif_esp32c6_devkitc_1.jpg",
+          "https://hackster.imgix.net/uploads/attachments/1916137/MPU6050.jpg",
+          "https://hackster.imgix.net/uploads/attachments/1916138/Dht11_he1.jpg",
+          "https://hackster.imgix.net/uploads/attachments/1916140/image_ICeXM7zDcq.png",
+          "https://hackster.imgix.net/uploads/attachments/1916141/WhatsApp_Image_2025-11-30_at_91313_PM.jpeg",
+          "https://hackster.imgix.net/uploads/attachments/1916142/WhatsApp_Image_2025-11-30_at_82659_PM.jpeg",
+          "https://hackster.imgix.net/uploads/attachments/1916143/WhatsApp_Image_2025-11-30_at_82659_PM__1_.jpeg"
+        ]
+      },
+      {
+        heading: "Sensor Hardware Details",
+        body: "ESP32-C6 serves as the central hub with Wi-Fi 6 and BLE 5.0, collecting vibration data from MPU6050 and environmental readings from DHT11. Nodes provide local LED status and transmit structured JSON data for AI processing."
+      },
+      {
+        heading: "Embedded Firmware",
+        body: "The firmware reads sensors, computes derived features (lags, rolling stats, thermal index, corrosion risk), formats JSON payloads, and transmits over Wi-Fi at 300ms intervals. Built-in RGB LED indicates operational status and risk classification."
+      },
+      {
+        heading: "Edge AI & ML",
+        body: "Degradation and 30-day forecast models are implemented using LightGBM regression. Anomaly detection leverages z-scores on vibration magnitudes. Final condition classification combines degradation, forecast, anomaly, and corrosion risk into actionable bridge health states."
+      },
+      {
+        heading: "Cloud API & Data Handling",
+        body: "Python Flask API receives node JSON data, applies ML inference, computes anomaly scores, and returns structured condition outputs. API endpoints support `/sensor`, `/latest`, and `/stats` queries for real-time monitoring."
+      },
+      {
+        heading: "Dashboard Visualization",
+        body: "Web dashboard built with Three.js, Chart.js, HTML, and CSS. Displays a 3D digital twin, risk-colored bridge segments, gauges for thermal and corrosion indices, trend charts for degradation and forecast, and real-time vibration waveforms.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1916145/WhatsApp_Image_2025-11-30_at_82658_PM__1_.jpeg",
+          "https://hackster.imgix.net/uploads/attachments/1916146/Screenshot__205_.png",
+          "https://hackster.imgix.net/uploads/attachments/1916147/WhatsApp_Image_2025-11-30_at_82658_PM.jpeg",
+          "https://hackster.imgix.net/uploads/attachments/1916148/schematic_11302025230909_VP33ArxWyp.jpeg"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This system provides continuous structural health insights, early detection of degradation, anomaly monitoring, and real-time forecasting for bridges. It demonstrates professional expertise in edge AI, embedded systems, IoT sensor integration, and web visualization for civil infrastructure."
+      }
+    ]
+  },
+  {
+    slug: "e7c2b1", // new unique hex slug
+    title: "Edge-Based Machine Condition Intelligence System",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "iot-connected-devices", "ai-embedded-systems"],
+    description: "Low-power embedded system performing real-time vibration analysis and on-device fault classification for predictive maintenance.",
+    longDescription: "This project demonstrates an embedded condition monitoring system designed for predictive maintenance of industrial machinery. It combines a high-precision accelerometer with a microcontroller platform capable of running machine learning inference directly at the edge. The system captures vibration data, processes it locally, and classifies machine states in real time, reducing dependency on cloud processing while improving response time and efficiency.",
+    tags: ["Predictive Maintenance", "Edge AI", "Embedded Systems", "Vibration Analysis", "TinyML", "IoT"],
+    icon: Cpu,
+    highlight: "Edge AI Condition Monitoring",
+    hidden: false,
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1516207/_iny5In0pv0.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+    deliverables: [
+      "Embedded vibration-based condition monitoring system",
+      "Real-time machine state classification at the edge",
+      "Integrated accelerometer data acquisition pipeline",
+      "On-device TinyML inference engine",
+      "Cloud connectivity for remote monitoring"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed an embedded predictive maintenance system that continuously monitors machine vibration and classifies operating conditions in real time. The solution eliminates the need for continuous cloud transmission by performing inference locally on a low-power microcontroller. :contentReference[oaicite:0]{index=0}"
+      },
+      {
+        heading: "Hardware Architecture",
+        body: "The system integrates a high-resolution accelerometer with a microcontroller-based IoT platform to capture and process vibration signals.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1515930/wizfi360-evb-pico_LrXNS0OKzt.png",
+          "https://hackster.imgix.net/uploads/attachments/1521189/prototype_1UltiTVV1s.JPG",
+          "https://hackster.imgix.net/uploads/attachments/1521240/device_xhM7ot3oRr.JPG"
+        ]
+      },
+      {
+        heading: "Data Acquisition",
+        body: "Vibration data is collected across X, Y, and Z axes using a precision accelerometer with a sampling frequency of approximately 85 Hz. Multiple operating scenarios were recorded including normal operation, airflow anomalies, and shutdown conditions to build a comprehensive dataset for model training. :contentReference[oaicite:1]{index=1}",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1516208/data-aquisition_ZQbR4Cfhzn.png",
+          "https://hackster.imgix.net/uploads/attachments/1516209/image_nZJB9JpT7Q.png",
+          "https://hackster.imgix.net/uploads/attachments/1516210/img_0443_l1FyXh8GZk.JPG"
+        ]
+      },
+      {
+        heading: "Machine Learning Pipeline",
+        body: "A lightweight machine learning model was trained using spectral features derived from vibration signals. FFT-based preprocessing was applied to extract meaningful frequency-domain characteristics, enabling accurate classification of machine states.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1516212/image_IiqV6Ji2zM.png",
+          "https://hackster.imgix.net/uploads/attachments/1516213/image_sjbfHD170u.png",
+          "https://hackster.imgix.net/uploads/attachments/1516211/image_oygGNr630O.png"
+        ]
+      },
+      {
+        heading: "Embedded Inference",
+        body: "The trained model was deployed on the microcontroller using an optimized inference library. Real-time classification is performed on streaming sensor data with minimal latency, enabling immediate detection of abnormal operating conditions.",
+      },
+      {
+        heading: "System Operation",
+        body: "The device continuously samples vibration data, processes it into feature vectors, and classifies machine states such as normal operation, airflow anomalies, and shutdown conditions. This allows early fault detection without requiring continuous cloud communication."
+      },
+      {
+        heading: "Cloud Integration",
+        body: "Processed results can be transmitted to a cloud platform for remote monitoring and visualization. This hybrid architecture balances local intelligence with centralized analytics for scalability."
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced capabilities in embedded AI, real-time signal processing, and low-power IoT system design. It highlights expertise in deploying machine learning models on constrained hardware for predictive maintenance applications."
+      }
+    ]
+  },
+  {
     slug: "e2b7c9",
     title: "High-Throughput RTL Error Correction Engine",
     category: "FPGA & Embedded AI",
