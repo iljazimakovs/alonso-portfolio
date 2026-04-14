@@ -2499,7 +2499,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1876222/_tDZeRdmVD5.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/_tDZeRdmVD5.jpg"
       }
     ],
     deliverables: [
@@ -2518,7 +2518,7 @@ const projects: Project[] = [
         heading: "Hardware Integration",
         body: "The sensor module is connected through Arduino-style headers, allowing direct interfacing with the evaluation board. The design ensures stable communication and proper signal routing for reliable operation.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1876232/tmf8808_ra4m2_RKsC00pjYX.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/tmf8808_ra4m2_RKsC00pjYX.jpg"
         ]
       },
       {
@@ -2533,8 +2533,8 @@ const projects: Project[] = [
         heading: "Peripheral Configuration",
         body: "The system configures I2C communication channels, external interrupt handling, and periodic timers for sensor operation. Proper alignment between hardware pin mapping and firmware stacks ensures stable and synchronized operation across all interfaces.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1876233/ren2_C9y7N7vwCK.PNG?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1876234/ren_arduino_Rnfj841nIw.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/ren2_C9y7N7vwCK.jpg",
+          "/images/ren_arduino_Rnfj841nIw.jpg"
         ]
       },
       {
@@ -2579,7 +2579,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1924022/_cQTzHc5SJS.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/o1cn0108sim31pnnpgi3uic_2212561741885_png_468x468q50_jpg__lxVQsKebbW.jpg"
       }
     ],
 
@@ -2601,7 +2601,7 @@ const projects: Project[] = [
         heading: "Hardware Architecture",
         body: "The system is built on an STM32 microcontroller platform paired with a dedicated ToF expansion board. The modular design allows rapid integration while maintaining reliable communication and signal integrity.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/324011/STM32_Nucleo64_Development_Board_with_STM32L073RZT6_MCU_supports_Arduino_and_ST_morpho_connectivity.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/STM32_Nucleo64_Development_Board_with_STM32L073RZT6_MCU_supports_Arduino_and_ST_morpho_connectivity.jpg"
         ]
       },
 
@@ -2624,7 +2624,7 @@ const projects: Project[] = [
         heading: "Data Acquisition & Output",
         body: "Distance values are streamed via a serial interface in real time. The system outputs individual measurements per detected object, allowing direct visualization and debugging without additional processing layers.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1923502/image_JQH8MeDUyh.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_JQH8MeDUyh.jpg"
         ]
       },
 
@@ -2636,9 +2636,6 @@ const projects: Project[] = [
       {
         heading: "Hardware Integration",
         body: "The sensor module connects directly to the microcontroller board through standardized headers, enabling a compact and reliable embedded implementation.",
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1926151/o1cn0108sim31pnnpgi3uic_2212561741885_png_468x468q50_jpg__lxVQsKebbW.jpg"
-        ]
       },
 
       {
