@@ -2486,6 +2486,168 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "b7c4e2",
+    title: "Time-of-Flight Distance Sensing Integration on ARM-Based Platform",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "sensor-integration", "pcb-hardware"],
+    description: "High-precision distance sensing system integrating a SPAD-based Time-of-Flight sensor with an ARM microcontroller platform.",
+    longDescription: "This project demonstrates the integration of a high-precision Time-of-Flight (ToF) sensor into an ARM-based embedded platform. The system enables accurate distance measurement using SPAD and histogram-based sensing technology, with optimized firmware handling I2C communication, interrupt-driven acquisition, and real-time data output via USB. The implementation focuses on reliable sensor interfacing, timing accuracy, and embedded system integration for distance sensing applications.",
+    tags: ["Time-of-Flight", "ToF Sensor", "Embedded Systems", "I2C", "Sensor Integration", "ARM MCU"],
+    icon: Cpu,
+    highlight: "Precision Distance Sensing",
+    hidden: false,
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1876222/_tDZeRdmVD5.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+    deliverables: [
+      "ToF sensor integration on ARM-based microcontroller",
+      "I2C communication stack implementation",
+      "Interrupt-driven measurement handling",
+      "USB-based real-time data output",
+      "Distance measurement and calibration workflow"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Implemented a Time-of-Flight distance measurement system by integrating a SPAD-based sensor with an ARM microcontroller evaluation platform. The system enables accurate ranging using histogram-based sensing and real-time data acquisition. :contentReference[oaicite:0]{index=0}"
+      },
+      {
+        heading: "Hardware Integration",
+        body: "The sensor module is connected through Arduino-style headers, allowing direct interfacing with the evaluation board. The design ensures stable communication and proper signal routing for reliable operation.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1876232/tmf8808_ra4m2_RKsC00pjYX.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Sensor Technology",
+        body: "The ToF sensor uses SPAD (Single Photon Avalanche Diode), TDC, and histogram processing to measure distance with high precision. The system supports measurement ranges up to several meters with firmware-level extensions for enhanced performance. :contentReference[oaicite:1]{index=1}"
+      },
+      {
+        heading: "Firmware Architecture",
+        body: "Firmware was developed to manage I2C communication, sensor control signals, and interrupt-based event handling. Dedicated GPIO lines are used for enable and interrupt signaling, ensuring efficient asynchronous measurement processing."
+      },
+      {
+        heading: "Peripheral Configuration",
+        body: "The system configures I2C communication channels, external interrupt handling, and periodic timers for sensor operation. Proper alignment between hardware pin mapping and firmware stacks ensures stable and synchronized operation across all interfaces.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1876233/ren2_C9y7N7vwCK.PNG?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1876234/ren_arduino_Rnfj841nIw.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+      {
+        heading: "Data Acquisition & Output",
+        body: "Distance measurements are processed and transmitted through a USB interface, allowing direct visualization and debugging without additional external tools. The system outputs structured measurement data including confidence, raw distance, corrected distance, and temperature."
+      },
+      {
+        heading: "System Behavior",
+        body: "The device performs on-demand measurements triggered via command input, processes sensor data internally, and outputs structured results. Special attention was given to timing constraints and USB interface stability for reliable operation."
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates strong expertise in sensor integration, embedded firmware development, and real-time data acquisition. It highlights the ability to work with advanced sensing technologies and integrate them into robust embedded platforms for precise measurement applications."
+      }
+    ]
+  },
+  {
+    slug: "d8a4c1",
+    title: "Multi-Target Optical Ranging System with Embedded Time-of-Flight Processing",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "sensor-integration", "real-time-systems"],
+
+    description: "Embedded optical ranging system using a high-resolution Time-of-Flight sensor with multi-object detection and real-time data acquisition.",
+
+    longDescription: "This project demonstrates the integration of an advanced Time-of-Flight (ToF) ranging sensor into an embedded microcontroller platform for precise distance measurement and multi-object detection. The system captures real-time ranging data, processes multiple return signals, and outputs structured distance information through a serial interface. The implementation highlights reliable I2C communication, real-time measurement handling, and efficient embedded firmware design for optical sensing applications.",
+
+    tags: [
+      "Time-of-Flight",
+      "ToF Sensor",
+      "STM32",
+      "Embedded Systems",
+      "I2C",
+      "Multi-Object Detection",
+      "Sensor Integration"
+    ],
+
+    icon: Cpu,
+    highlight: "Optical Ranging System",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1924022/_cQTzHc5SJS.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Embedded ToF ranging system",
+      "Multi-object detection implementation",
+      "Real-time distance acquisition pipeline",
+      "I2C sensor communication interface",
+      "Serial-based measurement output system"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed an embedded optical ranging system capable of detecting and measuring distances to multiple objects simultaneously using a Time-of-Flight sensor. The system provides real-time distance output and supports extended sensing ranges for various applications. :contentReference[oaicite:1]{index=1}"
+      },
+
+      {
+        heading: "Hardware Architecture",
+        body: "The system is built on an STM32 microcontroller platform paired with a dedicated ToF expansion board. The modular design allows rapid integration while maintaining reliable communication and signal integrity.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/324011/STM32_Nucleo64_Development_Board_with_STM32L073RZT6_MCU_supports_Arduino_and_ST_morpho_connectivity.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Sensor Capabilities",
+        body: "The ToF sensor supports high-precision ranging over several meters and enables simultaneous detection of multiple objects within the field of view. This allows distinguishing foreground objects from background surfaces in real time. :contentReference[oaicite:2]{index=2}"
+      },
+
+      {
+        heading: "Embedded Firmware",
+        body: "Firmware was implemented to initialize the sensor, configure I2C communication, and continuously acquire measurement data. The system handles asynchronous measurement readiness and processes multi-object ranging results efficiently."
+      },
+
+      {
+        heading: "Multi-Object Detection",
+        body: "The system processes multiple return signals from the sensor, allowing detection of several objects at different distances. Each detected object is reported individually, enabling separation between near-field obstacles and background surfaces."
+      },
+
+      {
+        heading: "Data Acquisition & Output",
+        body: "Distance values are streamed via a serial interface in real time. The system outputs individual measurements per detected object, allowing direct visualization and debugging without additional processing layers.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1923502/image_JQH8MeDUyh.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "System Behavior",
+        body: "During operation, the system continuously measures distances and dynamically adapts to scene changes. When objects enter the sensing field, additional distance readings are generated, demonstrating true multi-target detection capability."
+      },
+
+      {
+        heading: "Hardware Integration",
+        body: "The sensor module connects directly to the microcontroller board through standardized headers, enabling a compact and reliable embedded implementation.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1926151/o1cn0108sim31pnnpgi3uic_2212561741885_png_468x468q50_jpg__lxVQsKebbW.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates strong expertise in optical sensing, embedded firmware development, and real-time data acquisition. It highlights the ability to integrate advanced ToF sensors into embedded platforms for accurate multi-object distance measurement applications."
+      }
+    ]
+  },
+  {
     slug: "c5e8a2",
     title: "Multi-Channel LED Control Platform",
     category: "PCB & Hardware",
