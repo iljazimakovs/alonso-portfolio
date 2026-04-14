@@ -1194,7 +1194,6 @@ const projects: Project[] = [
         ],
         images: [
           "/images/module_KWi6fuxF66.jpg",
-          "/images/wio_o2dAdIBjuW.jpg"
         ]
       },
 
