@@ -3369,7 +3369,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "/images/_wOWGZfnOJ9.blob"
+        src: "/images/_wOWGZfnOJ9.jpg"
       }
     ],
 
