@@ -3369,7 +3369,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1913870/_wOWGZfnOJ9.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/_wOWGZfnOJ9.blob"
       }
     ],
 
@@ -3402,8 +3402,8 @@ const projects: Project[] = [
           "Fan header for thermal control"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1913894/screenshot_2025-12-23_at_09_45_47_cg7EFKUjj6.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1913893/screenshot_2025-12-23_at_09_55_08_XM6p1bWLp2.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/screenshot_2025-12-23_at_09_45_47_cg7EFKUjj6.jpg",
+          "/images/screenshot_2025-12-23_at_09_55_08_XM6p1bWLp2.jpg"
         ]
       },
 
@@ -3418,8 +3418,8 @@ const projects: Project[] = [
           "Manufacturing-ready layout"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1913877/screenshot_2025-12-20_at_16_14_33_ptyHC7ldn6.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1913883/image_eA9DqA7geH.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "/images/screenshot_2025-12-20_at_16_14_33_ptyHC7ldn6.jpg",
+          "/images/image_eA9DqA7geH.jpg",
         ]
       },
 
@@ -3437,7 +3437,7 @@ const projects: Project[] = [
         heading: "Mechanical Integration",
         body: "The system includes enclosure-ready mounting and CNC housing direction for deployment-grade packaging.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1914554/screenshot_2025-12-24_at_23_46_09_I7xoxfFxez.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/screenshot_2025-12-24_at_23_46_09_I7xoxfFxez.jpg"
         ]
       },
 
@@ -3476,7 +3476,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1674480/_ska4fqzqrs_blob_copy_DZtriN08A0.jpg?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=1.1041666269302368"
+        src: "/images/_ska4fqzqrs_blob_copy_DZtriN08A0.jpg"
       }
     ],
 
@@ -3499,7 +3499,7 @@ const projects: Project[] = [
         heading: "Compute Platform Architecture",
         body: "The design is centered around a powerful adaptive SoM containing programmable logic, processing cores, memory, non-volatile storage, and board-to-board connectors exposing high-speed user I/O.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1670909/kria_k26_som_aNCEf3WgVZ.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/kria_k26_som_aNCEf3WgVZ.jpg"
         ]
       },
 
@@ -3514,8 +3514,8 @@ const projects: Project[] = [
           "Low-latency video pipeline support"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1670907/aper-oculus-front-01_jpg_md-fixed-xl_xngAOPtMB1.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1674362/t-6_products_image-sensor_industry_slvs-ec02_en_Fbp89fdzfw.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/aper-oculus-front-01_jpg_md-fixed-xl_xngAOPtMB1.jpg",
+          "/images/t-6_products_image-sensor_industry_slvs-ec02_en_Fbp89fdzfw.jpg"
         ]
       },
 
@@ -3530,7 +3530,7 @@ const projects: Project[] = [
           "External mezzanine compatibility"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1670906/aper-oculus_LjQ2Nj6zoS.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/aper-oculus_LjQ2Nj6zoS.jpg"
         ]
       },
 
@@ -3543,7 +3543,7 @@ const projects: Project[] = [
         heading: "Platform Benchmarking",
         body: "The architecture was positioned as a premium carrier solution by combining rare interface support with strong expansion capability and camera-focused hardware design.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1670910/comparison_chart_j9hKnpl8e6.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/comparison_chart_j9hKnpl8e6.jpg"
         ]
       },
 
@@ -4898,7 +4898,7 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: "e2b4c9",
+    slug: "e2b4cgg",
     title: "FPGA-Based SDR Setup and Lab Platform",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-firmware", "iot-connected-devices"],
