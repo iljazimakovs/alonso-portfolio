@@ -417,9 +417,7 @@ const projects: Project[] = [
     title: "Autonomous CO₂ Monitoring & Environmental Control Platform",
     category: "IoT & Connected Devices",
     filterSlugs: ["embedded-firmware", "sensor-integration", "hardware-design"],
-
     description: "ESP32-based Wio Terminal system for real-time CO₂ monitoring, humidity and temperature sensing, with automated fan control and cloud connectivity.",
-
     longDescription: "This project demonstrates a robust embedded system for continuous monitoring of CO₂ levels, temperature, and humidity using the Wio Terminal platform. When CO₂ exceeds predefined thresholds, a 5V ventilation fan is automatically activated, and alerts are visualized on the built-in LCD screen. The system can also log environmental data for further analysis or transmit it to cloud services via the integrated Wi-Fi module. Designed for home, bedroom, or office deployment, it emphasizes real-time response, reliability, and scalability for IoT applications.",
 
     tags: [
@@ -1141,9 +1139,7 @@ const projects: Project[] = [
     title: "Autonomous Vibration Intelligence Node for Infrastructure Monitoring",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
-
     description: "Solar-powered vibration monitoring system with embedded AI for anomaly detection in industrial and logistics infrastructure.",
-
     longDescription: "Designed a fully autonomous vibration monitoring node capable of detecting structural and mechanical anomalies using embedded AI. The system integrates a high-bandwidth industrial accelerometer, ultra-low-power wireless communication, and solar energy harvesting with Lithium-Ion Capacitor (LIC) storage. Optimized for long-term deployment, the platform continuously captures vibration data, performs frequency-domain analysis, and applies TinyML-based models to classify abnormal patterns in real time. The architecture is tailored for logistics infrastructure such as railways, bridges, and transport systems where predictive maintenance is critical.",
 
     tags: [
@@ -1280,9 +1276,7 @@ const projects: Project[] = [
     title: "Edge-Connected Machine Health Monitoring System",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
-
     description: "Battery-powered vibration monitoring system with edge signal processing, mesh networking, and cloud-based analytics.",
-
     longDescription: "Developed a distributed machine monitoring system that captures vibration data and performs edge-level signal processing before transmitting insights through a resilient mesh network to cloud analytics platforms. The architecture combines embedded DSP, low-power wireless communication, and scalable IoT infrastructure to enable predictive maintenance across industrial environments. Designed for reliability and extensibility, the system supports real-time anomaly detection, efficient data encoding, and seamless integration with cloud-based monitoring services.",
 
     tags: [
@@ -1858,11 +1852,8 @@ const projects: Project[] = [
     title: "Compact x86 Compute Module Carrier Platform",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "hardware-design"],
-
     description: "High-density carrier board for an x86 compute module integrating Ethernet, HDMI, USB, M.2 expansion, camera interface, and USB-C power delivery.",
-
     longDescription: "Designed a compact custom carrier board for an x86 compute module to enable desktop-class computing in embedded form factors. The platform expands the module into a deployable system by integrating high-speed I/O, networking, display output, storage and wireless expansion, camera connectivity, active cooling support, and USB-C power delivery. The hardware focuses on signal integrity, manufacturability, and real-world integration for edge computing, robotics, industrial control, and portable embedded systems.",
-
     tags: [
       "Carrier Board",
       "x86 Embedded",
@@ -1965,11 +1956,8 @@ const projects: Project[] = [
     title: "High-Speed Vision Processing Carrier for Adaptive SoM Platform",
     category: "FPGA & Digital Design",
     filterSlugs: ["fpga-digital-design", "embedded-linux-bsp", "pcb-hardware"],
-
     description: "Advanced carrier board for an FPGA-based system-on-module featuring high-bandwidth camera interfaces, display outputs, storage, and expansion for embedded vision workloads.",
-
     longDescription: "Designed a high-performance carrier platform for an adaptive FPGA system-on-module focused on embedded vision, video processing, and AI edge applications. The board expands the compute module with high-speed camera inputs, display connectivity, storage interfaces, FMC expansion, and peripheral I/O. Special attention was given to signal integrity, high-speed routing, and scalable interface architecture required for professional imaging systems.",
-
     tags: [
       "FPGA",
       "Carrier Board",
@@ -2768,9 +2756,7 @@ const projects: Project[] = [
     title: "Multi-Target Optical Ranging System with Embedded Time-of-Flight Processing",
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "sensor-integration", "real-time-systems"],
-
     description: "Embedded optical ranging system using a high-resolution Time-of-Flight sensor with multi-object detection and real-time data acquisition.",
-
     longDescription: "This project demonstrates the integration of an advanced Time-of-Flight (ToF) ranging sensor into an embedded microcontroller platform for precise distance measurement and multi-object detection. The system captures real-time ranging data, processes multiple return signals, and outputs structured distance information through a serial interface. The implementation highlights reliable I2C communication, real-time measurement handling, and efficient embedded firmware design for optical sensing applications.",
 
     tags: [
@@ -3663,9 +3649,7 @@ const projects: Project[] = [
     title: "Bluetooth-Enabled Multi-Channel LED Control Interface",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware", "pcb-hardware"],
-
     description: "Compact BLE-based lighting control module supporting PWM dimming, dynamic patterns, and mobile app integration.",
-
     longDescription: "This project demonstrates the integration and evaluation of a compact Bluetooth Low Energy (BLE) lighting control module for real-time LED control applications. The system enables wireless control of color, brightness, and dynamic lighting patterns through a mobile interface, supporting both iOS and Android platforms. The design focuses on low-power operation, high-frequency PWM control, and seamless user interaction, making it suitable for consumer lighting products and embedded IoT systems.",
 
     tags: [
