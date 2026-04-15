@@ -3341,6 +3341,220 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "m9c4e7",
+    title: "Compact x86 Compute Module Carrier Platform",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "hardware-design"],
+
+    description: "High-density carrier board for an x86 compute module integrating Ethernet, HDMI, USB, M.2 expansion, camera interface, and USB-C power delivery.",
+
+    longDescription: "Designed a compact custom carrier board for an x86 compute module to enable desktop-class computing in embedded form factors. The platform expands the module into a deployable system by integrating high-speed I/O, networking, display output, storage and wireless expansion, camera connectivity, active cooling support, and USB-C power delivery. The hardware focuses on signal integrity, manufacturability, and real-world integration for edge computing, robotics, industrial control, and portable embedded systems.",
+
+    tags: [
+      "Carrier Board",
+      "x86 Embedded",
+      "High-Speed PCB",
+      "Ethernet",
+      "HDMI",
+      "USB-C PD",
+      "M.2",
+      "KiCad"
+    ],
+
+    icon: Cpu,
+    highlight: "x86 Carrier Board",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1913870/_wOWGZfnOJ9.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Custom 4-layer carrier PCB for x86 compute module",
+      "Gigabit Ethernet + HDMI integration",
+      "USB 2.0 / USB 3.0 connectivity",
+      "M.2 expansion interfaces",
+      "CSI camera + debug interfaces",
+      "USB-C PD power architecture"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a compact carrier platform for an x86 compute module, transforming a high-performance SoM into a practical embedded computing solution with integrated display, networking, storage expansion, and peripheral connectivity. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "System Architecture",
+        body: "The carrier board extends the compute module through high-speed interfaces and embedded I/O required for real-world deployments.",
+        bullets: [
+          "Gigabit Ethernet connectivity",
+          "HDMI display output",
+          "USB 2.0 and USB 3.0 interfaces",
+          "M.2 expansion sockets",
+          "CSI camera connector",
+          "I2C expansion header",
+          "UART debug interface",
+          "Fan header for thermal control"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1913894/screenshot_2025-12-23_at_09_45_47_cg7EFKUjj6.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1913893/screenshot_2025-12-23_at_09_55_08_XM6p1bWLp2.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "PCB Design Implementation",
+        body: "The board was implemented as a compact multilayer design optimized for routing density, controlled impedance paths, and connector accessibility. Particular focus was placed on high-speed signal breakout and mechanical integration.",
+        bullets: [
+          "4-layer PCB stack-up",
+          "Dense connector routing",
+          "Power / signal plane separation",
+          "Compact edge-compute form factor",
+          "Manufacturing-ready layout"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1913877/screenshot_2025-12-20_at_16_14_33_ptyHC7ldn6.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1913883/image_eA9DqA7geH.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1913879/screenshot_2025-12-20_at_16_15_29_aMocHSYxRV.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Power Architecture",
+        body: "USB-C Power Delivery input at 12V enables compact external powering while supporting compute-module and peripheral loads. The architecture is suitable for mobile and embedded deployments."
+      },
+
+      {
+        heading: "Expansion Capability",
+        body: "M.2 interfaces allow wireless modules, NVMe storage, or accelerator expansion, making the platform adaptable for AI edge nodes, gateways, robotics controllers, and industrial systems."
+      },
+
+      {
+        heading: "Mechanical Integration",
+        body: "The system includes enclosure-ready mounting and CNC housing direction for deployment-grade packaging.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1914554/screenshot_2025-12-24_at_23_46_09_I7xoxfFxez.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced experience in carrier board development, high-speed PCB layout, power architecture, and embedded compute platform integration. It highlights the ability to convert complex SoMs into production-ready hardware platforms for commercial deployment."
+      }
+    ]
+  },
+  {
+    slug: "e2b4c9",
+    title: "High-Speed Vision Processing Carrier for Adaptive SoM Platform",
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-linux-bsp", "pcb-hardware"],
+
+    description: "Advanced carrier board for an FPGA-based system-on-module featuring high-bandwidth camera interfaces, display outputs, storage, and expansion for embedded vision workloads.",
+
+    longDescription: "Designed a high-performance carrier platform for an adaptive FPGA system-on-module focused on embedded vision, video processing, and AI edge applications. The board expands the compute module with high-speed camera inputs, display connectivity, storage interfaces, FMC expansion, and peripheral I/O. Special attention was given to signal integrity, high-speed routing, and scalable interface architecture required for professional imaging systems.",
+
+    tags: [
+      "FPGA",
+      "Carrier Board",
+      "Embedded Vision",
+      "High-Speed PCB",
+      "Camera Interfaces",
+      "DisplayPort",
+      "FMC",
+      "Edge AI"
+    ],
+
+    icon: Cpu,
+    highlight: "Vision FPGA Carrier",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1674480/_ska4fqzqrs_blob_copy_DZtriN08A0.jpg?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=1.1041666269302368"
+      }
+    ],
+
+    deliverables: [
+      "Carrier board for adaptive FPGA compute module",
+      "High-speed camera interface integration",
+      "Display + storage + USB expansion",
+      "FMC mezzanine expansion support",
+      "Embedded vision ready hardware platform",
+      "Signal-integrity focused PCB architecture"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a high-bandwidth carrier board for an FPGA-based system-on-module intended for embedded vision and AI edge processing. The platform enables rapid deployment of camera-centric systems requiring real-time video acquisition, acceleration, and external expansion. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "Compute Platform Architecture",
+        body: "The design is centered around a powerful adaptive SoM containing programmable logic, processing cores, memory, non-volatile storage, and board-to-board connectors exposing high-speed user I/O.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1670909/kria_k26_som_aNCEf3WgVZ.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Vision Interface Design",
+        body: "The carrier board was optimized for demanding camera workloads and multi-stream video applications.",
+        bullets: [
+          "High-speed serialized image sensor inputs",
+          "MIPI camera connectivity",
+          "Dual display outputs",
+          "USB 3.0 high-throughput peripherals",
+          "Low-latency video pipeline support"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1670907/aper-oculus-front-01_jpg_md-fixed-xl_xngAOPtMB1.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1674362/t-6_products_image-sensor_industry_slvs-ec02_en_Fbp89fdzfw.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Expansion & Peripheral Interfaces",
+        body: "The board includes flexible expansion paths for custom I/O, acquisition hardware, and storage acceleration.",
+        bullets: [
+          "FMC expansion connector",
+          "M.2 peripheral support",
+          "GPIO / PMOD style expansion",
+          "SATA storage interface",
+          "External mezzanine compatibility"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1670906/aper-oculus_LjQ2Nj6zoS.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "PCB Engineering Focus",
+        body: "Implementation required controlled impedance routing, differential pair matching, connector breakout strategy, and power distribution suitable for mixed FPGA + video workloads."
+      },
+
+      {
+        heading: "Platform Benchmarking",
+        body: "The architecture was positioned as a premium carrier solution by combining rare interface support with strong expansion capability and camera-focused hardware design.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1670910/comparison_chart_j9hKnpl8e6.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced expertise in FPGA carrier board development, high-speed PCB layout, embedded vision hardware, and scalable compute platform integration. It highlights the ability to engineer production-grade imaging systems requiring complex interface routing and real-time processing infrastructure."
+      }
+    ]
+  },
+  {
     slug: "4f8c2e",
     title: "Multi-Mode Motor Control Platform",
     category: "PCB & Hardware",
