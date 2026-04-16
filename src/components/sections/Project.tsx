@@ -4,6 +4,7 @@ import {
   Cpu,
   Server,
   Battery,
+  Home,
   Radio,
   ArrowRight,
   X,
@@ -1630,6 +1631,242 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "High-throughput RTL error correction engine demonstrating reliable, low-latency data processing with formal verification. System design ensures deterministic performance and correctness for communication and safety-critical applications."
+      }
+    ]
+  },
+  {
+    slug: "b7e4d2",
+    title: "Distributed Climate Control Platform with Wireless Sensor Nodes",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "hardware-design"],
+
+    description: "Smart HVAC control system using ESP32 wireless nodes, environmental sensing, relay switching, and Android-based user interface.",
+
+    longDescription: "Designed a distributed thermostat platform for residential heating control using ESP32 microcontrollers, wireless sensor nodes, relay actuation, and an Android control interface. The system gathers temperature and humidity data from multiple rooms, applies configurable heating logic, and remotely controls a boiler or HVAC source. The architecture focuses on low-cost deployment, multi-room sensing, remote access, and scalable home automation integration.",
+
+    tags: [
+      "ESP32",
+      "Smart Thermostat",
+      "IoT",
+      "HVAC",
+      "Home Automation",
+      "Wireless Sensors",
+      "Android",
+      "Relay Control"
+    ],
+
+    icon: Home,
+    highlight: "Wireless HVAC Control",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/442282/home-page-1-1024x488_SOmZrM4g2w.jpg?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Distributed thermostat architecture",
+      "ESP32 room sensing nodes",
+      "Relay-based boiler control",
+      "Android monitoring and control app",
+      "Remote client access system",
+      "Multi-room temperature management"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a wireless thermostat ecosystem that uses ESP32 sensor nodes and relay controllers to manage residential heating systems. The platform enables multi-room sensing, centralized decision logic, and remote user access through Android devices. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "System Architecture",
+        body: "The system separates environmental sensing, control logic, and actuation into distributed nodes for flexible deployment.",
+        bullets: [
+          "ESP32 temperature / humidity sensor nodes",
+          "Dedicated relay controller node",
+          "Central thermostat interface",
+          "Wireless communication between nodes",
+          "Remote client access support"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/442312/smart_pi_thermostat_architecture_(2)_Ob9VPg4vlz.jpg"
+        ]
+      },
+
+      {
+        heading: "Environmental Monitoring",
+        body: "Multiple rooms can be monitored simultaneously using wireless sensor modules, enabling smarter heating decisions based on real occupancy zones and temperature distribution.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/442295/esp32__dht11_p4d8yWle4E.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/442317/esp32__dht11_bb_5oLN0amQX3.jpg"
+        ]
+      },
+
+      {
+        heading: "HVAC Actuation Layer",
+        body: "A relay-equipped ESP32 node interfaces with the boiler or heating equipment, allowing isolated on/off control based on thermostat logic.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/442296/esp32__high_level_relay_GnIXC9ubO1.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/442320/esp32__relay_bb_v2VGS0jzJb.jpg"
+        ]
+      },
+
+      {
+        heading: "Combined Node Configuration",
+        body: "For compact deployments, sensing and relay functions can be combined on a single ESP32 platform, reducing hardware count while preserving functionality.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/442297/esp32_relay_and_dht_sensor_l95bwQ49Nz.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "User Interface & Remote Access",
+        body: "Android devices serve as thermostat controllers and monitoring terminals. Additional client devices can connect remotely for off-site heating control and status visibility.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/442290/device-2018-01-06-180237_dM4RLBXjN3.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/442309/device-2018-01-06-183135_dYWiI9eGff.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Control Logic",
+        body: "The software determines heating demand using configurable thresholds, temperature feedback, and humidity context. This enables automated operation without constant user interaction."
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates full-stack IoT product capability across embedded firmware, wireless networking, sensor integration, mobile interfaces, and HVAC hardware control. It highlights experience building scalable real-world automation systems using low-cost embedded platforms."
+      }
+    ]
+  },
+  {
+    slug: "d6f3b8",
+    title: "Programmable DC Load & Power Characterization Platform",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+
+    description: "Precision electronic load system using ESP32-S3 with closed-loop current control, power telemetry, thermal management, and wireless dashboard logging.",
+
+    longDescription: "Designed an advanced programmable DC load for validating power supplies, batteries, converters, and embedded power rails. The platform uses an ESP32-S3 controller with PID-regulated constant current sinking, precision shunt measurement, thermal protection, local user interface, and WiFi telemetry streaming. The system combines analog control hardware, high-current power dissipation, digital feedback control, and real-time monitoring into a compact engineering test instrument.",
+
+    tags: [
+      "Electronic Load",
+      "ESP32-S3",
+      "Power Electronics",
+      "PID Control",
+      "Current Sink",
+      "Telemetry",
+      "Thermal Design",
+      "Test Equipment"
+    ],
+
+    icon: Zap,
+    highlight: "Programmable Load Tester",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1792652/image_FSqB8efF26.png?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Programmable constant-current electronic load",
+      "PID closed-loop current regulation",
+      "100W-class thermal power stage",
+      "Touch interface + OLED display",
+      "WiFi telemetry to dashboard server",
+      "Custom KiCad PCB design"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a digitally controlled DC load for testing power sources under programmable current demand. The system regulates sink current in real time, measures electrical parameters, manages thermal behavior, and streams operating data to a dashboard environment. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "Control Architecture",
+        body: "The load uses precision current feedback and firmware control to maintain a requested current setpoint across varying source voltages.",
+        bullets: [
+          "Closed-loop PID regulation",
+          "Programmable current sink operation",
+          "10 mA step resolution",
+          "Wide operating load range",
+          "Soft-start current ramping"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792619/image_UuOW8hrEiv.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Measurement Subsystem",
+        body: "A precision shunt and high-resolution current monitor provide accurate measurement of voltage, current, and power during dynamic loading conditions.",
+        bullets: [
+          "High-side current sensing",
+          "Power computation in firmware",
+          "Real-time feedback loop input",
+          "High-resolution telemetry capture"
+        ]
+      },
+
+      {
+        heading: "Power Stage Design",
+        body: "The dissipation stage uses MOSFET-based linear control with heatsink mounting and thermal coupling optimized for sustained high-power testing.",
+        bullets: [
+          "MOSFET sink element",
+          "Up to ~100W operating class",
+          "Wide input voltage compatibility",
+          "Protection-oriented derating strategy"
+        ],
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792647/image_FgrNSXRepL.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792652/image_FSqB8efF26.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Thermal Management",
+        body: "An actively controlled CPU-class cooler is PWM-managed based on heatsink temperature to maintain safe junction conditions during prolonged stress testing."
+      },
+
+      {
+        heading: "User Interface",
+        body: "A capacitive touch matrix enables local setpoint adjustment and load control without mechanical encoders or buttons.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792207/image_BHB4pIZjfO.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792631/image_FXLLqYjZiU.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1794181/pad_s_3wN4wQ4XQR.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Cloud Logging & Analytics",
+        body: "Operating data is transmitted over WiFi to a time-series database for live dashboards, trend analysis, and long-duration test logging.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792674/dashboard_DYoQUkn2wW.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "PCB Implementation",
+        body: "The custom PCB was designed with segregated power and signal return paths, heavy-current routing, and close placement of sensing circuitry to improve accuracy and robustness.",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1792656/image_2qKmapYL8r.png?auto=compress%2Cformat&w=740&h=555&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/1792668/image_6Vy24RMDD4.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates strong capability in mixed-signal hardware, embedded control systems, power electronics, thermal engineering, and test instrumentation design. It highlights the ability to build professional-grade validation tools for power supply and battery development workflows."
       }
     ]
   },
