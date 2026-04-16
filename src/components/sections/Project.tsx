@@ -347,7 +347,7 @@ const projects: Project[] = [
     highlight: "High-Precision Ultrasonic Sensing",
     hidden: false,
     media: [
-      { type: "image", src: "/images/hqdefault.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" }
+      { type: "image", src: "/images/hqdefault.jpg" }
     ],
     deliverables: [
       "PIC18F45K22 firmware for ultrasonic distance measurement",
@@ -521,7 +521,7 @@ const projects: Project[] = [
     highlight: "Cloud-Connected Environmental Monitoring",
     hidden: false,
     media: [
-      { type: "image", src: "/images/cws1_2-600x400_kZGQsO9o1v.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" },
+      { type: "image", src: "/images/cws1_2-600x400_kZGQsO9o1v.jpg" },
     ],
     deliverables: [
       "ESP32 firmware for SHT31 sensor data acquisition",
@@ -1663,7 +1663,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/442282/home-page-1-1024x488_SOmZrM4g2w.jpg?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/home-page-1-1024x488_SOmZrM4g2w.jpg"
       }
     ],
 
@@ -1693,7 +1693,7 @@ const projects: Project[] = [
           "Remote client access support"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/442312/smart_pi_thermostat_architecture_(2)_Ob9VPg4vlz.jpg"
+          "/images/smart_pi_thermostat_architecture_(2)_Ob9VPg4vlz.jpg"
         ]
       },
 
@@ -1701,8 +1701,8 @@ const projects: Project[] = [
         heading: "Environmental Monitoring",
         body: "Multiple rooms can be monitored simultaneously using wireless sensor modules, enabling smarter heating decisions based on real occupancy zones and temperature distribution.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/442295/esp32__dht11_p4d8yWle4E.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/442317/esp32__dht11_bb_5oLN0amQX3.jpg"
+          "/images/esp32__dht11_p4d8yWle4E.jpg",
+          "/images/esp32__dht11_bb_5oLN0amQX3.jpg"
         ]
       },
 
@@ -1710,8 +1710,8 @@ const projects: Project[] = [
         heading: "HVAC Actuation Layer",
         body: "A relay-equipped ESP32 node interfaces with the boiler or heating equipment, allowing isolated on/off control based on thermostat logic.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/442296/esp32__high_level_relay_GnIXC9ubO1.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/442320/esp32__relay_bb_v2VGS0jzJb.jpg"
+          "/images/esp32__high_level_relay_GnIXC9ubO1.jpg",
+          "/images/esp32__relay_bb_v2VGS0jzJb.jpg"
         ]
       },
 
@@ -1719,7 +1719,7 @@ const projects: Project[] = [
         heading: "Combined Node Configuration",
         body: "For compact deployments, sensing and relay functions can be combined on a single ESP32 platform, reducing hardware count while preserving functionality.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/442297/esp32_relay_and_dht_sensor_l95bwQ49Nz.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/esp32_relay_and_dht_sensor_l95bwQ49Nz.jpg"
         ]
       },
 
@@ -1727,8 +1727,7 @@ const projects: Project[] = [
         heading: "User Interface & Remote Access",
         body: "Android devices serve as thermostat controllers and monitoring terminals. Additional client devices can connect remotely for off-site heating control and status visibility.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/442290/device-2018-01-06-180237_dM4RLBXjN3.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/442309/device-2018-01-06-183135_dYWiI9eGff.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/device-2018-01-06-180237_dM4RLBXjN3.jpg",
         ]
       },
 
@@ -1772,7 +1771,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1792652/image_FSqB8efF26.png?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/image_FSqB8efF26.jpg"
       }
     ],
 
@@ -1802,7 +1801,7 @@ const projects: Project[] = [
           "Soft-start current ramping"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792619/image_UuOW8hrEiv.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_UuOW8hrEiv.jpg"
         ]
       },
 
@@ -1827,8 +1826,8 @@ const projects: Project[] = [
           "Protection-oriented derating strategy"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792647/image_FgrNSXRepL.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792652/image_FSqB8efF26.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_FgrNSXRepL.jpg",
+          "/images/image_FSqB8efF26.jpg"
         ]
       },
 
@@ -1841,9 +1840,9 @@ const projects: Project[] = [
         heading: "User Interface",
         body: "A capacitive touch matrix enables local setpoint adjustment and load control without mechanical encoders or buttons.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792207/image_BHB4pIZjfO.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792631/image_FXLLqYjZiU.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1794181/pad_s_3wN4wQ4XQR.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_BHB4pIZjfO.jpg",
+          "/images/image_FXLLqYjZiU.jpg",
+          "/images/pad_s_3wN4wQ4XQR.jpg"
         ]
       },
 
@@ -1851,7 +1850,7 @@ const projects: Project[] = [
         heading: "Cloud Logging & Analytics",
         body: "Operating data is transmitted over WiFi to a time-series database for live dashboards, trend analysis, and long-duration test logging.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792674/dashboard_DYoQUkn2wW.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/dashboard_DYoQUkn2wW.jpg"
         ]
       },
 
@@ -1859,8 +1858,8 @@ const projects: Project[] = [
         heading: "PCB Implementation",
         body: "The custom PCB was designed with segregated power and signal return paths, heavy-current routing, and close placement of sensing circuitry to improve accuracy and robustness.",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1792656/image_2qKmapYL8r.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1792668/image_6Vy24RMDD4.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "/images/image_2qKmapYL8r.jpg",
+          "/images/image_6Vy24RMDD4.jpg"
         ]
       },
 
