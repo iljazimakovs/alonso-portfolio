@@ -1273,7 +1273,7 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: "f7d2e4",
+    slug: "f7d2e9",
     title: "Edge-Connected Machine Health Monitoring System",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
