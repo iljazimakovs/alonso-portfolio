@@ -3581,6 +3581,106 @@ const projects: Project[] = [
     ]
   },
   {
+    slug: "b7e4c2",
+    title: "Hall-Effect Drive Control Interface for Electric Mobility Systems",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "pcb-hardware", "sensor-systems"],
+
+    description: "Contactless throttle control platform using Hall-effect position sensing for electric bikes and mobility systems with embedded signal conditioning and controller interface.",
+
+    longDescription: "Designed a compact throttle control platform for electric mobility applications using Hall-effect sensing technology to replace traditional potentiometer-based throttles. The system measures lever or grip position through magnetic field detection and generates a stable throttle command compatible with common motor controllers. Developed for e-bikes, light EV platforms, and retrofit propulsion systems requiring higher reliability, smoother response, and wear-free operation.",
+
+    tags: [
+      "Hall Effect Sensor",
+      "Throttle Control",
+      "Electric Vehicle",
+      "E-Bike",
+      "Embedded Systems",
+      "Signal Conditioning",
+      "Motor Control",
+      "Sensor Interface"
+    ],
+
+    icon: Gauge,
+    highlight: "Hall Sensor Throttle",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "https://hackster.imgix.net/uploads/attachments/1030033/_nWUQpiRrQU.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+      }
+    ],
+
+    deliverables: [
+      "Hall-effect throttle sensing module",
+      "Embedded signal processing firmware",
+      "Analog/PWM controller output stage",
+      "Compact sensor PCB design",
+      "EV controller retrofit integration"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a contactless throttle control solution using Hall-effect sensing for electric propulsion systems. The platform was created as a more reliable alternative to potentiometer throttles, eliminating mechanical wear while improving control smoothness and long-term durability."
+      },
+
+      {
+        heading: "Sensor Architecture",
+        body: "Throttle position is measured using a magnet-and-sensor arrangement integrated into a moving lever or grip mechanism.",
+        bullets: [
+          "Linear Hall-effect position sensing",
+          "Magnet displacement tracking",
+          "No-contact operation",
+          "Long service life",
+          "Stable output over repeated cycles"
+        ]
+      },
+
+      {
+        heading: "Embedded Electronics",
+        body: "The embedded controller reads sensor output, applies filtering and calibration, then generates a throttle signal compatible with standard motor drivers.",
+        bullets: [
+          "ADC sensor acquisition",
+          "Output linearization",
+          "Noise filtering",
+          "PWM or analog signal generation",
+          "Low-latency response"
+        ]
+      },
+
+      {
+        heading: "Mechanical Integration",
+        body: "The sensor layout was optimized for compact installation inside throttle lever assemblies and handlebar controls.",
+        bullets: [
+          "Compact PCB form factor",
+          "Magnet alignment tolerance study",
+          "Lever travel mapping",
+          "Vibration-resistant mounting"
+        ]
+      },
+
+      {
+        heading: "Target Applications",
+        body: "Suitable for mobility and control systems requiring robust throttle sensing.",
+        bullets: [
+          "Electric bicycles",
+          "Scooters",
+          "Marine electric propulsion",
+          "Light EV conversions",
+          "Custom industrial control levers"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates practical experience in Hall-effect sensing, embedded control electronics, signal conditioning, and electromechanical product integration for throttle applications."
+      }
+    ]
+  },
+  {
     slug: "9d1b73",
     title: "IoT Water Leak Detection & Notification System",
     category: "IoT & Connectivity",
