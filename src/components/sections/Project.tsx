@@ -3582,27 +3582,27 @@ const projects: Project[] = [
   },
   {
     slug: "b7e4c2",
-    title: "Wireless Drive Command Interface for Electric Mobility Systems",
-    category: "IoT & Connected Devices",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware", "power-electronics"],
+    title: "Hall-Effect Drive Control Interface for Electric Mobility Systems",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "pcb-hardware", "sensor-systems"],
 
-    description: "WiFi-based throttle command module for electric bikes and marine propulsion systems using ESP8266 web control and analog signal emulation.",
+    description: "Contactless throttle control platform using Hall-effect position sensing for electric bikes and mobility systems with embedded signal conditioning and controller interface.",
 
-    longDescription: "Designed a wireless drive control interface that allows throttle operation of electric propulsion systems from a smartphone or browser. The system uses an ESP8266 microcontroller hosting a local WiFi access point and embedded web server to generate a PWM-based throttle command, converted into an analog-compatible control signal for existing motor controllers. Suitable for e-bikes, electric boats, and retrofit mobility platforms requiring remote low-voltage throttle control.",
+    longDescription: "Designed a compact throttle control platform for electric mobility applications using Hall-effect sensing technology to replace traditional potentiometer-based throttles. The system measures lever or grip position through magnetic field detection and generates a stable throttle command compatible with common motor controllers. Developed for e-bikes, light EV platforms, and retrofit propulsion systems requiring higher reliability, smoother response, and wear-free operation.",
 
     tags: [
-      "ESP8266",
-      "WiFi Control",
-      "Motor Control",
+      "Hall Effect Sensor",
+      "Throttle Control",
       "Electric Vehicle",
-      "Marine Electronics",
-      "PWM",
-      "IoT",
-      "Embedded Systems"
+      "E-Bike",
+      "Embedded Systems",
+      "Signal Conditioning",
+      "Motor Control",
+      "Sensor Interface"
     ],
 
-    icon: Wifi,
-    highlight: "Wireless Throttle Control",
+    icon: Gauge,
+    highlight: "Hall Sensor Throttle",
 
     hidden: false,
 
@@ -3614,92 +3614,77 @@ const projects: Project[] = [
     ],
 
     deliverables: [
-      "WiFi-enabled throttle control module",
-      "ESP8266 embedded web server firmware",
-      "PWM-to-analog throttle interface",
-      "Browser-based speed control UI",
-      "Retrofit integration for EV / marine systems"
+      "Hall-effect throttle sensing module",
+      "Embedded signal processing firmware",
+      "Analog/PWM controller output stage",
+      "Compact sensor PCB design",
+      "EV controller retrofit integration"
     ],
 
     sections: [
       {
         heading: "Project Overview",
-        body: "Developed a remote throttle control solution enabling electric propulsion systems to be operated from a phone or browser. The platform was designed for single-operator boat maneuvering and can also be adapted for electric bicycle cruise-control style applications. :contentReference[oaicite:0]{index=0}"
+        body: "Developed a contactless throttle control solution using Hall-effect sensing for electric propulsion systems. The platform was created as a more reliable alternative to potentiometer throttles, eliminating mechanical wear while improving control smoothness and long-term durability."
       },
 
       {
-        heading: "System Architecture",
-        body: "The solution combines wireless networking, embedded firmware, and analog throttle emulation into a compact retrofit module.",
+        heading: "Sensor Architecture",
+        body: "Throttle position is measured using a magnet-and-sensor arrangement integrated into a moving lever or grip mechanism.",
         bullets: [
-          "ESP8266-based control node",
-          "Local WiFi access point mode",
-          "Integrated HTTP control server",
-          "PWM throttle generation",
-          "Existing controller compatibility"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1030033/_nWUQpiRrQU.blob?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "Linear Hall-effect position sensing",
+          "Magnet displacement tracking",
+          "No-contact operation",
+          "Long service life",
+          "Stable output over repeated cycles"
         ]
       },
 
       {
-        heading: "Wireless User Interface",
-        body: "Users connect directly to the onboard WiFi network and access a browser-based speed slider for real-time command input.",
+        heading: "Embedded Electronics",
+        body: "The embedded controller reads sensor output, applies filtering and calibration, then generates a throttle signal compatible with standard motor drivers.",
         bullets: [
-          "Dedicated SSID access point",
-          "Phone / tablet compatible",
-          "No external router required",
-          "Simple slider-based throttle setting"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1030059/screenshot_20191203-181848_ufG9bWiu4s.png?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1030057/screenshot_20191203-181444_(1)_cywugKr3wQ.png?auto=compress%2Cformat&w=740&h=555&fit=max"
+          "ADC sensor acquisition",
+          "Output linearization",
+          "Noise filtering",
+          "PWM or analog signal generation",
+          "Low-latency response"
         ]
       },
 
       {
-        heading: "Throttle Signal Interface",
-        body: "Motor controllers requiring low-voltage analog throttle input are driven through a filtered PWM output stage.",
+        heading: "Mechanical Integration",
+        body: "The sensor layout was optimized for compact installation inside throttle lever assemblies and handlebar controls.",
         bullets: [
-          "PWM output from GPIO control pin",
-          "RC smoothing network for analog response",
-          "Compatible with potentiometer or Hall throttle systems",
-          "Splice-in retrofit integration"
-        ],
+          "Compact PCB form factor",
+          "Magnet alignment tolerance study",
+          "Lever travel mapping",
+          "Vibration-resistant mounting"
+        ]
+      },
+
+      {
+        heading: "Target Applications",
+        body: "Suitable for mobility and control systems requiring robust throttle sensing.",
+        bullets: [
+          "Electric bicycles",
+          "Scooters",
+          "Marine electric propulsion",
+          "Light EV conversions",
+          "Custom industrial control levers"
+        ]
+      },
+
+      {
+        heading: "Schematics",
+        body: "Control electronics include an ESP8266 module, PWM filtering stage, transistor-assisted output interface, and power conditioning components for integration with existing throttle wiring.",
         images: [
           "https://hackster.imgix.net/uploads/attachments/1030043/screenshot_20191203_174722_Zfug4VFR2L.png?auto=compress%2Cformat&w=740&h=555&fit=max"
         ]
       },
 
       {
-        heading: "Firmware Implementation",
-        body: "Custom firmware handles WiFi hosting, HTTP requests, slider parsing, and dynamic PWM duty-cycle updates.",
-        bullets: [
-          "ESP8266WebServer framework",
-          "Real-time slider command updates",
-          "Low-latency control loop",
-          "Simple maintainable embedded codebase"
-        ]
-      },
-
-      {
-        heading: "Target Applications",
-        body: "The architecture is suitable for multiple electric mobility and remote actuation platforms.",
-        bullets: [
-          "Electric bicycle throttle assist",
-          "Remote boat docking control",
-          "Small EV retrofit systems",
-          "Experimental robotic drive platforms"
-        ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1029680/boat_4wx9xJCyXt.jpg?auto=compress%2Cformat&w=740&h=555&fit=max",
-          "https://hackster.imgix.net/uploads/attachments/1029681/boat1_MOK4tKwXVk.jpg?auto=compress%2Cformat&w=740&h=555&fit=max"
-        ]
-      },
-
-      {
         heading: "Engineering Outcome",
-        body: "This project demonstrates embedded networking, real-time motor control interfacing, low-voltage analog signal conditioning, and practical retrofit engineering. It highlights the ability to combine firmware and electronics into functional wireless mobility control systems."
+        body: "This project demonstrates practical experience in Hall-effect sensing, embedded control electronics, signal conditioning, and electromechanical product integration for throttle applications."
       }
     ]
   },
