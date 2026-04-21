@@ -834,7 +834,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1607549/_8y0WrFgjvr.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/_8y0WrFgjvr.jpg"
       }
     ],
 
@@ -925,14 +925,14 @@ const projects: Project[] = [
       {
         heading: "Custom parts and enclosures",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1607551/fig-4_9II1MUs1AL.jpg"
+          "/images/fig-4_9II1MUs1AL.jpg"
         ]
       },
 
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1607550/fig-1_Bew6tqBZsE.jpg"
+          "/images/fig-1_Bew6tqBZsE.jpg"
         ]
       },
 
@@ -971,7 +971,7 @@ const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://hackster.imgix.net/uploads/attachments/1644581/_beVxXqooI0.blob?auto=compress%2Cformat&w=900&h=675&fit=min"
+        src: "/images/_beVxXqooI0.jpg"
       }
     ],
 
@@ -1045,8 +1045,8 @@ const projects: Project[] = [
           "Manufacturable compact footprint"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1644585/fig-4_WizALat6gr.jpg",
-          "https://hackster.imgix.net/uploads/attachments/1644586/fig-12_WxKjdeRm0S.jpg"
+          "/images/fig-4_WizALat6gr.jpg",
+          "/images/fig-12_WxKjdeRm0S.jpg"
         ]
       },
 
@@ -1058,7 +1058,7 @@ const projects: Project[] = [
       {
         heading: "Schematics",
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1644584/fig-1_DRSPxXWDro.jpg"
+          "/images/fig-1_DRSPxXWDro.jpg"
         ]
       },
 
