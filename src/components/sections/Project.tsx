@@ -519,7 +519,7 @@ const projects: Project[] = [
     tags: ["ESP32", "Raspberry Pi", "SHT31", "I2C", "Firebase", "IoT", "Humidity", "Temperature"],
     icon: Cloud,
     highlight: "Cloud-Connected Environmental Monitoring",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/cws1_2-600x400_kZGQsO9o1v.jpg" },
     ],
@@ -2370,7 +2370,7 @@ const projects: Project[] = [
     icon: Gauge,
     highlight: "Hall Sensor Throttle",
 
-    hidden: false,
+    hidden: true,
 
     media: [
       {
@@ -2579,7 +2579,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "Vision FPGA Carrier",
 
-    hidden: false,
+    hidden: true,
 
     media: [
       {
