@@ -345,7 +345,7 @@ const projects: Project[] = [
     tags: ["PIC18F45K22", "Ultrasonic Sensor", "Embedded Systems", "Distance Measurement", "CCP Modules", "Real-Time Firmware"],
     icon: Activity,
     highlight: "High-Precision Ultrasonic Sensing",
-    hidden: false,
+    hidden: true,
     media: [
       { type: "image", src: "/images/hqdefault.jpg" }
     ],
@@ -713,7 +713,7 @@ const projects: Project[] = [
         src: "/images/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg"
       }
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "Custom dual-MCU PCB",
       "ESP32 + RP2040 system architecture",
@@ -1307,7 +1307,7 @@ const projects: Project[] = [
         src: "/images/_kVlac0BHjL.jpg"
       }
     ],
-    hidden: false,
+    hidden: true,
     deliverables: [
       "RTL Motor Control System",
       "FPGA-Based PID Controller",
@@ -2475,7 +2475,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "x86 Carrier Board",
 
-    hidden: false,
+    hidden: true,
 
     media: [
       {
@@ -3379,7 +3379,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "Optical Ranging System",
 
-    hidden: false,
+    hidden: true,
 
     media: [
       {
