@@ -806,269 +806,6 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: "p4d8f1",
-    title: "Compact Offline Flyback Converter for Auxiliary DC Rails",
-    category: "Power Electronics",
-    filterSlugs: ["power-electronics", "pcb-hardware", "embedded-firmware"],
-
-    description: "Mains-powered isolated SMPS converting 220VAC to adjustable 8VDC at 24W using compact flyback topology and custom transformer design.",
-
-    longDescription: "Designed a compact offline flyback power supply for converting 220VAC mains input into a regulated low-voltage DC rail suitable for embedded systems, control electronics, and post-regulation stages. The converter delivers up to 24W output power with isolated topology, integrated PWM controller, custom magnetics, feedback regulation, EMI filtering, and compact PCB implementation. The design emphasizes reliability, efficiency, transient response, and manufacturable layout for commercial electronic products.",
-
-    tags: [
-      "Flyback Converter",
-      "SMPS",
-      "AC-DC",
-      "Power Electronics",
-      "Offline Power Supply",
-      "Transformer Design",
-      "PCB Design",
-      "EMI"
-    ],
-
-    icon: Zap,
-    highlight: "24W Offline SMPS",
-
-    hidden: false,
-
-    media: [
-      {
-        type: "image",
-        src: "/images/_8y0WrFgjvr.jpg"
-      }
-    ],
-
-    deliverables: [
-      "220VAC to 8VDC isolated flyback converter",
-      "24W output power architecture",
-      "Custom transformer + magnetics selection",
-      "EMI input protection stage",
-      "Production-ready PCB layout",
-      "Bench validation and load testing"
-    ],
-
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed a compact isolated AC-DC switching power supply converting 220VAC mains input into a stable low-voltage DC output. The platform was intended for electronics requiring reliable auxiliary power with efficient conversion and compact footprint."
-      },
-
-      {
-        heading: "Electrical Specifications",
-        bullets: [
-          "Input: 220VAC mains",
-          "Output: adjustable 7.5V to 8VDC",
-          "Maximum load current: 3A",
-          "Maximum output power: 24W",
-          "Isolated flyback topology"
-        ]
-      },
-
-      {
-        heading: "Power Topology",
-        body: "A flyback switching architecture was selected to provide galvanic isolation, low component count, and strong suitability for sub-30W offline converters.",
-        bullets: [
-          "Primary-side switching controller",
-          "Integrated startup architecture",
-          "No auxiliary winding required",
-          "Opto-isolated output regulation",
-          "Compact transformer implementation"
-        ]
-      },
-
-      {
-        heading: "Magnetics Design",
-        body: "The converter uses a compact RM8 ferrite transformer core selected for efficient energy transfer and reduced board area.",
-        bullets: [
-          "RM8 ferrite core geometry",
-          "Custom primary / secondary turns ratio",
-          "Isolation barrier compliance",
-          "Optimized leakage and thermal behavior"
-        ]
-      },
-
-      {
-        heading: "Protection & Filtering",
-        body: "Input and output stages were designed for stable operation and robustness under real mains environments.",
-        bullets: [
-          "AC input rectification stage",
-          "Surge / transient suppression",
-          "EMI filtering network",
-          "Output ripple suppression capacitors",
-          "Feedback loop compensation"
-        ]
-      },
-
-      {
-        heading: "PCB Implementation",
-        body: "The PCB layout was optimized for creepage clearance, switching current loops, thermal paths, and manufacturability.",
-        bullets: [
-          "Primary / secondary isolation spacing",
-          "Short high-current switching loops",
-          "Thermal copper around power devices",
-          "Compact single-board implementation"
-        ],
-      },
-
-      {
-        heading: "Validation Testing",
-        body: "Bench testing covered regulation accuracy, voltage droop, load response, and output noise under dynamic loading.",
-        bullets: [
-          "Voltage regulation verification",
-          "3A current delivery testing",
-          "Transient load-step response",
-          "Ripple / noise measurement",
-          "Thermal observation under load"
-        ]
-      },
-
-      {
-        heading: "Custom parts and enclosures",
-        images: [
-          "/images/fig-4_9II1MUs1AL.jpg"
-        ]
-      },
-
-      {
-        heading: "Schematics",
-        images: [
-          "/images/fig-1_Bew6tqBZsE.jpg"
-        ]
-      },
-
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates strong capability in offline power conversion, flyback topology selection, transformer-based SMPS design, EMI-aware PCB layout, and production-oriented validation. It highlights experience directly aligned with commercial AC-DC converter development."
-      }
-    ]
-  },
-  {
-    slug: "n5e7c3",
-    title: "Universal Input Isolated 5V Converter Module",
-    category: "Power Electronics",
-    filterSlugs: ["power-electronics", "pcb-hardware", "embedded-firmware"],
-
-    description: "Wide-range mains AC to regulated 5VDC flyback converter delivering up to 2.5A with isolated topology and low-noise output performance.",
-
-    longDescription: "Designed a compact universal-input AC-DC switching power module converting 85VAC to 260VAC mains input into a tightly regulated 5VDC output rail. The converter uses isolated flyback topology, integrated PWM control, custom transformer magnetics, precision feedback regulation, and compact PCB implementation. The platform is suitable for powering embedded controllers, IoT products, communication devices, and downstream point-of-load regulators requiring robust operation across global mains ranges.",
-
-    tags: [
-      "AC-DC",
-      "Flyback Converter",
-      "Universal Input",
-      "5V Power Supply",
-      "SMPS",
-      "Power Electronics",
-      "Transformer Design",
-      "PCB Design"
-    ],
-
-    icon: Zap,
-    highlight: "Universal 5V SMPS",
-
-    hidden: false,
-
-    media: [
-      {
-        type: "image",
-        src: "/images/_beVxXqooI0.jpg"
-      }
-    ],
-
-    deliverables: [
-      "85VAC–260VAC isolated flyback converter",
-      "Regulated 5VDC output up to 2.5A peak",
-      "Custom EE20 transformer design",
-      "Low ripple output stage",
-      "Compact production PCB layout",
-      "Bench-tested electrical validation"
-    ],
-
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed a universal-input isolated switching power supply for generating a stable 5V rail directly from global mains sources. The design targets compact electronics requiring dependable low-voltage power under varying line conditions."
-      },
-
-      {
-        heading: "Electrical Specifications",
-        bullets: [
-          "Input range: 85VAC to 260VAC",
-          "Output voltage: 5VDC adjustable",
-          "Peak output current: 2.5A",
-          "Continuous output current: 2A",
-          "Maximum output power: ~12W"
-        ]
-      },
-
-      {
-        heading: "Power Topology",
-        body: "An isolated flyback architecture was selected for efficiency, low BOM count, and suitability for low-to-mid power offline applications.",
-        bullets: [
-          "Primary-side switching controller",
-          "Integrated startup capability",
-          "No auxiliary winding required",
-          "Opto-coupled closed-loop regulation",
-          "Wide mains operating support"
-        ]
-      },
-
-      {
-        heading: "Magnetics Design",
-        body: "The converter uses an EE20 ferrite transformer optimized for isolation, compact size, and stable power transfer across wide input conditions.",
-        bullets: [
-          "EE20 ferrite core platform",
-          "Custom turns ratio design",
-          "Primary / secondary isolation barrier",
-          "Thermal and efficiency optimization"
-        ]
-      },
-
-      {
-        heading: "Output Performance",
-        body: "The supply was tuned for strong voltage regulation and low-noise output suitable for digital electronics.",
-        bullets: [
-          "No-load ripple: ~1.5mVrms / 4mVp-p",
-          "Full-load ripple (2A): ~3mVrms / 25mVp-p",
-          "Voltage drop at 2A load: ~50mV",
-          "Stable regulation under load transitions"
-        ]
-      },
-
-      {
-        heading: "PCB Implementation",
-        body: "PCB layout emphasized safety spacing, minimized switching loops, thermal distribution, and compact mechanical form factor.",
-        bullets: [
-          "Primary / secondary creepage clearance",
-          "Short current return paths",
-          "Low-noise feedback routing",
-          "Manufacturable compact footprint"
-        ],
-        images: [
-          "/images/fig-4_WizALat6gr.jpg",
-          "/images/fig-12_WxKjdeRm0S.jpg"
-        ]
-      },
-
-      {
-        heading: "Validation Testing",
-        body: "Bench characterization verified current delivery, voltage sag, and ripple performance using programmable load and oscilloscope instrumentation."
-      },
-
-      {
-        heading: "Schematics",
-        images: [
-          "/images/fig-1_DRSPxXWDro.jpg"
-        ]
-      },
-
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates strong expertise in offline SMPS development, universal-input flyback converter design, transformer selection, low-noise power regulation, and manufacturable PCB implementation. It directly reflects practical capability for commercial AC-DC power supply design."
-      }
-    ]
-  },
-  {
     slug: "d3f8a1",
     title: "Battery-Powered Environmental Sensing Node",
     category: "IoT & Connected Devices",
@@ -1894,6 +1631,269 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "High-throughput RTL error correction engine demonstrating reliable, low-latency data processing with formal verification. System design ensures deterministic performance and correctness for communication and safety-critical applications."
+      }
+    ]
+  },
+  {
+    slug: "p4d8f1",
+    title: "Compact Offline Flyback Converter for Auxiliary DC Rails",
+    category: "Power Electronics",
+    filterSlugs: ["power-electronics", "pcb-hardware", "embedded-firmware"],
+
+    description: "Mains-powered isolated SMPS converting 220VAC to adjustable 8VDC at 24W using compact flyback topology and custom transformer design.",
+
+    longDescription: "Designed a compact offline flyback power supply for converting 220VAC mains input into a regulated low-voltage DC rail suitable for embedded systems, control electronics, and post-regulation stages. The converter delivers up to 24W output power with isolated topology, integrated PWM controller, custom magnetics, feedback regulation, EMI filtering, and compact PCB implementation. The design emphasizes reliability, efficiency, transient response, and manufacturable layout for commercial electronic products.",
+
+    tags: [
+      "Flyback Converter",
+      "SMPS",
+      "AC-DC",
+      "Power Electronics",
+      "Offline Power Supply",
+      "Transformer Design",
+      "PCB Design",
+      "EMI"
+    ],
+
+    icon: Zap,
+    highlight: "24W Offline SMPS",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "/images/_8y0WrFgjvr.jpg"
+      }
+    ],
+
+    deliverables: [
+      "220VAC to 8VDC isolated flyback converter",
+      "24W output power architecture",
+      "Custom transformer + magnetics selection",
+      "EMI input protection stage",
+      "Production-ready PCB layout",
+      "Bench validation and load testing"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a compact isolated AC-DC switching power supply converting 220VAC mains input into a stable low-voltage DC output. The platform was intended for electronics requiring reliable auxiliary power with efficient conversion and compact footprint."
+      },
+
+      {
+        heading: "Electrical Specifications",
+        bullets: [
+          "Input: 220VAC mains",
+          "Output: adjustable 7.5V to 8VDC",
+          "Maximum load current: 3A",
+          "Maximum output power: 24W",
+          "Isolated flyback topology"
+        ]
+      },
+
+      {
+        heading: "Power Topology",
+        body: "A flyback switching architecture was selected to provide galvanic isolation, low component count, and strong suitability for sub-30W offline converters.",
+        bullets: [
+          "Primary-side switching controller",
+          "Integrated startup architecture",
+          "No auxiliary winding required",
+          "Opto-isolated output regulation",
+          "Compact transformer implementation"
+        ]
+      },
+
+      {
+        heading: "Magnetics Design",
+        body: "The converter uses a compact RM8 ferrite transformer core selected for efficient energy transfer and reduced board area.",
+        bullets: [
+          "RM8 ferrite core geometry",
+          "Custom primary / secondary turns ratio",
+          "Isolation barrier compliance",
+          "Optimized leakage and thermal behavior"
+        ]
+      },
+
+      {
+        heading: "Protection & Filtering",
+        body: "Input and output stages were designed for stable operation and robustness under real mains environments.",
+        bullets: [
+          "AC input rectification stage",
+          "Surge / transient suppression",
+          "EMI filtering network",
+          "Output ripple suppression capacitors",
+          "Feedback loop compensation"
+        ]
+      },
+
+      {
+        heading: "PCB Implementation",
+        body: "The PCB layout was optimized for creepage clearance, switching current loops, thermal paths, and manufacturability.",
+        bullets: [
+          "Primary / secondary isolation spacing",
+          "Short high-current switching loops",
+          "Thermal copper around power devices",
+          "Compact single-board implementation"
+        ],
+      },
+
+      {
+        heading: "Validation Testing",
+        body: "Bench testing covered regulation accuracy, voltage droop, load response, and output noise under dynamic loading.",
+        bullets: [
+          "Voltage regulation verification",
+          "3A current delivery testing",
+          "Transient load-step response",
+          "Ripple / noise measurement",
+          "Thermal observation under load"
+        ]
+      },
+
+      {
+        heading: "Custom parts and enclosures",
+        images: [
+          "/images/fig-4_9II1MUs1AL.jpg"
+        ]
+      },
+
+      {
+        heading: "Schematics",
+        images: [
+          "/images/fig-1_Bew6tqBZsE.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates strong capability in offline power conversion, flyback topology selection, transformer-based SMPS design, EMI-aware PCB layout, and production-oriented validation. It highlights experience directly aligned with commercial AC-DC converter development."
+      }
+    ]
+  },
+  {
+    slug: "n5e7c3",
+    title: "Universal Input Isolated 5V Converter Module",
+    category: "Power Electronics",
+    filterSlugs: ["power-electronics", "pcb-hardware", "embedded-firmware"],
+
+    description: "Wide-range mains AC to regulated 5VDC flyback converter delivering up to 2.5A with isolated topology and low-noise output performance.",
+
+    longDescription: "Designed a compact universal-input AC-DC switching power module converting 85VAC to 260VAC mains input into a tightly regulated 5VDC output rail. The converter uses isolated flyback topology, integrated PWM control, custom transformer magnetics, precision feedback regulation, and compact PCB implementation. The platform is suitable for powering embedded controllers, IoT products, communication devices, and downstream point-of-load regulators requiring robust operation across global mains ranges.",
+
+    tags: [
+      "AC-DC",
+      "Flyback Converter",
+      "Universal Input",
+      "5V Power Supply",
+      "SMPS",
+      "Power Electronics",
+      "Transformer Design",
+      "PCB Design"
+    ],
+
+    icon: Zap,
+    highlight: "Universal 5V SMPS",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "/images/_beVxXqooI0.jpg"
+      }
+    ],
+
+    deliverables: [
+      "85VAC–260VAC isolated flyback converter",
+      "Regulated 5VDC output up to 2.5A peak",
+      "Custom EE20 transformer design",
+      "Low ripple output stage",
+      "Compact production PCB layout",
+      "Bench-tested electrical validation"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a universal-input isolated switching power supply for generating a stable 5V rail directly from global mains sources. The design targets compact electronics requiring dependable low-voltage power under varying line conditions."
+      },
+
+      {
+        heading: "Electrical Specifications",
+        bullets: [
+          "Input range: 85VAC to 260VAC",
+          "Output voltage: 5VDC adjustable",
+          "Peak output current: 2.5A",
+          "Continuous output current: 2A",
+          "Maximum output power: ~12W"
+        ]
+      },
+
+      {
+        heading: "Power Topology",
+        body: "An isolated flyback architecture was selected for efficiency, low BOM count, and suitability for low-to-mid power offline applications.",
+        bullets: [
+          "Primary-side switching controller",
+          "Integrated startup capability",
+          "No auxiliary winding required",
+          "Opto-coupled closed-loop regulation",
+          "Wide mains operating support"
+        ]
+      },
+
+      {
+        heading: "Magnetics Design",
+        body: "The converter uses an EE20 ferrite transformer optimized for isolation, compact size, and stable power transfer across wide input conditions.",
+        bullets: [
+          "EE20 ferrite core platform",
+          "Custom turns ratio design",
+          "Primary / secondary isolation barrier",
+          "Thermal and efficiency optimization"
+        ]
+      },
+
+      {
+        heading: "Output Performance",
+        body: "The supply was tuned for strong voltage regulation and low-noise output suitable for digital electronics.",
+        bullets: [
+          "No-load ripple: ~1.5mVrms / 4mVp-p",
+          "Full-load ripple (2A): ~3mVrms / 25mVp-p",
+          "Voltage drop at 2A load: ~50mV",
+          "Stable regulation under load transitions"
+        ]
+      },
+
+      {
+        heading: "PCB Implementation",
+        body: "PCB layout emphasized safety spacing, minimized switching loops, thermal distribution, and compact mechanical form factor.",
+        bullets: [
+          "Primary / secondary creepage clearance",
+          "Short current return paths",
+          "Low-noise feedback routing",
+          "Manufacturable compact footprint"
+        ],
+        images: [
+          "/images/fig-4_WizALat6gr.jpg",
+          "/images/fig-12_WxKjdeRm0S.jpg"
+        ]
+      },
+
+      {
+        heading: "Validation Testing",
+        body: "Bench characterization verified current delivery, voltage sag, and ripple performance using programmable load and oscilloscope instrumentation."
+      },
+
+      {
+        heading: "Schematics",
+        images: [
+          "/images/fig-1_DRSPxXWDro.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates strong expertise in offline SMPS development, universal-input flyback converter design, transformer selection, low-noise power regulation, and manufacturable PCB implementation. It directly reflects practical capability for commercial AC-DC power supply design."
       }
     ]
   },
