@@ -908,9 +908,6 @@ const projects: Project[] = [
           "Thermal copper around power devices",
           "Compact single-board implementation"
         ],
-        images: [
-          "https://hackster.imgix.net/uploads/attachments/1607549/_8y0WrFgjvr.blob?auto=compress%2Cformat&w=740&h=555&fit=max"
-        ]
       },
 
       {
@@ -922,6 +919,13 @@ const projects: Project[] = [
           "Transient load-step response",
           "Ripple / noise measurement",
           "Thermal observation under load"
+        ]
+      },
+
+      {
+        heading: "Custom parts and enclosures",
+        images: [
+          "https://hackster.imgix.net/uploads/attachments/1607551/fig-4_9II1MUs1AL.jpg"
         ]
       },
 
@@ -1041,7 +1045,6 @@ const projects: Project[] = [
           "Manufacturable compact footprint"
         ],
         images: [
-          "https://hackster.imgix.net/uploads/attachments/1644581/_beVxXqooI0.blob?auto=compress%2Cformat&w=740&h=555&fit=max",
           "https://hackster.imgix.net/uploads/attachments/1644585/fig-4_WizALat6gr.jpg",
           "https://hackster.imgix.net/uploads/attachments/1644586/fig-12_WxKjdeRm0S.jpg"
         ]
