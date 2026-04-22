@@ -248,7 +248,7 @@ const projects: Project[] = [
     slug: "f9c2d7",
     title: "FPGA Neural Network Acceleration Engine",
     category: "FPGA & Digital Design",
-    filterSlugs: ["fpga-digital-design", "embedded-ai", "embedded-firmware"],
+    filterSlugs: ["fpga-digital-design", "embedded-firmware"],
     description: "High-throughput FPGA-based neural network inference using HLS, achieving over 200k FPS through pipelining, parallelism, and quantized integer computation.",
     longDescription: "Fully connected neural network inference engine implemented on FPGA using Vitis High-Level Synthesis (HLS) on the Kria KV260 platform. Targets small neural networks where traditional embedded frameworks introduce overhead. The design uses quantized integer arithmetic, pipelined vector-matrix multiplications, and parallelized compute structures to achieve high inference throughput. Workflow includes model quantization, HLS hardware generation, Vivado integration, and runtime execution with PYNQ. Comparison with RTL-based implementations highlights tradeoffs in resource efficiency and abstraction level.",
     tags: [
@@ -903,7 +903,7 @@ const projects: Project[] = [
     slug: "a8c3f2",
     title: "Industrial Edge Compute Carrier Board",
     category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-linux-bsp"],
+    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "fpga-digital-design"],
     description: "Custom carrier board for edge computing modules with Raspberry Pi–form-factor compatibility and multi-interface peripheral support.",
     longDescription: "Custom carrier platform for edge computing system-on-modules, designed for compatibility, flexibility, and high-speed peripheral integration. Raspberry Pi–compatible form factor allows reuse of existing ecosystems while providing advanced compute capabilities. Integrates Ethernet, USB, JTAG/UART interfaces, SD storage, and fully accessible GPIO routed to programmable logic. Emphasis on layout constraints, connector alignment, power sequencing, and high-speed interface integration resulted in a compact multi-layer PCB suitable for embedded AI and robotics applications.",
     tags: [
@@ -1024,8 +1024,8 @@ const projects: Project[] = [
   {
     slug: "b7f4d1",
     title: "Dual-Motor FPGA Control Platform",
-    category: "FPGA & Embedded AI",
-    filterSlugs: ["fpga", "robotics", "embedded-systems"],
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-firmware"],
     description: "RTL-based FPGA system for precise dual DC motor control with encoder feedback and lead-follow PID synchronization.",
     longDescription: "Real-time motor control system implemented on FPGA using Verilog. Enables precise dual DC motor synchronization with encoder feedback. Integrates PWM generation, quadrature decoding, and custom lead-follow PID control. FPGA implementation provides deterministic timing, parallel processing, and low-latency control for robotics and embedded applications.",
     tags: [
@@ -1535,8 +1535,8 @@ const projects: Project[] = [
   {
     slug: "e2b7c9",
     title: "High-Throughput RTL Error Correction Engine",
-    category: "FPGA & Embedded AI",
-    filterSlugs: ["fpga", "digital-design", "verification"],
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-firmware"],
     description: "RTL-based high-throughput error correction system with continuous data processing, formal verification, and real-time FPGA deployment.",
     longDescription: "High-throughput error correction engine implemented in RTL, capable of producing one valid output per clock cycle. The architecture uses time-division multiplexing across multiple decoding units to sustain continuous data flow. Serial data interface enables high-speed communication, and a valid-ready protocol ensures synchronization between encoder and decoder. Formal verification using model checking guarantees correctness under all input conditions, including error injection scenarios.",
     tags: [
