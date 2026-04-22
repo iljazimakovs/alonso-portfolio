@@ -1,12 +1,12 @@
 import profilePhoto from "/images/photo.png";
 
 const datasheetRows = [
-  { label: "Core Domains", value: "Firmware · Hardware · PCB Design · Embedded Linux · IoT" },
+  { label: "Core Domains", value: "Firmware · Hardware · PCB Design · FPGA · Embedded Linux · IoT" },
   { label: "RTOS", value: "FreeRTOS · Zephyr · ThreadX" },
   { label: "Toolchain", value: "GCC · IAR · LLVM · Keil" },
   { label: "Debug I/F", value: "JTAG · SWD · ETM Trace · Logic Analysis" },
   { label: "PCB Capability", value: "2 → 16-layer HDI · High-Speed Routing · SI / EMI Aware Design" },
-  { label: "Platforms", value: "ARM Cortex-M · STM32 · ESP32 · NXP · Embedded Linux SoCs" },
+  { label: "Platforms", value: "ARM Cortex-M · STM32 · ESP32 · NXP · AMD/Xilinx FPGA · Embedded Linux SoCs" },
   { label: "Protocols", value: "UART · SPI · I²C · USB · CAN · BLE · Ethernet · Wi-Fi" },
 ];
 
@@ -91,9 +91,9 @@ export function About() {
               <p>
                 I'm a senior embedded systems engineer with over ten years of experience
                 developing products from concept through production. My main areas are
-                firmware development, hardware design, PCB design, embedded Linux, and
-                system integration. I support projects across architecture, prototype
-                bring-up, validation, and manufacturing handoff.
+                firmware development, hardware design, PCB design, FPGA / digital systems,
+                embedded Linux, and system integration. I support projects across
+                architecture, prototype bring-up, validation, and manufacturing handoff.
               </p>
 
               <p>
@@ -108,10 +108,10 @@ export function About() {
                   <li>Embedded firmware development (C / C++)</li>
                   <li>Hardware design and schematic capture</li>
                   <li>Multi-layer PCB design and production files</li>
+                  <li>FPGA / digital system development</li>
                   <li>Embedded Linux bring-up and integration</li>
                   <li>Prototype bring-up and debugging</li>
                   <li>Manufacturing handoff and documentation</li>
-                  <li>Product redesign and production readiness</li>
                   <li>FCC / CE pre-compliance support</li>
                 </ul>
               </div>

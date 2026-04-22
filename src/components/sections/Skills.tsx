@@ -1,5 +1,14 @@
 const categories = [
-    {
+  {
+    name: "Hardware & PCB",
+    reg: "REG_HW",
+    tags: [
+      "Altium Designer", "KiCad", "Multi-Layer PCB",
+      "High-Speed Layout", "Power Design",
+      "EMI / EMC", "DFM / DFA",
+    ],
+  },
+  {
     name: "Embedded Firmware",
     reg: "REG_FW",
     tags: [
@@ -9,12 +18,12 @@ const categories = [
     ],
   },
   {
-    name: "Hardware & PCB",
-    reg: "REG_HW",
+    name: "FPGA & Digital Systems",
+    reg: "REG_FPGA",
     tags: [
-      "Altium Designer", "KiCad", "Multi-Layer PCB",
-      "High-Speed Layout", "Power Design",
-      "EMI / EMC", "DFM / DFA",
+      "Verilog", "Vitis HLS", "Vivado",
+      "AMD / Xilinx", "Zynq / Kria",
+      "AXI Interfaces", "Timing Closure",
     ],
   },
   {

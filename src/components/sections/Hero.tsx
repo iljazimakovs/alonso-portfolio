@@ -14,10 +14,10 @@ const bootLines = [
 ];
 
 const stats = [
-  { value: "10+", label: "Years Embedded" },
-  { value: "30+", label: "Boards Shipped" },
-  { value: "5", label: "MCU Families" },
-  { value: "CE/FCC", label: "Certified Products" },
+  { value: "10+", label: "Years Experience" },
+  { value: "30+", label: "Boards Delivered" },
+  { value: "8+", label: "MCU / FPGA Platforms" },
+  { value: "CE/FCC", label: "Compliance Support" },
 ];
 
 export function Hero() {
@@ -80,7 +80,7 @@ export function Hero() {
             {/* Description */}
             <div>
               <p className="text-[15px] text-muted-foreground leading-[2] max-w-lg">
-                Firmware, hardware and PCB design, embedded Linux, and IoT. Ten years of hands-on embedded work from first bring-up through compliance testing and CM handoff. I cover the full hardware and software stack on the same project.
+                Firmware, hardware & PCB design, FPGA systems, embedded Linux, and connected devices. Ten years of hands-on embedded work from first bring-up through compliance testing and CM handoff. I cover the full hardware and software stack on the same project.
               </p>
             </div>
 

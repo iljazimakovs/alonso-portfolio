@@ -1,39 +1,39 @@
 const services = [
   {
-    num: "01",
+    num: "02",
     title: "Embedded Firmware Development",
     description:
-      "Reliable bare-metal and RTOS firmware in C/C++ for microcontroller-based products. Driver development, peripheral integration, low-power behavior, diagnostics, and maintainable architectures built for long-term support.",
+      "Reliable bare-metal and RTOS firmware in C/C++ for microcontroller-based products. Driver development, peripheral integration, low-power behavior, diagnostics, and maintainable architectures designed for long-term support.",
   },
   {
-    num: "02",
+    num: "01",
     title: "Hardware & PCB Design",
     description:
-      "Complete electronic hardware development from schematic capture through production-ready PCB release. Multi-layer boards, power design, mixed-signal layouts, compact form factors, and manufacturable designs with strong revision discipline.",
+      "Complete electronic hardware development from schematic capture through production-ready PCB release. Multi-layer boards, high-speed layouts, power design, mixed-signal systems, and manufacturable designs built for reliable deployment.",
   },
   {
     num: "03",
+    title: "FPGA & Digital Systems",
+    description:
+      "FPGA and digital logic development for control, data acquisition, acceleration, and custom interfaces. Experience with Verilog, HLS workflows, AMD/Xilinx platforms, and mixed FPGA-embedded architectures.",
+  },
+  {
+    num: "04",
     title: "Embedded Linux Systems",
     description:
       "Custom embedded Linux platforms using Yocto and Buildroot. Board bring-up, device tree configuration, peripheral enablement, boot optimization, and Linux integration for gateways, appliances, and edge devices.",
   },
   {
-    num: "04",
+    num: "05",
     title: "Connectivity & IoT",
     description:
       "Connected product development across BLE, Wi-Fi, Ethernet, LoRa, CAN, and USB. Sensor gateways, remote monitoring devices, OTA update workflows, and secure field-connected systems.",
   },
   {
-    num: "05",
-    title: "Prototype Bring-Up & Debug",
-    description:
-      "Hands-on support from first power-on to stable prototype. Root-cause analysis, board rework guidance, firmware debug, interface validation, and structured troubleshooting to shorten development cycles.",
-  },
-  {
     num: "06",
-    title: "Production & Compliance",
+    title: "Production & Bring-Up",
     description:
-      "Manufacturing handoff packages, BOM review, programming workflows, test procedures, and FCC / CE pre-compliance support. Focused on smooth transition from prototype to repeatable production.",
+      "Hands-on support from first power-on through manufacturing release. Root-cause analysis, board rework guidance, validation, documentation, BOM review, and FCC / CE pre-compliance support.",
   },
 ];
 
