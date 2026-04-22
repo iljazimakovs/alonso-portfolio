@@ -22,7 +22,7 @@ export function About() {
           <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">About</span>
         </div>
         <blockquote className="text-2xl md:text-[2rem] lg:text-[2.4rem] font-display font-semibold text-foreground leading-[1.25] max-w-4xl">
-          "Most of the interesting problems in embedded work happen
+          "Most of the interesting problems in embedded work show up
           <span className="text-muted-foreground/70"> after the prototype passes."</span>
         </blockquote>
       </div>
