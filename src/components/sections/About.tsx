@@ -1,11 +1,13 @@
 import profilePhoto from "/images/photo.png";
 
 const datasheetRows = [
-  { label: "RTOS",             value: "FreeRTOS · Zephyr · ThreadX" },
-  { label: "Toolchain",        value: "GCC · IAR · LLVM · Keil" },
-  { label: "Debug I/F",        value: "JTAG · SWD · ETM Trace" },
-  { label: "PCB Stack-up",     value: "2 → 8-layer HDI" },
-  { label: "Protocols",   value: "UART · SPI · I²C · USB · CAN" },
+  { label: "Core Domains", value: "Firmware · Hardware · PCB Design · Embedded Linux · IoT" },
+  { label: "RTOS", value: "FreeRTOS · Zephyr · ThreadX" },
+  { label: "Toolchain", value: "GCC · IAR · LLVM · Keil" },
+  { label: "Debug I/F", value: "JTAG · SWD · ETM Trace · Logic Analysis" },
+  { label: "PCB Capability", value: "2 → 16-layer HDI · High-Speed Routing · SI / EMI Aware Design" },
+  { label: "Platforms", value: "ARM Cortex-M · STM32 · ESP32 · NXP · Embedded Linux SoCs" },
+  { label: "Protocols", value: "UART · SPI · I²C · USB · CAN · BLE · Ethernet · Wi-Fi" },
 ];
 
 export function About() {
@@ -87,28 +89,32 @@ export function About() {
 
             <div className="space-y-5 text-[15px] text-muted-foreground leading-[1.75]">
               <p>
-                I've been working in embedded systems for about ten years, mostly on projects that
-                reach production. Day-to-day that means writing firmware in C and C++ for Cortex-M
-                targets - STM32, nRF52, ESP32 - bringing up embedded Linux on custom hardware using
-                Yocto or Buildroot, and doing schematic capture and multi-layer PCB layout in KiCad
-                myself rather than handing it off. Most clients come to me because they need one
-                engineer who can work across both sides of the board.
+                I'm a senior embedded systems engineer with over ten years of experience
+                developing products from concept through production. My main areas are
+                firmware development, hardware design, PCB design, embedded Linux, and
+                system integration. I support projects across architecture, prototype
+                bring-up, validation, and manufacturing handoff.
               </p>
+
               <p>
-                I've worked on BLE health monitors, industrial IoT gateways, LoRa sensor networks,
-                and a few motor-control boards - mostly for startups and small engineering teams without
-                an embedded specialist on staff. Projects usually involve first-article builds, which
-                means dealing with bring-up issues, board rework, and the back-and-forth that comes
-                before anything stabilises. I'm used to that part.
+                I've worked across industrial electronics, IoT devices, connected sensors,
+                control systems, battery powered products, consumer devices, and custom
+                embedded platforms for startups, product companies, and engineering teams.
               </p>
-              <p>
-                On the firmware side I write layered code with a hardware abstraction layer so the
-                application logic stays portable and testable. For PCB work I do my own DFM checks
-                before sending files to fab and keep the CM in the loop early. If a project needs
-                FCC or CE testing, I can write the test plan, coordinate with the lab, and handle
-                remediation. Handoff packages include schematics, BOM, firmware build instructions,
-                and programming jig specs - enough for a CM to run production independently.
-              </p>
+
+              <div className="pt-1">
+                <h4 className="text-foreground font-medium mb-3">Core Services</h4>
+                <ul className="space-y-2 list-disc pl-5">
+                  <li>Embedded firmware development (C / C++)</li>
+                  <li>Hardware design and schematic capture</li>
+                  <li>Multi-layer PCB design and production files</li>
+                  <li>Embedded Linux bring-up and integration</li>
+                  <li>Prototype bring-up and debugging</li>
+                  <li>Manufacturing handoff and documentation</li>
+                  <li>Product redesign and production readiness</li>
+                  <li>FCC / CE pre-compliance support</li>
+                </ul>
+              </div>
             </div>
           </div>
 

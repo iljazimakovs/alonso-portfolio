@@ -1,16 +1,16 @@
 import { Github } from "lucide-react";
 
 const bootLines = [
-  { ts: "0.000", text: "firmware_init: HAL v3.2.1 loaded", highlight: false },
-  { ts: "0.012", text: "clock_config: PLL locked @ 168MHz", highlight: false },
-  { ts: "0.024", text: "gpio_init: 48 pins configured", highlight: false },
-  { ts: "0.031", text: "spi_init: flash detected (W25Q128)", highlight: false },
-  { ts: "0.048", text: "rtos_start: FreeRTOS v10.5.1", highlight: false },
-  { ts: "0.063", text: "net_stack: lwIP initialized", highlight: false },
-  { ts: "0.088", text: "ble_init: nRF52840 stack ready", highlight: false },
-  { ts: "0.102", text: "watchdog: 8s timeout armed", highlight: false },
-  { ts: "0.118", text: "self_test: PASS (all subsystems)", highlight: true },
-  { ts: "0.155", text: "system: ready – awaiting commands", highlight: true },
+  { ts: "0.000", text: "boot: hardware bring-up sequence start", highlight: false },
+  { ts: "0.014", text: "power_init: rails stable, supervisors OK", highlight: false },
+  { ts: "0.026", text: "clock_config: PLL locked @ target freq", highlight: false },
+  { ts: "0.039", text: "pcb_check: interfaces enumerated", highlight: false },
+  { ts: "0.054", text: "storage_init: eMMC / QSPI detected", highlight: false },
+  { ts: "0.071", text: "firmware_init: RTOS + drivers online", highlight: false },
+  { ts: "0.089", text: "linux_init: peripheral handoff complete", highlight: false },
+  { ts: "0.104", text: "connectivity: USB / CAN / ETH ready", highlight: false },
+  { ts: "0.121", text: "self_test: PASS (hardware + firmware)", highlight: true },
+  { ts: "0.148", text: "system: ready for deployment", highlight: true },
 ];
 
 const stats = [
@@ -80,9 +80,7 @@ export function Hero() {
             {/* Description */}
             <div>
               <p className="text-[15px] text-muted-foreground leading-[2] max-w-lg">
-                Firmware, Embedded Linux, IoT, and PCB design. Ten years of hands-on embedded work -
-                from first bring-up through compliance testing and CM handoff. I cover the full
-                hardware-software stack on the same project.
+                Firmware, Hardware & PCB Design, Embedded Linux, and IoT. Ten years of hands-on embedded work - from first bring-up through compliance testing and CM handoff. I cover the full hardware-software stack on the same project.
               </p>
             </div>
 

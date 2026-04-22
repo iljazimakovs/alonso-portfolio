@@ -1639,9 +1639,7 @@ const projects: Project[] = [
     title: "Compact Offline Flyback Converter for Auxiliary DC Rails",
     category: "Power Electronics",
     filterSlugs: ["power-electronics", "pcb-hardware", "embedded-firmware"],
-
     description: "Mains-powered isolated SMPS converting 220VAC to adjustable 8VDC at 24W using compact flyback topology and custom transformer design.",
-
     longDescription: "Designed a compact offline flyback power supply for converting 220VAC mains input into a regulated low-voltage DC rail suitable for embedded systems, control electronics, and post-regulation stages. The converter delivers up to 24W output power with isolated topology, integrated PWM controller, custom magnetics, feedback regulation, EMI filtering, and compact PCB implementation. The design emphasizes reliability, efficiency, transient response, and manufacturable layout for commercial electronic products.",
 
     tags: [
@@ -1776,9 +1774,7 @@ const projects: Project[] = [
     title: "Universal Input Isolated 5V Converter Module",
     category: "Power Electronics",
     filterSlugs: ["power-electronics", "pcb-hardware", "embedded-firmware"],
-
     description: "Wide-range mains AC to regulated 5VDC flyback converter delivering up to 2.5A with isolated topology and low-noise output performance.",
-
     longDescription: "Designed a compact universal-input AC-DC switching power module converting 85VAC to 260VAC mains input into a tightly regulated 5VDC output rail. The converter uses isolated flyback topology, integrated PWM control, custom transformer magnetics, precision feedback regulation, and compact PCB implementation. The platform is suitable for powering embedded controllers, IoT products, communication devices, and downstream point-of-load regulators requiring robust operation across global mains ranges.",
 
     tags: [
@@ -1902,9 +1898,7 @@ const projects: Project[] = [
     title: "Distributed Climate Control Platform with Wireless Sensor Nodes",
     category: "IoT & Connected Devices",
     filterSlugs: ["iot-connected-devices", "embedded-firmware", "hardware-design"],
-
     description: "Smart HVAC control system using ESP32 wireless nodes, environmental sensing, relay switching, and Android-based user interface.",
-
     longDescription: "Designed a distributed thermostat platform for residential heating control using ESP32 microcontrollers, wireless sensor nodes, relay actuation, and an Android control interface. The system gathers temperature and humidity data from multiple rooms, applies configurable heating logic, and remotely controls a boiler or HVAC source. The architecture focuses on low-cost deployment, multi-room sensing, remote access, and scalable home automation integration.",
 
     tags: [
@@ -2010,9 +2004,7 @@ const projects: Project[] = [
     title: "Programmable DC Load & Power Characterization Platform",
     category: "PCB & Hardware",
     filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
-
     description: "Precision electronic load system using ESP32-S3 with closed-loop current control, power telemetry, thermal management, and wireless dashboard logging.",
-
     longDescription: "Designed an advanced programmable DC load for validating power supplies, batteries, converters, and embedded power rails. The platform uses an ESP32-S3 controller with PID-regulated constant current sinking, precision shunt measurement, thermal protection, local user interface, and WiFi telemetry streaming. The system combines analog control hardware, high-current power dissipation, digital feedback control, and real-time monitoring into a compact engineering test instrument.",
 
     tags: [
@@ -2351,9 +2343,7 @@ const projects: Project[] = [
     title: "Hall-Effect Drive Control Interface for Electric Mobility Systems",
     category: "Embedded Systems",
     filterSlugs: ["embedded-firmware", "pcb-hardware", "sensor-systems"],
-
     description: "Contactless throttle control platform using Hall-effect position sensing for electric bikes and mobility systems with embedded signal conditioning and controller interface.",
-
     longDescription: "Designed a compact throttle control platform for electric mobility applications using Hall-effect sensing technology to replace traditional potentiometer-based throttles. The system measures lever or grip position through magnetic field detection and generates a stable throttle command compatible with common motor controllers. Developed for e-bikes, light EV platforms, and retrofit propulsion systems requiring higher reliability, smoother response, and wear-free operation.",
 
     tags: [
