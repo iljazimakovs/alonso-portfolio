@@ -1,20 +1,20 @@
 const categories = [
   {
-    name: "Hardware & PCB",
-    reg: "REG_HW",
-    tags: [
-      "Altium Designer", "KiCad", "Multi-Layer PCB",
-      "High-Speed Layout", "Power Design",
-      "EMI / EMC", "DFM / DFA",
-    ],
-  },
-  {
     name: "Embedded Firmware",
     reg: "REG_FW",
     tags: [
       "C / C++", "FreeRTOS", "Zephyr",
       "Bare-Metal Systems", "HAL / BSP Drivers",
       "Bootloader Design", "Low-Power Optimization",
+    ],
+  },
+  {
+    name: "Hardware & PCB",
+    reg: "REG_HW",
+    tags: [
+      "Altium Designer", "KiCad", "Multi-Layer PCB",
+      "High-Speed Layout", "Power Design",
+      "EMI / EMC", "DFM / DFA",
     ],
   },
   {
