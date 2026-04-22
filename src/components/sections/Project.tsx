@@ -132,6 +132,467 @@ interface Project {
 
 const projects: Project[] = [
   {
+    slug: "e2b4c9",
+    title: "High-Speed Vision Processing Carrier for Adaptive SoM Platform",
+    category: "FPGA & Digital Design",
+    filterSlugs: ["fpga-digital-design", "embedded-linux-bsp", "pcb-hardware"],
+    description: "Advanced carrier board for an FPGA-based system-on-module featuring high-bandwidth camera interfaces, display outputs, storage, and expansion for embedded vision workloads.",
+    longDescription: "Designed a high-performance carrier platform for an adaptive FPGA system-on-module focused on embedded vision, video processing, and AI edge applications. The board expands the compute module with high-speed camera inputs, display connectivity, storage interfaces, FMC expansion, and peripheral I/O. Special attention was given to signal integrity, high-speed routing, and scalable interface architecture required for professional imaging systems.",
+    tags: [
+      "FPGA",
+      "Carrier Board",
+      "Embedded Vision",
+      "High-Speed PCB",
+      "Camera Interfaces",
+      "DisplayPort",
+      "FMC",
+      "Edge AI"
+    ],
+
+    icon: Cpu,
+    highlight: "Vision FPGA Carrier",
+
+    hidden: true,
+
+    media: [
+      {
+        type: "image",
+        src: "/images/_ska4fqzqrs_blob_copy_DZtriN08A0.jpg"
+      }
+    ],
+
+    deliverables: [
+      "Carrier board for adaptive FPGA compute module",
+      "High-speed camera interface integration",
+      "Display + storage + USB expansion",
+      "FMC mezzanine expansion support",
+      "Embedded vision ready hardware platform",
+      "Signal-integrity focused PCB architecture"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a high-bandwidth carrier board for an FPGA-based system-on-module intended for embedded vision and AI edge processing. The platform enables rapid deployment of camera-centric systems requiring real-time video acquisition, acceleration, and external expansion. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "Compute Platform Architecture",
+        body: "The design is centered around a powerful adaptive SoM containing programmable logic, processing cores, memory, non-volatile storage, and board-to-board connectors exposing high-speed user I/O.",
+        images: [
+          "/images/kria_k26_som_aNCEf3WgVZ.jpg"
+        ]
+      },
+
+      {
+        heading: "Vision Interface Design",
+        body: "The carrier board was optimized for demanding camera workloads and multi-stream video applications.",
+        bullets: [
+          "High-speed serialized image sensor inputs",
+          "MIPI camera connectivity",
+          "Dual display outputs",
+          "USB 3.0 high-throughput peripherals",
+          "Low-latency video pipeline support"
+        ],
+        images: [
+          "/images/aper-oculus-front-01_jpg_md-fixed-xl_xngAOPtMB1.jpg",
+          "/images/t-6_products_image-sensor_industry_slvs-ec02_en_Fbp89fdzfw.jpg"
+        ]
+      },
+
+      {
+        heading: "Expansion & Peripheral Interfaces",
+        body: "The board includes flexible expansion paths for custom I/O, acquisition hardware, and storage acceleration.",
+        bullets: [
+          "FMC expansion connector",
+          "M.2 peripheral support",
+          "GPIO / PMOD style expansion",
+          "SATA storage interface",
+          "External mezzanine compatibility"
+        ],
+        images: [
+          "/images/aper-oculus_LjQ2Nj6zoS.jpg"
+        ]
+      },
+
+      {
+        heading: "PCB Engineering Focus",
+        body: "Implementation required controlled impedance routing, differential pair matching, connector breakout strategy, and power distribution suitable for mixed FPGA + video workloads."
+      },
+
+      {
+        heading: "Platform Benchmarking",
+        body: "The architecture was positioned as a premium carrier solution by combining rare interface support with strong expansion capability and camera-focused hardware design.",
+        images: [
+          "/images/comparison_chart_j9hKnpl8e6.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced expertise in FPGA carrier board development, high-speed PCB layout, embedded vision hardware, and scalable compute platform integration. It highlights the ability to engineer production-grade imaging systems requiring complex interface routing and real-time processing infrastructure."
+      }
+    ]
+  },
+  {
+    slug: "a8c3f2",
+    title: "Industrial Edge Compute Carrier Board",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "fpga-digital-design"],
+    description: "Custom carrier board for edge computing modules with Raspberry Pi–form-factor compatibility and multi-interface peripheral support.",
+    longDescription: "Custom carrier platform for edge computing system-on-modules, designed for compatibility, flexibility, and high-speed peripheral integration. Raspberry Pi–compatible form factor allows reuse of existing ecosystems while providing advanced compute capabilities. Integrates Ethernet, USB, JTAG/UART interfaces, SD storage, and fully accessible GPIO routed to programmable logic. Emphasis on layout constraints, connector alignment, power sequencing, and high-speed interface integration resulted in a compact multi-layer PCB suitable for embedded AI and robotics applications.",
+    tags: [
+      "PCB Design",
+      "Carrier Board",
+      "Edge Computing",
+      "High-Speed Design",
+      "Embedded Systems",
+      "KiCad",
+      "FPGA Systems"
+    ],
+    icon: Cpu,
+    highlight: "Carrier Board Design",
+    media: [
+      {
+        type: "image",
+        src: "/images/_zJ41sg2WrV.jpg"
+      }
+    ],
+    hidden: false,
+    deliverables: [
+      "Custom Carrier Board Architecture",
+      "Multi-Interface Hardware Design",
+      "High-Speed PCB Layout",
+      "Peripheral Integration System",
+      "Edge Compute Platform Design"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Custom carrier platform designed for edge computing modules, combining high-performance processing with a widely supported hardware ecosystem. Allows integration of existing accessories and expansion through custom hardware.",
+        images: [
+          "/images/mockup_6JvfupHzEW.jpg"
+        ]
+      },
+      {
+        heading: "System Architecture",
+        body: "Integration of high-speed and standard interfaces into a compact form factor, enabling flexible deployment for robotics and edge AI applications.",
+        bullets: [
+          "Ethernet interface for high-speed networking",
+          "USB subsystem for peripheral connectivity",
+          "Dedicated JTAG and UART debugging interfaces",
+          "SD card interface for storage and boot",
+          "40-pin GPIO header for expansion and customization"
+        ]
+      },
+      {
+        heading: "Core Hardware Integration",
+        numbered: [
+          {
+            title: "Module Connector Interface",
+            body: "High-density board-to-board connectors interface with the compute module, routing critical signals while maintaining layout integrity.",
+            image: "/images/som_connectors_mJpzpMsKbH.jpg"
+          },
+          {
+            title: "Ethernet Subsystem",
+            body: "Gigabit-capable Ethernet implemented with dedicated PHY and RJ45 connector for reliable high-speed communication.",
+            image: "/images/ethernet.jpg"
+          },
+          {
+            title: "Debug & Programming Interface",
+            body: "USB-based debugging via FTDI and direct JTAG interface provide flexible programming and diagnostics.",
+            image: "/images/ftdi_wnqTE2RjpX.jpg"
+          }
+        ]
+      },
+      {
+        heading: "Peripheral Integration",
+        body: "Extends system functionality through multiple integrated peripheral interfaces.",
+        bullets: [
+          "USB PHY for external device connectivity",
+          "GPIO routed to programmable logic for flexibility",
+          "Standard expansion header compatibility",
+          "Modular peripheral architecture"
+        ],
+        images: [
+          "/images/usb_phy_Au69HL294v.jpg",
+          "/images/periph_connectors_nER2srhq72.jpg"
+        ]
+      },
+      {
+        heading: "GPIO & System Flexibility",
+        body: "All GPIO signals routed to programmable logic, enabling full reconfigurability and custom interface design.",
+        images: [
+          "/images/rpi_gpio_uhy8PyvFFw.jpg"
+        ]
+      },
+      {
+        heading: "Storage Interface",
+        body: "SD card circuitry integrated for system boot and data storage using reference design patterns.",
+        images: [
+          "/images/sd_card_gXRYhJ7V29.jpg"
+        ]
+      },
+      {
+        heading: "PCB Layout & Constraints",
+        body: "Layout addresses connector alignment, mechanical constraints, and high-density routing within a compact multi-layer PCB.",
+        bullets: [
+          "Multi-layer PCB design for signal integrity",
+          "Precise connector spacing and mechanical alignment",
+          "Compact routing under space constraints",
+          "Optimized placement for dense component layout"
+        ],
+        images: [
+          "/images/layout0_hnjUD4cAXc.jpg",
+          "/images/layout1_i8TyWDEqdK.jpg",
+          "/images/layout2_6nYmrYTYvF.jpg",
+          "/images/layout5_AB0xAZ8wK4.jpg",
+          "/images/layout6_8NQwHBBEek.jpg"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "Demonstrates advanced PCB design and system integration, including high-speed interface design, multi-layer routing, and hardware platform development for edge computing systems. Highlights ability to design complex carrier architectures for scalable embedded and AI applications."
+      }
+    ]
+  },
+  {
+    slug: "m9c4e7",
+    title: "Compact x86 Compute Module Carrier Platform",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "hardware-design"],
+    description: "High-density carrier board for an x86 compute module integrating Ethernet, HDMI, USB, M.2 expansion, camera interface, and USB-C power delivery.",
+    longDescription: "Designed a compact custom carrier board for an x86 compute module to enable desktop-class computing in embedded form factors. The platform expands the module into a deployable system by integrating high-speed I/O, networking, display output, storage and wireless expansion, camera connectivity, active cooling support, and USB-C power delivery. The hardware focuses on signal integrity, manufacturability, and real-world integration for edge computing, robotics, industrial control, and portable embedded systems.",
+    tags: [
+      "Carrier Board",
+      "x86 Embedded",
+      "High-Speed PCB",
+      "Ethernet",
+      "HDMI",
+      "USB-C PD",
+      "M.2",
+      "KiCad"
+    ],
+
+    icon: Cpu,
+    highlight: "x86 Carrier Board",
+
+    hidden: true,
+
+    media: [
+      {
+        type: "image",
+        src: "/images/_wOWGZfnOJ9.jpg"
+      }
+    ],
+
+    deliverables: [
+      "Custom 4-layer carrier PCB for x86 compute module",
+      "Gigabit Ethernet + HDMI integration",
+      "USB 2.0 / USB 3.0 connectivity",
+      "M.2 expansion interfaces",
+      "CSI camera + debug interfaces",
+      "USB-C PD power architecture"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a compact carrier platform for an x86 compute module, transforming a high-performance SoM into a practical embedded computing solution with integrated display, networking, storage expansion, and peripheral connectivity. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "System Architecture",
+        body: "The carrier board extends the compute module through high-speed interfaces and embedded I/O required for real-world deployments.",
+        bullets: [
+          "Gigabit Ethernet connectivity",
+          "HDMI display output",
+          "USB 2.0 and USB 3.0 interfaces",
+          "M.2 expansion sockets",
+          "CSI camera connector",
+          "I2C expansion header",
+          "UART debug interface",
+          "Fan header for thermal control"
+        ],
+        images: [
+          "/images/screenshot_2025-12-23_at_09_45_47_cg7EFKUjj6.jpg",
+          "/images/screenshot_2025-12-23_at_09_55_08_XM6p1bWLp2.jpg"
+        ]
+      },
+
+      {
+        heading: "PCB Design Implementation",
+        body: "The board was implemented as a compact multilayer design optimized for routing density, controlled impedance paths, and connector accessibility. Particular focus was placed on high-speed signal breakout and mechanical integration.",
+        bullets: [
+          "4-layer PCB stack-up",
+          "Dense connector routing",
+          "Power / signal plane separation",
+          "Compact edge-compute form factor",
+          "Manufacturing-ready layout"
+        ],
+        images: [
+          "/images/screenshot_2025-12-20_at_16_14_33_ptyHC7ldn6.jpg",
+          "/images/image_eA9DqA7geH.jpg",
+        ]
+      },
+
+      {
+        heading: "Power Architecture",
+        body: "USB-C Power Delivery input at 12V enables compact external powering while supporting compute-module and peripheral loads. The architecture is suitable for mobile and embedded deployments."
+      },
+
+      {
+        heading: "Expansion Capability",
+        body: "M.2 interfaces allow wireless modules, NVMe storage, or accelerator expansion, making the platform adaptable for AI edge nodes, gateways, robotics controllers, and industrial systems."
+      },
+
+      {
+        heading: "Mechanical Integration",
+        body: "The system includes enclosure-ready mounting and CNC housing direction for deployment-grade packaging.",
+        images: [
+          "/images/screenshot_2025-12-24_at_23_46_09_I7xoxfFxez.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced experience in carrier board development, high-speed PCB layout, power architecture, and embedded compute platform integration. It highlights the ability to convert complex SoMs into production-ready hardware platforms for commercial deployment."
+      }
+    ]
+  },
+  {
+    slug: "a9e7f1",
+    title: "Scalable EV Battery Management System",
+    category: "Embedded Systems",
+    filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
+    description: "Battery Management System (BMS) for high-performance electric vehicle applications, supporting scalable cell monitoring and balancing.",
+    longDescription: "Scalable BMS for electric vehicles designed to monitor multiple battery cells, auxiliary inputs, and daisy-chained ICs, capable of measuring up to 256 cells in a single network. Provides safe cell operation, voltage balancing, and telemetry via CAN bus, optimized for high-performance EV racing applications.",
+    tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
+    icon: Cpu,
+    highlight: "Scalable EV Battery Monitoring",
+    hidden: true,
+    media: [
+      { type: "image", src: "/images/_qfcRSffjLb.jpg" }
+    ],
+    deliverables: [
+      "Scalable EV BMS with BQ76PL455 IC",
+      "Safe cell monitoring and balancing",
+      "CAN bus data output for telemetry",
+      "Optimized for Formula SAE racing teams",
+      "PCB layout and 3D model for rapid prototyping"
+    ],
+    sections: [
+      {
+        heading: "Components Used",
+        bullets: [
+          "Texas Instruments BQ76PL455 IC ×1"
+        ]
+      },
+      {
+        heading: "System Overview",
+        body: "Monitors individual battery cells, auxiliary inputs for temperature, and allows daisy-chaining of up to 15 ICs, enabling measurement of up to 256 cells. Designed to provide scalable, safe operation and real-time telemetry for high-performance EV applications."
+      },
+      {
+        heading: "Schematics & Hardware",
+        images: [
+          "/images/pcb_layout_QBbFFRFEJj.jpg",
+          "/images/real_cut_S1i9IADIfg.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "d7f4c8",
+    title: "High-Precision Multi-Mode BLDC Motor Controller",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+    description: "Custom BLDC motor controller PCB with STM32F4 MCU, DRV8301 gate drivers, and high-current three-phase power stage.",
+    longDescription: "This project demonstrates the design and assembly of a professional BLDC motor controller PCB capable of precise speed and torque control. It integrates STM32F4 microcontroller, DRV8301 gate drivers, and a three-phase high-current power stage with comprehensive thermal and signal integrity management. The platform is designed for industrial automation applications, enabling compact form factor deployment with reliable performance.",
+    tags: ["BLDC", "Motor Control", "STM32F4", "DRV8301", "PCB Design", "Power Electronics", "Embedded Systems"],
+    icon: Gauge,
+    highlight: "Professional BLDC Motor Control",
+    hidden: true,
+    media: [
+      { type: "image", src: "/images/_5cSan2KQek.jpg" }
+    ],
+    deliverables: [
+      "Turnkey BLDC motor controller PCB",
+      "STM32F4 MCU with SPI/UART interfaces",
+      "DRV8301 gate drivers for high-current FETs",
+      "Three-phase half-bridge power stage",
+      "Thermal and signal integrity optimized PCB",
+      "Functional validation with 400W BLDC motor"
+    ],
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Complete development of a high-performance BLDC motor controller from schematic design to assembly and functional testing. The PCB supports industrial automation requiring precise motor control and efficient thermal management."
+      },
+      {
+        heading: "Hardware Components",
+        bullets: [
+          "STM32F103RB compatible microcontroller (Leaf Maple / Mini MapleTree)",
+          "DRV8301 gate driver IC (Texas Instruments)",
+          "Three-phase half-bridge MOSFETs",
+          "4-layer PCB, 95×75 mm",
+          "Current sensing via low-side shunt resistors"
+        ],
+      },
+      {
+        heading: "Design Specifications",
+        bullets: [
+          "Input voltage: 24–48V DC",
+          "Continuous current: 20A",
+          "PWM frequency: up to 20 kHz",
+          "Layer count: 4-layer PCB",
+          "Thermal and overcurrent protection integrated"
+        ]
+      },
+      {
+        heading: "Schematic Design",
+        body: "Schematic created in Altium Designer covering power stage, gate drive, current sensing, MCU interface, and protection circuits.",
+        images: [
+          "/images/circuit_drv8301_tq3pzziuDb.jpg"
+        ]
+      },
+      {
+        heading: "PCB Layout & Thermal Management",
+        body: "Critical layout considerations were applied to minimize parasitic inductance, optimize thermal dissipation, and maintain signal integrity across power and analog sections.",
+        bullets: [
+          "Power loops minimized for high-current paths",
+          "MOSFETs placed near board edge with thermal copper connected to chassis",
+          "Gate drive traces matched and kept short",
+          "Analog current sense traces routed away from switching nodes"
+        ]
+      },
+      {
+        heading: "Assembly & Validation",
+        body: "Turnkey PCB assembly included solder paste application, automated pick-and-place, reflow soldering, AOI inspection, and manual through-hole soldering. Functional testing verified motor spin-up, current measurement, and thermal performance at full load.",
+        bullets: [
+          "First-pass yield: 98.5%",
+          "Smooth torque control with 400W BLDC motor",
+          "Thermal performance validated up to 50°C ambient"
+        ]
+      },
+      {
+        heading: "Firmware Integration",
+        body: "STM32 firmware includes initialization, PWM generation, and DRV8301 control routines for full 6-channel PWM operation.",
+        code: [
+          "// Example DRV8301 initialization",
+          "DRV8301_Init();",
+          "TIM1_PWM_Init();",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 500);",
+          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 500);"
+        ]
+      },
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates end-to-end professional BLDC motor controller development including embedded firmware, high-current power stage, thermal and signal integrity design, PCB layout, and turnkey assembly suitable for industrial applications."
+      }
+    ]
+  },
+  {
     slug: "e4a1b2",
     title: "Compact High-Power USB-C Power Input Module",
     category: "PCB & Hardware",
@@ -247,6 +708,268 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "Final design delivers a compact, high-power USB-C PD sink module with configurable voltage and current, optional telemetry, and robust PCB design for embedded and inline applications."
+      }
+    ]
+  },
+  {
+    slug: "b3f6d1",
+    title: "Autonomous Vibration Intelligence Node for Infrastructure Monitoring",
+    category: "IoT & Connected Devices",
+    filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
+    description: "Solar-powered vibration monitoring system with embedded AI for anomaly detection in industrial and logistics infrastructure.",
+    longDescription: "Designed a fully autonomous vibration monitoring node capable of detecting structural and mechanical anomalies using embedded AI. The system integrates a high-bandwidth industrial accelerometer, ultra-low-power wireless communication, and solar energy harvesting with Lithium-Ion Capacitor (LIC) storage. Optimized for long-term deployment, the platform continuously captures vibration data, performs frequency-domain analysis, and applies TinyML-based models to classify abnormal patterns in real time. The architecture is tailored for logistics infrastructure such as railways, bridges, and transport systems where predictive maintenance is critical.",
+
+    tags: [
+      "Vibration Monitoring",
+      "Embedded AI",
+      "TinyML",
+      "LoRa",
+      "Low Power Design",
+      "Industrial IoT",
+      "Signal Processing"
+    ],
+
+    icon: Activity,
+    highlight: "Edge AI Monitoring",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "/images/_TNpoG1kiQf.jpg"
+      }
+    ],
+
+    deliverables: [
+      "Solar-powered embedded monitoring node",
+      "Vibration data acquisition and FFT processing",
+      "TinyML-based anomaly detection model",
+      "Ultra-low-power firmware architecture",
+      "LoRa-based long-range communication system"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed an автономous vibration monitoring system for industrial and logistics infrastructure. The platform continuously measures vibration signals and detects anomalies using embedded AI, enabling predictive maintenance and early fault detection."
+      },
+
+      {
+        heading: "Hardware Architecture",
+        body: "The system integrates sensing, processing, communication, and energy harvesting into a compact embedded platform.",
+        bullets: [
+          "Wio-WM1110 module with integrated MCU and LoRa communication",
+          "IIS3DWB high-bandwidth industrial accelerometer",
+          "Solar energy harvesting using multiple micro solar cells",
+          "Lithium-Ion Capacitor (LIC) for long lifecycle energy storage",
+          "Custom PCB optimized for ultra-low-power operation"
+        ],
+        images: [
+          "/images/module_KWi6fuxF66.jpg",
+        ]
+      },
+
+      {
+        heading: "Mechanical & Deployment Design",
+        body: "A transparent enclosure was used to protect the system while maintaining solar exposure, enabling reliable outdoor deployment.",
+        images: [
+          "/images/3d_caja_lsR0fDqRqX.jpg",
+          "/images/circuito-1_338G53j3xU.jpg",
+          "/images/circuito-3_yDrlZ46rDW.jpg"
+        ]
+      },
+
+      {
+        heading: "Power Optimization",
+        body: "Power efficiency is critical for autonomous operation. The system is optimized for ultra-low consumption with aggressive sleep strategies.",
+        bullets: [
+          "Deep sleep current ~12µA",
+          "Transmission spikes up to ~48mA during LoRa communication",
+          "Energy harvesting ensures continuous operation",
+          "LIC storage enables high cycle durability (~10× LiPo lifecycle)"
+        ],
+        images: [
+          "/images/deep_sleep_Mh0mAYcdvj.jpg",
+          "/images/simple_lora_application-lora_transmit_SgvKe699LQ.jpg"
+        ]
+      },
+
+      {
+        heading: "Vibration Signal Processing",
+        body: "High-resolution vibration data is captured and analyzed in both time and frequency domains.",
+        bullets: [
+          "Sampling frequency: 1024 Hz",
+          "3-axis vibration measurement",
+          "FFT analysis for frequency-domain insights",
+          "Detection of imbalance, misalignment, and wear patterns"
+        ],
+        images: [
+          "/images/whatsapp_image_2023-07-26_at_16_05_31_OaQN9PmUKg.jpg",
+          "/images/whatsapp_image_2023-07-26_at_16_05_31(1)_24YB1El1lQ.jpg",
+          "/images/whatsapp_image_2023-07-26_at_16_05_33_xyPp7vMy3R.jpg"
+        ]
+      },
+
+      {
+        heading: "Anomaly Detection with Embedded AI",
+        body: "Machine learning models were trained using vibration data to detect abnormal behavior directly on the device.",
+        bullets: [
+          "Feature extraction from vibration signals",
+          "Model training using iterative optimization",
+          "On-device anomaly classification",
+          "Real-time detection without cloud dependency"
+        ],
+        images: [
+          "/images/abnormal_signal_t0bnswp62a.jpg",
+          "/images/iterations_WiSnpXEoIY.jpg",
+          "/images/detection_benchmark_V9URsWySwC.jpg"
+        ]
+      },
+
+      {
+        heading: "Applications",
+        body: "The system is designed for deployment in infrastructure monitoring and predictive maintenance scenarios.",
+        bullets: [
+          "Railway and bridge structural monitoring",
+          "Road and transport infrastructure diagnostics",
+          "Industrial machinery condition monitoring",
+          "Marine and cargo transport vibration analysis"
+        ],
+        images: [
+          "/images/cylog_7BVkAYoO11.jpg",
+          "/images/dynamic_logistics_wVarNw9GOR.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates advanced system-level design combining ultra-low-power electronics, energy harvesting, high-frequency signal processing, and embedded AI. It highlights strong capability in developing autonomous IoT systems for predictive maintenance and real-world industrial deployment."
+      }
+    ]
+  },
+  {
+    slug: "d6f3b8",
+    title: "Programmable DC Load & Power Characterization Platform",
+    category: "PCB & Hardware",
+    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
+    description: "Precision electronic load system using ESP32-S3 with closed-loop current control, power telemetry, thermal management, and wireless dashboard logging.",
+    longDescription: "Designed an advanced programmable DC load for validating power supplies, batteries, converters, and embedded power rails. The platform uses an ESP32-S3 controller with PID-regulated constant current sinking, precision shunt measurement, thermal protection, local user interface, and WiFi telemetry streaming. The system combines analog control hardware, high-current power dissipation, digital feedback control, and real-time monitoring into a compact engineering test instrument.",
+
+    tags: [
+      "Electronic Load",
+      "ESP32-S3",
+      "Power Electronics",
+      "PID Control",
+      "Current Sink",
+      "Telemetry",
+      "Thermal Design",
+      "Test Equipment"
+    ],
+
+    icon: Zap,
+    highlight: "Programmable Load Tester",
+
+    hidden: false,
+
+    media: [
+      {
+        type: "image",
+        src: "/images/image_FSqB8efF26.jpg"
+      }
+    ],
+
+    deliverables: [
+      "Programmable constant-current electronic load",
+      "PID closed-loop current regulation",
+      "100W-class thermal power stage",
+      "Touch interface + OLED display",
+      "WiFi telemetry to dashboard server",
+      "Custom KiCad PCB design"
+    ],
+
+    sections: [
+      {
+        heading: "Project Overview",
+        body: "Developed a digitally controlled DC load for testing power sources under programmable current demand. The system regulates sink current in real time, measures electrical parameters, manages thermal behavior, and streams operating data to a dashboard environment. :contentReference[oaicite:0]{index=0}"
+      },
+
+      {
+        heading: "Control Architecture",
+        body: "The load uses precision current feedback and firmware control to maintain a requested current setpoint across varying source voltages.",
+        bullets: [
+          "Closed-loop PID regulation",
+          "Programmable current sink operation",
+          "10 mA step resolution",
+          "Wide operating load range",
+          "Soft-start current ramping"
+        ],
+        images: [
+          "/images/image_UuOW8hrEiv.jpg"
+        ]
+      },
+
+      {
+        heading: "Measurement Subsystem",
+        body: "A precision shunt and high-resolution current monitor provide accurate measurement of voltage, current, and power during dynamic loading conditions.",
+        bullets: [
+          "High-side current sensing",
+          "Power computation in firmware",
+          "Real-time feedback loop input",
+          "High-resolution telemetry capture"
+        ]
+      },
+
+      {
+        heading: "Power Stage Design",
+        body: "The dissipation stage uses MOSFET-based linear control with heatsink mounting and thermal coupling optimized for sustained high-power testing.",
+        bullets: [
+          "MOSFET sink element",
+          "Up to ~100W operating class",
+          "Wide input voltage compatibility",
+          "Protection-oriented derating strategy"
+        ],
+        images: [
+          "/images/image_FgrNSXRepL.jpg",
+          "/images/image_FSqB8efF26.jpg"
+        ]
+      },
+
+      {
+        heading: "Thermal Management",
+        body: "An actively controlled CPU-class cooler is PWM-managed based on heatsink temperature to maintain safe junction conditions during prolonged stress testing."
+      },
+
+      {
+        heading: "User Interface",
+        body: "A capacitive touch matrix enables local setpoint adjustment and load control without mechanical encoders or buttons.",
+        images: [
+          "/images/image_BHB4pIZjfO.jpg",
+          "/images/image_FXLLqYjZiU.jpg",
+          "/images/pad_s_3wN4wQ4XQR.jpg"
+        ]
+      },
+
+      {
+        heading: "Cloud Logging & Analytics",
+        body: "Operating data is transmitted over WiFi to a time-series database for live dashboards, trend analysis, and long-duration test logging.",
+        images: [
+          "/images/dashboard_DYoQUkn2wW.jpg"
+        ]
+      },
+
+      {
+        heading: "PCB Implementation",
+        body: "The custom PCB was designed with segregated power and signal return paths, heavy-current routing, and close placement of sensing circuitry to improve accuracy and robustness.",
+        images: [
+          "/images/image_2qKmapYL8r.jpg",
+          "/images/image_6Vy24RMDD4.jpg"
+        ]
+      },
+
+      {
+        heading: "Engineering Outcome",
+        body: "This project demonstrates strong capability in mixed-signal hardware, embedded control systems, power electronics, thermal engineering, and test instrumentation design. It highlights the ability to build professional-grade validation tools for power supply and battery development workflows."
       }
     ]
   },
@@ -906,128 +1629,6 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: "a8c3f2",
-    title: "Industrial Edge Compute Carrier Board",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "fpga-digital-design"],
-    description: "Custom carrier board for edge computing modules with Raspberry Pi–form-factor compatibility and multi-interface peripheral support.",
-    longDescription: "Custom carrier platform for edge computing system-on-modules, designed for compatibility, flexibility, and high-speed peripheral integration. Raspberry Pi–compatible form factor allows reuse of existing ecosystems while providing advanced compute capabilities. Integrates Ethernet, USB, JTAG/UART interfaces, SD storage, and fully accessible GPIO routed to programmable logic. Emphasis on layout constraints, connector alignment, power sequencing, and high-speed interface integration resulted in a compact multi-layer PCB suitable for embedded AI and robotics applications.",
-    tags: [
-      "PCB Design",
-      "Carrier Board",
-      "Edge Computing",
-      "High-Speed Design",
-      "Embedded Systems",
-      "KiCad",
-      "FPGA Systems"
-    ],
-    icon: Cpu,
-    highlight: "Carrier Board Design",
-    media: [
-      {
-        type: "image",
-        src: "/images/_zJ41sg2WrV.jpg"
-      }
-    ],
-    hidden: false,
-    deliverables: [
-      "Custom Carrier Board Architecture",
-      "Multi-Interface Hardware Design",
-      "High-Speed PCB Layout",
-      "Peripheral Integration System",
-      "Edge Compute Platform Design"
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Custom carrier platform designed for edge computing modules, combining high-performance processing with a widely supported hardware ecosystem. Allows integration of existing accessories and expansion through custom hardware.",
-        images: [
-          "/images/mockup_6JvfupHzEW.jpg"
-        ]
-      },
-      {
-        heading: "System Architecture",
-        body: "Integration of high-speed and standard interfaces into a compact form factor, enabling flexible deployment for robotics and edge AI applications.",
-        bullets: [
-          "Ethernet interface for high-speed networking",
-          "USB subsystem for peripheral connectivity",
-          "Dedicated JTAG and UART debugging interfaces",
-          "SD card interface for storage and boot",
-          "40-pin GPIO header for expansion and customization"
-        ]
-      },
-      {
-        heading: "Core Hardware Integration",
-        numbered: [
-          {
-            title: "Module Connector Interface",
-            body: "High-density board-to-board connectors interface with the compute module, routing critical signals while maintaining layout integrity.",
-            image: "/images/som_connectors_mJpzpMsKbH.jpg"
-          },
-          {
-            title: "Ethernet Subsystem",
-            body: "Gigabit-capable Ethernet implemented with dedicated PHY and RJ45 connector for reliable high-speed communication.",
-            image: "/images/ethernet.jpg"
-          },
-          {
-            title: "Debug & Programming Interface",
-            body: "USB-based debugging via FTDI and direct JTAG interface provide flexible programming and diagnostics.",
-            image: "/images/ftdi_wnqTE2RjpX.jpg"
-          }
-        ]
-      },
-      {
-        heading: "Peripheral Integration",
-        body: "Extends system functionality through multiple integrated peripheral interfaces.",
-        bullets: [
-          "USB PHY for external device connectivity",
-          "GPIO routed to programmable logic for flexibility",
-          "Standard expansion header compatibility",
-          "Modular peripheral architecture"
-        ],
-        images: [
-          "/images/usb_phy_Au69HL294v.jpg",
-          "/images/periph_connectors_nER2srhq72.jpg"
-        ]
-      },
-      {
-        heading: "GPIO & System Flexibility",
-        body: "All GPIO signals routed to programmable logic, enabling full reconfigurability and custom interface design.",
-        images: [
-          "/images/rpi_gpio_uhy8PyvFFw.jpg"
-        ]
-      },
-      {
-        heading: "Storage Interface",
-        body: "SD card circuitry integrated for system boot and data storage using reference design patterns.",
-        images: [
-          "/images/sd_card_gXRYhJ7V29.jpg"
-        ]
-      },
-      {
-        heading: "PCB Layout & Constraints",
-        body: "Layout addresses connector alignment, mechanical constraints, and high-density routing within a compact multi-layer PCB.",
-        bullets: [
-          "Multi-layer PCB design for signal integrity",
-          "Precise connector spacing and mechanical alignment",
-          "Compact routing under space constraints",
-          "Optimized placement for dense component layout"
-        ],
-        images: [
-          "/images/layout0_hnjUD4cAXc.jpg",
-          "/images/layout1_i8TyWDEqdK.jpg",
-          "/images/layout2_6nYmrYTYvF.jpg",
-          "/images/layout5_AB0xAZ8wK4.jpg",
-          "/images/layout6_8NQwHBBEek.jpg"
-        ]
-      },
-      {
-        heading: "Engineering Outcome",
-        body: "Demonstrates advanced PCB design and system integration, including high-speed interface design, multi-layer routing, and hardware platform development for edge computing systems. Highlights ability to design complex carrier architectures for scalable embedded and AI applications."
-      }
-    ]
-  },
-  {
     slug: "b7f4d1",
     title: "Dual-Motor FPGA Control Platform",
     category: "FPGA & Digital Design",
@@ -1139,143 +1740,6 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "Demonstrates FPGA-based motor control system design combining RTL implementation, real-time signal processing, and robotics integration. Provides deterministic dual-motor synchronization with encoder feedback for embedded robotics applications."
-      }
-    ]
-  },
-  {
-    slug: "b3f6d1",
-    title: "Autonomous Vibration Intelligence Node for Infrastructure Monitoring",
-    category: "IoT & Connected Devices",
-    filterSlugs: ["iot-connected-devices", "embedded-firmware", "embedded-ai"],
-    description: "Solar-powered vibration monitoring system with embedded AI for anomaly detection in industrial and logistics infrastructure.",
-    longDescription: "Designed a fully autonomous vibration monitoring node capable of detecting structural and mechanical anomalies using embedded AI. The system integrates a high-bandwidth industrial accelerometer, ultra-low-power wireless communication, and solar energy harvesting with Lithium-Ion Capacitor (LIC) storage. Optimized for long-term deployment, the platform continuously captures vibration data, performs frequency-domain analysis, and applies TinyML-based models to classify abnormal patterns in real time. The architecture is tailored for logistics infrastructure such as railways, bridges, and transport systems where predictive maintenance is critical.",
-
-    tags: [
-      "Vibration Monitoring",
-      "Embedded AI",
-      "TinyML",
-      "LoRa",
-      "Low Power Design",
-      "Industrial IoT",
-      "Signal Processing"
-    ],
-
-    icon: Activity,
-    highlight: "Edge AI Monitoring",
-
-    hidden: false,
-
-    media: [
-      {
-        type: "image",
-        src: "/images/_TNpoG1kiQf.jpg"
-      }
-    ],
-
-    deliverables: [
-      "Solar-powered embedded monitoring node",
-      "Vibration data acquisition and FFT processing",
-      "TinyML-based anomaly detection model",
-      "Ultra-low-power firmware architecture",
-      "LoRa-based long-range communication system"
-    ],
-
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed an автономous vibration monitoring system for industrial and logistics infrastructure. The platform continuously measures vibration signals and detects anomalies using embedded AI, enabling predictive maintenance and early fault detection."
-      },
-
-      {
-        heading: "Hardware Architecture",
-        body: "The system integrates sensing, processing, communication, and energy harvesting into a compact embedded platform.",
-        bullets: [
-          "Wio-WM1110 module with integrated MCU and LoRa communication",
-          "IIS3DWB high-bandwidth industrial accelerometer",
-          "Solar energy harvesting using multiple micro solar cells",
-          "Lithium-Ion Capacitor (LIC) for long lifecycle energy storage",
-          "Custom PCB optimized for ultra-low-power operation"
-        ],
-        images: [
-          "/images/module_KWi6fuxF66.jpg",
-        ]
-      },
-
-      {
-        heading: "Mechanical & Deployment Design",
-        body: "A transparent enclosure was used to protect the system while maintaining solar exposure, enabling reliable outdoor deployment.",
-        images: [
-          "/images/3d_caja_lsR0fDqRqX.jpg",
-          "/images/circuito-1_338G53j3xU.jpg",
-          "/images/circuito-3_yDrlZ46rDW.jpg"
-        ]
-      },
-
-      {
-        heading: "Power Optimization",
-        body: "Power efficiency is critical for autonomous operation. The system is optimized for ultra-low consumption with aggressive sleep strategies.",
-        bullets: [
-          "Deep sleep current ~12µA",
-          "Transmission spikes up to ~48mA during LoRa communication",
-          "Energy harvesting ensures continuous operation",
-          "LIC storage enables high cycle durability (~10× LiPo lifecycle)"
-        ],
-        images: [
-          "/images/deep_sleep_Mh0mAYcdvj.jpg",
-          "/images/simple_lora_application-lora_transmit_SgvKe699LQ.jpg"
-        ]
-      },
-
-      {
-        heading: "Vibration Signal Processing",
-        body: "High-resolution vibration data is captured and analyzed in both time and frequency domains.",
-        bullets: [
-          "Sampling frequency: 1024 Hz",
-          "3-axis vibration measurement",
-          "FFT analysis for frequency-domain insights",
-          "Detection of imbalance, misalignment, and wear patterns"
-        ],
-        images: [
-          "/images/whatsapp_image_2023-07-26_at_16_05_31_OaQN9PmUKg.jpg",
-          "/images/whatsapp_image_2023-07-26_at_16_05_31(1)_24YB1El1lQ.jpg",
-          "/images/whatsapp_image_2023-07-26_at_16_05_33_xyPp7vMy3R.jpg"
-        ]
-      },
-
-      {
-        heading: "Anomaly Detection with Embedded AI",
-        body: "Machine learning models were trained using vibration data to detect abnormal behavior directly on the device.",
-        bullets: [
-          "Feature extraction from vibration signals",
-          "Model training using iterative optimization",
-          "On-device anomaly classification",
-          "Real-time detection without cloud dependency"
-        ],
-        images: [
-          "/images/abnormal_signal_t0bnswp62a.jpg",
-          "/images/iterations_WiSnpXEoIY.jpg",
-          "/images/detection_benchmark_V9URsWySwC.jpg"
-        ]
-      },
-
-      {
-        heading: "Applications",
-        body: "The system is designed for deployment in infrastructure monitoring and predictive maintenance scenarios.",
-        bullets: [
-          "Railway and bridge structural monitoring",
-          "Road and transport infrastructure diagnostics",
-          "Industrial machinery condition monitoring",
-          "Marine and cargo transport vibration analysis"
-        ],
-        images: [
-          "/images/cylog_7BVkAYoO11.jpg",
-          "/images/dynamic_logistics_wVarNw9GOR.jpg"
-        ]
-      },
-
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates advanced system-level design combining ultra-low-power electronics, energy harvesting, high-frequency signal processing, and embedded AI. It highlights strong capability in developing autonomous IoT systems for predictive maintenance and real-world industrial deployment."
       }
     ]
   },
@@ -2007,131 +2471,6 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: "d6f3b8",
-    title: "Programmable DC Load & Power Characterization Platform",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
-    description: "Precision electronic load system using ESP32-S3 with closed-loop current control, power telemetry, thermal management, and wireless dashboard logging.",
-    longDescription: "Designed an advanced programmable DC load for validating power supplies, batteries, converters, and embedded power rails. The platform uses an ESP32-S3 controller with PID-regulated constant current sinking, precision shunt measurement, thermal protection, local user interface, and WiFi telemetry streaming. The system combines analog control hardware, high-current power dissipation, digital feedback control, and real-time monitoring into a compact engineering test instrument.",
-
-    tags: [
-      "Electronic Load",
-      "ESP32-S3",
-      "Power Electronics",
-      "PID Control",
-      "Current Sink",
-      "Telemetry",
-      "Thermal Design",
-      "Test Equipment"
-    ],
-
-    icon: Zap,
-    highlight: "Programmable Load Tester",
-
-    hidden: false,
-
-    media: [
-      {
-        type: "image",
-        src: "/images/image_FSqB8efF26.jpg"
-      }
-    ],
-
-    deliverables: [
-      "Programmable constant-current electronic load",
-      "PID closed-loop current regulation",
-      "100W-class thermal power stage",
-      "Touch interface + OLED display",
-      "WiFi telemetry to dashboard server",
-      "Custom KiCad PCB design"
-    ],
-
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed a digitally controlled DC load for testing power sources under programmable current demand. The system regulates sink current in real time, measures electrical parameters, manages thermal behavior, and streams operating data to a dashboard environment. :contentReference[oaicite:0]{index=0}"
-      },
-
-      {
-        heading: "Control Architecture",
-        body: "The load uses precision current feedback and firmware control to maintain a requested current setpoint across varying source voltages.",
-        bullets: [
-          "Closed-loop PID regulation",
-          "Programmable current sink operation",
-          "10 mA step resolution",
-          "Wide operating load range",
-          "Soft-start current ramping"
-        ],
-        images: [
-          "/images/image_UuOW8hrEiv.jpg"
-        ]
-      },
-
-      {
-        heading: "Measurement Subsystem",
-        body: "A precision shunt and high-resolution current monitor provide accurate measurement of voltage, current, and power during dynamic loading conditions.",
-        bullets: [
-          "High-side current sensing",
-          "Power computation in firmware",
-          "Real-time feedback loop input",
-          "High-resolution telemetry capture"
-        ]
-      },
-
-      {
-        heading: "Power Stage Design",
-        body: "The dissipation stage uses MOSFET-based linear control with heatsink mounting and thermal coupling optimized for sustained high-power testing.",
-        bullets: [
-          "MOSFET sink element",
-          "Up to ~100W operating class",
-          "Wide input voltage compatibility",
-          "Protection-oriented derating strategy"
-        ],
-        images: [
-          "/images/image_FgrNSXRepL.jpg",
-          "/images/image_FSqB8efF26.jpg"
-        ]
-      },
-
-      {
-        heading: "Thermal Management",
-        body: "An actively controlled CPU-class cooler is PWM-managed based on heatsink temperature to maintain safe junction conditions during prolonged stress testing."
-      },
-
-      {
-        heading: "User Interface",
-        body: "A capacitive touch matrix enables local setpoint adjustment and load control without mechanical encoders or buttons.",
-        images: [
-          "/images/image_BHB4pIZjfO.jpg",
-          "/images/image_FXLLqYjZiU.jpg",
-          "/images/pad_s_3wN4wQ4XQR.jpg"
-        ]
-      },
-
-      {
-        heading: "Cloud Logging & Analytics",
-        body: "Operating data is transmitted over WiFi to a time-series database for live dashboards, trend analysis, and long-duration test logging.",
-        images: [
-          "/images/dashboard_DYoQUkn2wW.jpg"
-        ]
-      },
-
-      {
-        heading: "PCB Implementation",
-        body: "The custom PCB was designed with segregated power and signal return paths, heavy-current routing, and close placement of sensing circuitry to improve accuracy and robustness.",
-        images: [
-          "/images/image_2qKmapYL8r.jpg",
-          "/images/image_6Vy24RMDD4.jpg"
-        ]
-      },
-
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates strong capability in mixed-signal hardware, embedded control systems, power electronics, thermal engineering, and test instrumentation design. It highlights the ability to build professional-grade validation tools for power supply and battery development workflows."
-      }
-    ]
-  },
-  {
     slug: "c2f6a8",
     title: "Heterogeneous Accelerator AI Deployment",
     category: "Embedded Linux & BSP",
@@ -2448,213 +2787,6 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "This project demonstrates practical experience in Hall-effect sensing, embedded control electronics, signal conditioning, and electromechanical product integration for throttle applications."
-      }
-    ]
-  },
-  {
-    slug: "m9c4e7",
-    title: "Compact x86 Compute Module Carrier Platform",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-linux-bsp", "hardware-design"],
-    description: "High-density carrier board for an x86 compute module integrating Ethernet, HDMI, USB, M.2 expansion, camera interface, and USB-C power delivery.",
-    longDescription: "Designed a compact custom carrier board for an x86 compute module to enable desktop-class computing in embedded form factors. The platform expands the module into a deployable system by integrating high-speed I/O, networking, display output, storage and wireless expansion, camera connectivity, active cooling support, and USB-C power delivery. The hardware focuses on signal integrity, manufacturability, and real-world integration for edge computing, robotics, industrial control, and portable embedded systems.",
-    tags: [
-      "Carrier Board",
-      "x86 Embedded",
-      "High-Speed PCB",
-      "Ethernet",
-      "HDMI",
-      "USB-C PD",
-      "M.2",
-      "KiCad"
-    ],
-
-    icon: Cpu,
-    highlight: "x86 Carrier Board",
-
-    hidden: true,
-
-    media: [
-      {
-        type: "image",
-        src: "/images/_wOWGZfnOJ9.jpg"
-      }
-    ],
-
-    deliverables: [
-      "Custom 4-layer carrier PCB for x86 compute module",
-      "Gigabit Ethernet + HDMI integration",
-      "USB 2.0 / USB 3.0 connectivity",
-      "M.2 expansion interfaces",
-      "CSI camera + debug interfaces",
-      "USB-C PD power architecture"
-    ],
-
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed a compact carrier platform for an x86 compute module, transforming a high-performance SoM into a practical embedded computing solution with integrated display, networking, storage expansion, and peripheral connectivity. :contentReference[oaicite:0]{index=0}"
-      },
-
-      {
-        heading: "System Architecture",
-        body: "The carrier board extends the compute module through high-speed interfaces and embedded I/O required for real-world deployments.",
-        bullets: [
-          "Gigabit Ethernet connectivity",
-          "HDMI display output",
-          "USB 2.0 and USB 3.0 interfaces",
-          "M.2 expansion sockets",
-          "CSI camera connector",
-          "I2C expansion header",
-          "UART debug interface",
-          "Fan header for thermal control"
-        ],
-        images: [
-          "/images/screenshot_2025-12-23_at_09_45_47_cg7EFKUjj6.jpg",
-          "/images/screenshot_2025-12-23_at_09_55_08_XM6p1bWLp2.jpg"
-        ]
-      },
-
-      {
-        heading: "PCB Design Implementation",
-        body: "The board was implemented as a compact multilayer design optimized for routing density, controlled impedance paths, and connector accessibility. Particular focus was placed on high-speed signal breakout and mechanical integration.",
-        bullets: [
-          "4-layer PCB stack-up",
-          "Dense connector routing",
-          "Power / signal plane separation",
-          "Compact edge-compute form factor",
-          "Manufacturing-ready layout"
-        ],
-        images: [
-          "/images/screenshot_2025-12-20_at_16_14_33_ptyHC7ldn6.jpg",
-          "/images/image_eA9DqA7geH.jpg",
-        ]
-      },
-
-      {
-        heading: "Power Architecture",
-        body: "USB-C Power Delivery input at 12V enables compact external powering while supporting compute-module and peripheral loads. The architecture is suitable for mobile and embedded deployments."
-      },
-
-      {
-        heading: "Expansion Capability",
-        body: "M.2 interfaces allow wireless modules, NVMe storage, or accelerator expansion, making the platform adaptable for AI edge nodes, gateways, robotics controllers, and industrial systems."
-      },
-
-      {
-        heading: "Mechanical Integration",
-        body: "The system includes enclosure-ready mounting and CNC housing direction for deployment-grade packaging.",
-        images: [
-          "/images/screenshot_2025-12-24_at_23_46_09_I7xoxfFxez.jpg"
-        ]
-      },
-
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates advanced experience in carrier board development, high-speed PCB layout, power architecture, and embedded compute platform integration. It highlights the ability to convert complex SoMs into production-ready hardware platforms for commercial deployment."
-      }
-    ]
-  },
-  {
-    slug: "e2b4c9",
-    title: "High-Speed Vision Processing Carrier for Adaptive SoM Platform",
-    category: "FPGA & Digital Design",
-    filterSlugs: ["fpga-digital-design", "embedded-linux-bsp", "pcb-hardware"],
-    description: "Advanced carrier board for an FPGA-based system-on-module featuring high-bandwidth camera interfaces, display outputs, storage, and expansion for embedded vision workloads.",
-    longDescription: "Designed a high-performance carrier platform for an adaptive FPGA system-on-module focused on embedded vision, video processing, and AI edge applications. The board expands the compute module with high-speed camera inputs, display connectivity, storage interfaces, FMC expansion, and peripheral I/O. Special attention was given to signal integrity, high-speed routing, and scalable interface architecture required for professional imaging systems.",
-    tags: [
-      "FPGA",
-      "Carrier Board",
-      "Embedded Vision",
-      "High-Speed PCB",
-      "Camera Interfaces",
-      "DisplayPort",
-      "FMC",
-      "Edge AI"
-    ],
-
-    icon: Cpu,
-    highlight: "Vision FPGA Carrier",
-
-    hidden: true,
-
-    media: [
-      {
-        type: "image",
-        src: "/images/_ska4fqzqrs_blob_copy_DZtriN08A0.jpg"
-      }
-    ],
-
-    deliverables: [
-      "Carrier board for adaptive FPGA compute module",
-      "High-speed camera interface integration",
-      "Display + storage + USB expansion",
-      "FMC mezzanine expansion support",
-      "Embedded vision ready hardware platform",
-      "Signal-integrity focused PCB architecture"
-    ],
-
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Developed a high-bandwidth carrier board for an FPGA-based system-on-module intended for embedded vision and AI edge processing. The platform enables rapid deployment of camera-centric systems requiring real-time video acquisition, acceleration, and external expansion. :contentReference[oaicite:0]{index=0}"
-      },
-
-      {
-        heading: "Compute Platform Architecture",
-        body: "The design is centered around a powerful adaptive SoM containing programmable logic, processing cores, memory, non-volatile storage, and board-to-board connectors exposing high-speed user I/O.",
-        images: [
-          "/images/kria_k26_som_aNCEf3WgVZ.jpg"
-        ]
-      },
-
-      {
-        heading: "Vision Interface Design",
-        body: "The carrier board was optimized for demanding camera workloads and multi-stream video applications.",
-        bullets: [
-          "High-speed serialized image sensor inputs",
-          "MIPI camera connectivity",
-          "Dual display outputs",
-          "USB 3.0 high-throughput peripherals",
-          "Low-latency video pipeline support"
-        ],
-        images: [
-          "/images/aper-oculus-front-01_jpg_md-fixed-xl_xngAOPtMB1.jpg",
-          "/images/t-6_products_image-sensor_industry_slvs-ec02_en_Fbp89fdzfw.jpg"
-        ]
-      },
-
-      {
-        heading: "Expansion & Peripheral Interfaces",
-        body: "The board includes flexible expansion paths for custom I/O, acquisition hardware, and storage acceleration.",
-        bullets: [
-          "FMC expansion connector",
-          "M.2 peripheral support",
-          "GPIO / PMOD style expansion",
-          "SATA storage interface",
-          "External mezzanine compatibility"
-        ],
-        images: [
-          "/images/aper-oculus_LjQ2Nj6zoS.jpg"
-        ]
-      },
-
-      {
-        heading: "PCB Engineering Focus",
-        body: "Implementation required controlled impedance routing, differential pair matching, connector breakout strategy, and power distribution suitable for mixed FPGA + video workloads."
-      },
-
-      {
-        heading: "Platform Benchmarking",
-        body: "The architecture was positioned as a premium carrier solution by combining rare interface support with strong expansion capability and camera-focused hardware design.",
-        images: [
-          "/images/comparison_chart_j9hKnpl8e6.jpg"
-        ]
-      },
-
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates advanced expertise in FPGA carrier board development, high-speed PCB layout, embedded vision hardware, and scalable compute platform integration. It highlights the ability to engineer production-grade imaging systems requiring complex interface routing and real-time processing infrastructure."
       }
     ]
   },
@@ -3047,47 +3179,6 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "Iterative hardware design demonstrates practical PCB layout, power system design, embedded hardware integration, and usability improvements across revisions."
-      }
-    ]
-  },
-  {
-    slug: "a9e7f1",
-    title: "Scalable EV Battery Management System",
-    category: "Embedded Systems",
-    filterSlugs: ["embedded-firmware", "pcb-hardware", "power-electronics"],
-    description: "Battery Management System (BMS) for high-performance electric vehicle applications, supporting scalable cell monitoring and balancing.",
-    longDescription: "Scalable BMS for electric vehicles designed to monitor multiple battery cells, auxiliary inputs, and daisy-chained ICs, capable of measuring up to 256 cells in a single network. Provides safe cell operation, voltage balancing, and telemetry via CAN bus, optimized for high-performance EV racing applications.",
-    tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
-    icon: Cpu,
-    highlight: "Scalable EV Battery Monitoring",
-    hidden: true,
-    media: [
-      { type: "image", src: "/images/_qfcRSffjLb.jpg" }
-    ],
-    deliverables: [
-      "Scalable EV BMS with BQ76PL455 IC",
-      "Safe cell monitoring and balancing",
-      "CAN bus data output for telemetry",
-      "Optimized for Formula SAE racing teams",
-      "PCB layout and 3D model for rapid prototyping"
-    ],
-    sections: [
-      {
-        heading: "Components Used",
-        bullets: [
-          "Texas Instruments BQ76PL455 IC ×1"
-        ]
-      },
-      {
-        heading: "System Overview",
-        body: "Monitors individual battery cells, auxiliary inputs for temperature, and allows daisy-chaining of up to 15 ICs, enabling measurement of up to 256 cells. Designed to provide scalable, safe operation and real-time telemetry for high-performance EV applications."
-      },
-      {
-        heading: "Schematics & Hardware",
-        images: [
-          "/images/pcb_layout_QBbFFRFEJj.jpg",
-          "/images/real_cut_S1i9IADIfg.jpg"
-        ]
       }
     ]
   },
@@ -3679,97 +3770,6 @@ const projects: Project[] = [
       {
         heading: "Engineering Outcome",
         body: "This project demonstrates advanced hardware design for USB PD monitoring, combining embedded microcontroller control, high-fidelity UART capture, and robust PCB architecture. Suitable for professional evaluation, debugging, and testing of USB-C PD-enabled devices."
-      }
-    ]
-  },
-  {
-    slug: "d7f4c8",
-    title: "High-Precision Multi-Mode BLDC Motor Controller",
-    category: "PCB & Hardware",
-    filterSlugs: ["pcb-hardware", "embedded-firmware", "power-electronics"],
-    description: "Custom BLDC motor controller PCB with STM32F4 MCU, DRV8301 gate drivers, and high-current three-phase power stage.",
-    longDescription: "This project demonstrates the design and assembly of a professional BLDC motor controller PCB capable of precise speed and torque control. It integrates STM32F4 microcontroller, DRV8301 gate drivers, and a three-phase high-current power stage with comprehensive thermal and signal integrity management. The platform is designed for industrial automation applications, enabling compact form factor deployment with reliable performance.",
-    tags: ["BLDC", "Motor Control", "STM32F4", "DRV8301", "PCB Design", "Power Electronics", "Embedded Systems"],
-    icon: Gauge,
-    highlight: "Professional BLDC Motor Control",
-    hidden: true,
-    media: [
-      { type: "image", src: "/images/_5cSan2KQek.jpg" }
-    ],
-    deliverables: [
-      "Turnkey BLDC motor controller PCB",
-      "STM32F4 MCU with SPI/UART interfaces",
-      "DRV8301 gate drivers for high-current FETs",
-      "Three-phase half-bridge power stage",
-      "Thermal and signal integrity optimized PCB",
-      "Functional validation with 400W BLDC motor"
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        body: "Complete development of a high-performance BLDC motor controller from schematic design to assembly and functional testing. The PCB supports industrial automation requiring precise motor control and efficient thermal management."
-      },
-      {
-        heading: "Hardware Components",
-        bullets: [
-          "STM32F103RB compatible microcontroller (Leaf Maple / Mini MapleTree)",
-          "DRV8301 gate driver IC (Texas Instruments)",
-          "Three-phase half-bridge MOSFETs",
-          "4-layer PCB, 95×75 mm",
-          "Current sensing via low-side shunt resistors"
-        ],
-      },
-      {
-        heading: "Design Specifications",
-        bullets: [
-          "Input voltage: 24–48V DC",
-          "Continuous current: 20A",
-          "PWM frequency: up to 20 kHz",
-          "Layer count: 4-layer PCB",
-          "Thermal and overcurrent protection integrated"
-        ]
-      },
-      {
-        heading: "Schematic Design",
-        body: "Schematic created in Altium Designer covering power stage, gate drive, current sensing, MCU interface, and protection circuits.",
-        images: [
-          "/images/circuit_drv8301_tq3pzziuDb.jpg"
-        ]
-      },
-      {
-        heading: "PCB Layout & Thermal Management",
-        body: "Critical layout considerations were applied to minimize parasitic inductance, optimize thermal dissipation, and maintain signal integrity across power and analog sections.",
-        bullets: [
-          "Power loops minimized for high-current paths",
-          "MOSFETs placed near board edge with thermal copper connected to chassis",
-          "Gate drive traces matched and kept short",
-          "Analog current sense traces routed away from switching nodes"
-        ]
-      },
-      {
-        heading: "Assembly & Validation",
-        body: "Turnkey PCB assembly included solder paste application, automated pick-and-place, reflow soldering, AOI inspection, and manual through-hole soldering. Functional testing verified motor spin-up, current measurement, and thermal performance at full load.",
-        bullets: [
-          "First-pass yield: 98.5%",
-          "Smooth torque control with 400W BLDC motor",
-          "Thermal performance validated up to 50°C ambient"
-        ]
-      },
-      {
-        heading: "Firmware Integration",
-        body: "STM32 firmware includes initialization, PWM generation, and DRV8301 control routines for full 6-channel PWM operation.",
-        code: [
-          "// Example DRV8301 initialization",
-          "DRV8301_Init();",
-          "TIM1_PWM_Init();",
-          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);",
-          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 500);",
-          "__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 500);"
-        ]
-      },
-      {
-        heading: "Engineering Outcome",
-        body: "This project demonstrates end-to-end professional BLDC motor controller development including embedded firmware, high-current power stage, thermal and signal integrity design, PCB layout, and turnkey assembly suitable for industrial applications."
       }
     ]
   },
