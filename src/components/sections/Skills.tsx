@@ -1,47 +1,49 @@
 const categories = [
   {
-    name: "Firmware & RTOS",
-    reg: "REG_FW",
+    name: "Hardware & PCB",
+    reg: "REG_HW",
     tags: [
-      "C / C++", "FreeRTOS", "Zephyr RTOS",
-      "HAL / BSP Drivers", "Bootloader Design",
-      "OTA Frameworks", "Memory Optimization",
+      "Altium Designer", "KiCad", "Multi-Layer PCB",
+      "High-Speed Layout", "Power Design",
+      "EMI / EMC", "DFM / DFA",
     ],
   },
   {
-    name: "Linux Platforms",
+    name: "Embedded Firmware",
+    reg: "REG_FW",
+    tags: [
+      "C / C++", "FreeRTOS", "Zephyr",
+      "Bare-Metal Systems", "HAL / BSP Drivers",
+      "Bootloader Design", "Low-Power Optimization",
+    ],
+  },
+  {
+    name: "Embedded Linux",
     reg: "REG_LNX",
     tags: [
       "Yocto Project", "Buildroot",
-      "Device Tree Overlays", "Kernel Development",
-      "U-Boot Config", "Systemd Services",
-      "Shell Automation",
+      "Device Tree", "Kernel Configuration",
+      "U-Boot", "System Services",
+      "Board Bring-Up",
     ],
   },
   {
-    name: "Wireless Protocols",
-    reg: "REG_RF",
+    name: "Connectivity & IoT",
+    reg: "REG_NET",
     tags: [
-      "Bluetooth LE", "Wi-Fi 6", "LoRaWAN", "MQTT / CoAP",
-      "TLS / DTLS", "Protocol Buffers", "Cellular LTE / 5G",
+      "Bluetooth LE", "Wi-Fi", "Ethernet",
+      "LoRa", "CAN Bus", "USB",
+      "MQTT / Cloud Integration",
     ],
   },
   {
-    name: "PCB & Hardware",
-    reg: "REG_HW",
+    name: "Bring-Up & Production",
+    reg: "REG_PRD",
     tags: [
-      "Altium Designer", "KiCad", "High-Speed Layout",
-      "Power Integrity", "EMC Design", "DFM / DFA",
-      "Component Engineering",
-    ],
-  },
-  {
-    name: "Validation & Test",
-    reg: "REG_TST",
-    tags: [
-      "JTAG / SWD Debug", "Oscilloscope Analysis",
-      "Protocol Analyzers", "Automated Test Frameworks",
-      "CI / CD Pipelines", "Environmental Testing",
+      "Prototype Debug", "JTAG / SWD",
+      "Oscilloscope Analysis", "Board Rework",
+      "Manufacturing Handoff", "Test Fixtures",
+      "FCC / CE Support",
     ],
   },
 ];

@@ -1,39 +1,39 @@
 const services = [
   {
     num: "01",
-    title: "Firmware Architecture",
+    title: "Embedded Firmware Development",
     description:
-      "Scalable bare-metal and RTOS solutions built for longevity. From hardware abstraction layers to deterministic state machines, every line of code is production-tested and maintainable by the next engineer on the project.",
+      "Reliable bare-metal and RTOS firmware in C/C++ for microcontroller-based products. Driver development, peripheral integration, low-power behavior, diagnostics, and maintainable architectures built for long-term support.",
   },
   {
     num: "02",
-    title: "Linux BSP Development",
+    title: "Hardware & PCB Design",
     description:
-      "Tailored Yocto and Buildroot distributions with custom kernel drivers, optimized boot sequences, and hardened security configurations. I've brought up BSPs for i.MX, AM3x, and Rockchip platforms for production systems.",
+      "Complete electronic hardware development from schematic capture through production-ready PCB release. Multi-layer boards, power design, mixed-signal layouts, compact form factors, and manufacturable designs with strong revision discipline.",
   },
   {
     num: "03",
-    title: "Wireless & Connectivity",
+    title: "Embedded Linux Systems",
     description:
-      "End-to-end wireless integration across BLE, Wi-Fi 6, LoRaWAN, and cellular LTE/5G. Secure protocol stacks, OTA update pipelines, and fleet management tooling are standard deliverables, not afterthoughts.",
+      "Custom embedded Linux platforms using Yocto and Buildroot. Board bring-up, device tree configuration, peripheral enablement, boot optimization, and Linux integration for gateways, appliances, and edge devices.",
   },
   {
     num: "04",
-    title: "PCB Engineering",
+    title: "Connectivity & IoT",
     description:
-      "Multi-layer board design from schematic through manufacturing release. Signal integrity analysis, power integrity simulation, thermal management, and DFM optimization so the board you design is the board that ships.",
+      "Connected product development across BLE, Wi-Fi, Ethernet, LoRa, CAN, and USB. Sensor gateways, remote monitoring devices, OTA update workflows, and secure field-connected systems.",
   },
   {
     num: "05",
-    title: "System Integration & Bring-Up",
+    title: "Prototype Bring-Up & Debug",
     description:
-      "Systematic validation from first power-on through full-system qualification. JTAG bring-up, protocol analyzer capture, automated test harnesses, and the documentation your CM needs to run production confidently.",
+      "Hands-on support from first power-on to stable prototype. Root-cause analysis, board rework guidance, firmware debug, interface validation, and structured troubleshooting to shorten development cycles.",
   },
   {
     num: "06",
-    title: "Compliance & Manufacturing",
+    title: "Production & Compliance",
     description:
-      "Pre-compliance RF testing, FCC/CE/UL certification support, and factory programming workflow design. I've shepherded a dozen products through regulatory approval and helped clients avoid the costly late-stage redesign trap.",
+      "Manufacturing handoff packages, BOM review, programming workflows, test procedures, and FCC / CE pre-compliance support. Focused on smooth transition from prototype to repeatable production.",
   },
 ];
 
