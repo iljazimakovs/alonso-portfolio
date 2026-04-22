@@ -152,7 +152,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "Vision FPGA Carrier",
 
-    hidden: true,
+    hidden: false,
 
     media: [
       {
@@ -377,7 +377,7 @@ const projects: Project[] = [
     icon: Cpu,
     highlight: "x86 Carrier Board",
 
-    hidden: true,
+    hidden: false,
 
     media: [
       {
@@ -470,7 +470,7 @@ const projects: Project[] = [
     tags: ["BMS", "EV", "STM32", "Power Electronics", "PCB Design", "Embedded Systems"],
     icon: Cpu,
     highlight: "Scalable EV Battery Monitoring",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_qfcRSffjLb.jpg" }
     ],
@@ -511,7 +511,7 @@ const projects: Project[] = [
     tags: ["BLDC", "Motor Control", "STM32F4", "DRV8301", "PCB Design", "Power Electronics", "Embedded Systems"],
     icon: Gauge,
     highlight: "Professional BLDC Motor Control",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_5cSan2KQek.jpg" }
     ],
@@ -2262,7 +2262,7 @@ const projects: Project[] = [
     icon: Zap,
     highlight: "Universal 5V SMPS",
 
-    hidden: false,
+    hidden: true,
 
     media: [
       {
