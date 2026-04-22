@@ -98,8 +98,8 @@ interface FilterCategory {
 
 export const filterCategories: FilterCategory[] = [
   { name: "All Projects", slug: "all" },
-  { name: "PCB & Hardware", slug: "pcb-hardware" },
   { name: "Firmware", slug: "embedded-firmware" },
+  { name: "PCB & Hardware", slug: "pcb-hardware" },
   { name: "Linux & BSP", slug: "embedded-linux-bsp" },
   { name: "IoT & Connectivity", slug: "iot-connected-devices" },
 ];
