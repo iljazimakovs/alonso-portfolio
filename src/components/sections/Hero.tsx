@@ -80,7 +80,7 @@ export function Hero() {
             {/* Description */}
             <div>
               <p className="text-[15px] text-muted-foreground leading-[2] max-w-lg">
-                Firmware, Hardware & PCB Design, Embedded Linux, and IoT. Ten years of hands-on embedded work - from first bring-up through compliance testing and CM handoff. I cover the full hardware-software stack on the same project.
+                Firmware, hardware and PCB design, embedded Linux, and IoT. Ten years of hands-on embedded work from first bring-up through compliance testing and CM handoff. I cover the full hardware and software stack on the same project.
               </p>
             </div>
 
