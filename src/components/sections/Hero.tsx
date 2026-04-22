@@ -1,16 +1,16 @@
 import { Github } from "lucide-react";
 
 const bootLines = [
-  { ts: "0.000", text: "boot: hardware bring-up sequence start", highlight: false },
-  { ts: "0.014", text: "power_init: rails stable, supervisors OK", highlight: false },
-  { ts: "0.026", text: "clock_config: PLL locked @ target freq", highlight: false },
-  { ts: "0.039", text: "pcb_check: interfaces enumerated", highlight: false },
-  { ts: "0.054", text: "storage_init: eMMC / QSPI detected", highlight: false },
-  { ts: "0.071", text: "firmware_init: RTOS + drivers online", highlight: false },
-  { ts: "0.089", text: "linux_init: peripheral handoff complete", highlight: false },
-  { ts: "0.104", text: "connectivity: USB / CAN / ETH ready", highlight: false },
-  { ts: "0.121", text: "self_test: PASS (hardware + firmware)", highlight: true },
-  { ts: "0.148", text: "system: ready for deployment", highlight: true },
+  { ts: "0.000", text: "boot: power-on sequence start", highlight: false },
+  { ts: "0.012", text: "power_init: rails stable, reset released", highlight: false },
+  { ts: "0.025", text: "clock_init: system clocks locked", highlight: false },
+  { ts: "0.039", text: "hw_detect: core peripherals enumerated", highlight: false },
+  { ts: "0.055", text: "storage_init: flash / eMMC online", highlight: false },
+  { ts: "0.071", text: "firmware_init: drivers + RTOS ready", highlight: false },
+  { ts: "0.088", text: "linux_init: BSP handoff complete", highlight: false },
+  { ts: "0.104", text: "io_init: USB / CAN / ETH active", highlight: false },
+  { ts: "0.121", text: "self_test: PASS (system validated)", highlight: true },
+  { ts: "0.146", text: "system: ready for operation", highlight: true },
 ];
 
 const stats = [
