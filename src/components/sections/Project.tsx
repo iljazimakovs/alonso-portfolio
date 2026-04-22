@@ -239,6 +239,12 @@ const projects: Project[] = [
         ]
       },
       {
+        heading: "Schematics",
+        images: [
+          "/images/boardd_5PbUd9n7An.jpg"
+        ]
+      },
+      {
         heading: "Engineering Outcome",
         body: "Final design delivers a compact, high-power USB-C PD sink module with configurable voltage and current, optional telemetry, and robust PCB design for embedded and inline applications."
       }
