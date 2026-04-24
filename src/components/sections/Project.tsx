@@ -1443,7 +1443,7 @@ const projects: Project[] = [
         src: "/images/espiff-v3-angle-02_jpg_md-xl_vEo2gKvi8U.jpg"
       }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Custom dual-MCU PCB",
       "ESP32 + RP2040 system architecture",
@@ -3558,7 +3558,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/_9AJ5MQyfmN.jpg" }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Multi-Channel LED Driver Hardware",
       "PWM Control Firmware",
@@ -3863,7 +3863,7 @@ const projects: Project[] = [
     media: [
       { type: "image", src: "/images/_OXf2590Kja.jpg" }
     ],
-    hidden: true,
+    hidden: false,
     deliverables: [
       "Wireless LED Control System",
       "ESP32 Firmware Integration",
@@ -4278,7 +4278,7 @@ const projects: Project[] = [
     ],
 
 
-    hidden: true,
+    hidden: false,
 
     deliverables: [
       "BLE-based LED control system",
@@ -5400,7 +5400,7 @@ const projects: Project[] = [
     tags: ["Embedded Systems", "Firmware Development", "IoT", "Vehicle Electronics", "Hardware Design", "Prototyping", "Cloud Integration"],
     icon: Cpu,
     highlight: "IoT Vehicle Terminal",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/cover.jpg" }
     ],
@@ -5889,7 +5889,7 @@ const projects: Project[] = [
     tags: ["Energy Monitoring", "Power Electronics", "Embedded Systems", "ESP32", "DAC", "PWM", "MPPT"],
     icon: Cpu,
     highlight: "High-Precision Multi-Phase Energy Control",
-    hidden: true,
+    hidden: false,
     media: [
       { type: "image", src: "/images/_SgSKULlyfj.jpg" }
     ],
