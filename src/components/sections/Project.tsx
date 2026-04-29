@@ -99,7 +99,7 @@ interface FilterCategory {
 export const filterCategories: FilterCategory[] = [
   { name: "All Projects", slug: "all" },
   { name: "Firmware", slug: "embedded-firmware" },
-  { name: "PCB & Hardware", slug: "pcb-hardware" },
+  { name: "Hardware & PCB", slug: "pcb-hardware" },
   { name: "FPGA & Digital", slug: "fpga-digital-design" },
   { name: "Linux & BSP", slug: "embedded-linux-bsp" },
   { name: "IoT & Connectivity", slug: "iot-connected-devices" },
@@ -6951,7 +6951,7 @@ export function Project({
             <Button
               variant="outline"
               className="font-mono text-sm border-primary/40 text-primary gap-2 hover:bg-primary/10"
-              onClick={() => setVisibleCount((prev) => prev + 6)}
+              onClick={() => setVisibleCount((prev) => prev + 3)}
               data-testid="button-show-more"
             >
               <ChevronDown className="w-4 h-4" />

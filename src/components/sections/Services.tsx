@@ -1,12 +1,12 @@
 const services = [
   {
-    num: "02",
+    num: "01",
     title: "Embedded Firmware Development",
     description:
       "Reliable bare-metal and RTOS firmware in C/C++ for microcontroller-based products. Driver development, peripheral integration, low-power behavior, diagnostics, and maintainable architectures designed for long-term support.",
   },
   {
-    num: "01",
+    num: "02",
     title: "Hardware & PCB Design",
     description:
       "Complete electronic hardware development from schematic capture through production-ready PCB release. Multi-layer boards, high-speed layouts, power design, mixed-signal systems, and manufacturable designs built for reliable deployment.",
@@ -42,50 +42,44 @@ export function Services() {
     <section id="services" className="py-24 relative bg-card/15">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-
-          {/* Left - sticky heading block */}
-          <div className="lg:w-60 shrink-0">
-            <div className="lg:sticky lg:top-28">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0002</span>
-                <div className="h-px w-8 bg-border/40" />
-                <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Services</span>
-              </div>
-              <h2 className="font-display font-bold text-foreground leading-snug mb-4">
-                <span className="block text-lg font-medium text-muted-foreground">What I</span>
-                <span className="block text-4xl">Build</span>
-                <span className="block text-lg font-medium text-muted-foreground">For You</span>
-              </h2>
-              <p className="text-[13px] text-muted-foreground leading-relaxed">
-                End-to-end embedded engineering - from concept validation to certified, volume-ready product.
-              </p>
-            </div>
+        {/* Header */}
+        <div className="mb-16 max-w-3xl">
+          <div className="flex items-center gap-5 mb-8">
+            <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0002</span>
+            <div className="h-px flex-1 bg-border/35 max-w-[100px]" />
+            <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Services</span>
           </div>
-
-          {/* Right - vertical numbered service list */}
-          <div className="flex-1 divide-y divide-border/35">
-            {services.map((service) => (
-              <div
-                key={service.num}
-                className="py-8 flex flex-col sm:flex-row gap-5 sm:gap-8 group"
-              >
-                <span className="text-5xl font-display font-extrabold text-muted-foreground/10 group-hover:text-primary/15 transition-colors duration-300 shrink-0 leading-none select-none">
-                  {service.num}
-                </span>
-                <div className="flex-1 pt-1">
-                  <h3 className="text-base font-display font-bold text-foreground mb-2.5">
-                    {service.title}
-                  </h3>
-                  <p className="text-[13.5px] text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-6">
+            What I build for you.
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            End-to-end embedded engineering - from concept validation to certified, volume-ready product.
+          </p>
         </div>
+
+        {/* Vertical numbered service list */}
+        <div className="divide-y divide-border/35 border-t border-border/35">
+          {services.map((service) => (
+            <div
+              key={service.num}
+              className="py-8 flex flex-col sm:flex-row gap-5 sm:gap-10 group"
+              data-testid={`service-${service.num}`}
+            >
+              <span className="text-6xl font-display font-extrabold text-muted-foreground/15 group-hover:text-primary/30 transition-colors duration-300 shrink-0 leading-none select-none w-20">
+                {service.num}
+              </span>
+              <div className="flex-1 pt-2">
+                <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

@@ -36,12 +36,12 @@ export function Industries() {
           <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0005</span>
           <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Sectors</span>
           <div className="h-px flex-1 bg-border/35" />
-          <h2 className="text-base font-display font-bold text-foreground whitespace-nowrap">
+          <h2 className="text-lg font-display font-bold text-foreground whitespace-nowrap">
             Industry Experience
           </h2>
         </div>
 
-        {/* Asymmetric industry grid — 2-col left wide, 3-col right narrower */}
+        {/* Asymmetric industry grid - 2-col left wide, 3-col right narrower */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-border/30 rounded-lg overflow-hidden border border-border/30">
           {industries.map((ind, i) => (
             <div
@@ -51,14 +51,14 @@ export function Industries() {
               }`}
             >
               <div className="flex items-start justify-between gap-3">
-                <h3 className="text-[13px] font-display font-bold text-foreground leading-snug">
+                <h3 className="text-base font-display font-bold text-foreground leading-snug">
                   {ind.name}
                 </h3>
               </div>
-              <p className="text-[12px] text-muted-foreground/70 leading-relaxed flex-1">
+              <p className="text-sm text-muted-foreground/80 leading-relaxed flex-1">
                 {ind.description}
               </p>
-              <p className="text-[10px] font-mono text-primary/70 tracking-wider mt-1">
+              <p className="text-[11px] font-mono text-primary/75 tracking-wider mt-1">
                 {ind.protocols}
               </p>
             </div>

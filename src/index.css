@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Light mode — clean technical document, like a datasheet */
+    /* Light mode - clean technical document, like a datasheet */
     --background: 0 0% 97%;
     --foreground: 0 0% 8%;
 
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
 
-    /* Phosphor green — datasheet/PCB silkscreen */
+    /* Phosphor green - datasheet/PCB silkscreen */
     --primary: 145 58% 30%;
     --primary-foreground: 0 0% 98%;
 
@@ -36,7 +36,7 @@
     --input: 0 0% 84%;
     --ring: 145 58% 30%;
 
-    /* Tighter radius — engineering tools prefer rectangular elements */
+    /* Tighter radius - engineering tools prefer rectangular elements */
     --radius: 0.3rem;
 
     --font-sans: 'Inter', sans-serif;
@@ -51,7 +51,7 @@
   }
 
   .dark {
-    /* True near-black — oscilloscope / instrument display, no navy cast */
+    /* True near-black - oscilloscope / instrument display, no navy cast */
     --background: 0 0% 4%;
     --foreground: 0 0% 90%;
 
@@ -61,7 +61,7 @@
     --popover: 0 0% 4%;
     --popover-foreground: 0 0% 90%;
 
-    /* Phosphor green — the universal embedded/terminal color */
+    /* Phosphor green - the universal embedded/terminal color */
     --primary: 145 60% 40%;
     --primary-foreground: 0 0% 4%;
 
@@ -84,7 +84,7 @@
     --elevate-1: rgba(255, 255, 255, 0.02);
     --elevate-2: rgba(255, 255, 255, 0.05);
 
-    /* Subtle green-tinted graticule grid — like an oscilloscope screen */
+    /* Subtle green-tinted graticule grid - like an oscilloscope screen */
     --grid-line-color: rgba(60, 200, 100, 0.055);
     --grid-line-color-lg: rgba(60, 200, 100, 0.03);
   }
@@ -109,7 +109,7 @@
 }
 
 @layer utilities {
-  /* Standard 40px square grid — like graph paper or PCB grid */
+  /* Standard 40px square grid - like graph paper or PCB grid */
   .bg-grid-pattern {
     background-image:
       linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
@@ -117,7 +117,7 @@
     background-size: 40px 40px;
   }
 
-  /* 64px grid — hero / large sections */
+  /* 64px grid - hero / large sections */
   .bg-grid-pattern-lg {
     background-image:
       linear-gradient(to right, var(--grid-line-color-lg) 1px, transparent 1px),
@@ -125,13 +125,13 @@
     background-size: 64px 64px;
   }
 
-  /* Oscilloscope-style dot graticule — use for accent sections */
+  /* Oscilloscope-style dot graticule - use for accent sections */
   .bg-dot-pattern {
     background-image: radial-gradient(circle, var(--grid-line-color) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
-  /* PCB corner bracket accent — used on cards/panels */
+  /* PCB corner bracket accent - used on cards/panels */
   .corner-bracket {
     position: relative;
   }
@@ -165,7 +165,7 @@
   }
 }
 
-/* Precision scrollbar — thin, like an instrument panel */
+/* Precision scrollbar - thin, like an instrument panel */
 ::-webkit-scrollbar {
   width: 5px;
 }

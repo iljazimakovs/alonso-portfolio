@@ -84,7 +84,7 @@ export function Footer() {
       {/* Main footer row */}
       <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
 
-        {/* Left — chip badge + copyright */}
+        {/* Left - chip badge + copyright */}
         <div className="flex items-center gap-3">
           <ChipBadge />
           <span className="text-sm text-muted-foreground font-mono">
@@ -92,7 +92,7 @@ export function Footer() {
           </span>
         </div>
 
-        {/* Right — nav links + GitHub */}
+        {/* Right - nav links + GitHub */}
         <nav className="flex items-center gap-6 flex-wrap justify-center">
           {navLinks.map((link) => (
             <a

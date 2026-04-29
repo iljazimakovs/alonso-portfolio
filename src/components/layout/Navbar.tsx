@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 function ChipLogo({ className = "" }: { className?: string }) {
   return (
     <svg width="50" height="30" viewBox="0 0 50 30" fill="none" className={`shrink-0 text-primary ${className}`}>
-      {/* Left pins — 3 leads */}
+      {/* Left pins - 3 leads */}
       <line x1="0" y1="8"  x2="9" y2="8"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
       <line x1="0" y1="15" x2="9" y2="15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
       <line x1="0" y1="22" x2="9" y2="22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
-      {/* Right pins — 3 leads */}
+      {/* Right pins - 3 leads */}
       <line x1="41" y1="8"  x2="50" y2="8"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
       <line x1="41" y1="15" x2="50" y2="15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
       <line x1="41" y1="22" x2="50" y2="22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.65"/>
@@ -47,8 +47,8 @@ export function Navbar() {
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Projects", href: "#project" },
     { name: "Expertise", href: "#skills" },
+    { name: "Projects", href: "#project" },
     { name: "Industries", href: "#industries" },
   ];
 
@@ -59,12 +59,9 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo: chip icon + name */}
-        <a href="#" className="flex items-center gap-3 group">
+        {/* Logo: chip icon */}
+        <a href="#" className="flex items-center gap-3 group" aria-label="Home">
           <ChipLogo className="group-hover:opacity-100 opacity-75 transition-opacity" />
-          <span className="font-display font-semibold text-base text-foreground group-hover:text-primary transition-colors tracking-tight">
-            Alonso Fernandez
-          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-7">

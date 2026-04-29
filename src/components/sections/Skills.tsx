@@ -67,12 +67,12 @@ export function Skills() {
           <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">0x0004</span>
           <span className="text-[10px] font-mono text-primary font-semibold tracking-widest uppercase">Expertise</span>
           <div className="h-px flex-1 bg-border/35" />
-          <h2 className="text-base font-display font-bold text-foreground whitespace-nowrap">
+          <h2 className="text-lg font-display font-bold text-foreground whitespace-nowrap">
             Technology Stack
           </h2>
         </div>
 
-        {/* Register-file style table — category left, tags right */}
+        {/* Register-file style table - category left, tags right */}
         <div className="divide-y divide-border/30">
           {categories.map((cat) => (
             <div
@@ -80,11 +80,11 @@ export function Skills() {
               className="flex flex-col sm:flex-row gap-5 sm:gap-10 py-7 group"
             >
               {/* Category label */}
-              <div className="sm:w-44 shrink-0 pt-0.5">
-                <p className="text-[11px] font-mono text-primary font-semibold tracking-widest uppercase">
+              <div className="sm:w-52 shrink-0 pt-0.5">
+                <p className="text-[13px] font-mono text-primary font-semibold tracking-widest uppercase">
                   {cat.name}
                 </p>
-                <p className="text-[9px] font-mono text-muted-foreground/35 mt-1 tracking-wider">
+                <p className="text-[10px] font-mono text-muted-foreground/35 mt-1.5 tracking-wider">
                   {cat.reg}
                 </p>
               </div>
@@ -94,7 +94,7 @@ export function Skills() {
                 {cat.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center font-mono text-[11px] text-muted-foreground/75 border border-border/50 bg-background/50 rounded px-2.5 py-1 hover:border-primary/30 hover:text-foreground/80 transition-colors duration-150"
+                    className="inline-flex items-center font-mono text-[13px] text-muted-foreground/80 border border-border/50 bg-background/50 rounded px-3 py-1.5 hover:border-primary/30 hover:text-foreground/80 transition-colors duration-150"
                   >
                     {tag}
                   </span>
