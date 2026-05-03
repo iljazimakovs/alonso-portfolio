@@ -6987,6 +6987,18 @@ export function Project({
             {recommended.size > 0 && (
               <>
                 <button
+                  data-testid="filter-all"
+                  onClick={() => handleCategoryChange("all")}
+                  className={`px-4 py-2 rounded-lg text-sm font-mono transition-all border ${
+                    activeCategory === "all"
+                      ? "bg-primary/15 text-primary border-primary/40"
+                      : "bg-card/60 text-muted-foreground border-border/40 hover:border-primary/30 hover:text-foreground"
+                  }`}
+                >
+                  All Projects
+                </button>
+
+                <button
                   data-testid="filter-recommended"
                   onClick={() => handleCategoryChange("recommended")}
                   className={`px-4 py-2 rounded-lg text-sm font-mono transition-all border flex items-center gap-1.5 ${
